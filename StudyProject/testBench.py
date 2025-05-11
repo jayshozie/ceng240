@@ -52,5 +52,7 @@ def shortest(routes, cities):
 
 
 # Test cases
-print(shortest([('A', 'B', 1), ('B', 'C', 2), ('A', 'C', 2)], 'A-B'))  # Output: 1
-print(shortest([('A', 'B', 1), ('B', 'C', 2), ('A', 'C', 2)], 'A-C'))  # Output: 2
+# Output: 1
+print(shortest([('A', 'B', 1), ('B', 'C', 2), ('A', 'C', 2)], 'A-B'))
+# Output: 2
+print(shortest([('A', 'B', 1), ('B', 'C', 2), ('A', 'C', 2)], 'A-C'))
