@@ -24,6 +24,7 @@ class CustomList(list):
                 total += item
         return total
 
+
 # Testing the modified class
 
 # Create an instance of CustomList
