@@ -15,8 +15,8 @@ digits after the decimal point.
 
 Hint: 1 square meter = 0.0001 decares
 
-Important Note: In order not to lose any point redundantly, you must NOT use any
-arguments for the input() function and comply with the output format.
+Important Note: In order not to lose any point redundantly, you must NOT use
+any arguments for the input() function and comply with the output format.
 
 
 Sample I/O:

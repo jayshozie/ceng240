@@ -36,8 +36,10 @@ custom_list.append(10)  # This should print "Appending 10 to the list."
 custom_list.append("Hello")  # This should print "Appending Hello to the list."
 
 # Print the updated list
-print("Updated list:", custom_list)  # This should print [5, 10, "Hello"]
+print("Updated list:", custom_list)
 
 # Call sum_elements and print the result
 sum_result = custom_list.sum_elements()
-print("Sum of numeric elements:", sum_result) # Output: Sum of numeric elements: 15
+
+# Output: Sum of numeric elements: 15
+print("Sum of numeric elements:", sum_result)

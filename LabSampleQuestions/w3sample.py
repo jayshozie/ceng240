@@ -117,7 +117,8 @@ Output:
 Insert: 2
 
 Input:
-{chocolate: 2, spring_water: 1, energy_drink: 7, "coke": 5, "hand_sanitizer": 5}
+{chocolate: 2, spring_water: 1, energy_drink: 7, "coke": 5,
+"hand_sanitizer": 5}
 ["hand_sanitizer", "mask"]
 5
 Output:
@@ -126,17 +127,17 @@ Done
 
 # Solution
 
-vending_machine = eval(input())
-requested_items = eval(input())
-money_inserted = int(input())
+vm = eval(input())
+req_items = eval(input())
+mon_inserted = eval(input())
 
-valid_requests = [req for req in requested_items if req in vending_machine.keys()]
+valid_reqs = [req for req in req_items if req in vm.keys()]
 
 total_price = 0
-for item in valid_requests:
-    total_price += vending_machine[item]
+for item in valid_reqs:
+    total_price += vm[item]
 
-balance = money_inserted - total_price
+balance = mon_inserted - total_price
 
 if balance < 0:
     print(f"Insert: {abs(balance)}")
