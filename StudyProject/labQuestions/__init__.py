@@ -1,0 +1,2 @@
+from labQuestions import W3tripletCounterFunc
+from labQuestions import W4matrMultFunc

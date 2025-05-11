@@ -1,0 +1,1 @@
+from exercises import BinarySearchTree, LinkedList, Person, Shape, ShoppingCart, Stack, StringCompression

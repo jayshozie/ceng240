@@ -1,0 +1,1 @@
+from Functions import findRootQuadratic, isInRange, isPrime, numericalIntegration
