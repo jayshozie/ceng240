@@ -6,15 +6,18 @@ class Node:
         data: The data stored in the node.
         next: A reference to the next node in the linked list.
     """
+
     def __init__(self, data):
         """
-        Initializes a Node object with the given data and sets the next pointer to None.
+        Initializes a Node object with the given data and sets the next pointer
+        to None.
 
         Args:
             data: The data to store in the node.
         """
         self.data = data
         self.next = None
+
 
 class LinkedList:
     """
@@ -23,6 +26,7 @@ class LinkedList:
     Attributes:
         head: The head node of the linked list.
     """
+
     def __init__(self):
         """
         Initializes an empty linked list with the head set to None.
@@ -84,6 +88,7 @@ class LinkedList:
         if current:
             prev.next = current.next
 
+
 """
 # Example usage
 # Create an instance of the LinkedList class
@@ -107,7 +112,7 @@ linked_list.display()
 # Delete a node with data 2 from the linked list
 linked_list.delete(2)
 print("After deleting an existing node (2):")
-linked_list.display() 
+linked_list.display()
 """
 """
 linked_list = LinkedList()

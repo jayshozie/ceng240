@@ -11,9 +11,11 @@ class Node:
     right : Node or None
         A reference to the right child node.
     """
+
     def __init__(self, value):
         """
-        Initializes a Node object with the given value and sets the left and right children to None.
+        Initializes a Node object with the given value and sets the left and
+        right children to None.
 
         Parameters
         ----------
@@ -35,12 +37,13 @@ class Node:
         """
         return str(self.value)
 
+
 class BinarySearchTree:
     """
     A class to represent a Binary Search Tree (BST).
 
-    This class provides functionality to create and manage a binary search tree,
-    including inserting values and searching for specific values.
+    This class provides functionality to create and manage a binary search
+    tree, including inserting values and searching for specific values.
 
     Attributes
     ----------
@@ -54,12 +57,16 @@ class BinarySearchTree:
     insert(value):
         Inserts a value into the binary search tree.
     _insert_recursive(node, value):
-        Recursively inserts a value into the binary search tree (helper method).
+        Recursively inserts a value into the binary search tree
+        (helper method).
     search(value):
-        Searches for a value in the binary search tree and returns the corresponding node if found.
+        Searches for a value in the binary search tree and returns the
+        corresponding node if found.
     _search_recursive(node, value):
-        Recursively searches for a value in the binary search tree (helper method).
+        Recursively searches for a value in the binary search tree
+        (helper method).
     """
+
     def __init__(self):
         """
         Initializes the BinarySearchTree object with an empty root.
@@ -74,8 +81,8 @@ class BinarySearchTree:
         """
         Inserts a value into the binary search tree.
 
-        If the tree is empty, the value is set as the root node. Otherwise, the value
-        is inserted into the appropriate position in the tree.
+        If the tree is empty, the value is set as the root node. Otherwise,
+        the value is inserted into the appropriate position in the tree.
 
         Parameters
         ----------
@@ -125,13 +132,14 @@ class BinarySearchTree:
 
         Parameters
         ----------
-        value : Any 
+        value : Any
             The value to search for in the binary search tree.
 
         Returns
         -------
         Node or None
-            The node containing the value if found, or None if the value is not in the tree.
+            The node containing the value if found, or None if the value is
+            not in the tree.
         """
         return self._search_recursive(self.root, value)
 
@@ -151,7 +159,8 @@ class BinarySearchTree:
         Returns
         -------
         Node or None
-            The node containing the value if found, or None if the value is not in the tree.
+            The node containing the value if found, or None if the value is
+            not in the tree.
         """
         if node is None or node.value == value:
             return node
@@ -159,6 +168,7 @@ class BinarySearchTree:
             return self._search_recursive(node.left, value)
         else:
             return self._search_recursive(node.right, value)
+
 
 """
 # Example usage

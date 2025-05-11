@@ -1,5 +1,6 @@
 from datetime import date
 
+
 class Person:
     def __init__(self, firstName, country, dateOfBirth, occupation, height, weight):
         self.firstName = firstName
@@ -8,13 +9,14 @@ class Person:
         self.occupation = occupation
         self.height, self.weight = height, weight
         self.BMI = self.BodyMassIndex()
+
     def AgeCalc(self):
         today = date.today()
         age = today.year - self.dateOfBirth.year
         if today < date(today.year, self.dateOfBirth.month, self.dateOfBirth.day):
             age -= 1
         return age
-    
+
     def BodyMassIndex(self):
         BMI = self.weight / (self.height**2)
         return BMI

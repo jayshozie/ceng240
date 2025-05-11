@@ -18,18 +18,18 @@ class Stack:
             del tmp
         else:
             return "Empty stack, can't pop."
-        
+
     def size(self):
         print("Size:", len(self.items))
         return len(self.items)
-    
+
     def peek(self):
         if not self.isEmpty():
             print("Top:", self.items[-1])
             return self.items[-1]
         else:
             return "Empty stack."
-        
+
     def show(self):
         if not self.isEmpty():
             showList = []
@@ -39,6 +39,7 @@ class Stack:
             return showList
         else:
             return "Empty stack."
+
 
 """
 

@@ -1,4 +1,6 @@
-def matrMult(A, B): # Takes in 2 matrices as nested lists, returns the matrix multiplication of the given matrices, if possible.
+# Takes in 2 matrices as nested lists, returns the matrix multiplication of
+# the given matrices, if possible.
+def matrMult(A, B):
     # Get the dimensions of the matrices.
     rows_A, cols_A = len(A), len(A[0])
     rows_B, cols_B = len(B), len(B[0])
@@ -18,14 +20,15 @@ def matrMult(A, B): # Takes in 2 matrices as nested lists, returns the matrix mu
 
     return result
 
+
 """
 # Example usage:
-A = [[1, 2, 3, 4], 
+A = [[1, 2, 3, 4],
      [5, 6, 7, 8]]
 
-B = [[5,  6,   7], 
-     [8,  9,  10], 
-     [11, 12, 13], 
+B = [[5,  6,   7],
+     [8,  9,  10],
+     [11, 12, 13],
      [14, 15, 16]]
 
 print(matrMult(A, B))

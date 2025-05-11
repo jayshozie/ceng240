@@ -5,58 +5,64 @@ class ShoppingCart:
     def isEmpty(self):
         return len(self.items) == 0
 
-    def add(self, name, price, quantity): # Add item to cart with name, price, quantity as properties.
+    # Add item to cart with name, price, quantity as properties.
+    def add(self, name, price, quantity):
 
         count = 0
-        item = [name, price, quantity] # Create a tmp list using the properties given.
+        # Create a tmp list using the properties given.
+        item = [name, price, quantity]
 
-        for i in self.items: # Iterates through items already in the cart.
+        for i in self.items:  # Iterates through items already in the cart.
 
-            if item[0] == i[0]: # Checks if the item exists.
+            if item[0] == i[0]:  # Checks if the item exists.
 
-                i[2] += item[2] # Adds the given quantity to previous one.
+                i[2] += item[2]  # Adds the given quantity to previous one.
                 count += 1
                 break
 
-        if count == 0: # Adds item if it doesn't exist already.
+        if count == 0:  # Adds item if it doesn't exist already.
 
             self.items.append(item)
 
-    def remove(self, name, quantity): # Remove item with name and quantity as properties.
+    # Remove item with name and quantity as properties.
+    def remove(self, name, quantity):
 
-        if not self.isEmpty(): # Checks if the ccart is empty.
-
-            for item in self.items: # Iterates through the list to find the index.
+        if not self.isEmpty():  # Checks if the ccart is empty.
+            # Iterates through the list to find the index.
+            for item in self.items:
 
                 if (item[0] == name and
-                    item[2] > quantity):
+                        item[2] > quantity):
                     # Checks if the given quantity is less than the total in the list.
-                    item[2] -= quantity # Removes said amount of items.
+                    item[2] -= quantity  # Removes said amount of items.
                     break
 
                 elif item[0] == name and item[2] <= quantity:
-                    self.items.remove(item) # Removes the item completely. Error handling.
+                    # Removes the item completely. Error handling.
+                    self.items.remove(item)
                     break
 
         else:
             return "Cart empty."
 
-    def total(self): # Calculates the total of the shopping cart.
+    def total(self):  # Calculates the total of the shopping cart.
 
         total = 0
 
-        for item in self.items: # Iterates through all items.
-            total += item[1] * item[2] # Calculates the total using the price of one and the quantity in cart.
+        for item in self.items:  # Iterates through all items.
+            # Calculates the total using the price of one and the quantity in cart.
+            total += item[1] * item[2]
 
         return total
 
-    def show(self): # Shows what's in the cart.
+    def show(self):  # Shows what's in the cart.
 
-        if not self.isEmpty(): # Checks if empty.
-            return self.items # Returns cart as nested list.
-        
-        else: # Error handling.
+        if not self.isEmpty():  # Checks if empty.
+            return self.items  # Returns cart as nested list.
+
+        else:  # Error handling.
             return "Cart empty."
+
 
 """
 # Example Use:

@@ -1,12 +1,13 @@
-import math 
+import math
+
 
 class Shape:
     """
     A base class for geometric shapes.
-    This class provides a blueprint for creating shape objects and includes methods
-    to calculate the area, perimeter, and semi-perimeter of a shape. Subclasses
-    should override the `_CalcArea` and `_CalcPeri` methods to provide specific
-    implementations for different shapes.
+    This class provides a blueprint for creating shape objects and includes
+    methods to calculate the area, perimeter, and semi-perimeter of a shape.
+    Subclasses should override the `_CalcArea` and `_CalcPeri` methods to
+    provide specific implementations for different shapes.
 
     Methods:
     --------
@@ -24,14 +25,17 @@ class Shape:
 
     def _CalcArea(self):
         pass
+
     def _CalcPeri(self):
         pass
+
     def _CalcSemiPeri(self):
         return self._CalcPeri()/2
 
+
 class Circle(Shape):
     """
-    This class inherits from the `Shape` base class and provides 
+    This class inherits from the `Shape` base class and provides
     methods to calculate the area, arc length, and perimeter of
     the circle/sector object.
 
@@ -52,7 +56,8 @@ class Circle(Shape):
     TypeError
         If the radius or angle is not a numeric value.
     ValueError
-        If the radius is negative or the absolute value of the angle is not in the range (0, 2π].
+        If the radius is negative or the absolute value of the angle is not in
+        the range (0, 2π].
     """
 
     def __init__(self, radius, angle=(2*math.pi)):
@@ -65,23 +70,25 @@ class Circle(Shape):
             The radius of the circle or sector. Must be positive.
         angle : float , optional
             The angle of the sector in radians. (default 2*math.pi)
-        
+
         Raises
         --------
         TypeError
             If the radius or angle is not a numeric value.
         ValueError
-            If the radius is negative or the absolute value of the angle is not in the range (0, 2π].
+            If the radius is negative or the absolute value of the angle is not
+            in the range (0, 2π].
         """
 
         if not isinstance(radius, (int, float)) or not isinstance(angle, (int, float)):
             raise TypeError("Radius and angle must be numeric values.")
-        
+
         if (radius <= 0):
             raise ValueError("Radius must be positive.")
-        
+
         if (abs(angle) > 2*math.pi or abs(angle) == 0):
-            raise ValueError("The absolute value of the angle must be in the range (0, 2π].")
+            raise ValueError(
+                "The absolute value of the angle must be in the range (0, 2π].")
 
         self.radius = radius
         self.angle = angle
@@ -102,7 +109,7 @@ class Circle(Shape):
         --------
         float
             The area of the circle or sector.
-        
+
         Raises
         ------
         None
@@ -127,7 +134,7 @@ class Circle(Shape):
         None
         """
         return (abs(self.angle) * self.radius)
-    
+
     def _CalcPeri(self):
         """
         Calculates the perimeter of the circle/sector.
@@ -145,12 +152,13 @@ class Circle(Shape):
         ------
         None
         """
-    
-        if (abs(self.angle) == 2*math.pi): # Circle
+
+        if (abs(self.angle) == 2*math.pi):  # Circle
             return (abs(self.angle) * self.radius)
-        
-        else: # Sector
+
+        else:  # Sector
             return (abs((self.angle * self.radius)) + (2 * self.radius))
+
 
 """ Left here for future proofing.
         if self. radius != 0: # To check if it's a point or an object.
@@ -171,6 +179,7 @@ class Circle(Shape):
         else:
             return 0
 """
+
 
 class Triangle(Shape):
     """
@@ -203,7 +212,7 @@ class Triangle(Shape):
         The area of the triangle.
     peri : float
         The perimeter of the triangle.
-    
+
     Methods
     -------
     __init__(a=None, b=None, c=None, alpha=None, beta=None, gamma=None)
@@ -214,16 +223,16 @@ class Triangle(Shape):
     """
 
     INVALID_ARGS_MSG = (
-    "Invalid arguments: Please provide a valid combination of sides and angles.\n"
-    "Valid combinations are:\n"
-    "1. SSS: a, b, c (all three sides)\n"
-    "2. SAS: a, b, gamma (two sides and the included angle)\n"
-    "3. ASA: a, beta, gamma (one side and two adjacent angles)\n"
-    "4. AAS: a, alpha, beta (one side and two opposite angles)"
+        "Invalid arguments: Please provide a valid combination of sides and angles.\n"
+        "Valid combinations are:\n"
+        "1. SSS: a, b, c (all three sides)\n"
+        "2. SAS: a, b, gamma (two sides and the included angle)\n"
+        "3. ASA: a, beta, gamma (one side and two adjacent angles)\n"
+        "4. AAS: a, alpha, beta (one side and two opposite angles)"
     )
 
     INVALID_ANG_SUM = (
-    "Invalid triangle: The sum of the angles must be equal to π radians."
+        "Invalid triangle: The sum of the angles must be equal to π radians."
     )
 
     def __init__(self, a=None, b=None, c=None, alpha=None, beta=None, gamma=None):
@@ -258,7 +267,7 @@ class Triangle(Shape):
         ValueError
             If the provided attributes do not form a valid triangle.
         """
-        isASA, isAAS, isSAS, isHeron, isTri = False, False, False, False, False # Required bools for case checks.
+        isASA, isAAS, isSAS, isHeron, isTri = False, False, False, False, False  # Required bools for case checks.
 
         # Validate the triangle based on the given attributes
         if a is not None and b is not None and c is not None:  # Case SSS
@@ -268,16 +277,18 @@ class Triangle(Shape):
             alpha = (math.pi - beta - gamma)
 
             if not (a + b > c and a + c > b and b + c > a):
-                raise ValueError("Invalid triangle: The given side lengths do not satisfy the triangle inequality.")
-            
+                raise ValueError(
+                    "Invalid triangle: The given side lengths do not satisfy the triangle inequality.")
+
             isHeron = True
 
         elif a is not None and b is not None and gamma is not None:  # Case SAS
             # Calculating the unknown side.
             c = math.sqrt((a**2) + (b**2) - 2*(a*b)*math.cos(gamma))
-            
+
             if c == 0:
-                raise ValueError("Invalid triangle: The given side lengths results in c being 0.")
+                raise ValueError(
+                    "Invalid triangle: The given side lengths results in c being 0.")
 
             # Calculating the unknown angles.
             alpha = (math.sin(gamma)*(a/c))
@@ -285,7 +296,7 @@ class Triangle(Shape):
 
             if not (0 < gamma < math.pi):
                 raise ValueError(self.INVALID_ANG_SUM)
-            
+
             isSAS = True
 
         elif a is not None and beta is not None and gamma is not None:  # Case ASA
@@ -298,7 +309,7 @@ class Triangle(Shape):
 
             if not math.isclose(beta + gamma, math.pi - alpha, rel_tol=1e-9):
                 raise ValueError(self.INVALID_ANG_SUM)
-            
+
             isASA = True
 
         elif a is not None and alpha is not None and beta is not None:  # Case AAS
@@ -306,14 +317,16 @@ class Triangle(Shape):
             gamma = (math.pi - alpha - beta)
 
             if alpha == 0:
-                raise ValueError("Invalid triangle: The angle alpha must be greater than zero.")
+                raise ValueError(
+                    "Invalid triangle: The angle alpha must be greater than zero.")
 
             # Calculating the unknown side lengths.
             b = (a * (math.sin(beta)/math.sin(alpha)))
             c = (a * (math.sin(gamma)/math.sin(alpha)))
 
             if not math.isclose(alpha + beta + gamma, math.pi, rel_tol=1e-9):
-                raise ValueError("Invalid triangle: The sum of the angles must be equal to π radians.")
+                raise ValueError(
+                    "Invalid triangle: The sum of the angles must be equal to π radians.")
 
             isAAS = True
 
@@ -328,39 +341,44 @@ class Triangle(Shape):
 
         if isTri:
             # If validation passes, set the attributes.
-            self.a, self.b, self.c = a, b, c # Sides of the triangle.
-            self.alpha, self.beta, self.gamma = alpha, beta, gamma # Angles of the triangle.
+            self.a, self.b, self.c = a, b, c  # Sides of the triangle.
+            # Angles of the triangle.
+            self.alpha, self.beta, self.gamma = alpha, beta, gamma
 
             # Initialize other attirbutes.
-            #peri, semiperi, area = 0.0, 0.0, 0.0 # Perimeter, semiperimeter (used for Heron's Formula), and the area of the triangle.
-            #self.peri, self.semiperi, self.area = peri, semiperi, area # Properties of the triangle.
+            # peri, semiperi, area = 0.0, 0.0, 0.0 # Perimeter, semiperimeter (used for Heron's Formula), and the area of the triangle.
+            # self.peri, self.semiperi, self.area = peri, semiperi, area # Properties of the triangle.
 
             # Initialize bools of cases.
-            self.isASA, self.isAAS, self.isSAS, self.isHeron = isASA, isAAS, isSAS, isHeron # Case of triangle.
+            # Case of triangle.
+            self.isASA, self.isAAS, self.isSAS, self.isHeron = isASA, isAAS, isSAS, isHeron
 
-            self.isTri = isTri # Validity of the triangle.
+            self.isTri = isTri  # Validity of the triangle.
 
             self.peri = self._CalcPeri()
             self.semiperi = self._CalcSemiPeri()
 
-            if (self.isHeron == True): # Case Heron
-                self.area = math.sqrt(self.semiperi*(self.semiperi-self.a)*(self.semiperi-self.b)*(self.semiperi-self.c)) # Heron's Formula
-            
-            elif (self.isSAS == True): # Case SAS
+            if (self.isHeron is True):  # Case Heron
+                self.area = math.sqrt(self.semiperi*(self.semiperi-self.a)*(
+                    # Heron's Formula
+                    self.semiperi-self.b)*(self.semiperi-self.c))
+
+            elif (self.isSAS is True):  # Case SAS
                 self.area = ((0.5) * (self.a * self.b) * math.sin(self.gamma))
 
-            elif (self.isASA == True): # Case ASA
-                self.area = ((self.a**2)/2)*((math.sin(self.beta)*(math.sin(self.gamma)))/(math.sin(self.alpha)))
+            elif (self.isASA is True):  # Case ASA
+                self.area = ((self.a**2)/2)*((math.sin(self.beta)
+                                              * (math.sin(self.gamma)))/(math.sin(self.alpha)))
 
-            elif (self.isAAS == True): # Case AAS
-                self.area = ((self.a**2)/2)*((math.sin(self.beta)*(math.sin(self.alpha+self.beta)))/(math.sin(self.alpha)))
+            elif (self.isAAS is True):  # Case AAS
+                self.area = ((self.a**2)/2)*((math.sin(self.beta) *
+                                              (math.sin(self.alpha+self.beta)))/(math.sin(self.alpha)))
 
             else:
                 raise ValueError(self.INVALID_ARGS_MSG)
 
         else:
             raise ValueError(self.INVALID_ARGS_MSG)
-
 
     def _CalcPeri(self):
         """
@@ -385,6 +403,7 @@ class Triangle(Shape):
         else:
             raise ValueError(self.INVALID_ARGS_MSG)
 
+
 class Rectangle(Shape):
     def __init__(self, length, width):
         self.length = length
@@ -399,11 +418,11 @@ class Rectangle(Shape):
         return self.length+self.width
 
     def _CalcPeri(self):
-        return 2*self._CalcSemiPeri() # Semiperimeter of the rectangle
-    
-#tri = Triangle(3, b=None, c=None, alpha=math.pi/2, beta=math.pi/4)
-#print(tri.area)
-#print(tri.CalcArea())
+        return 2*self._CalcSemiPeri()  # Semiperimeter of the rectangle
 
-#tri = Triangle(3,b=None,c=None, alpha=math.pi/2, beta=math.pi/4)
-#print("%.4f" % tri.area)
+# tri = Triangle(3, b=None, c=None, alpha=math.pi/2, beta=math.pi/4)
+# print(tri.area)
+# print(tri.CalcArea())
+
+# tri = Triangle(3,b=None,c=None, alpha=math.pi/2, beta=math.pi/4)
+# print("%.4f" % tri.area)
