@@ -1,4 +1,6 @@
 # This is a Dijkstra's algorithm solution for CENG240 lab exam question
+# This is not an official solution, because Dijkstra's algorithm is not
+# covered in the course.
 # Write a function that takes in 2 arguments: a list of tuples of cities
 # and the distance between them, and a string of 2 cities.
 # The function should return the shortest distance between the two cities.
@@ -47,8 +49,14 @@ def shortest(routes, cities):
             if neighbor not in visited:
                 queue.append((neighbor, current_distance + distance))
 
-    return shortest_distance if shortest_distance != float('inf') else -1  # Return -1 if no path found
+    # Return -1 if no path found
+    return shortest_distance if shortest_distance != float('inf') else -1
+
 
 # Test cases
-print(shortest([('A', 'B', 1), ('B', 'C', 2), ('A', 'C', 2)], 'A-B'))  # Output: 1
-print(shortest([('A', 'B', 1), ('B', 'C', 2), ('A', 'C', 2)], 'A-C'))  # Output: 2
+
+# Output: 1
+print(shortest([('A', 'B', 1), ('B', 'C', 2), ('A', 'C', 2)], 'A-B'))
+
+# Output: 2
+print(shortest([('A', 'B', 1), ('B', 'C', 2), ('A', 'C', 2)], 'A-C'))
