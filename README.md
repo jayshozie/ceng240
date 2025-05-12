@@ -8,4 +8,4 @@ If you are a student in the same course, you can use this repo as a reference fo
 
 - **Course Name**: CENG240 - Programming with Python for Engineers
 - **Semester**: Spring 2024
-- **Course Page**: [CENG240](https://ceng240.github.io/)
+- **Course Page**: [CENG240](https://ceng240.github.io/www.ceng240.org)
