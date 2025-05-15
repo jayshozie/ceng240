@@ -52,3 +52,41 @@ Analyze the unusual data from the engineers. How many reports are safe?
 """
 
 
+# Not the most elegant way to do, I suppose; but, it works.
+def countSafe(reports):
+    count = 0
+    report = 1
+
+    while report <= 6:
+        tmp = []
+        for i in range(0, 5):
+            tmp.append(reports[0])
+            reports.pop(0)
+
+        innerCount = 0
+        condInc, condDec = False, False
+        if tmp[0] < tmp[1] < tmp[2] < tmp[3] < tmp[4]:
+            condInc = True
+        elif tmp[0] > tmp[1] > tmp[2] > tmp[3] > tmp[4]:
+            condDec = True
+
+        if condInc or condDec:
+            for i in range(len(tmp)-1):
+                if 1 <= abs(tmp[i] - tmp[i+1]) <= 3:
+                    innerCount += 1
+        if innerCount == 4:
+            count += 1
+
+        tmp.clear()
+        report += 1
+
+    return count
+
+
+# Example usage
+print(countSafe([7, 6, 4, 2, 1,
+                 1, 2, 7, 8, 9,
+                 9, 7, 6, 2, 1,
+                 1, 3, 2, 4, 5,
+                 8, 6, 4, 4, 1,
+                 1, 3, 6, 7, 9]))
