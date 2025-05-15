@@ -1,5 +1,5 @@
 # 0 <= day <= 30
-class WeekBill:
+class WeekBill: # My version
     def __init__(self, prc):
         self.consumptions = [0] * 31
         self.price = prc
@@ -30,6 +30,53 @@ class WeekBill:
         # total = totalcons * price - discount
         # Return : {'totalcons': totalcons, 'weekendcons': weekendcons, 'discount': discount, 'total': total}
 
+
+"""
+Claude.ai's Version for reference:
+
+class WeekBill:
+    def __init__(self, prc):
+        self.consumptions = [0] * 31
+        self.price = prc
+
+    def consume(self, day, amnt):
+        self.consumptions[day] += amnt
+
+    def bill(self):
+        # This method should calculate the total consumption, weekend
+        #   consumption, discount, and total bill.
+        # The discount is 20% for weekends.
+        # The total bill is the total consumption minus the discount.
+        # Return the answer as a dictionary like this:
+        # {'totalcons': totalcons, 'weekendcons': weekendcons, 'discount': discount, 'total': total}
+
+        # Initialize variables
+        totalcons = 0
+        weekendcons = 0
+
+        # Calculate total consumption and weekend consumption
+        for day in range(len(self.consumptions)):
+            totalcons += self.consumptions[day]
+
+            # Check if the day is a weekend (Saturday or Sunday)
+            # In a month, days 6, 7, 13, 14, 20, 21, 27, 28 are weekends
+            if day % 7 == 5 or day % 7 == 6:  # 0-indexed, so 5 is Saturday, 6 is Sunday
+                weekendcons += self.consumptions[day]
+
+        # Calculate discount (20% of weekend consumption)
+        discount = weekendcons * self.price * 0.2
+
+        # Calculate total bill
+        total = totalcons * self.price - discount
+
+        # Return result as a dictionary
+        return {
+            'totalcons': totalcons,
+            'weekendcons': weekendcons,
+            'discount': discount,
+            'total': total
+        }
+"""
 
 # Examples are provided by Claude.ai.
 
