@@ -49,6 +49,7 @@ as long as I can.
 # Course Info
 
 - Course Name: CENG240 - Python Programming for Engineering Students
+- Course Website: [CENG240](https://ceng240.github.io)
 - Semester Taken: Spring 2024
 - Book: [Python Programming for Engineering Students](https://pp4e.online/book.html)
 
