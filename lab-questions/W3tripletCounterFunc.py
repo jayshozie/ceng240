@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Please see the LICENSE file for more details.
+
 """
 A triplet is 3 numbers in row that satisfies these 3 conditions:
 1. The first number is less than the second number.

@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Please see the LICENSE file for more details.
+
 import functools, time
 
 def slowDown(_func=None, *, rate=1): # Decorator. Takes in rate=float(sec), makes the function wait before each execution. (Default rate = 1)

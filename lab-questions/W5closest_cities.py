@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Please see the LICENSE file for more details.
+
 # This is a Dijkstra's algorithm solution for CENG240 lab exam question
 # Write a function that takes in 2 arguments: a list of tuples of cities
 # and the distance between them, and a string of 2 cities.

@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Please see the LICENSE file for more details.
+
 def man(p1,p2):
     return abs(p1[1]-p2[1]) + abs(p1[0]-p2[0])
 
