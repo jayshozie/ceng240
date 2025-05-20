@@ -4,7 +4,7 @@ I didn't keep track of week 1 and week 2.
 
 # What about week 6?
 
-Check [the announcement](ANNOUNCEMENT.md).
+Check [the announcement](./ANNOUNCEMENT.md).
 
 # What will happen now?
 
