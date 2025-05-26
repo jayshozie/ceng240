@@ -3,6 +3,12 @@
 This is an archive of my CENG240 course materials, including lab exam
 questions, answers to those exams, and other relevant resources.
 
+## **DISCLAIMER**
+
+**This is NOT an official repository of the CENG240 course given at METU. This
+is only a personal archive for future references, and made public to contribute
+to open-source community.**
+
 ## Usage
 
 1. You can clone this repository to your local machine using the following
