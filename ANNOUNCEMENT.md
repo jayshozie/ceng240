@@ -7,7 +7,7 @@ still accessible in the history, thus complete removal of the repository.
 # Couldn't you just change the history of the repository?
 
 Yeah, about that. Please check
-[How did you manage to delete the files?](#how-did-you-manage-to-delete-the-files?)
+[How did you manage to delete the files?](#how-did-you-manage-to-delete-the-files)
 section lol.
 
 # What is going to happen?
