@@ -5,8 +5,10 @@ Copyright (c) 2025 Emir Baha Yıldırım
 This license is only applied to the files that are explicitly declared that
 they are licensed. Every other file that are not explicitly declared as
 licensed are not under this license. For any licensing issues in the
-repository, consult the hyperlink
-[Reaching About Copyright Issues](./README.md#reaching-about-copyright-issues).
+repository, consult the 
+[Reaching About Copyright Issues](./README.md#reaching-about-copyright-issues)
+section located in [README.md](./README.md) file located in the root of the
+repository.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
