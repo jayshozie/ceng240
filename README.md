@@ -10,10 +10,20 @@ command if you have Git installed:
 ```bash
 git clone https://github.com/jayshozie/ceng240.git
 ```
+To clone this repo to your local machine, please create a folder in your home
+directory (or anywhere you want) and then go into that directory and run that
+command.
+
+E.g.:
+```bash
+~/ $ mkdir ceng240
+~/ $ cd ceng240
+~/ceng240 $ git clone https://github.com/jayshozie/ceng240.git
+```
 
 2. If you don't have Git installed, or you prefer to download the files then
-you can download the ZIP file from the repository page and extract it to your
-desired location.
+you can download the ZIP file from the repository page, clicking the `Download`
+button, and extract it to your desired location.
 
 3. You can download individual files by opening them and then clicking
 the `Download` button. Please note that each file in this repository is
