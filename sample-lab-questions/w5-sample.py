@@ -54,6 +54,10 @@ def process_transacions(transactions, lower_bound, upper_bound):
     return [low, mid, high]
 
 
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Every line after this notice is licensed with MIT License with the name
+# provided in the LICENSE file. Please see the LICENSE file for more details.
 """
 I don't have much to say about this problem, since it's so easy, the answer
 is pretty straightforward.

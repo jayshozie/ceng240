@@ -87,6 +87,10 @@ def check_list(NamesOfChemicals, XFactorList, YFactorList, ZFactorList):
     return main_list
 
 
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Every line after this notice is licensed with MIT License with the name
+# provided in the LICENSE file. Please see the LICENSE file for more details.
 """
 This solution is good, but it could be easier to read and replicate.
 """

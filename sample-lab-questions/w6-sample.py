@@ -65,3 +65,12 @@ print("Updated List:", custom_list)  # Output: Updated List: [5, 10, 'hello']
 sum_result = custom_list.sum_elements()
 print("Sum of numeric elements:", sum_result)
 # Output: Sum of numeric elements: 15
+
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Every line after this notice is licensed with MIT License with the name
+# provided in the LICENSE file. Please see the LICENSE file for more details.
+"""
+I don't have an issue with this solution, I'll check in the future whether it
+can be improved.
+"""

@@ -41,6 +41,10 @@ W=float(input())
 A=L*W*0.001
 print("{:.2f}".format(A))
 
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Every line after this notice is licensed with MIT License with the name
+# provided in the LICENSE file. Please see the LICENSE file for more details.
 """
 I hate this solution. As if it was designed to confuse people who just started
 coding.

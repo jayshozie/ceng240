@@ -36,12 +36,13 @@ have the original license and copyright notice.
 ## License
 
 This repository and all files in it, except the [slides](slides/) folder and
-it's contents, are licensed under the [MIT License](LICENSE). 
-You are free to use, modify, and distribute the licensed files in this
-repository as long as you include the original license and copyright notice.
-However, please note that the book is copyrighted and cannot be distributed
-without explicit permission from the authors. So, don't add it into your forks,
-pull requests, or anywhere else.
+it's contents and the YouTube video links provided in the
+[supplementary-videos.txt](supplementary-videos.txt) file, are licensed under
+the [MIT License](LICENSE). You are free to use, modify, and distribute the
+licensed files in this repository as long as you include the original license
+and copyright notice. However, please note that the book is copyrighted and
+cannot be distributed without explicit permission from the authors. So, don't
+add it into your forks, pull requests, or anywhere else.
 
 ## Reaching About Copyright Issues
 

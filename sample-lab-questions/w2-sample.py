@@ -106,6 +106,10 @@ else:
 total = base_price*usage
 print("%.2f" % total)
 
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Every line after this notice is licensed with MIT License with the name
+# provided in the LICENSE file. Please see the LICENSE file for more details.
 """
 This solution is a wee bit better than the first week sample questions'
 solutions; it still has room for improvement.

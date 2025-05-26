@@ -73,6 +73,10 @@ for i in range(len(entry_prices)-1):
 total_money = total_ticket_prices * entry_prices[-1]
 print(total_money)
 
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Every line after this notice is licensed with MIT License with the name
+# provided in the LICENSE file. Please see the LICENSE file for more details.
 """
 Again, technically this solution is alright, but we can make it easier to
 understand.
