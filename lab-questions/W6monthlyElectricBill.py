@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Please see the LICENSE file for more details.
+
 """
 So, here is the thing. I don't remember this question entirely.
 How, you ask? Please check the ANNOUNCEMENT.md in the root of the repo.
