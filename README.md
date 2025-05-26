@@ -35,14 +35,28 @@ have the original license and copyright notice.
 
 ## License
 
-This repository and all files in it, except the [slides](slides/) folder and
-it's contents and the YouTube video links provided in the
-[supplementary-videos.txt](supplementary-videos.txt) file, are licensed under
-the [MIT License](LICENSE). You are free to use, modify, and distribute the
+This repository and all files, except the exceptions that are explained
+in the [LICENSE.md](LICENSE.md) file, in it are licensed under the
+[MIT License](LICENSE.md). You are free to use, modify, and distribute the
 licensed files in this repository as long as you include the original license
 and copyright notice. However, please note that the book is copyrighted and
 cannot be distributed without explicit permission from the authors. So, don't
 add it into your forks, pull requests, or anywhere else.
+
+- NOT LEGAL ADVICE BUT ONLY AN EASY-TO-UNDERSTAND GUIDE:
+    - If a file has no other lines before the licensing declaration, then that
+    entire file is licensed by the author of [LICENSE.md](LICENSE.md), and is
+    available as open-source code for all to use.
+    - Some exceptions:
+        - In some files the licensing declaration explicitly states that the
+        lines after the licensing declaration are licensed. This means that the
+        file itself is NOT licensed, only the lines after that declaration is
+        licensed by the author and available as open-source code. Lines before
+        that licensing declaration are NOT licensed by the author, and should
+        not be copied without explicit permission from the authors.
+        - If a file does NOT include the licensing declaration of the author of
+        [LICENSE.md](LICENSE.md) it is NOT licensed by the author. Do NOT copy
+        without explicit permissions from their authors.
 
 ## Reaching About Copyright Issues
 
