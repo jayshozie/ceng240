@@ -112,7 +112,31 @@ def movie_func(file_str, director_str, star_str, genre_str):
 # Every line after this notice is licensed with MIT License with the name
 # provided in the LICENSE file. Please see the LICENSE file for more details.
 """
-Weirdly, I don't have an issue with this solution. It's pretty straight forward
-and easy to understand. To the senior ceng student who wrote this question,
-thank you for your service.
+Weirdly, I don't have an issue with this solution except one thing. It's pretty
+straight forward and easy to understand. To the senior ceng student who wrote
+this question, thank you for your service.
+
+My only problem is that the answer never actually closes the file.
 """
+
+# My Solution
+
+
+def my_movie_func(fileStr, directorStr, starStr, genreStr):
+    with open(fileStr, 'r') as f:
+        lines = f.readlines()
+        retMovies = []
+
+        for line in lines:
+            args = line.strip().split('|')
+
+            if (directorStr == args[4] or
+                    starStr == args[5] or
+                    starStr == args[6]):
+                genres = args[2].split(',')
+
+                for genre in genres:
+                    if genreStr == genre:
+                        retMovies.append(args[0])
+
+    return retMovies
