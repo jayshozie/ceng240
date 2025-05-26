@@ -15,13 +15,13 @@ directory (or anywhere you want) and then go into that directory and run that
 command.
 
 ### Bash
-```bash session
+```console
 foo@bar:~$ mkdir ceng240
 foo@bar:~$ cd ceng240
 foo@bar:~/ceng240$ git clone https://github.com/jayshozie/ceng240.git
 ```
 ### Command Prompt
-```bash session
+```console
 C:\Users\foo\Desktop> mkdir ceng240
 C:\Users\foo\Desktop> cd ceng240
 C:\Users\foo\Desktop\ceng240> git clone https://github.com/jayshozie/ceng240.git
