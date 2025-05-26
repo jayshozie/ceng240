@@ -46,12 +46,14 @@ add it into your forks, pull requests, or anywhere else.
 - NOT LEGAL ADVICE BUT ONLY AN EASY-TO-UNDERSTAND GUIDE:
     - If a file has no other lines before the licensing declaration, then that
     entire file is licensed by the author of [LICENSE.md](LICENSE.md), and is
-    available as open-source code for all to use.
+    available as open-source code for all to use with the conditions specified
+    in the [LICENSE.md](LICENSE.md) file.
     - Some exceptions:
         - In some files the licensing declaration explicitly states that the
         lines after the licensing declaration are licensed. This means that the
         file itself is NOT licensed, only the lines after that declaration is
-        licensed by the author and available as open-source code. Lines before
+        licensed by the author and available as open-source code with the
+        conditions specified in the [LICENSE.md](LICENSE.md) file. Lines before
         that licensing declaration are NOT licensed by the author, and should
         not be copied without explicit permission from the authors.
         - If a file does NOT include the licensing declaration of the author of
