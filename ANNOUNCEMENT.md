@@ -6,17 +6,18 @@ still accessible in the history, thus complete removal of the repository.
 
 # Couldn't you just change the history of the repository?
 
-Yeah, about that. Please check 'How did you manage to delete the files?'
+Yeah, about that. Please check
+[How did you manage to delete the files?](#how-did-you-manage-to-delete-the-files?)
 section lol.
 
 # What is going to happen?
 
-Hopefully, I'll rebuild the repository without adding the book.
+Hopefully, I'll rebuild the repository without ever including the book.
 
 # How?
 
 I have an old copy of these files, but they are pretty outdated. It's going to
-take some time to get it back to its feet. I'll need help from you guys.
+take some time to get it back to its feet. I'll need help from you.
 
 # How did you manage to delete the files?
 
