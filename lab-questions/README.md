@@ -2,7 +2,7 @@
 
 I didn't keep track of week 1 and 2.
 
-# What about week 6?
+# What about other weeks?
 
 Check the [announcement](/ANNOUNCEMENT.md).
 
