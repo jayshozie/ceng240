@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Please see the LICENSE file for more details.
+
 # Part A
 with open("sample_text.txt", 'r') as sample:
     # First Memory-Inefficient Way:

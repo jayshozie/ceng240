@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Please see the LICENSE file for more details.
+
 # Solution
 
 # This solution is basically error handling fetish.

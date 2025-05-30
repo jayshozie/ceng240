@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2025 Emir Baha Yıldırım
+# Please see the LICENSE file for more details.
+
 with open("test_file.txt", "r") as test_file:
     print("--- Entire file content as a single string ---")
     all_content = test_file.read()
