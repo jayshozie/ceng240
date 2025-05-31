@@ -64,15 +64,15 @@ the tutorial I've told you about in the previous subsection.
 
 I use this line of questioning.
 
-Do I know what I'm doing, or what I should do?
+Do you know how to implement your idea?
 
-1. Yes:
+1. Yes: Do you know how to implement your idea?
 
-    1. Yes: Use it.
-    2. No: Search for it in the documentation. Did I find what I'm looking for?
+    1. Yes: Do it.
+    2. No: Search it in the docs. Did you find what you're looking for?
 
         1. Yes: Use it.
-        2. No: Search for it on the Internet. Did I find what I'm looking for
+        2. No: Search it on the Internet. Did you find what you're looking for
             in sites like [stackoverflow](https://stackoverflow.com) or any
             issue opened on a [GitHub](https://github.com) repository?
 
@@ -82,7 +82,7 @@ Do I know what I'm doing, or what I should do?
 
 2. No:
 
-    1. Search in stackoverflow directly. Did I find what I'm looking for?
+    1. Search in stackoverflow directly. Did you find what you're looking for?
         
         1. Yes: UNDERSTAND IT, then use it.
         2. No: Open up a question on stackoverflow.
@@ -90,7 +90,10 @@ Do I know what I'm doing, or what I should do?
 As a general guide, if you have no idea what to even search for, use a large
 language model (LLM) (commonly known as AI chatbots). Ask the question to that
 bot, it will probably understand a general idea of what you mean. It will help
-you to understand what to search for.
+you to understand what to search for; and as a personal advice, don't make them
+do the coding for you. That won't help you even a tiny bit. Explicitly state to
+the chatbot that you only want the idea explained, not coded. This way will be
+of great help to your coding journey.
 
 -------------------------------------------------------------------------------
 
