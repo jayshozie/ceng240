@@ -250,6 +250,7 @@ thing indefinitely.
 <details>
     <summary>Other Components</summary>
 
+
 Now that we know how a computer works at the very deep, we need to learn some
 other components that helps us using a computer.
 
