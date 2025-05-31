@@ -7,8 +7,6 @@ also will explain you what they mean. Sorry in advance.
 
 # Computers
 
--------------------------------------------------------------------------------
-
 ## What is a computer?
 
 A computer is an electronic object that can do some sort of calculation. This
@@ -28,8 +26,13 @@ complicated, every modern computer is a Turing machine on steroids.
 
 ## Components of a Computer
 
-There are multiple cruical components of a computer, namely the CPU, RAM, and
-storage.
+There are multiple cruical components of a computer, namely the motherboard,
+power supply unit (PSU) central-processing unit (CPU), memory (a.k.a.
+random-access memory, RAM), graphics processing unit (GPU), storage devices,
+and peripherals.
+
+Before diving into the components, you need to learn how a computer works. We
+will start with the CPU, then get to the bigger picture.
 
 ### The von Neumann (Princeton) Architecture
 
@@ -148,6 +151,9 @@ of the von Neumann architecture, say the CPU and the memory.
 
 -------------------------------------------------------------------------------
 
+<details>
+    <summary>Some Proprietary Stuff</summary>
+
 #### Instructions
 
 Instructions are how the user interacts with the CPU. Here is an example:
@@ -246,6 +252,7 @@ the ALU.
 Your cycle is finished, now do it again. If you read it one more time you'll
 see how this self-corrects the registers and you can continue doing the same
 thing indefinitely.
+<details>
 
 <details>
     <summary>Other Components</summary>
@@ -543,4 +550,11 @@ capability to actually change some students' mind about CS.
 </details>
 
 -------------------------------------------------------------------------------
+
+### Operating
+
+
+
+
+
 
