@@ -11,22 +11,22 @@ also will explain you what they mean. Sorry in advance.
 
 A computer is an electronic object that can do some sort of calculation. This
 may sound like a calculator, but guess what? The very thing you're reading this
-on is an extremely over-powered calculator, and it can only do addition. If you
-would like to learn even more deeper stuff like how does a computer do
-subtraction with addition, visit my
+on is an extremely overpowered calculator, and it can only do addition. If you
+would like to learn even deeper stuff like how does a computer do subtraction
+with addition, visit my
 [cs-studies](https://github.com/jayshozie/cs-studies) repository. Generally,
 Alan Turing is the accepted father of the computer. He's the inventor of the
 Turing machine, which is a theoretical machine that manipulates a tape with
 infinite 0s and 1s on it. This machine is a complete equivalent of the machine
 you're reading this right now. It can do whatever a modern computer can,
-because that is exactly what your machine is doing right now. Even though more
+because that is exactly what your machine is doing right now. Although more
 complicated, every modern computer is a Turing machine on steroids.
 
 -------------------------------------------------------------------------------
 
 ## Components of a Computer
 
-There are multiple cruical components of a computer, namely the motherboard,
+There are multiple crucial components of a computer, namely the motherboard,
 power supply unit (PSU) central-processing unit (CPU), memory (a.k.a.
 random-access memory, RAM), graphics processing unit (GPU), storage devices,
 and peripherals.
@@ -39,7 +39,7 @@ will start with the CPU, then get to the bigger picture.
 This is the blueprint of the great-great grandpa of your computer. It has 2
 parts: the CPU and the memory. The main difference between the Princeton
 architecture and the Harvard architecture is that in the Princeton architecture
-both the instructions and the value are stored in the same memory. In Harvard
+both the instructions and the values are stored in the same memory. In Harvard
 architecture, however, there are 2 separate memories, where one holds the
 instructions and the other holds the values that are needed on runtime.
 
@@ -58,18 +58,18 @@ The central-processing unit, or abbreviated as CPU, is the brain of the
 computer. It's the component that handles all of the computation. It starts as
 soon as you start your computer and it executes instruction after instruction.
 Modern computers are way more complex than what von Neumann designed, but the
-idea stays the same. It itself has multiple parts. The arithmetic logic unit,
-and processor registers are located here.
+idea stays the same. It is composed of multiple parts. The arithmetic logic
+unit, and processor registers are located here.
 
 ##### Register & Cache
 
-These are spots on a CPU that holds some values. The reason why these exist
-and why the CPU doesn't just store them in the memory is the speed difference.
-In modern computers there are 4 ways we can store data (from fastest to
-slowest): registers, cache, RAMs, HDDs. If you read this from last to
-first now you have the list from highest storage to lowest. Actually, assigning
-speed to registers is a bit of misleading, because since that's where the CPU
-is doing its calculations, its speed is the speed of the CPU itself.
+These are spots on a CPU that hold some values. The reason why these exist and
+why the CPU doesn't just store them in the memory is the speed difference. In
+modern computers there are 4 ways we can store data (from fastest to slowest):
+registers, cache, RAMs, HDDs. If you read this from last to first now you have
+the list from highest storage to lowest. Assigning a separate speed to
+registers is a bit misleading, as they operate at the native speed of the CPU's
+clock cycles, being integral to its calculations.
 
 Registers are the fastest way CPU accesses data, because it is the CPU itself.
 It takes 1 clock cycle, because at every clock cycle register values change.
@@ -90,25 +90,24 @@ These clock speeds may be a little misleading, though. Your machine probably
 has a CPU that has a clock speed way above 1.0GHz. 1.0GHz mean that every
 single second your CPU's clock ticks more than a billion times.
 
-Now that we got how fricking fast these machines are, let's get to how they do
-arithmetic and logic.
+Now that we understand how unbelievably fast these machines are, let's get to
+how they do arithmetical and logical calculations.
 
 ##### Arithmetic-Logic Unit (ALU)
 
 This is the part of the CPU that handles all of arithmetic and logical
 calculations. This is the place where 1+1 equals 10. A weird world, surely.
-ALU has a lot of electrical logic gates (e.g.: AND, OR), which is connected so
-that it can do computations and process instructions.
+ALU has a lot of electrical logic gates (e.g.: AND, OR), which are connected to
+perform computations and process instructions.
 
 P.S.: 10 is the binary representation of the decimal number 2.
 
 #### Control Unit
 
-This is the part of the CPU that handles the
-reading-and-writing-values-to-the-memory-part. It has an instruction register,
-which holds the memory address of the current instruction being executed and
-the program counter (PC) which holds the memory address of the next instruction
-to be fetched.
+This is the part of the CPU that handles the reading and writing values to the
+memory part. It has an instruction register, which holds the memory address of
+the current instruction being executed and the program counter (PC) which holds
+the memory address of the next instruction to be fetched.
 
 #### Random Access Memory (RAM)
 
@@ -138,7 +137,7 @@ each platter.
 
 ##### Solid State Drives (SSDs)
 
-A solid-state drive (SSD) is a type of solid-state storage device that use
+A solid-state drive (SSD) is a type of solid-state storage device that uses
 integrated circuits to store data persistently
 [Solid-state drive](https://en.wikipedia.org/wiki/Solid-state_drive). This is
 a bit of a technical definition, I think the best way to understand is to
@@ -214,18 +213,18 @@ First we need to find where the instruction is located, that's stored in the
 program counter (PC). We copy that address to the memory address register
 (MAR), because we need to empty the program counter at some point.
 
-Now we need to to change the value stored in the PC, so that we know which
+Now the value stored in the PC needs to be changed, so that we know which
 instruction to execute next, since that's the reason PC exists in the first
 place.
 
 Now, we find the address described by the MAR in the memory, and copy that
 instruction into memory data register (MDR), so we know what to do.
 
-Then we copy that to the current instruction register (CIR) so we can decode
-and execute it.
+Then the instruction from the MMDr is copied to the current instruction
+register (CIR, a.k.a. instruction register (IR)) for decoding and execution.
 
-Now, the control unit starts to decode the instruction located in CIR, so that
-we understand the thing we're going to do.
+The Control Unit then begins to decode the instructions in the CIr,
+interpreting the thing we're going to do.
 
 After the decode, CU sends signals to relevant components in the CPU such as
 the ALU.
@@ -242,9 +241,10 @@ thing indefinitely.
 
 #### Instructions
 
-Instructions are how the user interacts with the CPU. Here is an example:
-(This is not how we actually, well, there are some people who has to code like
-this, but that's not what we're going to do.)
+Instructions are how the user interacts with the CPU. They are the fundamental
+commands that software (programs) uses to interact with the CPU. Here is an
+example: (This is not how we actually, well, there are some people who has to
+code like this, but that's not what we're going to do.)
 
 ##### Machine Code (Binary)
 100000111100001100001010
@@ -254,8 +254,7 @@ this, but that's not what we're going to do.)
 ##### Assembly (x86_64)
 add ebx, 10
 
-All of these mean exactly the same thing, add the value 10 to the ebx memory
-location.
+All of these mean exactly the same thing, add the value 10 to the ebx register.
 
 </details>
 
@@ -359,12 +358,12 @@ to know more.
 ### BIOS (Basic Input-Output System) is loaded.
 
 Before BIOS is loaded, the computer needs a Power Good signal from the
-power supply unit (PSU), which ensures the rest of the system the
-electricity that is connected to the system is stable. After that signal
-the motherboard starts the CPU, and tests its very basic capabilities.
-These tests include very basic functionality like basic arithmetic. CPU
-then loads Basic Input-Output System (BIOS) into the system memory.
-BIOS takes control of the system for the time being.
+power supply unit (PSU), which ensures the rest of the system that the
+electricity connected to is stable. After that signal the motherboard starts
+the CPU, and tests its very basic capabilities. These tests include very basic
+functionality like basic arithmetic. The CPU then begins executing instructions
+from the BIOS firmware directly from the ROM chip on the motherboard. BIOS takes
+control of the system for the time being.
 
 ### POST (Power-On Self-Test) is performed.
 
@@ -383,8 +382,10 @@ OS, then it tries to find its Master Boot Record (MBR) and loads it into
 the system memory.
 
 Master Boot Record (MBR) of a disk contains a table and code piece for
-loading the OS on that disk. There may be multiple in a single disk, if
-that disk has more than one bootable operating systems.
+loading the OS on that disk. The MBR contains a small executable program
+(bootstrap code) and a partition table that points to an active partition. If a
+disk has multiple bootable operating systems, a more advanced bootloader (often
+residing in the Volume Boot Record of a partition) is used ot manage selection.
 
 ### MBR is Executed to load the OS.
 
@@ -392,19 +393,15 @@ BIOS executes MBR, and gives control of the system to
 it. MBR then tries to find the rest of the OS, and if it does it loads it
 into the system memory and gives control of the system to the OS.
 
-NOTE: I have no idea what do they mean by executing the MBR, it is a list
-of important stuff about the operating system and its components on
-that disk and where they are located.
-
 ### BIOS and MBR are extended by
 
 - Unified Extensible Firmware Interface (UEFI)
 - GPT (GUID Partition Table)
 
-NOTE: Those two points are literally the only thing under that section in
-slides, and I have no idea what are they trying to tell by extending. For a
-better and more in-depth explanation of the start-up processes of a
-computer, please check the More Detailed Way dropdown.
+Note: UEFI and GPT represent modern advancements over the traditional BIOS/MBR
+system, offering enhanced boot capabilities and disk partitioning schemes.
+For a more detailed explanation, refer to the More Detailed Way section.
+
 </details>
 
 <details>
@@ -551,15 +548,232 @@ environment, which includes:
 This is way more than what you need to pass this course, but I believe seeing
 how many things happen in about 3-10 seconds when you turn-on your computer
 makes everything that much more impressive, and I believe this has the
-capability to actually change some students' mind about CS.
+capability to actually change some students' minds about CS as a career.
 </details>
 
 -------------------------------------------------------------------------------
 
-### Operating
+## Operating Systems (OSs)
 
+### What is an operating system (OS)?
 
+An operating system (OS) serves as the fundamental layer of software that
+manages computer hardware and software resources, providing common services for
+computer programs. It acts as an intermediary between the hardware and the
+applications, abstracting the complexities of the underlying hardware and
+presenting a consistent, high-level interface to application software and
+users. Its primary objectives include managing system resources, facilitating
+program execution, ensuring system security, and providing a stable environment
+for all operations.
 
+<details>
+    <summary>CENG240 Way</summary>
 
+The operating system (OS) handles a number of processes.
 
+- Memory Management
+- Process Management
+- Device Management
+- File Management
+- Security
+- User Interface
 
+Note: That's literally the only information about an operating system in the
+official slides. If you want to learn how an operating system works, please
+check the More Detailed Way dropdown.
+</details>
+
+<details>
+    <summary>More Detailed Way</summary>
+
+### The Kernel
+
+The kernel is the core of the operating system, resident in memory. It holds
+complete control over everything in the system and operates in a special
+protected mode (kernel mode or supervisor mode), granting it direct access to
+all hardware resources. Its primary responsibilities are;
+
+1. **Process Management**
+
+    - **Process Scheduling:** Manages the allocation of CPU time to various
+    processes. This involves complex algorithms (e.g., First-Come, First-Served
+    (FCFS), Shortest Job First (SJF), Priority Scheduling, Round Robin,
+    Multilevel Feedback Queue) to determine which process runs at what time,
+    aiming to optimize system throughput, turnaround time, waiting time, and
+    response time.
+
+    - **Process Control Block (PCB):** For each process, the kernel maintains a
+    data structure called a PCB, which stores crucial information such as
+    process state (running, waiting, ready), program counter, CPU registers,
+    memory management information, I/O status information, and accounting
+    information.
+
+    - **Context Switching:** The mechanism by which the CPU saves the state of
+    the current process and loads the savved state of another process, allowing
+    multiple process to share the CPU.
+
+    - **Inter-Process Communication (IPC):** Provides mechanisms (e.g., pipes,
+    message queues, shared memory, semaphores, mutexes) for processes to
+    communicate and synchronize their activities, preventing race conditions
+    and deadlocks.
+
+    - **Threads:** Supports the creation and management of threads, which are
+    lightweight units of execution within a process, allowing for concurrent
+    execution within a single program.
+
+2. **Memory Management**
+
+    - **Virtual Memory:** A technique that allows processos to use more memory
+    than physically available. It provides an illusion of a large, contiguous
+    address space by mapping virtual addresses to physical addresses, primarily
+    using disk space as an extension of RAM.
+        - **Paging:** Divides memory into fixed-size blocks called "pages" (for
+        virtual memory) and "frames" (for physical memory). This allows
+        non-contiguous allocation of memory to processes.
+        - **Segmentation:** Divides memory into variable-sized logical units
+        called "segments", which correspond to logical divisions of a program
+        *e.g., code, data, stack).
+        - **Swapping:** The process of temporarily moving a process (or parts
+        of it) from main memory to secondary storage (swap space on disk) and
+        back to allow more processes to run than can fit in physical memory.
+
+    - **Memory Allocation/Deallocation:** Manages the allocation and
+    deallocation of memory spacee to processes and applications dynamically.
+
+    - **Memory Protection:** Implements mechanisms *e.g., base and limit
+    registers, segmentation, paging) to ensure that processes cannot access
+    memory regions belonging to other processes or the OS itself, maintaining
+    system stability and security.
+
+3. **Storage Management (File System Management)**
+
+    - **File System:** Organizes data on stareg devices (hard drives, SSDs, USB
+    drives) into files and directories (folders for Windows users). It provides
+    a logical vie of data storage, abstracting the physical block-level
+    storage.
+
+    - **File Allocation Methods:** Determines how files are stored on disk
+    (e.g., contiguous allocation, linked allocation, indexed allocation).
+
+    - **Directory Structure:** Manages the hierarchical organization of files,
+    allowing for easy navigation and management (e.g., tree-structured
+    directories).
+
+    - **Disk Scheduling:** Optimizes the movement of the disk's read/write
+    heads (on hard disk drives) to reduce seek time and improve I/O performance
+    (e.g., FCFS, SSTF, SCAN, C-SCAN).
+
+    - **Data Buffering and Caching:** Uses main memory as a buffer and cache
+    for disk I/O operations to improve performance by reducing the number of
+    direct disk accesses.
+
+4. **Device Management (I/O Management)**
+
+    - **Device Drivers:** Specialized software modules that act as
+    intermediaries between the operating system's kernel and specific hardware
+    devices (e.g., printers, network cards, graphics cards, USB devices). They
+    translate OS requests into hardware-specific commands and handle hardware
+    interurpts.
+
+    - **I/O Control:** Manages input and output operations to and from devices,
+    ensuring efficient and error-free data transfer.
+
+    - **Buffering and Spooling:** Uses memory buffers to temporarily hold data
+    during I/O operations. Spooling (Simultaneous Peripheral Operations
+    On-Line) is a technique for buffering data for slower devices like
+    printers, allowing the CPU to proceed with other tasks.
+
+5. **Security and Protection**
+
+    - **Authentication and Authorization:** Verifies user identities
+    (authentication) and determines what resources users or processes are
+    allowed to access (authorization) through mechanisms like passwords,
+    biometric data, and access control lists (ACLs).
+
+    - **Privilege Levels:** Enforces distinct modes of operation (kernel mode
+    for the OS, user mode for applications) to protect critical system
+    resources from unauthorized access or malicious processes.
+
+    - **System Calls (syscalls):** Provides a controlled interface for
+    user-mode programs to request services from the kernel, ensuring that all
+    interactions with hardware or protected resources are mediated and
+    validated by the OS.
+
+6. **Networking**
+
+    - **Network Stack:** Implements the various layers of networking protocls
+    (e.g., TCP/IP stack), allowing the computer to communicate over networks.
+
+    - **Socket Interface:** Provides a programming interface (API) for
+    applications to establish network connections and send/receive data.
+
+### The Shell (User Interface)
+
+This component provides the means for users to interact with the operating
+system, acting as a bridge between the human and the machine. It has two main
+parts.
+
+1. **Command Line Interface (CLI)**
+
+    - **Command Interpreter (Shell):** A text-based interface where users type
+    commands. The interpreter parses these commands and sends them to the
+    kernel for execution. Examples include Bash (Linux/macOS), PowerShell
+    (Windows), and Command Prompt (Windows).
+    - **Shell Scripts:** Allows users to automate sequences of commands by
+    writing them into a script file, providing powerful capabilities for system
+    administration and task automation.
+
+2. **Graphical User Interface (GUI)**
+
+    - **Windowing System:** Manages the display of multiple application windows
+    on the screen, handling their creation, resizing, movement, and drawing.
+
+    - **Desktop Enviornment:** Provides a comprehensive visual metaphor for
+    user interaction, complete with icons, menus, panels, widgets, and a
+    background. Popular examples include GNOME, KDE, and XFCE for Linux, the
+    Windows Desktop; and macOS Aqua.
+
+    - **Event Handling:** Processes user input from pointing devices (mouse,
+    touchpad) and keyboards, translating physical actions into system events
+    that applications can respond to.
+
+### System Utilities and Application Programming Interfaces (APIs)
+
+These components extend the functionality of the OS, providing tools for
+maintenance, configuration, and management tasks. It has two main branches:
+system utilities and application programming interfaces (APIs).
+
+System utilities are standalone programs that perform routine system
+maintenance, configuration, and management tasks. APIs are crucial for software
+development, providing a standardized bridge for applications to request OS
+services.
+
+1. **System Utilities**
+
+    - **Maintenance Tools:** Examples include disk defragmenters/optimizers,
+    backup utilities, system monitors (for CPU, memory, network usage), and
+    task managers.
+
+    - **Configuration Tools:** Utilities for managing network settings, user
+    accounts, hardware configurrations, and installing/removing software (e.g.,
+    package managers on Linux).
+
+2. **Application Programming Interfaces (APIs)
+
+    - **System Call Interface:** A set of defined routines and protocols that
+    allow applications to request services from the kernel (e.g.,
+    reading/writing files, creating new processes, network communication,
+    memory allocation). This abstraction layer frees developers from needing to
+    know the low-level hardware specifics.
+
+    - **Libraries:** Collections of pre-written code (functions, routines) that
+    applications can use to perform common tasks. These libraries simplify
+    application development, ensure consistency, and often sit on top of the
+    system call interface.
+</details>
+
+# Reading Recommendations from the Official Lecture Slides
+
+- History of Computing:
+    - <https://www.computersciencelab.com/ComputerHistory/History.htm>
+    - <https://www.youtube.com/playlist?list=PL1331A4548513EA81>

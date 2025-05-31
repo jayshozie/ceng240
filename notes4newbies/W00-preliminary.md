@@ -6,10 +6,12 @@ Please see the LICENSE file for more details.
 
 # Preliminary Information
 
-This markdown is basically a guide on how to read documentations. Actually,
-this guide itself is enough to dive into Python.
+This markdown serves as a guide on how to read programming language
+documentations. This documentation itself provides a solid foundation for
+beginning with any programming language, without losing yourself in those
+YouTube tutorials.
 
-## What is a documentation of a programming languge?
+## What is a documentation of a programming language?
 
 It's a reference manual of the programming language. It is a series of
 definitions, explanations and examples of almost everything you need to know
@@ -29,9 +31,9 @@ saver.
 ## How to read documentations?
 
 At first it won't be easy. They look very complicated with terminology that you
-have no idea. First of all, it gets way easier with time. It may not be the
-best way for a complete beginner to start learning a language; however, if you
-have even a small amount of knowledge it is the way to go.
+probably have no idea. First of all, it gets way easier with time. It may not
+be the best way for a complete beginner to start learning a language; however,
+if you have even a small amount of knowledge it is the way to go.
 
 ### Where are they?
 
@@ -100,8 +102,8 @@ languages.
 
 ## What is a programming language?
 
-High-level programming languages, which I'll describe in just a minute, is your
-intermediary language between you and your computer. It's not the native
+High-level programming languages, which I'll describe in just a minute, are
+your intermediary language between you and your computer. It's not the native
 language of either of you. The lines in your code are line-by-line instructions
 that you want your computer to do.
 
@@ -110,24 +112,26 @@ that you want your computer to do.
     [Programming Language](https://en.wikipedia.org/wiki/Programming_language)
 
 
-## How tf does everything work?
+## How does everything work?
 
 Up at the top, you have your central-processing unit (CPU), and your code.
-Your CPU can interpret and execute that code. What happens inside the CPU which
-is capable of understanding all that? No idea, too complex. Basically speaking
-there are some architectures (e.g. x86 family, ARM family). These architectures
-provide the developer with some very low-level, basic commands to bridge the
-gap between the high-level programming language, a.k.a. Assembly language.
-Assembly language differ from architecture to architecture. This guide won't
-help you with that, because you don't need to know it at the moment.
+Your CPU can interpret and execute that code. The intricate details of how the
+CPU translates these instructions are highly complex and involve electrical
+circuits and microcode, which are way beyond the scope of this introductory
+course. Fundamentally, there are various architectures (e.g., x86 family, ARM
+family). These architectures define a set of very low-level, basic commands
+(the instruction set) that can be directly understood by the CPU. Programming
+with these commansd directly is done using Assemly language, which differs from
+one architecture to another. This guide won't help you with that, because you
+don't need to know it for this course, and probably for the rest of your career
+even if you choose to study computer science.
 
 -------------------------------------------------------------------------------
 
 # Basics of Programming
 
 I'll introduce you to some core concepts of programming, via phases. Each phase
-has a way to represent, and another way to manipulate data. I will try to give
-examples for Windows and Linux/macOS users for as many subjects as I can.
+has a way to represent, and another way to manipulate data.
 
 ## Phase 1: Value & Command Line
 
@@ -194,14 +198,15 @@ Perimeter = 62.83185307179586
 Area = 314.1592653589793
 ```
 
-There are many terminology up there that you probably don't know. Don't worry
+There are many terms up there that you probably don't know. Don't worry,
 you'll understand them in about 3 markdowns or so. Like I said, it gets easier.
 
 Now we're getting somewhere. You can do somewhat-complex stuff with only
 variables and scripts. This can be very useful for simple stuff that you need
 to automate.
 
-Now let's get to the heart of programming, functions.
+Now let's get to the heart of programming, functions and functional
+programming.
 
 ## Phase 3: Argument & Function
 
@@ -225,8 +230,9 @@ def perimeter_area_circle(radius):
     return perimeter, area
 ```
 
-Now you can access the variables `perimeter` and `area` anywhere in your code.
-For example you can do more complicated stuff like this:
+Now, the values for `perimeter` and `area` calculated by the function can be
+used where you call the function. For example you can do more complicated stuff
+like this:
 ```python
 """
 This is a function that takes the side length of a cube calculates the area
@@ -273,7 +279,7 @@ class Circle:
         self.perimeter = 2 * math.pi * radius
         return self.perimeter
     def area(self):
-        self.area = math.pi * radius**2
+        self.area = math.pi * self.radius**2
         return self.area
     def properties_of_circle(self):
         print("Perimeter =", self.perimeter)
@@ -281,6 +287,29 @@ class Circle:
 
         return self.perimeter, self.area
 ```
+<details>
+    <summary>To the people who know OOP</summary>
+
+I know this is possibly the worst class I've ever written in my repositories,
+but I believe it gives a good general idea about what classes are.
+
+A better version of that class:
+```python
+import math
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+        self.perimeter = 2 * math.pi * self.radius
+        self.area = math.pi * self.radius**2
+
+    def properties(self):
+        print(f"Perimeter = {self.perimeter}\n"
+              f"Area = {self.area}")
+
+        return self.perimeter, self.area
+```
+</details>
+
 To create an object of the class Circle;
 ```python
 my_circle = Circle(4)
