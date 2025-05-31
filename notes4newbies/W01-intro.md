@@ -256,13 +256,15 @@ button of your computer. I'll give you what the CENG240 wants you to know, but
 also give you a more in-depth look at a system power-up for the ones who want
 to know more.
 
-#### CENG240 Way
+<details>
+    <summary>CENG240 Way</summary>
 
 ##### BIOS (Basic Input-Output System) is loaded.
 ##### POST (Power-On Self Test) is performed.
 ##### BIOS Searches for an operating system to load.
 ##### MBR is Executed to load the OS.
 ##### BIOS and MBR are extended by
+<details>
 
 <details>
     <summary>More Detailed Way</summary>
