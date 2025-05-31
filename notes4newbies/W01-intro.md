@@ -4,10 +4,10 @@ Please see the LICENSE file for more details.
 
 -------------------------------------------------------------------------------
 
-There are 2 ways some concepts are explained in this file. That's for your
-convention, because, in my opinion, the CENG240 way of explaining these
-concepts are not that good. They don't explain most of the stuff, and that
-strongly hurts the foundation of your understanding of computers.
+You'll notice some concepts in this file are explained in two ways. This is
+because, in my opinion, the CENG240 approach these topics often lacks the depth
+needed to build a strong foundational understanding of computers. I've provided
+additional detail to help bridge that gap.
 
 # Computers
 
