@@ -266,6 +266,7 @@ to know more.
 
 <details>
     <summary> More Detailed Way</summary>
+    <br>
 
 ##### Power Applied/Power Good Signal
 
