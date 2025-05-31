@@ -323,8 +323,8 @@ my_circle.properties_of_circle()
 This should print;
 ```bash session
 Radius: 4
-Perimeter = 25.132741228718345
-Area = 50.26548245743669
+Perimeter: 25.132741228718345
+Area: 50.26548245743669
 ```
 
 We even have a method that checks whether a point on the xy-plane is in that
