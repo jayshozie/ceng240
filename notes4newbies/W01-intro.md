@@ -264,7 +264,7 @@ to know more.
 ##### BIOS Searches for an operating system to load.
 ##### MBR is Executed to load the OS.
 ##### BIOS and MBR are extended by
-<details>
+</details>
 
 <details>
     <summary>More Detailed Way</summary>
