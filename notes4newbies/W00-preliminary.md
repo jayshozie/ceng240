@@ -198,7 +198,7 @@ $ python3 circle.py
 ```
 
 Here is how it looks like:
-```
+```bash session
 Radius of the circle: 
 10  # Your cursor blinks until you enter a value and press <Enter>
 Perimeter = 62.83185307179586
