@@ -257,17 +257,61 @@ also give you a more in-depth look at a system power-up for the ones who want
 to know more.
 
 <details>
-    <summary>CENG240 Way</summary>
+    <summary>**CENG240 Way**</summary>
 
 ##### BIOS (Basic Input-Output System) is loaded.
-##### POST (Power-On Self Test) is performed.
+
+    Before BIOS is loaded, the computer needs a Power Good signal from the
+    power supply unit (PSU), which ensures the rest of the system the
+    electricity that is connected to the system is stable. After that signal
+    the motherboard starts the CPU, and tests its very basic capabilities.
+    These tests include very basic functionality like basic arithmetic. CPU
+    then loads Basic Input-Output System (BIOS) into the system memory.
+    BIOS takes control of the system for the time being.
+
+##### POST (Power-On Self-Test) is performed.
+
+    BIOS initiates a proprietary test called Power-On Self-Test (POST) to be
+    sure that everything works as intended. This tests everything from the
+    the CPU itself to peripherals. The most important checks are as follows:
+
+    1. More In-Depth Test of the CPU
+    2. Detailed Test of RAM
+
 ##### BIOS Searches for an operating system to load.
+
+    If the POST is successful, then the BIOS searches the storage devices, such
+    as HDDs and SSDs, for bootable operating systems. If it finds a bootable
+    OS, then it tries to find its Master Boot Record (MBR) and loads it into
+    the system memory.
+
+    Master Boot Record (MBR) of a disk contains a table and code piece for
+    loading the OS on that disk. There may be multiple in a single disk, if
+    that disk has more than one bootable operating systems.
+
 ##### MBR is Executed to load the OS.
+
+    BIOS executes MBR, and gives control of the system to
+    it. MBR then tries to find the rest of the OS, and if it does it loads it
+    into the system memory and gives control of the system to the OS.
+
+    NOTE: I have no idea what do they mean by executing the MBR, it is a list
+    of important stuff about the operating system and its components on
+    that disk and where they are located.
+
 ##### BIOS and MBR are extended by
+
+    - Unified Extensible Firmware Interface (UEFI)
+    - GPT (GUID Partition Table)
+
+    NOTE: Those two points are literally the only thing under that section in
+    slides, and I have no idea what are they trying to tell by extending. For a
+    better and more in-depth explanation of the start-up processes of a
+    computer, please check the More Detailed Way dropdown.
 </details>
 
 <details>
-    <summary>More Detailed Way</summary>
+    <summary>**More Detailed Way**</summary>
 
 ##### Power Applied/Power Good Signal
 
@@ -317,7 +361,7 @@ screen, or diagnostic LEDs.
 
 ##### BIOS/UEFI Configuration Loading and Hardware Environment Setup
 
-- If POSt is successful, the firmware loads its configuration settings (stored
+- If POST is successful, the firmware loads its configuration settings (stored
 in NVRAM or CMOS memory, powered by a small battery).
 - It continues to initialize peripheral devices and controllers not covered in
 the basic POST.
