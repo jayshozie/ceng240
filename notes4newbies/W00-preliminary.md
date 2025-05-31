@@ -114,17 +114,17 @@ that you want your computer to do.
 
 ## How does everything work?
 
-Up at the top, you have your central-processing unit (CPU), and your code.
-Your CPU can interpret and execute that code. The intricate details of how the
-CPU translates these instructions are highly complex and involve electrical
-circuits and microcode, which are way beyond the scope of this introductory
-course. Fundamentally, there are various architectures (e.g., x86 family, ARM
-family). These architectures define a set of very low-level, basic commands
-(the instruction set) that can be directly understood by the CPU. Programming
-with these commansd directly is done using Assemly language, which differs from
-one architecture to another. This guide won't help you with that, because you
-don't need to know it for this course, and probably for the rest of your career
-even if you choose to study computer science.
+At the very fundamental level, you have your central-processing unit (CPU), and
+your code. Your CPU can interpret and execute that code. The intricate details
+of how the CPU translates these instructions are highly complex and involve
+electrical circuits and microcode, which are way beyond the scope of this
+introductory course. Fundamentally, there are various architectures (e.g., x86
+family, ARM family). These architectures define a set of very low-level, basic
+commands (the instruction set) that can be directly understood by the CPU.
+Programming with these commands directly is done using Assemly language, which
+differs from one architecture to another. This guide won't help you with that,
+because you don't need to know it for this course, and probably for the rest of
+your career even if you choose to study computer science.
 
 -------------------------------------------------------------------------------
 
@@ -167,7 +167,11 @@ shell;
 >>> my_number = 30  # You just assinged your first variable!
 >>> print(my_number)  # This is a print function
 30
->>> my_number = "Hi"  # In Python you can change variable type without issue
+>>> my_number = "Hi"  
+# In Python you can change variable type without issue
+# and the name of the variable doesn't restrict the type of value it can hold.
+# The variable name you choose is just a convention for you to remember it
+# later in your code.
 >>> print(my_number)
 Hi  # I did this to show you the variable name doesn't matter.
 >>> y = 0.10
@@ -275,61 +279,49 @@ import math
 class Circle:
     def __init__(self, radius):
         self.radius = radius
-    def perimeter(self):
-        self.perimeter = 2 * math.pi * radius
-        return self.perimeter
-    def area(self):
-        self.area = math.pi * self.radius**2
-        return self.area
-    def properties_of_circle(self):
-        print("Perimeter =", self.perimeter)
-        print("Area =", self.area)
-
-        return self.perimeter, self.area
-```
-<details>
-    <summary>To the people who know OOP</summary>
-
-I know this is possibly the worst class I've ever written in my repositories,
-but I believe it gives a good general idea about what classes are.
-
-A better version of that class:
-```python
-import math
-class Circle:
-    def __init__(self, radius):
-        self.radius = radius
         self.perimeter = 2 * math.pi * self.radius
         self.area = math.pi * self.radius**2
 
-    def properties(self):
-        print(f"Perimeter = {self.perimeter}\n"
-              f"Area = {self.area}")
+    def is_point_inside(self, x, y):
+        distance_from_center = math.sqrt(x**2 + y**2)
+        return distance_from_center < self.radius
 
-        return self.perimeter, self.area
+    def properties_of_circle(self):
+        print(f"Radius: {self.radius}\n"
+              f"Perimeter = {self.perimeter}\n"
+              f"Area = {self.area}\n")
 ```
-</details>
 
 To create an object of the class Circle;
 ```python
 my_circle = Circle(4)
 ```
-Now in the memory, you have an object called my_circle which has an attribute
-called `radius` equal to 4, and nothing else. To calculate the perimeter and
-the area of that circle;
+
+Now, in memory, there is an object named my_circle with the attributes radius,
+perimeter, and area. In the initiation stage of the object, our algorithms
+calculate the necessary values and store them as attributes of that object.
+
+You can actually check whether that worked with this:
 ```python
-perimeter_of_my_circle = my_circle.perimeter()
-area_of_my_circle = my_circle.area()
+print(my_circle.radius)
+print(my_circle.perimeter)
+print(my_circle.area)
 ```
-Now you have 2 different variables called which hold the perimeter and area
-values.
+
+However, we did write a method for that. Let us use that instead:
 ```python
-print(my_circle.properties_of_circle())
+my_circle.properties_of_circle()
+# Output:
+# Radius: 4
+# Perimeter = 25.132741228718345
+# Area = 50.26548245743669
 ```
-should print
-```
-Perimeter = 25.132741228718345
-Area = 50.26548245743669
+
+We even have a method that checks whether a point on the xy-plane is in that
+circle. I added this so that you can see a class has multiple methods:
+```python
+print(my_circle.is_point_inside(1, 1))  # Output: True
+print(my_circle.is_point_inside(3, 4))  # Output: False
 ```
 
 Yes, they all do the exact same thing; however, they have fundamental

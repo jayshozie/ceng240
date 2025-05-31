@@ -2,8 +2,12 @@ MIT License
 Copyright (c) 2025 Emir Baha Yıldırım
 Please see the LICENSE file for more details.
 
-Since they do ask these things as questions in the midterm and final exams, I
-also will explain you what they mean. Sorry in advance.
+-------------------------------------------------------------------------------
+
+There are 2 ways some concepts are explained in this file. That's for your
+convention, because, in my opinion, the CENG240 way of explaining these
+concepts are not that good. They don't explain most of the stuff, and that
+strongly hurts the foundation of your understanding of computers.
 
 # Computers
 
@@ -43,7 +47,7 @@ both the instructions and the values are stored in the same memory. In Harvard
 architecture, however, there are 2 separate memories, where one holds the
 instructions and the other holds the values that are needed on runtime.
 
-The von Neumann architecture have these components:
+The von Neumann architecture has these components:
 
 - A processing unit with both an arithmetic logic unit and processor registers
 - A control unit that includes an instruction register and a program counter
@@ -111,10 +115,10 @@ the memory address of the next instruction to be fetched.
 
 #### Random Access Memory (RAM)
 
-Memory (or its more modern name, RAM) is a long list of values and instructions
-stored in addresses. Addresses may look a bit scary (e.g.: 11000011 (binary),
-0xC3 (hexadecimal), ebx (Assembly)), but you don't need to worry about them too
-much, Python handles all of that.
+Random Access Memory (RAM), often simply referred to as memory, is a long list
+of values and instructions stored in addresses. Addresses may look a bit scary
+(e.g.: 11000011 (binary), 0xC3 (hexadecimal), ebx (Assembly)), but you don't
+need to worry about them too much, Python handles all of that.
 
 #### External Mass Storage
 
@@ -180,11 +184,11 @@ ultimately executed, which can take several steps.
 
 Everything starts with fetching information from somewhere.
 
-1. Address in program counter (PC) is copies to memory address register (MAR).
+1. Address in program counter (PC) is copied to memory address register (MAR).
 2. PC incremented to "point" to the next instruction.
-3. Instruction found at address described by MAR copied to the memory data
+3. Instruction found at the address described by MAR copied to the memory data
 register (MDR).
-4. Instruction in MDR, copied to the current instruction register (CIR).
+4. Instruction in MDR, is copied to the current instruction register (CIR).
 
 ##### Decode
 
@@ -220,7 +224,7 @@ place.
 Now, we find the address described by the MAR in the memory, and copy that
 instruction into memory data register (MDR), so we know what to do.
 
-Then the instruction from the MMDr is copied to the current instruction
+Then the instruction from the MDR is copied to the current instruction
 register (CIR, a.k.a. instruction register (IR)) for decoding and execution.
 
 The Control Unit then begins to decode the instructions in the CIr,
@@ -243,8 +247,8 @@ thing indefinitely.
 
 Instructions are how the user interacts with the CPU. They are the fundamental
 commands that software (programs) uses to interact with the CPU. Here is an
-example: (This is not how we actually, well, there are some people who has to
-code like this, but that's not what we're going to do.)
+example: (This is not how we actually write code, well, there are some people
+who have to code like this, but that's not what we're going to do.)
 
 ##### Machine Code (Binary)
 100000111100001100001010
@@ -569,7 +573,7 @@ for all operations.
 <details>
     <summary>CENG240 Way</summary>
 
-The operating system (OS) handles a number of processes.
+The operating system (OS) has a number of responsibilities:
 
 - Memory Management
 - Process Management
