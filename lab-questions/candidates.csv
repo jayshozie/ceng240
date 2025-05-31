@@ -1,60 +1,100 @@
-Sophia Lee 85.34
-William Taylor 72.19
-Olivia Martin 91.05
-James Wilson 68.76
-Ava Moore 95.82
-Benjamin White 78.41
-Isabella Thomas 89.27
-Lucas Jackson 63.98
-Mia Harris 98.11
-Alexander Clark 55.67
-Charlotte Lewis 82.50
-Daniel Robinson 70.03
-Amelia Walker 93.45
-Matthew Young 60.22
-Harper Hall 87.99
-Ethan King 74.58
-Evelyn Wright 96.73
-Michael Scott 58.01
-Abigail Green 80.88
-David Adams 76.25
-Emily Baker 90.15
-Joseph Nelson 65.43
-Elizabeth Carter 94.61
-Samuel Roberts 61.87
-Ella Phillips 88.39
-Andrew Campbell 71.92
-Sofia Parker 92.08
-Joshua Evans 66.55
-Avery Turner 97.52
-John Miller 59.13
-Chloe Davis 84.07
-Christopher Rodriguez 73.28
-Grace Martinez 90.91
-Ryan Hernandez 69.44
-Victoria Lopez 95.06
-Jacob Gonzalez 56.89
-Madison Perez 81.77
-Nicholas Sanchez 77.00
-Liam Torres 93.18
-Hannah Rivera 62.74
-Jackson Kelly 86.60
-Ella Mae Johnson 75.36
-Daniel Robert Smith 98.99
-Olivia Jane Williams 57.49
-Michael Paul Brown 83.02
-Ava Grace Jones 79.64
-Noah David Garcia 91.50
-Isabella Rose Miller 64.17
-Liam Alexander Davis 88.55
-Charlotte Anne Rodriguez 70.83
-Benjamin Lee Martin 96.30
-Harper Marie Wilson 60.95
-Ethan Michael Moore 89.70
-Avery Elizabeth Taylor 72.91
-Sophia Grace Anderson 94.25
-Mason James Thomas 67.23
-Evelyn Claire Jackson 97.10
-Jackson Andrew White 55.00
-Abigail Rose Harris 80.14
-David William Clark 76.59
+Alice Smith 88.5 75.2 92.1 80.0
+Bob Johnson 72.3 89.1 65.4 78.5
+Charlie David Brown 95.0 90.5 88.8 92.3
+Diana Miller 60.1 70.0 77.7 68.2
+Edward James Davis 81.2 83.4 79.0 85.1
+Fiona White 90.7 92.8 91.5 89.6
+George William Green 78.9 76.1 82.3 74.9
+Hannah Black 85.5 88.0 86.2 87.1
+Ivan Petrov 67.8 62.5 70.3 65.9
+Julia Anne Adams 93.1 94.7 90.0 91.2
+Kevin Lee 70.5 68.2 75.6 72.0
+Laura Kim 80.3 81.6 78.1 83.5
+Michael John Chen 91.9 93.0 94.2 90.8
+Nancy Wong 65.2 60.8 68.7 63.3
+Oliver Peter Garcia 84.6 87.0 82.5 86.4
+Patricia Rodriguez 89.8 91.1 88.3 90.6
+Quinn Alexander Martinez 76.4 73.9 79.8 77.2
+Rachel Hernandez 92.5 90.0 93.5 91.8
+Samuel Joseph Lopez 69.7 67.3 71.0 66.5
+Tina Gonzalez 87.3 85.9 89.2 88.7
+Uma Perez 94.0 95.5 92.0 93.7
+Victor Sanchez 71.1 70.0 69.5 73.0
+Wendy Sue Scott 82.9 84.2 80.9 81.7
+Xavier King 90.1 91.3 89.0 92.2
+Yara Wright 77.5 75.0 78.0 76.9
+Zachary Robert Hill 86.8 88.1 87.5 85.0
+Amelia Baker 91.0 92.0 90.5 91.5
+Benjamin Kyle Hall 63.4 65.0 62.0 64.5
+Chloe Young 80.0 79.0 81.0 78.8
+Daniel Turner 88.0 87.0 89.0 88.5
+Ella Grace Parker 93.0 94.0 92.5 93.3
+Frank Taylor 75.0 76.0 74.0 75.5
+Grace Morgan 85.0 86.0 84.5 85.2
+Henry Cooper 70.0 69.0 71.0 70.5
+Isabella Maria Ward 90.0 91.0 89.5 90.3
+Jack Foster 68.0 67.0 69.0 68.5
+Katherine Bell 82.0 83.0 81.5 82.2
+Liam Patrick Rivera 89.0 90.0 88.5 89.3
+Mia Cox 95.0 96.0 94.5 95.2
+Noah Bailey 72.0 73.0 71.5 72.5
+Olivia Peterson 87.0 88.0 86.5 87.3
+Patrick Brooks 79.0 80.0 78.5 79.5
+Sophia Jane Kelly 92.0 93.0 91.5 92.3
+Thomas Sanders 66.0 65.0 67.0 66.5
+Victoria Lynn Price 84.0 85.0 83.5 84.2
+William Ross 91.0 92.0 90.5 91.5
+Ashley Perry 74.0 73.0 75.0 74.5
+Ethan David Coleman 83.0 84.0 82.5 83.3
+Emily Long 90.0 91.0 89.5 90.3
+James Campbell 69.0 68.0 70.0 69.5
+Lily Anne Reed 88.0 89.0 87.5 88.3
+Matthew Watson 77.0 78.0 76.5 77.5
+Natalie Hayes 94.0 95.0 93.5 94.3
+Oscar James Graham 70.0 69.0 71.0 70.5
+Penelope Griffin 86.0 87.0 85.5 86.3
+Richard Paul Hunter 71.0 72.0 70.5 71.5
+Samantha Phillips 81.0 82.0 80.5 81.3
+Tyler James Dixon 93.0 94.0 92.5 93.3
+Zoe Morris 62.0 61.0 63.0 62.5
+Aaron Collins 85.0 86.0 84.5 85.3
+Brandon Scott Stewart 90.0 91.0 89.5 90.3
+Caroline Wood 78.0 79.0 77.5 78.5
+David Rivera 89.0 90.0 88.5 89.3
+Eva King 92.0 93.0 91.5 92.3
+Frankie Alan Adams 73.0 74.0 72.5 73.5
+Gabriella Baker 87.0 88.0 86.5 87.3
+Harvey Nelson 65.0 66.0 64.5 65.5
+Iris Green 91.0 92.0 90.5 91.3
+Jason Carter 76.0 77.0 75.5 76.5
+Kimberly Hall 84.0 85.0 83.5 84.3
+Leo Daniel Cook 80.0 81.0 79.5 80.5
+Megan Brooks 93.0 94.0 92.5 93.3
+Nicholas Foster 68.0 69.0 67.5 68.5
+Olivia Long 88.0 89.0 87.5 88.3
+Peter Morgan 72.0 73.0 71.5 72.5
+Quinn Bell 85.0 86.0 84.5 85.3
+Rose Marie Turner 90.0 91.0 89.5 90.3
+Scott Kelly 75.0 76.0 74.5 75.5
+Tiffany Price 94.0 95.0 93.5 94.3
+Ursula Cox 60.0 61.0 59.5 60.5
+Vincent Paul Perry 82.0 83.0 81.5 82.5
+Willow Reed 89.0 90.0 88.5 89.3
+Xavier Scott 70.0 71.0 69.5 70.5
+Yvonne Hill 86.0 87.0 85.5 86.5
+Zane Thomas Sanders 91.0 92.0 90.5 91.3
+Abigail Allen 78.0 79.0 77.5 78.5
+Brenda Ross 83.0 84.0 82.5 83.5
+Caleb Ward 67.0 68.0 66.5 67.5
+Danielle Nicole Hayes 92.0 93.0 91.5 92.5
+Eric Watson 74.0 75.0 73.5 74.5
+Faith White 85.0 86.0 84.5 85.5
+Gavin King 89.0 90.0 88.5 89.5
+Hope Young 94.0 95.0 93.5 94.5
+Isaac Michael Campbell 71.0 72.0 70.5 71.5
+Jasmine Phillips 88.0 89.0 87.5 88.5
+Kyle Collins 69.0 70.0 68.5 69.5
+Lily Graham 90.0 91.0 89.5 90.5
+Marcus Adams 77.0 78.0 76.5 77.5
+Nora Bell 86.0 87.0 85.5 86.5
+Owen Baker 91.0 92.0 90.5 91.5

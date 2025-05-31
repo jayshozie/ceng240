@@ -40,27 +40,55 @@ both the instructions and the value are stored in the same memory. In Harvard
 architecture, however, there are 2 separate memories, where one holds the
 instructions and the other holds the values that are needed on runtime.
 
+The von Neumann architecture have these components:
+
+- A processing unit with both an arithmetic logic unit and processor registers
+- A control unit that includes an instruction register and a program counter
+- Memory that stores data and instructions
+- External mass storage
+- Input and output mechanisms
+[Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture)
+
 #### Central-Processing Unit (CPU)
 
 The central-processing unit, or abbreviated as CPU, is the brain of the
 computer. It's the component that handles all of the computation. It starts as
 soon as you start your computer and it executes instruction after instruction.
 Modern computers are way more complex than what von Neumann designed, but the
-idea stays the same. It itself has multiple parts.
+idea stays the same. It itself has multiple parts. The arithmetic logic unit,
+and processor registers are located here.
 
-##### Registers
+##### Register & Cache
 
 These are spots on a CPU that holds some values. The reason why these exist
 and why the CPU doesn't just store them in the memory is the speed difference.
 In modern computers there are 4 ways we can store data (from fastest to
-slowest): registers, cache, RAMs, SSDs, HDDs. If you read this from last to
+slowest): registers, cache, RAMs, HDDs. If you read this from last to
 first now you have the list from highest storage to lowest. Actually, assigning
 speed to registers is a bit of misleading, because since that's where the CPU
-is doing its calculations its speed is the speed of the CPU itself.
+is doing its calculations, its speed is the speed of the CPU itself.
 
-Cache is the fastest way a CPU can access to data. They are placed right at the
-die itself, where die is the silicon die of the CPU (for further reading:
-[Die (integrated circuit)](https://en.wikipedia.org/wiki/Die_(integrated_circuit))
+Registers are the fastest way CPU accesses data, because it is the CPU itself.
+It takes 1 clock cycle, because at every clock cycle register values change.
+
+Cache is the second fastest way a CPU can access to data. They are placed right
+at the die itself, where die is the silicon die of the CPU (for further
+reading:
+[Die (integrated circuit)](https://en.wikipedia.org/wiki/Die_(integrated_circuit)).
+CPU waits about 2-100 cycles for a data stored on the cache. 
+
+The next in the speed comparison list is the RAM, if the CPU needs a data from
+the RAM it can take up to 1000 cycles.
+
+The slowest storage in our list are HDDs (hard disk drives). It can take up to
+100.000.000 cycles for the CPU to acquire a data located on a HDD.
+
+These clock speeds may be a little misleading, though. Your machine probably
+has a CPU that has a clock speed way above 1.0GHz. 1.0GHz mean that every
+single second your CPU's clock ticks more than a billion times.
+
+Now that we got how fricking fast these machines are, let's get to how they do
+arithmetic and logic.
 
 ##### Arithmetic-Logic Unit (ALU)
 
@@ -71,10 +99,13 @@ that it can do computations and process instructions.
 
 P.S.: 10 is the binary representation of the decimal number 2.
 
-##### Control Unit
+#### Control Unit
 
 This is the part of the CPU that handles the
-reading-and-writing-values-to-the-memory-part. 
+reading-and-writing-values-to-the-memory-part. It has an instruction register,
+which holds the memory address of the current instruction being executed and
+the program counter (PC) which holds the memory address of the next instruction
+to be fetched.
 
 #### Random Access Memory (RAM)
 
@@ -83,7 +114,41 @@ stored in addresses. Addresses may look a bit scary (e.g.: 11000011 (binary),
 0xC3 (hexadecimal), ebx (Assembly)), but you don't need to worry about them too
 much, Python handles all of that.
 
-#### Instructions
+#### External Mass Storage
+
+This is your computer's actual storage. It can be more than terabytes (TB) of
+data in modern day computers. There are multiple types of it, but the two types
+you should know are HDDs (hard disk drives) and SSDs.
+
+##### Hard Disk Drives (HDDs)
+
+A hard disk is a sealed unit containing a number of platters (magnetic storage
+devices that are similar in looks and principle to optic storage devices like
+CDs and DVDs) in a stack. These are electro-mechanical data storage devices.
+Electromagnetic read/write heads are positioned above and below each platter.
+As the platters spin, the drive heads move in toward the center surface and out
+toward the edge. In this way, the drive heads can reach the entire surface of
+each platter.
+
+[Hard disk drive](https://en.wikipedia.org/wiki/Hard_disk_drive)
+[Hard Disk Drive Basics](https://ntfs.com/hard-disk-basics.htm)
+
+##### Solid State Drives (SSDs)
+
+A solid-state drive (SSD) is a type of solid-state storage device that use
+integrated circuits to store data persistently
+[Solid-state drive](https://en.wikipedia.org/wiki/Solid-state_drive). This is
+a bit of a technical definition, I think the best way to understand is to
+compare them to RAMs and HDDs. Unlike HDDs, SSDs have no moving parts which
+allows them to be way faster than a traditional HDD. Instead of storing data
+magnetically, they store data in semiconductor components.
+
+Putting the actual architecture aside, if they ask you what are the components
+of the von Neumann architecture, say the CPU and the memory.
+
+-------------------------------------------------------------------------------
+
+### Instructions
 
 Instructions are how the user interacts with the CPU. Here is an example:
 (This is not how we actually, well, there are some people who has to code like
@@ -100,17 +165,89 @@ add ebx, 10
 All of these mean exactly the same thing, add the value 10 to the ebx memory
 location.
 
-#### Fetch-Decode-Execute (Fetch-Execute) Cycle
+### Fetch-Decode-Execute (Fetch-Execute) Cycle
 
-OK, now we have a way to tell the CPU to do stuff, but how does it understand
-us?
+In the von Neumann architecture, he explained how a "cycle" should be like.
+There are 3 main stages at every cycle of the CPU: fetch, decode, execute.
 
-Control Unit fetches an instruction from the memory, stores it in the registers
-of the CPU. ALU, decodes that instruction, executes it, stores the answer
-of that computation in another register. Control Unit takes that stored data
-and writes it into memory, if needed. This is called the "Fetch-Execute" cycle.
+There are some extra registers that you don't have to know, but I'll give you
+what they are and what they do so that you can understand the process better.
 
-#### CPU Architectures
+##### Memory Address Register (MAR)
+A memory address register is the CPU register that either stores the memory
+address from which data will be fetched to the CPU registers, or the address to
+which data will be sent and stored via system bus.
+
+##### Memory Data Register (MDR)
+A memory data register, a.k.a. memory buffer register (MBR), is the register in
+a computer's CPU that stores the data being transferred to and from the
+immediate access storage.
+
+##### Current Instruction Register (CIR)
+A current instruction register, a.k.a. instruction register (IR), is the part
+of a CPU's control unit that holds the instruction currently being executed or
+decoded. In simple processors, each instruction to be executed is loaded into
+the instruction register, which holds it while it is decoded, prepared, and
+ultimately executed, which can take several steps.
+
+#### Fetch
+
+Everything starts with fetching information from somewhere.
+
+1. Address in program counter (PC) is copies to memory address register (MAR).
+2. PC incremented to "point" to the next instruction.
+3. Instruction found at address described by MAR copied to the memory data
+    register (MDR).
+4. Instruction in MDR, copied to the current instruction register (CIR).
+
+#### Decode
+
+Now that we have an instruction, we need to decode it so that we know what to
+do. In the decode stage, the control unit (CU) decodes the contents of the CIR.
+That's the only thing happening in the decode stage.
+
+#### Execute
+
+We know what to do, let's do it. Control unit (CU) sends signals to relevant
+components (e.g. ALU). Whatever that instruction asks the CPU to do, it happens
+right here.
+
+What happens after that? Go back to the fetch stage and do it a couple billion
+times a second and you have a modern day CPU.
+
+For a more in-depth explanation you can check
+[Instruction cycle](https://en.wikipedia.org/wiki/Instruction_cycle)
+
+### A Slightly Detailed Explanation of Fetch-Decode-Execute Cycle
+
+The most complex stage in the fetch-decode-execute cycle is the fetch stage;
+however, it's still simple enough if you think it through.
+
+First we need to find where the instruction is located, that's stored in the
+program counter (PC). We copy that address to the memory address register
+(MAR), because we need to empty the program counter at some point.
+
+Now we need to to change the value stored in the PC, so that we know which
+instruction to execute next, since that's the reason PC exists in the first
+place.
+
+Now, we find the address described by the MAR in the memory, and copy that
+instruction into memory data register (MDR), so we know what to do.
+
+Then we copy that to the current instruction register (CIR) so we can decode
+and execute it.
+
+Now, the control unit starts to decode the instruction located in CIR, so that
+we understand the thing we're going to do.
+
+After the decode, CU sends signals to relevant components in the CPU such as
+the ALU.
+
+Your cycle is finished, now do it again. If you read it one more time you'll
+see how this self-corrects the registers and you can continue doing the same
+thing indefinitely.
+
+### CPU Architectures
 
 First of all, yes, it's called architecture.
 
