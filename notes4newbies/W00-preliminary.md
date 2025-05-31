@@ -164,17 +164,16 @@ Although phase 1 is basically what happens under the hood, it's pretty hard to
 do every single calculation by-hand, and it overly underestimates the
 capabilities of computers.
 
-You can create variables and assign values to them. For example in the Python3
+You can create variables and assign values to them. For example in the Python 3
 shell;
 ```python
 >>> my_number = 30  # You just assinged your first variable!
 >>> print(my_number)  # This is a print function
 30
 >>> my_number = "Hi"  
-# In Python you can change variable type without issue
-# and the name of the variable doesn't restrict the type of value it can hold.
-# The variable name you choose is just a convention for you to remember it
-# later in your code.
+# In Python you can change variable type without issue and the name of the
+# variable doesn't restrict the type of value it can hold. The variable name
+# you choose is just a convention for you to remember it later in your code.
 >>> print(my_number)
 Hi  # I did this to show you the variable name doesn't matter.
 >>> y = 0.10
@@ -192,6 +191,7 @@ radius = float(input("Radius of the circle: "))
 print("Perimeter =", 2 * math.pi * radius)
 print("Area =", math.pi * radius**2)
 ```
+
 If you write these lines in a circle.py file and run it via
 ```bash session
 $ python3 circle.py
@@ -226,6 +226,7 @@ def lower_my_name(name):
     name_lower = name.lower()
     return name_lower
 ```
+
 Now, you know how to write functions. Just kidding. The main idea is that you
 don't want to write the script everytime you want to do something, so you write
 it once in a more general way so when you run it, it just works. For example;
@@ -242,8 +243,8 @@ used where you call the function. For example you can do more complicated stuff
 like this:
 ```python
 """
-This is a function that takes the side length of a cube calculates the area
-difference between that cube and a sphere that perfectly fits inside it.
+This is a function that takes the side length of a cube and calculates the
+volume difference between that cube and a sphere that perfectly fits inside it.
 """
 import math
 def volume_diff(side):
@@ -267,11 +268,13 @@ into the deeply controversial territory of object oriented programming.
 
 According to [Wikipedia](https://en.wikipedia.org/wiki/Object-oriented-programming);
 
+```text
 Object-oriented programming (OOP) is a programming paradigm based on the
 concept of objects. Objects can contain data (called fields, attributes or
 properties) and have actions they can perform (called procedures or methods and
 implemented in code). In OOP, computer programs are designed by making them out
 of objects that interact with one another.
+```
 
 Basically, maybe you want to have multiple circles and you want to them to have
 different radii and you want to keep them in memory.
@@ -300,9 +303,10 @@ To create an object of the class Circle;
 my_circle = Circle(4)
 ```
 
-Now, in memory, there is an object named my_circle with the attributes radius,
-perimeter, and area. In the initiation stage of the object, our algorithms
-calculate the necessary values and store them as attributes of that object.
+Now, in memory, there is an object named `my_circle` with the attributes
+radius, perimeter, and area. In the initiation stage of the object, our
+algorithms calculate the necessary values and store them as attributes of that
+object.
 
 You can actually check whether that worked with this:
 ```python
@@ -314,14 +318,17 @@ print(my_circle.area)
 However, we did write a method for that. Let us use that instead:
 ```python
 my_circle.properties_of_circle()
-# Output:
-# Radius: 4
-# Perimeter = 25.132741228718345
-# Area = 50.26548245743669
+```
+
+This should print;
+```bash session
+Radius: 4
+Perimeter = 25.132741228718345
+Area = 50.26548245743669
 ```
 
 We even have a method that checks whether a point on the xy-plane is in that
-circle. I added this so that you can see a class has multiple methods:
+circle. I added this so that you can see a class can have multiple methods:
 ```python
 print(my_circle.is_point_inside(1, 1))  # Output: True
 print(my_circle.is_point_inside(3, 4))  # Output: False
