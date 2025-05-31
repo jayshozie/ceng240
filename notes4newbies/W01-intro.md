@@ -149,27 +149,8 @@ magnetically, they store data in semiconductor components.
 Putting the actual architecture aside, if they ask you what are the components
 of the von Neumann architecture, say the CPU and the memory.
 
--------------------------------------------------------------------------------
-
 <details>
-    <summary>Some Proprietary Stuff</summary>
-
-#### Instructions
-
-Instructions are how the user interacts with the CPU. Here is an example:
-(This is not how we actually, well, there are some people who has to code like
-this, but that's not what we're going to do.)
-
-##### Machine Code (Binary)
-100000111100001100001010
-(10000011 11000011 00001010 for easier reading)
-##### Machine Code (Hexadecimal)
-0x83 0xC3 0x0A
-##### Assembly (x86_64)
-add ebx, 10
-
-All of these mean exactly the same thing, add the value 10 to the ebx memory
-location.
+    <summary>Fetch-Decode-Execute Cycle</summary>
 
 #### Fetch-Decode-Execute (Fetch-Execute) Cycle
 
@@ -203,7 +184,7 @@ Everything starts with fetching information from somewhere.
 1. Address in program counter (PC) is copies to memory address register (MAR).
 2. PC incremented to "point" to the next instruction.
 3. Instruction found at address described by MAR copied to the memory data
-    register (MDR).
+register (MDR).
 4. Instruction in MDR, copied to the current instruction register (CIR).
 
 ##### Decode
@@ -252,6 +233,30 @@ the ALU.
 Your cycle is finished, now do it again. If you read it one more time you'll
 see how this self-corrects the registers and you can continue doing the same
 thing indefinitely.
+</details>
+
+-------------------------------------------------------------------------------
+
+<details>
+    <summary>Some Proprietary Stuff</summary>
+
+#### Instructions
+
+Instructions are how the user interacts with the CPU. Here is an example:
+(This is not how we actually, well, there are some people who has to code like
+this, but that's not what we're going to do.)
+
+##### Machine Code (Binary)
+100000111100001100001010
+(10000011 11000011 00001010 for easier reading)
+##### Machine Code (Hexadecimal)
+0x83 0xC3 0x0A
+##### Assembly (x86_64)
+add ebx, 10
+
+All of these mean exactly the same thing, add the value 10 to the ebx memory
+location.
+
 </details>
 
 <details>
