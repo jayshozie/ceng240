@@ -247,9 +247,94 @@ Your cycle is finished, now do it again. If you read it one more time you'll
 see how this self-corrects the registers and you can continue doing the same
 thing indefinitely.
 
+<details>
+    <summary>Other Components</summary>
+
+Now that we know how a computer works at the very deep, we need to learn some
+other components that helps us using a computer.
+
+First of all, all input-output devices are connected to the CPU via a wiring
+system called bus. Most simply put, buses are metallic cables that connect
+everything to each other. Subtopics are listed in order of importance.
+
+### Input Devices
+
+#### Keyboard
+
+A [computer keyboard](https://en.wikipedia.org/wiki/Computer_keyboard) is a
+built-in or peripheral input device modeled after the typewriter keyboard.
+
+It's the thing that is right in front of you. The one with the keys on it, with
+letters and numbers on them.
+
+#### Mouse
+
+A [computer mouse](https://en.wikipedia.org/wiki/Computer_mouse) (plural mice;
+rarely also mouses) is a hand-held pointing device that detects two-dimensional
+motion relative to a surface. This motion is typically translated into the
+motion of the pointer (called a cursor) on a display, which allows a smooth
+control of the graphical user interface (GUI) of a computer.
+
+It's the thing in your hand, or the surface you're touching to move the cursor.
+The second is called a touchpad, not a mouse, same idea different device.
+
+#### Microphone
+
+A [microphone](https://en.wikipedia.org/wiki/Microphone), colloquially called a
+mic, or mike, is a transducer that converts sound into an electrical signal.
+
+It's the thing you're talking into when you're talking with someone over your
+phone, through the microphone of your headset, or through the computer itself.
+
+### Output Devices
+
+#### Monitor
+
+A [computer monitor](https://en.wikipedia.org/wiki/Computer_monitor) is an
+output device that displays information in pictorial or textual form. A
+discrete monitor comprises a visual display, support electronics, power supply,
+housing, electrical connectors, and external user controls.
+
+It's the thing that you're reading this from.
+
+#### Speakers
+
+A [loudspeaker](https://en.wikipedia.org/wiki/Loudspeaker) (commonly referred
+to as a speaker, or more fully, a speaker system) is a combination of one or
+more speaker drivers, an enclosure, and electrical connections (possible
+including a crossover network). The speaker driver is an electroacoustic
+transducer that converts an electrical audio signal into a corresponding sound.
+
+A [computer speaker](https://en.wikipedia.org/wiki/Computer_speaker) are
+speakers marketed for use with computers, although usually capable of other
+audio uses, e.g. for a shelf stereo or television.
+
+It's the thing that makes the computer go beep.
+
+#### Headphones
+
+[Headphones](https://en.wikipedia.org/wiki/Headphones) are a pair of small
+loudspeaker drives worn on or around the head over a user's ears. They are
+electroacoustic transducers, which convert an electrical signal to a
+corresponding sound.
+
+It's the thing that you put in/on to your ears.
+
+### Input/Output Devices
+
+#### Storage Device
+
+We've talked about these in a previous section, but let us go through them one
+more time.
+
+A [storage device](https://en.wikipedia.org/wiki/Computer_data_storage), a.k.a.
+computer data storage or digital data storage, is a technology consisting of
+computer components and recording media that are used to retain digital data.
+</details>
+
 -------------------------------------------------------------------------------
 
-### How does a computer start?
+## How does a computer start?
 
 There are multiple steps of instructions happening when you press the on/off
 button of your computer. I'll give you what the CENG240 wants you to know, but
@@ -259,7 +344,7 @@ to know more.
 <details>
     <summary>CENG240 Way</summary>
 
-##### BIOS (Basic Input-Output System) is loaded.
+### BIOS (Basic Input-Output System) is loaded.
 
 Before BIOS is loaded, the computer needs a Power Good signal from the
 power supply unit (PSU), which ensures the rest of the system the
@@ -269,7 +354,7 @@ These tests include very basic functionality like basic arithmetic. CPU
 then loads Basic Input-Output System (BIOS) into the system memory.
 BIOS takes control of the system for the time being.
 
-##### POST (Power-On Self-Test) is performed.
+### POST (Power-On Self-Test) is performed.
 
 BIOS initiates a proprietary test called Power-On Self-Test (POST) to be
 sure that everything works as intended. This tests everything from the
@@ -278,7 +363,7 @@ the CPU itself to peripherals. The most important checks are as follows:
 1. More In-Depth Test of the CPU
 2. Detailed Test of RAM
 
-##### BIOS Searches for an operating system to load.
+### BIOS Searches for an operating system to load.
 
 If the POST is successful, then the BIOS searches the storage devices, such
 as HDDs and SSDs, for bootable operating systems. If it finds a bootable
@@ -289,7 +374,7 @@ Master Boot Record (MBR) of a disk contains a table and code piece for
 loading the OS on that disk. There may be multiple in a single disk, if
 that disk has more than one bootable operating systems.
 
-##### MBR is Executed to load the OS.
+### MBR is Executed to load the OS.
 
 BIOS executes MBR, and gives control of the system to
 it. MBR then tries to find the rest of the OS, and if it does it loads it
@@ -299,7 +384,7 @@ NOTE: I have no idea what do they mean by executing the MBR, it is a list
 of important stuff about the operating system and its components on
 that disk and where they are located.
 
-##### BIOS and MBR are extended by
+### BIOS and MBR are extended by
 
 - Unified Extensible Firmware Interface (UEFI)
 - GPT (GUID Partition Table)
@@ -313,7 +398,7 @@ computer, please check the More Detailed Way dropdown.
 <details>
     <summary>More Detailed Way</summary>
 
-##### Power Applied/Power Good Signal
+### Power Applied/Power Good Signal
 
 - When the power button is pressed, the Power Supply Unit (PSU), which is the
 block where you connect to the outlet and to your computer, delivers power to
@@ -322,7 +407,7 @@ the motherboard and components.
 motherboard this signal prevents the CPU from starting prematurely with
 unstable power.
 
-##### CPU Initialization and Reset Vector
+### CPU Initialization and Reset Vector
 
 - Upon receiving the Power Good signal, the CPU is released from its reset
 state.
@@ -332,7 +417,7 @@ the program counter (PC) is loaded with specific memory addresses, known as the
 UEFI). This address points to the start of the Basic Input/Output System (BIOS)
 or Unified Extensible Firmware Interface (UEFI) firmware.
 
-##### BIOS/UEFI Firmware Loading and Execution
+### BIOS/UEFI Firmware Loading and Execution
 
 - The CPU begins executing instructions from the address pointed to by the
 reset vector. These instructions reside in a non-volatile memory chip on the
@@ -341,7 +426,7 @@ firmware.
 - Early Firmware Initialization: The firmware performs the setup of the CPU and
 memory controller, allowing access to the main system RAM.
 
-##### Power-On Self-Test (POST)
+### Power-On Self-Test (POST)
 
 - The firmware initiates the POST process to check the integrity and presence
 of essential hardware components.
@@ -359,7 +444,7 @@ connected to the motherboard.
 typcilaly halts and reports the error via beep codes, error messages on the
 screen, or diagnostic LEDs.
 
-##### BIOS/UEFI Configuration Loading and Hardware Environment Setup
+### BIOS/UEFI Configuration Loading and Hardware Environment Setup
 
 - If POST is successful, the firmware loads its configuration settings (stored
 in NVRAM or CMOS memory, powered by a small battery).
@@ -368,14 +453,14 @@ the basic POST.
 - It enumerates and configures hardware resources (I/O addresses, IRQs, DMA
 channels) for all selected devices.
 
-##### Boot Device Selection
+### Boot Device Selection
 
 - The BIOS/UEFI uses its configured boot order (e.g., CD/DVD, USB, Hard Drive,
 Network) to find a bootable device.
 - It reads the Master Boot Record (MBR) from the selected traditional hard
 drive or the EFI System Partition (ESP) from a UEFI-enabled drive.
 
-##### Bootloader Execution (Stage 1 & 2)
+### Bootloader Execution (Stage 1 & 2)
 
 - MBR Boot (Legacy BIOS)
     - The firmware loads the first sector of the boot device (the MBR) into
@@ -396,7 +481,7 @@ drive or the EFI System Partition (ESP) from a UEFI-enabled drive.
     (e.g., `bootmgfw.efi` for Windows, `grubx64.efi` for GRUB/Linux).
     - UEFI bootloaders can be more sophisticated and directly load the kernel.
 
-##### Operating System Kernel Loading
+### Operating System Kernel Loading
 
 - The Stage 2 bootloader (e.g., GRUB, Windows Boot Manager (BOOTMGR)) takes
 over.
@@ -410,7 +495,7 @@ core system files.
 - If the kernel is compressed, the bootloader or a small stub within the kernel
 itself will decompress it into memory.
 
-##### Kernel Initialization (Kernel Space)
+### Kernel Initialization (Kernel Space)
 
 - Once loaded, the OS kernel gains control.
 - it initializes its own internal structures (e.g., memory management units,
@@ -423,7 +508,7 @@ allocating resources (memory, I/O ports) for them.
 reside). If an `initramfs`/`initrd` was loaded, it might perform temporary
 tasks and then switch to the real root filesystem.
 
-##### Operating System Initialization (Userspace - Init System)
+### Operating System Initialization (Userspace - Init System)
 
 - After the kernel has initialized sufficiently it starts the very first
 user-space process, traditionally known as `init` (with Process ID 1, PID 1).
@@ -438,7 +523,7 @@ logging daemons, D-Bus, cron, security services).
 - It may run various startup scripts (`rc.local` on some Linux systems, startup
 scripts for installed applications).
 
-##### User Environment Loading
+### User Environment Loading
 
 - Once core system services are running, the init system starts the display
 manager or login manager (e.g., GDM, LightDM, SDDM on Linux; Winlogon on
@@ -457,18 +542,5 @@ makes everything that much more impressive, and I believe this has the
 capability to actually change some students' mind about CS.
 </details>
 
-### Other Components
+-------------------------------------------------------------------------------
 
-Now that we know how a computer works at the very deep, we need to learn some
-other components that helps us using a computer.
-
-#### Input-Output Devices
-
-First of all, all input-output devices are connected to the CPU via a wiring
-system called bus. Most simply put, buses are metallic cables that connect
-everything to each other.
-
-##### Keyboard
-##### Monitor
-##### Speakers
-##### Mouse
