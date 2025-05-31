@@ -252,7 +252,7 @@ the ALU.
 Your cycle is finished, now do it again. If you read it one more time you'll
 see how this self-corrects the registers and you can continue doing the same
 thing indefinitely.
-<details>
+</details>
 
 <details>
     <summary>Other Components</summary>
