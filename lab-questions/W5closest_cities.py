@@ -7,6 +7,16 @@
 # and the distance between them, and a string of 2 cities.
 # The function should return the shortest distance between the two cities.
 
+"""
+I felt the need to address some issues about this question.
+
+First of all, this is a pretty advanced solution for the CENG240 class, I know;
+however, the question literally asks for this solution. This is a problem for
+me. Yes, there are more beginner-friendly solutions, but this is the correct
+solution for that question. I think they shouldn't have asked this question
+for a bunch freshmen that doesn't even study computer science/engineering.
+"""
+
 def shortest(routes, cities):
     # Create a dictionary to store the distances between cities
     distances = {}
