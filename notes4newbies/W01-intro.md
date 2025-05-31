@@ -265,7 +265,7 @@ to know more.
 ##### BIOS and MBR are extended by
 
 <details>
-    <summary> More Detailed Way</summary>
+    <summary>More Detailed Way</summary>
 
 ##### Power Applied/Power Good Signal
 
