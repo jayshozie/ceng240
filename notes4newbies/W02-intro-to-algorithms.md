@@ -80,21 +80,25 @@ road merged their phonebooks together, they would have a 2000-page phonebook,
 and it could take us twice as fast to find that person. Let's call that graph,
 n. Second algorithm is also a linear one, because even if we were going twice
 as fast, every 2 pages added to the book would add one more step to our
-algorithm, making its graph n/2.
+algorithm, making its graph n/2. This way of trying to understand the average
+speed of algorithms is called the Big-O Notation (e.g., O(n), O(n/2))
 
 The third algorithm, however, is different. Its graph's shape is not linear,
 it's fundamentally different. If you remember your logarithms, you should
 recognize that graph as the graph of log base 2 of n. Adding 2 or 100 pages
 doesn't change our runtime even a bit. Yes, it's not a constant function, but
-it's significantly better than both of those algorithms.
+it's significantly better than both of those algorithms. The Big-O Notation of
+this algorithm would be O(log2(n)).
 
-![Three Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
+![1.1.1 - Three Algorithms Compared](./images/comparison-of-3-algorithms-cs50Week0Slide141.png)
 
 If we were to compare a case where we are looking for someone with their name
 starting with the letter 'Z', in a thousand-page phonebook, first algorithm
 would take 1000 steps but it would find it, the second algorithm would take
 ~500 steps but it has a 50/50 chance of not finding it; however, the third
 algorithm would only take about 10 steps.
+
+-------------------------------------------------------------------------------
 
 ## Valid Operations in Algorithms
 
@@ -130,7 +134,7 @@ code, and acting by the result of that question. Iteratives are looping
 instructions that repeat a set (or subset) of instructions. Let's identify
 these in my pseudocode.
 
-Using our definitions, line 1 must be a sequential operation. It's a
+From our definitions, line 1 must be a sequential operation. It's a
 well-defined declarative sentence, in which the user asks the machine to pick
 up the phonebook. Same thing applies to the second and third lines, they ask
 the machine to do some well-defined task, open the middle of the book or look
@@ -151,6 +155,59 @@ else case, in which we ask the computer to quit searching so it doesnt' go into
 an infinite loop.
 
 If you missed anything up there, I strongly urge you to watch the
-[video](https://www.youtube.com/live/2WtPyqwTLKM) I've mentioned before. David
-J. Malan is an amazing instructor, he explains everything so well.
+[video](https://www.youtube.com/live/2WtPyqwTLKM) I've mentioned before. Prof.
+David J. Malan is an amazing professor, he explains everything so well.
+
+-------------------------------------------------------------------------------
+
+## Ways of Describing Complex Algorithms
+
+First of all, the best way of describing an algorithm is the one you understand
+the best. Putting that aside there are some popular ways of doing it.
+
+1. **Using Pseudocode**
+
+Pseudocoding is very popular among developers, because it's very easy to
+understand and make other people understand. It's really easy to write, you
+just take a pen and paper and write the instructions in order of execution,
+just like what David's pseudocode of searching a name in a phonebook.
+
+2. **Using Flow-Charts**
+
+This is, again, very popular among developers, because it's easy to follow and
+see the outcomes of every possibility. This might take a bit more time than
+writing pseudocode, but you have more tools in your shed. You can use colors
+for different operations, for example.
+
+![1.3.1 - Example Algorithm Flowchart](./images/algorithm-flowchart-example.png)
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+# References
+
+1.1.1 - [CS50 - 3 Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
+[WayBack Machine](https://web.archive.org/web/20250601073812/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
+
+1.3.1 - [BBC - Example Algorithm Flowchart](https://www.bbc.co.uk/bitesize/guides/z3bq7ty/revision/3)
+[WayBack Machine](https://web.archive.org/web/20250320171857/https://bam.files.bbci.co.uk/bam/live/content/zs96tfr/large)
+
+
+
+
+
+
+
+
+
+
+
 
