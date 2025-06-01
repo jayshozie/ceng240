@@ -372,10 +372,10 @@ separate, upfront compilation step that creates a standalone executable.
 Instead, another program called an interpreter reads your source code line by
 line (or instruction by instruction) and executes it directly.
 
-The interpreter essentially performs the translation andd execution
+The interpreter essentially performs the translation and execution
 simultaneously. Each time you run an interpreted program, the interpreter
 processes the source code from scratch. This means you always need the
-interpreter installed on the computer where you wnat to run the program, along
+interpreter installed on the computer where you want to run the program, along
 with the original source code itself. The execution happens on the fly as the
 interpreter works through the code.
 
