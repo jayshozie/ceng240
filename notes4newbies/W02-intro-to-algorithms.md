@@ -216,32 +216,31 @@ applications. It is also used in reverse engineering, because it is very easy
 to understand how the machine works with it.
 
 <details>
-    <summary>An Example Assembly (x86_64) Code</summary>
-```assembly
+    <summary>A "Simple" Example of Assembly (x86_64) Code</summary>
+    ```assembly
+    section .data
+        ; Define our message and its length
+        msg db "Hello, World!", 0x0A ; 0x0A is the ASCII code for newline
+        len equ $ - msg             ; Calculates the length of the message
 
-section .data
-    ; Define our message and its length
-    msg db "Hello, World!", 0x0A ; 0x0A is the ASCII code for newline
-    len equ $ - msg             ; Calculates the length of the message
+    section .text
+        global _start               ; Entry point for the linker
 
-section .text
-    global _start               ; Entry point for the linker
+    _start:
+        ; syscall for sys_write (write to file descriptor)
+        mov rax, 1                  ; sys_write syscall number
+        mov rdi, 1                  ; File descriptor 1 (stdout)
+        mov rsi, msg                ; Address of the message string
+        mov rdx, len                ; Length of the message
+        syscall                     ; Execute syscall
 
-_start:
-    ; syscall for sys_write (write to file descriptor)
-    mov rax, 1                  ; sys_write syscall number
-    mov rdi, 1                  ; File descriptor 1 (stdout)
-    mov rsi, msg                ; Address of the message string
-    mov rdx, len                ; Length of the message
-    syscall                     ; Execute syscall
-
-    ; syscall for sys_exit (exit program)
-    mov rax, 60                 ; sys_exit syscall number
-    mov rdi, 0                  ; Exit code 0 (success)
-    syscall                     ; Execute syscall
-
-```
+        ; syscall for sys_exit (exit program)
+        mov rax, 60                 ; sys_exit syscall number
+        mov rdi, 0                  ; Exit code 0 (success)
+        syscall                     ; Execute syscall
+    ```
 </details>
+
 
 #### High-Level Programming Languages
 
