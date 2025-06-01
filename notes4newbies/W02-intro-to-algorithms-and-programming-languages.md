@@ -388,6 +388,96 @@ interpreter itself.
 
 -------------------------------------------------------------------------------
 
+# Data Representation in Programming Languages
+
+## Binary
+
+Again, I'll try to teach it to you the way David does.
+
+We have, apparently, a simple task on our hands. If you were to count up with a
+single hand, how high could you count? 5, right? You just use every finger as
+digits, allowing you to count as high as 5, but is it the best we can do? No.
+We can do way better than that.
+
+Imagine you have 3 lightbulbs in front of you. How many distinct ways can you
+turn on those lightbulbs, and the answer is not 3. Think of it this way, you
+could go off-off-off, off-off-on, off-on-off, off-on-on, on-off-off, etc.
+This would actually give you 8 completely distinct ways of turning on and off
+those lightbulbs. Now, how high can you count with that model? Let us call
+off-off-off 0, so that it's easily understandable. By doing that you can only
+count up to 7, but that's significantly better than 3.
+
+Revisiting our previous example, how high can we count with our fingers, if we
+were to use a more clever system? 31, is the correct answer, if we pick the
+not showing any fingers case is 0. Why 32 distinct cases, you ask? That's
+because in this way of counting every finger has only 2 different states, up or
+down. Since we have 2 different states for each finger, we have the permutate
+5, 2. The answer to that permutation is 31, and assigning (0,0,0,0,0) (all
+fingers are down) to 0, you can count up to 31 using only 5 fingers.
+
+That is exactly how computers communicate. They have billions of little
+lightbulbs in them, called transistors. Each transistor has 2 states, either on
+or off. We call these cases 1 and 0, respectively.
+
+### Deeper into Binary
+
+OK, we know how to count, but it feels unintuitive right now. Let's make it
+more intuitive.
+
+In elementary school, you've learned that the number representation 123 means
+one-hundred-twenty-three, now you don't even think about it anymore. But why?
+Why does the that specific combination of those symbols 1, 2, and 3 mean
+one-hundred-twenty-three? If you can recall, even if you don't have to do this
+computation right now, this is how you actually understand what number does it
+represent:
+
+- 3 is in the ones place, so 3 (3 * 1)
+- 2 is in the tens place, so 20 (2 * 10)
+- 1 is in the hundreds place, so 100 (1 * 100)
+- Add them all together, 100 + 20 + 3, and you have 123.
+
+This way of representing numbers is called the decimal system, meaning that it
+is base-10. Meaning, again, at every 10 numbers we run out and add one more
+column of numbers.
+
+Same idea can be implemented to any bases, and let's use it in binary system.
+In the decimal system our base was 10, and now it's 2, what does that mean?
+It means that every column of numbers represent a power of 2, starting from 0
+and going to infinity.
+
+If we were to use the same logic we did up there for 123 in decimal, let's do
+it for this number: 101
+
+- 1 is in the ones place, so 1 (1 * 1)
+- 0 is in the twos placee, so 0 (0 * 2)
+- and now, 1 is in the fours place, so 4 (1 * 4)
+- Adding them all together, the binary number 101 is actually 5 in our base-10
+decimal system.
+
+You don't need to be able to read it as fast as you do decimal numbers, but it
+would be nice for you to learn it.
+
+### Let's do some exercises.
+
+110110:
+
+- 0 is in the ones place, 0
+- 1 is in the twos place, 2
+- 1 is in the fours place, 4
+- 0 is in the eighths place, 0
+- 1 is in the sixteens place, 16
+- 1 is in the thirty twos place, 32
+- Adding them all together, you get 52 in decimals.
+
+
+
+
+-------------------------------------------------------------------------------
+
+## How would you represent 
+
+-------------------------------------------------------------------------------
+
 ### References
 
 [^1]: [CS50 - 3 Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
