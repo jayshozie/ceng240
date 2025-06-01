@@ -414,11 +414,12 @@ count up to 7, but that's significantly better than 3.
 
 Revisiting our previous example, how high can we count with our fingers, if we
 were to use a more clever system? 31, is the correct answer, if we pick the
-not showing any fingers case is 0. Why 32 distinct cases, you ask? That's
-because in this way of counting every finger has only 2 different states, up or
-down. Since we have 2 different states for each finger, we have the permute 5,
-2. The answer to that permutation is 31, and assigning (0,0,0,0,0) (all fingers
-are down) to 0, you can count up to 31 using only 5 fingers.
+not showing any fingers case is 0. Why 32 distinct cases (0 to 31), you ask?
+That's because in this way of counting every finger has only 2 different
+states, up or down. Since we have 2 different states for each finger, we have
+the permute 5, 2. The answer to that permutation is 31, and assigning
+(0,0,0,0,0) (all fingers are down) to 0, you can count up to 31 using only 5
+fingers.
 
 That is exactly how computers communicate. They have billions of little
 lightbulbs in them, called transistors. Each transistor has 2 states, either on
@@ -431,7 +432,7 @@ more intuitive.
 
 In elementary school, you've learned that the number representation 123 means
 one-hundred-twenty-three, now you don't even think about it anymore. But why?
-Why does the that specific combination of those symbols 1, 2, and 3 mean
+Why does that specific combination of those symbols 1, 2, and 3 mean
 one-hundred-twenty-three? If you can recall, even if you don't have to do this
 computation right now, this is how you actually understand what number does it
 represent:
@@ -445,16 +446,16 @@ This way of representing numbers is called the decimal system, meaning that it
 is base-10. Meaning, again, at every 10 numbers we run out and add one more
 column of numbers.
 
-Same idea can be implemented to any bases, and let's use it in binary system.
-In the decimal system our base was 10, and now it's 2, what does that mean?
-It means that every column of numbers represent a power of 2, starting from 0
-and going to infinity.
+The same idea can be implemented to any bases, and let's use it in binary
+system. In the decimal system our base was 10, and now it's 2, what does that
+mean? It means that every column of numbers represent a power of 2, starting
+from 0 and going to infinity.
 
 If we were to use the same logic we did up there for 123 in decimal, let's do
 it for this number: 101
 
 - 1 is in the ones place, so 1 (1 * 1)
-- 0 is in the twos placee, so 0 (0 * 2)
+- 0 is in the twos place, so 0 (0 * 2)
 - and now, 1 is in the fours place, so 4 (1 * 4)
 - Adding them all together, the binary number 101 is actually 5 in our base-10
 decimal system. This can be pictured as follows:
@@ -500,14 +501,16 @@ would be nice for you to learn it.
 
 #### Representing Text with Binary
 
-OK, now we know how to count with base-2. Let's go diver. How would you
+OK, now we know how to count with base-2. Let's go deeper. How would you
 represent letters in with only 0s and 1s? You could assign a number to each
 letter, and this is exactly what the people in the American Standards
 Association did. They assigned 65 to be 'A' (the capital letter A), and 66 to
 be 'B', and so on. Why 65, because they needed to make room for some other
-invisible characters that we need, we'll get to them later. They named this
-ASCII (American Standard Code for Information Interchange), and created a table
-of numbers and characters we need while processing text.
+invisible characters that we need, and they needed to align it with existing
+punched card codes and other historical computing standards, but we'll get to
+them later. They named this ASCII (American Standard Code for Information
+Interchange), and created a table of numbers and characters we need while
+processing text.
 
 Here is that original table:
 ![ASCII Table](./images/ascii-table.gif)[^3]
