@@ -179,7 +179,7 @@ see the outcomes of every possibility. This might take a bit more time than
 writing pseudocode, but you have more tools in your shed. You can use colors
 for different operations, for example.
 
-![1.3.1 - Example Algorithm Flowchart][./images/algorithm-flowchart-example.png]
+![1.3.1 - Example Algorithm Flowchart][1.3.1 - Example Algorithm Flowchart]
 
 In this funny example, the algorithm asks for the user's favorite subject. If
 They don't say "Computer Science", the algorithm prints out "Try again.!". If
