@@ -169,7 +169,7 @@ the best. Putting that aside there are some popular ways of doing it.
 
 Pseudocoding is very popular among developers, because it's very easy to
 understand and make other people understand. It's really easy to write, you
-just take a pen and paper and write the instructions in order of execution,
+just take a pen and paper and write the instructions in the order of execution,
 just like what David's pseudocode of searching a name in a phonebook.
 
 2. **Using Flow-Charts**
@@ -181,6 +181,67 @@ for different operations, for example.
 
 ![1.3.1 - Example Algorithm Flowchart](./images/algorithm-flowchart-example.png)
 
+In this funny example, the algorithm asks for the user's favorite subject. If
+They don't say "Computer Science", the algorithm prints out "Try again.!". If
+they do say "Computer Science" the algorithm prints out "Of course it is!" and
+ends the program.
+
+-------------------------------------------------------------------------------
+
+# Programming Languages
+
+## The World of Programming Languages
+
+If you remember week 0, I've talked about low/high level programming languages.
+I have intentionally mislead you there, sorry. Assembly is actually considered
+to be a low-level programming language, it's only 'high' level compared to pure
+machine code, and basically nothing else.
+
+### Levels of Programming Languages
+
+The levels of programming languages are not like the levels of a game. It's
+actually tells you how abstracted that language is. It's not a definite thing,
+mind you, it's only a way of understanding how abstract that language is
+compared to pure machine code.
+
+#### Low-Level Programming Languages
+
+A low-level programming language, like Assembly of x86_64, is a programming
+language that is very close to the machine code. It has very little abstraction
+from the machine code, and it is very hard to read for humans. It is very
+efficient, however, because it is very close to the machine code, thus not that
+abstract compared to high-level programming languages. It is usually used in
+operating systems, embedded systems, and other performance critical
+applications. It is also used in reverse engineering, because it is very easy
+to understand how the machine works with it.
+
+<details>
+    <summary>An Example Assembly (x86_64) Code</summary>
+```assembly
+section .data
+    ; Define our message and its length
+    msg db "Hello, World!", 0x0A ; 0x0A is the ASCII code for newline
+    len equ $ - msg             ; Calculates the length of the message
+
+section .text
+    global _start               ; Entry point for the linker
+
+_start:
+    ; syscall for sys_write (write to file descriptor)
+    mov rax, 1                  ; sys_write syscall number
+    mov rdi, 1                  ; File descriptor 1 (stdout)
+    mov rsi, msg                ; Address of the message string
+    mov rdx, len                ; Length of the message
+    syscall                     ; Execute syscall
+
+    ; syscall for sys_exit (exit program)
+    mov rax, 60                 ; sys_exit syscall number
+    mov rdi, 0                  ; Exit code 0 (success)
+    syscall                     ; Execute syscall
+```
+</details>
+
+#### High-Level Programming Languages
 
 
 
