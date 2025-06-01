@@ -89,3 +89,66 @@ doesn't change our runtime even a bit. Yes, it's not a constant function, but
 it's significantly better than both of those algorithms.
 
 ![Three Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
+
+If we were to compare a case where we are looking for someone with their name
+starting with the letter 'Z', in a thousand-page phonebook, first algorithm
+would take 1000 steps but it would find it, the second algorithm would take
+~500 steps but it has a 50/50 chance of not finding it; however, the third
+algorithm would only take about 10 steps.
+
+## Valid Operations in Algorithms
+
+Let's write the third algorithm in something called 'pseudocode'.
+
+<details>
+    <summary>What is pseudocode</summary>
+    A pseudocode is not a formal language or something like that. It's a way of
+    creating an algorithm in understandable but precise human language without
+    the burden of writing it out in syntax of programming languages.
+</details>
+
+01. Pick up phonebook
+02. Open the middle of book
+03. Look at page
+04. If person is on the page
+05.  Call person
+06. Else if person is earlier in book
+07.  Open to middle of left half of book
+08.  Go back to line 3
+09. Else if person is later in book
+10.  Open to middle of right half of book
+11.  Go back to line 3
+12. Else
+13.  Quit
+
+There are 3 types of valid operations in algorithms: sequentials, conditionals,
+and iteratives. Sequentials are simple, well-defined tasks, and they're usually
+declarative sentences. Conditionals are checks done by asking questions to the
+code, and acting by the result of that question. Iteratives are looping
+instructions that repeat a set (or subset) of instructions. Let's identify
+these in my pseudocode.
+
+Using our definitions, line 1 must be a sequential operation. It's a
+well-defined declarative sentence, in which the user asks the machine to pick
+up the phonebook. Same thing applies to the second and third lines, they ask
+the machine to do some well-defined task, open the middle of the book or look
+at page. Line 4, however, is a conditional. It checks whether the person is on
+the page that we've looked on line 3. The extra space on the line 5 is
+intentional, they specify what the machine should do if the question asked in
+the conditional is correct. In our case, if the person is on the page the
+machine should call the person, if not it would continue with the next
+conditional, else if person is earlier in book in our case. It checks whether
+the person we're trying to call is earlier in the book and then if that's
+correct it does the indented part of the code, in which it opens to middle of
+the left half of the book, and goes back to line 3. Line 8 is a perfect example
+of iterative operation, if the conditional is correct, it would go back to the
+line 3 and iterate over the rest of the code again. Same thing applies for the
+'code block' between the lines 9 and 11. If all three conditionals, the
+questions we ask the computer to check, fail, we have a last case scenario, an
+else case, in which we ask the computer to quit searching so it doesnt' go into
+an infinite loop.
+
+If you missed anything up there, I strongly urge you to watch the
+[video](https://www.youtube.com/live/2WtPyqwTLKM) I've mentioned before. David
+J. Malan is an amazing instructor, he explains everything so well.
+
