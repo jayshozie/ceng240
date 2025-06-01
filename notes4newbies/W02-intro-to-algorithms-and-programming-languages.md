@@ -152,11 +152,12 @@ the person we're trying to call is earlier in the book and then if that's
 correct it does the indented part of the code, in which it opens to middle of
 the left half of the book, and goes back to line 3. Line 8 is a perfect example
 of iterative operation, if the conditional is correct, it would go back to the
-line 3 and iterate over the rest of the code again. Same thing applies for the
-'code block' between the lines 9 and 11. If all three conditionals, the
-questions we ask the computer to check, fail, we have a last case scenario, an
-else case, in which we ask the computer to quit searching so it doesnt' go into
-an infinite loop.
+line 3 and iterate over the rest of the code again. In other words, the
+repeated execution of lines 3-11, driven by the 'Go back to line 3'
+instructions, demonstrates iteration. Same thing applies for the 'code block'
+between the lines 9 and 11. If all three conditionals, the questions we ask the
+computer to check, fail, we have a last case scenario, an else case, in which
+we ask the computer to quit searching so it doesnt' go into an infinite loop.
 
 If you missed anything up there, I strongly urge you to watch the
 [video](https://www.youtube.com/live/2WtPyqwTLKM) I've mentioned before. Prof.
