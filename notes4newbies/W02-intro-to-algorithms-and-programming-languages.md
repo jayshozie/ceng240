@@ -190,12 +190,16 @@ see the outcomes of every possibility. This might take a bit more time than
 writing pseudocode, but you have more tools in your shed. You can use colors
 for different operations, for example.
 
+<details>
+    <summary>Flowchart Example</summary>
+
 ![1.3.1 - Example Algorithm Flowchart](./images/algorithm-flowchart-example.png)[^2]
 
 In this funny example, the algorithm asks for the user's favorite subject. If
 They don't say "Computer Science", the algorithm prints out "Try again.!". If
 they do say "Computer Science" the algorithm prints out "Of course it is!" and
 ends the program.
+</details>
 
 -------------------------------------------------------------------------------
 
@@ -431,6 +435,8 @@ That is exactly how computers communicate. They have billions of little
 lightbulbs in them, called transistors. Each transistor has 2 states, either on
 or off. We call these cases 1 and 0, respectively.
 
+-------------------------------------------------------------------------------
+
 ### Deeper into the Binary System
 
 OK, we know how to count, but it feels unintuitive right now. Let's make it
@@ -505,6 +511,8 @@ would be nice for you to learn it.
 
 ### How would you represent things with binary?
 
+-------------------------------------------------------------------------------
+
 #### Representing Text with Binary
 
 OK, now we know how to count with base-2. Let's go deeper. How would you
@@ -534,6 +542,8 @@ that sentence `HI!`.
 What would the binary representation of that message be? We can use our
 knowledge on binary to solve this problem. It should be this:
 - `01001000 01001001 00100001`, added spaces so that you can read it easily.
+
+-------------------------------------------------------------------------------
 
 #### Representing Images with Binary
 
