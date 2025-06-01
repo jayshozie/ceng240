@@ -411,9 +411,9 @@ Revisiting our previous example, how high can we count with our fingers, if we
 were to use a more clever system? 31, is the correct answer, if we pick the
 not showing any fingers case is 0. Why 32 distinct cases, you ask? That's
 because in this way of counting every finger has only 2 different states, up or
-down. Since we have 2 different states for each finger, we have the permutate
-5, 2. The answer to that permutation is 31, and assigning (0,0,0,0,0) (all
-fingers are down) to 0, you can count up to 31 using only 5 fingers.
+down. Since we have 2 different states for each finger, we have the permute 5,
+2. The answer to that permutation is 31, and assigning (0,0,0,0,0) (all fingers
+are down) to 0, you can count up to 31 using only 5 fingers.
 
 That is exactly how computers communicate. They have billions of little
 lightbulbs in them, called transistors. Each transistor has 2 states, either on
@@ -452,29 +452,57 @@ it for this number: 101
 - 0 is in the twos placee, so 0 (0 * 2)
 - and now, 1 is in the fours place, so 4 (1 * 4)
 - Adding them all together, the binary number 101 is actually 5 in our base-10
-decimal system.
+decimal system. This can be pictured as follows:
+```markdown
+2^2 2^1 2^0
+1   0   1
+```
 
 You don't need to be able to read it as fast as you do decimal numbers, but it
 would be nice for you to learn it.
 
-### Let's do some exercises.
+<details>
+    <summary>Some Exercises of Binary -> Decimal Conversion</summary>
 
-110110:
+00110110:
 
 - 0 is in the ones place, 0
 - 1 is in the twos place, 2
 - 1 is in the fours place, 4
-- 0 is in the eighths place, 0
+- 0 is in the eights place, 0
 - 1 is in the sixteens place, 16
 - 1 is in the thirty twos place, 32
-- Adding them all together, you get 52 in decimals.
+- 0 is in the sixty fours place, 0
+- 0 is in the one hundred twenty eights place, 0
+- Adding them all together, you get 56 in decimals.
 
+01001111:
 
-
+- 1 is in the ones place, 1
+- 1 is in the twos place, 2
+- 1 is in the fours place, 4
+- 1 is in the eights place, 8
+- 0 is in the sixteens place, 0
+- 0 is in the thirty twos place, 0
+- 1 is in the sixty fours place, 64
+- 0 is in the one hundred twenty eights place, 0
+- Adding them all together, you get 79 in decimals.
+</details>
 
 -------------------------------------------------------------------------------
 
 ## How would you represent 
+
+OK, now we know how to count with base-2. Let's go diver. How would you
+represent letters in with only 0s and 1s? You could assign a number to each
+letter, and this is exactly what the people in the American Standards
+Association did. They assigned 65 to be 'A' (the capital letter A), and 66 to
+be 'B', and so on. Why 65, because they needed to make room for some other
+invisible characters that we need, we'll get to them later.
+
+Now, let's practice our new knowledge.
+
+
 
 -------------------------------------------------------------------------------
 
