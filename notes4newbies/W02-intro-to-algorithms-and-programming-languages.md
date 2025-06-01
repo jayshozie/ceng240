@@ -255,10 +255,95 @@ e:  48 8b 34 25 00 00 00    mov    rsi,QWORD PTR ds:0x0
 2e: 0f 05                   syscall
 ```
 </details>
+
+Don't worry, you probably will never actually deal with Assembly code ever in
+your life. I've put this here just as an example.
 </details>
 
-
 #### High-Level Programming Languages
+
+Now, that you know what low-level programming languages are, you can probably
+guess what kind of a programming language would be considered high-level. There
+are 2 types of high-level programming languages: compiled, interpreted.
+
+##### Compiled Languages
+
+Imagine you're writing a complex novel in English. Before anyone can read it,
+you need to translate the entire book into another language, say, French. This
+translation process meticulous; every word, every sentence, every grammatical
+rule must be perfectly converted. Once the whole book is ttranslated, it
+becomes a standalone French novel. You can then distribbute this French
+version, and anyone who speaks French can read it directly, quickly, without
+needing the original English text or the translator present.
+
+This is very similar to how a compiled programming language works. When you
+write code in a compiled language (e.g., C, C++, or Go), you first run it
+through a special program called a compiler. The compiler's job is to take your
+human-readable source code and translate the entire thing into a
+machine-readable format, typically called machine code or an executable file.
+This executable file is then self-contained and can be run directly by your
+computer's processor.
+
+The compilation process involves several complex steps, and you don't have to
+know it for this course, but I'll give you anyway.
+
+<details>
+    <summary>Steps of the Compilation Process</summary>
+
+1. **Lexical Analysis:** Breaking your code into tokens (like words and
+    symbols)
+2. **Syntax Analysis:** Checking if the code follows the language's grammar
+    rules.
+3. **Semantic Analysis:** Ensuring the code makse sense logically.
+
+4. **Code Generation:** Producing the machine code.
+
+5. **Optimization:** Making the machine code run faster or use less memory.
+</details>
+
+Once compiled, the resulting executable program can be run over and over again
+without needing the compiler or the original source code. Think of it as a
+pre-built application ready to go.
+
+<details>
+    <summary>A Simple Example in a Compiled Language (C99)</summary>
+
+A hello world program in C:
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!");
+
+    return 0;
+}
+```
+
+It's corresponding Assembly (x86_64) code:
+```asm
+section .data
+    hello db 'Hello, World!', 0
+
+section .text
+    global _start
+
+_start:
+    ; write the string to stdout
+    mov rax, 1          ; syscall: write
+    mov rdi, 1          ; file descriptor: stdout
+    mov rsi, hello      ; pointer to the string
+    mov rdx, 13         ; length of the string
+    syscall
+
+    ; exit the program
+    mov rax, 60         ; syscall: exit
+    xor rdi, rdi        ; status: 0
+    syscall
+```
+</details>
+
+##### Interpreted Languages
+
 
 
 
