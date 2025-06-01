@@ -419,7 +419,7 @@ That is exactly how computers communicate. They have billions of little
 lightbulbs in them, called transistors. Each transistor has 2 states, either on
 or off. We call these cases 1 and 0, respectively.
 
-### Deeper into Binary
+### Deeper into the Binary System
 
 OK, we know how to count, but it feels unintuitive right now. Let's make it
 more intuitive.
@@ -491,18 +491,33 @@ would be nice for you to learn it.
 
 -------------------------------------------------------------------------------
 
-## How would you represent 
+## How would you represent things?
+
+### Representing Text with Binary
 
 OK, now we know how to count with base-2. Let's go diver. How would you
 represent letters in with only 0s and 1s? You could assign a number to each
 letter, and this is exactly what the people in the American Standards
 Association did. They assigned 65 to be 'A' (the capital letter A), and 66 to
 be 'B', and so on. Why 65, because they needed to make room for some other
-invisible characters that we need, we'll get to them later.
+invisible characters that we need, we'll get to them later. They named this
+ASCII (American Standard Code for Information Interchange), and created a table
+of numbers and characters we need while processing text.
 
-Now, let's practice our new knowledge.
+Here is that original table:
+[ASCII Table](./images/ascii-table.gif)
+[^3]
 
+Now, let's practice our new knowledge. Let's say your received a text with the
+numbers `72 73 33`. What sentence does this combination of numbers represent?
 
+Well, according to our table, 72 is the representation of the capital letter
+'H', 73 is the capital letter 'I', and 33 is the exclamation mark '!'. Making
+that sentence `HI!`.
+
+What would the binary representation of that message be? We can use our
+knowledge on binary to solve this problem. It should be this:
+- `01001000 01001001 00100001`, added spaces so that you can read it easily.
 
 -------------------------------------------------------------------------------
 
@@ -511,5 +526,8 @@ Now, let's practice our new knowledge.
 [^1]: [CS50 - 3 Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
 [WayBack Machine](https://web.archive.org/web/20250601073812/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
 
-[^2]:  [BBC - Example Algorithm Flowchart](https://www.bbc.co.uk/bitesize/guides/z3bq7ty/revision/3)
+[^2]: [BBC - Example Algorithm Flowchart](https://www.bbc.co.uk/bitesize/guides/z3bq7ty/revision/3)
 [WayBack Machine](https://web.archive.org/web/20250320171857/https://bam.files.bbci.co.uk/bam/live/content/zs96tfr/large)
+
+[^3]: [ASCII Table](https://www.asciitable.com/asciifull.gif)
+[WayBack Machine](https://web.archive.org/web/20250530213724/https://www.asciitable.com/asciifull.gif)
