@@ -505,7 +505,7 @@ ASCII (American Standard Code for Information Interchange), and created a table
 of numbers and characters we need while processing text.
 
 Here is that original table:
-[ASCII Table](./images/ascii-table.gif)
+![ASCII Table](./images/ascii-table.gif)
 [^3]
 
 Now, let's practice our new knowledge. Let's say your received a text with the
