@@ -389,6 +389,7 @@ interpreter itself.
 -------------------------------------------------------------------------------
 
 # References
+
 [^1.1.1]: [CS50 - 3 Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
 [WayBack Machine](https://web.archive.org/web/20250601073812/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
 
