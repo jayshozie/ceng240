@@ -107,19 +107,21 @@ Let's write the third algorithm in something called 'pseudocode'.
     the burden of writing it out in syntax of programming languages.
 </details>
 
+```markdown
 01. Pick up phonebook
 02. Open the middle of book
 03. Look at page
 04. If person is on the page
-05.  Call person
+05.     Call person
 06. Else if person is earlier in book
-07.  Open to middle of left half of book
-08.  Go back to line 3
+07.     Open to middle of left half of book
+08.     Go back to line 3
 09. Else if person is later in book
-10.  Open to middle of right half of book
-11.  Go back to line 3
+10.     Open to middle of right half of book
+11.     Go back to line 3
 12. Else
-13.  Quit
+13.     Quit
+```
 
 There are 3 types of valid operations in algorithms: sequentials, conditionals,
 and iteratives. Sequentials are simple, well-defined tasks, and they're usually
