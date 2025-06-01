@@ -396,7 +396,7 @@ Again, I'll try to teach it to you the way David does.
 
 We have, apparently, a simple task on our hands. If you were to count up with a
 single hand, how high could you count? 5, right? You just use every finger as
-digits, allowing you to count as high as 5, but is it the best we can do? No.
+digits, allowing you to count as high as 5, but is this the best we can do? No.
 We can do way better than that.
 
 Imagine you have 3 lightbulbs in front of you. How many distinct ways can you
@@ -491,9 +491,9 @@ would be nice for you to learn it.
 
 -------------------------------------------------------------------------------
 
-## How would you represent things?
+### How would you represent things with binary?
 
-### Representing Text with Binary
+#### Representing Text with Binary
 
 OK, now we know how to count with base-2. Let's go diver. How would you
 represent letters in with only 0s and 1s? You could assign a number to each
