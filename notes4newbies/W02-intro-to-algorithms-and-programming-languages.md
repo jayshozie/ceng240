@@ -204,6 +204,8 @@ actually tells you how abstracted that language is. It's not a definite thing,
 mind you, it's only a way of understanding how abstract that language is
 compared to pure machine code.
 
+-------------------------------------------------------------------------------
+
 #### Low-Level Programming Languages
 
 A low-level programming language, like Assembly of x86_64, is a programming
@@ -260,11 +262,15 @@ Don't worry, you probably will never actually deal with Assembly code ever in
 your life. I've put this here just as an example.
 </details>
 
+-------------------------------------------------------------------------------
+
 #### High-Level Programming Languages
 
 Now, that you know what low-level programming languages are, you can probably
 guess what kind of a programming language would be considered high-level. There
 are 2 types of high-level programming languages: compiled, interpreted.
+
+-------------------------------------------------------------------------------
 
 ##### Compiled Languages
 
@@ -342,16 +348,43 @@ _start:
 ```
 </details>
 
+-------------------------------------------------------------------------------
+
 ##### Interpreted Languages
 
+Now, let's consider a different scenario for our novel. Instead of translating
+the entire book upfront, imagine, again, you have an English novel, and someone
+who only speaks French wants to read it. You could sit with them, and a human
+interpreter could read the English text line by line, translating each sentence
+into French aloud as they go. The reader gets the French version immediately
+after you speak each sentence, but the interpreter needs to be present and
+active throughout the entire reading process, and the original English book is
+always needed.
 
+This is analogous to an interpreted programming language. When you write code
+in an interpreted language (e.g., Python, JavaScript, or Ruby), there isn't a
+separate, upfront compilation step that creates a standalone executable.
+Instead, another program called an interpreter reads your source code line by
+line (or instruction by instruction) and executes it directly.
 
+The interpreter essentially performs the translation andd execution
+simultaneously. Each time you run an interpreted program, the interpreter
+processes the source code from scratch. This means you always need the
+interpreter installed on the computer where you wnat to run the program, along
+with the original source code itself. The execution happens on the fly as the
+interpreter works through the code.
 
+<details>
+    <summary>A Simple Example in a Interpreted Language</summary>
 
+A hello world program in Python.
+```python
+print("Hello, World!")
+```
 
-
-
-
+Yes, that's it. Literally. Also, it would work in a `.py` file and the Python
+interpreter itself.
+</details>
 
 -------------------------------------------------------------------------------
 
@@ -362,15 +395,3 @@ _start:
 
 1.3.1 - [BBC - Example Algorithm Flowchart](https://www.bbc.co.uk/bitesize/guides/z3bq7ty/revision/3)
 [WayBack Machine](https://web.archive.org/web/20250320171857/https://bam.files.bbci.co.uk/bam/live/content/zs96tfr/large)
-
-
-
-
-
-
-
-
-
-
-
-
