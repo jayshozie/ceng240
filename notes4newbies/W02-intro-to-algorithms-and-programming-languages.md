@@ -212,6 +212,8 @@ I have intentionally mislead you there, sorry. Assembly is actually considered
 to be a low-level programming language, it's only 'high' level compared to pure
 machine code, and basically nothing else.
 
+-------------------------------------------------------------------------------
+
 ### Levels of Programming Languages
 
 The levels of programming languages are not like the levels of a game. It's
