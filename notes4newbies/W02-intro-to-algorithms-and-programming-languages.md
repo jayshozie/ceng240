@@ -331,7 +331,7 @@ pre-built application ready to go.
 <details>
     <summary>A Simple Example in a Compiled Language (C)</summary>
 
-A hello world program in C:
+#### A 'Hello, World!' Program in C:
 ```c
 #include <stdio.h>
 
@@ -342,7 +342,7 @@ int main() {
 }
 ```
 
-It's corresponding Assembly (x86_64) code:
+#### It's Corresponding Assembly (x86_64):
 ```asm
 section .data
     hello db 'Hello, World!', 0
@@ -394,7 +394,7 @@ interpreter works through the code.
 <details>
     <summary>A Simple Example in an Interpreted Language (Python)</summary>
 
-A hello world program in Python.
+#### A 'Hello, World!' Program in Python:
 ```python
 print("Hello, World!")
 ```
@@ -405,9 +405,9 @@ interpreter itself.
 
 -------------------------------------------------------------------------------
 
-# Data Representation in Programming Languages
+## Data Representation in Programming Languages
 
-## Binary
+### Binary
 
 Again, I'll try to teach it to you the way David does.
 
@@ -439,7 +439,7 @@ or off. We call these cases 1 and 0, respectively.
 
 -------------------------------------------------------------------------------
 
-### Deeper into the Binary System
+### How to count in binary?
 
 OK, we know how to count, but it feels unintuitive right now. Let's make it
 more intuitive.
