@@ -14,7 +14,7 @@ CENG240 slides.
 An algorithm is;
 - a procedure or formula for solving a problem,
 - a set of instructions to be followed to solve a problem,
-- an effective method expressed as a finite listt of well-defined instructions
+- an effective method expressed as a finite list of well-defined instructions
     for calculating a function
 - step-by-step procedure for calculations.
 
