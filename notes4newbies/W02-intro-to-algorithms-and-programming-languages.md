@@ -239,6 +239,22 @@ _start:
     mov rdi, 0                  ; Exit code 0 (success)
     syscall                     ; Execute syscall
 ```
+<details>
+        <summary>Disassembly of the Above Code for Nerds</summary>
+
+```asm
+0:  48 c7 c0 01 00 00 00    mov    rax,0x1
+7:  48 c7 c7 01 00 00 00    mov    rdi,0x1
+e:  48 8b 34 25 00 00 00    mov    rsi,QWORD PTR ds:0x0
+15: 00
+16: 48 8b 14 25 00 00 00    mov    rdx,QWORD PTR ds:0x0
+1d: 00
+1e: 0f 05                   syscall
+20: 48 c7 c0 3c 00 00 00    mov    rax,0x3c
+27: 48 c7 c7 00 00 00 00    mov    rdi,0x0
+2e: 0f 05                   syscall
+```
+</details>
 </details>
 
 
