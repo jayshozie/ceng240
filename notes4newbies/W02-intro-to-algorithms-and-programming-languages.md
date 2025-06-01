@@ -375,7 +375,7 @@ with the original source code itself. The execution happens on the fly as the
 interpreter works through the code.
 
 <details>
-    <summary>A Simple Example in a Interpreted Language</summary>
+    <summary>A Simple Example in an Interpreted Language</summary>
 
 A hello world program in Python.
 ```python
