@@ -523,11 +523,11 @@ knowledge on binary to solve this problem. It should be this:
 
 ### References
 
-[^1]: [CS50 - 3 Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
+[^1]: [CS50 - 3 Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png) | 
 [WayBack Machine](https://web.archive.org/web/20250601073812/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
 
-[^2]: [BBC - Example Algorithm Flowchart](https://www.bbc.co.uk/bitesize/guides/z3bq7ty/revision/3)
+[^2]: [BBC - Example Algorithm Flowchart](https://www.bbc.co.uk/bitesize/guides/z3bq7ty/revision/3) | 
 [WayBack Machine](https://web.archive.org/web/20250320171857/https://bam.files.bbci.co.uk/bam/live/content/zs96tfr/large)
 
-[^3]: [ASCII Table](https://www.asciitable.com/asciifull.gif)
+[^3]: [ASCII Table](https://www.asciitable.com/asciifull.gif) | 
 [WayBack Machine](https://web.archive.org/web/20250530213724/https://www.asciitable.com/asciifull.gif)
