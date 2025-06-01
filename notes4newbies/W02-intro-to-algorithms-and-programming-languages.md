@@ -131,6 +131,12 @@ Let's write the third algorithm in something called 'pseudocode'.
 13.     Quit
 ```
 
+<details>
+    <summary>A Flowchart Representation of the Above Algorithm</summary>
+
+![Finding a Person in a Phonebook Flowchart](./images/algorithm-flowchart-example.png)
+</details>
+
 There are 3 types of valid operations in algorithms: sequentials, conditionals,
 and iteratives. Sequentials are simple, well-defined tasks, and they're usually
 declarative sentences. Conditionals are checks done by asking questions to the
