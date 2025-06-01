@@ -217,8 +217,8 @@ to understand how the machine works with it.
 
 <details>
     <summary>A "Simple" Example of Assembly (x86_64) Code</summary>
-    ```assembly
 
+```asm
 section .data
     ; Define our message and its length
     msg db "Hello, World!", 0x0A ; 0x0A is the ASCII code for newline
@@ -238,8 +238,7 @@ _start:
     mov rax, 60                 ; sys_exit syscall number
     mov rdi, 0                  ; Exit code 0 (success)
     syscall                     ; Execute syscall
-
-    ```
+```
 </details>
 
 
