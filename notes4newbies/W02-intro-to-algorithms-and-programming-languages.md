@@ -132,7 +132,7 @@ Let's write the third algorithm in something called 'pseudocode'.
 ```
 
 <details>
-    <summary>A Flowchart Representation of the Above Algorithm</summary>
+    <summary>A Flowchart Representation of That Algorithm</summary>
 
 ![Finding a Person in a Phonebook Flowchart](./images/phonebook-algorithm-flowchart.png)
 </details>
