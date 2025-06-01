@@ -168,14 +168,14 @@ David J. Malan is an amazing professor, he explains everything so well.
 ## Ways of Describing Complex Algorithms
 
 First of all, the best way of describing an algorithm is the one you understand
-the best. Putting that aside there are some popular ways of doing it.
+the best. Putting that aside, there are some popular ways of doing it.
 
 1. **Using Pseudocode**
 
 Pseudocoding is very popular among developers, because it's very easy to
 understand and make other people understand. It's really easy to write, you
 just take a pen and paper and write the instructions in the order of execution,
-just like what David's pseudocode of searching a name in a phonebook.
+just like David's pseudocode for searching a name in a phonebook.
 
 2. **Using Flow-Charts**
 
@@ -215,12 +215,12 @@ compared to pure machine code.
 
 A low-level programming language, like Assembly of x86_64, is a programming
 language that is very close to the machine code. It has very little abstraction
-from the machine code, and it is very hard to read for humans. It is very
+from the machine code and is very hard to read for humans. It is very
 efficient, however, because it is very close to the machine code, thus not that
 abstract compared to high-level programming languages. It is usually used in
 operating systems, embedded systems, and other performance critical
-applications. It is also used in reverse engineering, because it is very easy
-to understand how the machine works with it.
+applications. It is also used in reverse engineering, because it very easy to
+understand how the machine works.
 
 <details>
     <summary>A "Simple" Example of Assembly (x86_64) Code</summary>
@@ -273,7 +273,7 @@ your life. I've put this here just as an example.
 
 Now, that you know what low-level programming languages are, you can probably
 guess what kind of a programming language would be considered high-level. There
-are 2 types of high-level programming languages: compiled, interpreted.
+are two main types of high-level programming languages: compiled, interpreted.
 
 -------------------------------------------------------------------------------
 
@@ -281,11 +281,11 @@ are 2 types of high-level programming languages: compiled, interpreted.
 
 Imagine you're writing a complex novel in English. Before anyone can read it,
 you need to translate the entire book into another language, say, French. This
-translation process meticulous; every word, every sentence, every grammatical
-rule must be perfectly converted. Once the whole book is ttranslated, it
-becomes a standalone French novel. You can then distribbute this French
-version, and anyone who speaks French can read it directly, quickly, without
-needing the original English text or the translator present.
+translation process is meticulous; every word, every sentence, every
+grammatical rule must be perfectly converted. Once the whole book is
+translated, it becomes a standalone French novel. You can then distribute this
+French version, and anyone who speaks French can read it directly, quickly,
+without needing the original English text or the translator present.
 
 This is very similar to how a compiled programming language works. When you
 write code in a compiled language (e.g., C, C++, or Go), you first run it
@@ -317,7 +317,7 @@ without needing the compiler or the original source code. Think of it as a
 pre-built application ready to go.
 
 <details>
-    <summary>A Simple Example in a Compiled Language (C99)</summary>
+    <summary>A Simple Example in a Compiled Language (C)</summary>
 
 A hello world program in C:
 ```c
@@ -380,7 +380,7 @@ with the original source code itself. The execution happens on the fly as the
 interpreter works through the code.
 
 <details>
-    <summary>A Simple Example in an Interpreted Language</summary>
+    <summary>A Simple Example in an Interpreted Language (Python)</summary>
 
 A hello world program in Python.
 ```python
@@ -510,8 +510,7 @@ ASCII (American Standard Code for Information Interchange), and created a table
 of numbers and characters we need while processing text.
 
 Here is that original table:
-![ASCII Table](./images/ascii-table.gif)
-[^3]
+![ASCII Table](./images/ascii-table.gif)[^3]
 
 Now, let's practice our new knowledge. Let's say your received a text with the
 numbers `72 73 33`. What sentence does this combination of numbers represent?
