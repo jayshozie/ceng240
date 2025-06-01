@@ -44,8 +44,8 @@ certain area and it may also include phone numbers of local shops and all. Now,
 you want to find the phone number of John Harvard, an old friend of yours. What
 are the ways you can search the book?
 
-The first one that comes to mind is to through all pages one-by-one from start
-to either finish or John Harvard, if he's in the book. This is a correct
+The first one that comes to mind is to go through all pages one-by-one from
+start to either finish or John Harvard, if he's in the book. This is a correct
 algorithm, because if he's in the book you will definitely (if you're reading
 carefully) find him; however, this is pretty inefficient isn't it? Let's sa
 that there are 1000 pages in total. In every page we have very tiny lines of
