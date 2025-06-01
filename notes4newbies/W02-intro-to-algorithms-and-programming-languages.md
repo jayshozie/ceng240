@@ -90,9 +90,7 @@ doesn't change our runtime even a bit. Yes, it's not a constant function, but
 it's significantly better than both of those algorithms. The Big-O Notation of
 this algorithm would be O(log2(n)).
 
-[![Three Algorithms Compared](./images/comparison-of-3-algorithms-cs50Week0Slide141.png)](https://web.archive.org/web/20250601073812/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
-
-![1.1.1 - Three Algorithms Compared](./images/comparison-of-3-algorithms-cs50Week0Slide141.png)
+![Three Algorithms Compared](./images/comparison-of-3-algorithms-cs50Week0Slide141.png)[^1.1.1]
 
 If we were to compare a case where we are looking for someone with their name
 starting with the letter 'Z', in a thousand-page phonebook, first algorithm
@@ -181,7 +179,7 @@ see the outcomes of every possibility. This might take a bit more time than
 writing pseudocode, but you have more tools in your shed. You can use colors
 for different operations, for example.
 
-![1.3.1 - Example Algorithm Flowchart](./images/algorithm-flowchart-example.png)
+![1.3.1 - Example Algorithm Flowchart](./images/algorithm-flowchart-example.png)[^1.3.1]
 
 In this funny example, the algorithm asks for the user's favorite subject. If
 They don't say "Computer Science", the algorithm prints out "Try again.!". If
@@ -392,8 +390,8 @@ interpreter itself.
 
 # References
 
-[1.1.1] - [CS50 - 3 Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
+[^1.1.1]: [CS50 - 3 Algorithms Compared](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
 [WayBack Machine](https://web.archive.org/web/20250601073812/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide141.png)
 
-[1.3.1] - [BBC - Example Algorithm Flowchart](https://www.bbc.co.uk/bitesize/guides/z3bq7ty/revision/3)
+[^1.3.1]:  [BBC - Example Algorithm Flowchart](https://www.bbc.co.uk/bitesize/guides/z3bq7ty/revision/3)
 [WayBack Machine](https://web.archive.org/web/20250320171857/https://bam.files.bbci.co.uk/bam/live/content/zs96tfr/large)
