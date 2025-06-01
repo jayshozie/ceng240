@@ -526,6 +526,10 @@ What would the binary representation of that message be? We can use our
 knowledge on binary to solve this problem. It should be this:
 - `01001000 01001001 00100001`, added spaces so that you can read it easily.
 
+#### Representing Images with Binary
+
+How do you represent colors with only 0s and 1s?
+
 -------------------------------------------------------------------------------
 
 ### References
