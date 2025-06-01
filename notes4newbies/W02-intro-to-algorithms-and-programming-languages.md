@@ -49,13 +49,15 @@ start to either finish or John Harvard, if he's in the book. This is a correct
 algorithm, because if he's in the book you will definitely (if you're reading
 carefully) find him; however, this is pretty inefficient isn't it? Let's sa
 that there are 1000 pages in total. In every page we have very tiny lines of
-phone numbers. Let's try a different algorithm, in which we go 2 pages at a
-time, this should take half the time since we're going twice as fast, but is
-this algorithm correct? No, right, because John Harvard could be sandwiched
-between two pages when we come to 'J'. Even though this algorithm is twice as
-fast as our previous algorithm, it's not completely correct. Maybe we could go
-back and check again when we see that we've come to 'K'. All and all, these are
-pretty bad algorithms compared to the one I'll tell you right now.
+phone numbers.
+
+Let's try a different algorithm, in which we go 2 pages at a time, this should
+take half the time since we're going twice as fast, but is this algorithm
+correct? No, right, because John Harvard could be sandwiched between two pages
+when we come to 'J'. Even though this algorithm is twice as fast as our
+previous algorithm, it's not completely correct. Maybe we could go back and
+check again when we see that we've come to 'K'. All in all, these are pretty
+bad algorithms compared to the one I'll tell you right now.
 
 Imagine opening that book right from the middle, we're now seeing a page with
 the letter 'M'. Now, effectively we've divided this phonebook into two
@@ -80,15 +82,17 @@ road merged their phonebooks together, they would have a 2000-page phonebook,
 and it could take us twice as fast to find that person. Let's call that graph,
 n. Second algorithm is also a linear one, because even if we were going twice
 as fast, every 2 pages added to the book would add one more step to our
-algorithm, making its graph n/2. This way of trying to understand the average
-speed of algorithms is called the Big-O Notation (e.g., O(n), O(n/2))
+algorithm, making its graph n/2. This way representing the runtime complexity
+of algorithms is called the Big-O Notation (e.g., O(n), O(n/2)). While the
+second eample might seem faster, Big-O notation focuses on how the runtime
+scales with input size, and constant factors are typically dropped.
 
 The third algorithm, however, is different. Its graph's shape is not linear,
 it's fundamentally different. If you remember your logarithms, you should
 recognize that graph as the graph of log base 2 of n. Adding 2 or 100 pages
-doesn't change our runtime even a bit. Yes, it's not a constant function, but
-it's significantly better than both of those algorithms. The Big-O Notation of
-this algorithm would be O(log2(n)).
+doesn't change our runtime significantly. Yes, it's not a constant function,
+but it's significantly better than both of those algorithms. The Big-O Notation
+of this algorithm would be O(log2(n)).
 
 ![Three Algorithms Compared](./images/comparison-of-3-algorithms-cs50Week0Slide141.png)[^1]
 
@@ -132,7 +136,7 @@ and iteratives. Sequentials are simple, well-defined tasks, and they're usually
 declarative sentences. Conditionals are checks done by asking questions to the
 code, and acting by the result of that question. Iteratives are looping
 instructions that repeat a set (or subset) of instructions. Let's identify
-these in my pseudocode.
+these in David's pseudocode.
 
 From our definitions, line 1 must be a sequential operation. It's a
 well-defined declarative sentence, in which the user asks the machine to pick
