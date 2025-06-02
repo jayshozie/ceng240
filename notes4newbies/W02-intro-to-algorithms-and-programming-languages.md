@@ -494,7 +494,7 @@ would be nice for you to learn it.
 - 1 is in the thirty twos place, 32
 - 0 is in the sixty fours place, 0
 - 0 is in the one hundred twenty eights place, 0
-- Adding them all together, you get 56 in decimals.
+- Adding them all together, you get 54 in decimals.
 
 01001111:
 
