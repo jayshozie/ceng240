@@ -509,10 +509,37 @@ would be nice for you to learn it.
 - Adding them all together, you get 79 in decimals.
 </details>
 
+<details>
+    <summary>Decimal to Binary Conversion of Integers (Included)</summary>
+
+This part is included in the course.
+
+Easiest way of doing that for integers is to use the `divide until left with 0`
+method. You take a number, let's say it's 19, and divide it by 2 until you're
+left with 0. At every step, you write the remainder of the division, and when
+you reach 0, which makes the last column 1 in our case, you have the binary
+version of your number. It's read from last to first remainder.
+
+Step|Dividend|Divisor|Quotient|Remainder
+Step 1|19|2|8|1
+Step 2|9|2|4|1
+Step 3|4|2|1|0
+Step 4|2|2|1|0
+Step 5|1|2|0|1
+
+Which makes the binary version of the number 19, `10011`.
+</details>
+
 ### Deep Dive into Numbering Systems
 
 First of all, this part is included in the course, so even though I believe
 it's early for a complete beginner, you need to know these.
+
+#### Types of Numbers in Computers
+
+OK, I believe it was clear how to represent positive integers (and 0) in
+binary, but how would you represent real numbers, numbers like `24.32`, or
+`π`? Let's dive into different ways of doing that.
 
 
 
@@ -524,6 +551,8 @@ it's early for a complete beginner, you need to know these.
 
 <details>
     <summary>Representing Text with Binary</summary>
+
+This part is included in the course.
 
 OK, now we know how to count with base-2. Let's go deeper. How would you
 represent letters in with only 0s and 1s? You could assign a number to each
