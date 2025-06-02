@@ -509,6 +509,13 @@ would be nice for you to learn it.
 - Adding them all together, you get 79 in decimals.
 </details>
 
+### Deep Dive into Numbering Systems
+
+First of all, this part is included in the course, so even though I believe
+it's early for a complete beginner, you need to know these.
+
+
+
 -------------------------------------------------------------------------------
 
 ### How would you represent things with binary?
