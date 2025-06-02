@@ -664,4 +664,4 @@ This is example is a bit weird, because it's a flipbook and it's an 18FPS gif.
 [WayBack Machine](https://web.archive.org/web/20250602060438/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide120.png)
 
 [^7]: [Andymation - One of the Coolest Flipbooks I've Seen](https://www.youtube.com/watch?v=tudBOEbFt-8) | 
-[WayBack Machine](https://web.archive.org/web/20250602070336/https://www.youtube.com/watch?v=tudBOEbFt-8)
+[WayBack Machine](https://archive.org/details/one-of-the-coolest-flipbooks-ive-seen-andymation)
