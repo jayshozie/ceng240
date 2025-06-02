@@ -515,7 +515,8 @@ would be nice for you to learn it.
 
 -------------------------------------------------------------------------------
 
-#### Representing Text with Binary
+<details>
+    <summary>Representing Text with Binary</summary>
 
 OK, now we know how to count with base-2. Let's go deeper. How would you
 represent letters in with only 0s and 1s? You could assign a number to each
@@ -598,10 +599,15 @@ length of 32-bit per character. This makes it incredibly efficient in indexing
 comparison, since it uses 32-bits even for ASCII characters (which originally
 used 7-bits, extended uses 8-bits).
 </details>
+</details>
 
 -------------------------------------------------------------------------------
 
-#### Representing Images and Videos with Binary
+<details>
+    <summary>Representing Images, Videos, and Sounds with Binary</summary>
+
+You technically don't need to learn this for this course, but I believe it is
+really helpful to understanding how computer scientists and engineers think.
 
 How do you represent colors with only 0s and 1s? First of all, we need to
 understand how colors work. The most common way of representing colors is
@@ -631,14 +637,27 @@ colored images just from 0s and 1s.
 
 Now, how would you represent videos with binary? If you remember the flipbooks
 from your childhood, if you see images one after the other really fast you will
-percieve them as continuous.
+percieve them as continuous motion.
 <details>
     <summary>Flipbook (Flickbook) Example</summary>
 
 ![Flipbook Example](./gifs/one-of-the-coolest-flipbooks-ive-seen-andymation.gif)[^7]
 
 This is example is a bit weird, because it's a flipbook and it's an 18FPS gif.
+</details>
 
+We could use the same principle to represent videos. We can show a lot of
+images back to back really fast. So, video.
+
+One thing left in representing media with binary, is sound. How should you
+represent sound with binary? Sound is, at its core, a wave of varying pressure
+or loudness. We could take snapshots, so to speak, of that 'loudness' at very
+tiny intervals (thousands of snapshots every second). We could convert that
+loudness to numbers by saying that 0 is completely silent and 255 is incredibly
+loud (you could assign higher numbers if you want more detail, like with colors
+red-green-blue), and we could assign its frequency with a different byte. With
+this logic, you can store sound in binary, which concludes representing media
+with binary.
 </details>
 
 -------------------------------------------------------------------------------
