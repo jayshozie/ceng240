@@ -614,7 +614,7 @@ Let's use the numbers from our previous example. The number combination
 `72, 73, 33` represented `HI!` in ASCII as a text, but what would it represent
 as a color?
 
-![CS50 - 72-73-33 in Red-Green-Blue](./images/72-73-33-rgb-cs50Week0Slide118.png)[^5]
+![CS50 - 72-73-33 as Separate Red-Green-Blue](./images/72-73-33-rgb-cs50Week0Slide118.png)[^5]
 
 We can somewhat guess what the color should be using our our new
 knowledge, since all three colors can have a value between 0 and 255, red and
@@ -630,20 +630,14 @@ every smallest part of the image, called pixels, from its color, and we have
 colored images just from 0s and 1s.
 
 Now, how would you represent videos with binary? If you remember the flipbooks
-from your childhood,
+from your childhood, if you see images one after the other really fast you will
+percieve them as continuous.
 <details>
     <summary>Flipbook (Flickbook) Example</summary>
 
-<iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/tudBOEbFt-8?si=gMoNZT7mpgWaJPPn"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-</iframe>
+![Flipbook Example](./gifs/one-of-the-coolest-flipbooks-ive-seen-andymation.gif)[^7]
+
+This is example is a bit weird, because it's a flipbook and it's an 18FPS gif.
 
 </details>
 
@@ -663,7 +657,7 @@ from your childhood,
 [^4]: [Wikimedia: Basic Multilingual Plane (BMP)](https://upload.wikimedia.org/wikipedia/commons/0/05/Roadmap_to_Unicode_BMP_multilingual.svg) | 
 [WayBack Machine](https://web.archive.org/web/20250602063810/https://upload.wikimedia.org/wikipedia/commons/0/05/Roadmap_to_Unicode_BMP_multilingual.svg)
 
-[^5]: [CS50 - 72-73-33 in Red-Green-Blue](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide118.png) |
+[^5]: [CS50 - 72-73-33 as Separate Red-Green-Blue](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide118.png) |
 [WayBack Machine](https://web.archive.org/web/20250602060424/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide118.png)
 
 [^6]: [CS50 - 72-73-33 as a Shade of Yellow](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide120.png) |
