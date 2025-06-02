@@ -555,7 +555,7 @@ different `encodings` for different use cases. There are three main encodings
 you should at least hear that they exist: UTF-8, UTF-16, and UTF-32.
 
 <details>
-    <summary>Deep Diving into Unicode Encodings</summary>
+    <summary>Free Diving into Unicode Encodings</summary>
 
 ### UTF-8
 
@@ -574,6 +574,9 @@ like Japanese, Chinese, and Korean characters.
 4. **32-bit Characters:** It uses 32-bit characters for very uncommon
 characters and emojis.
 
+*Commonly Used in:* Literally everywhere from your texting app to Microsoft
+Word, to the machines you order fast-food.
+
 ### UTF-16
 
 UTF-16 is the second most widely used encoding of the Unicode. Again, it
@@ -583,8 +586,18 @@ doesn't use fixed bit lengths for characters.
 characters.
 2. **32-bit Characters:** It uses 32-bit characters for less common characters,
 especially those outside of [Basic Multilingual Plane (BMP)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane)
-
 ![Basic Multilingual Plane (BMP)](./images/roadmap-to-the-unicode-(bmp).svg)[^4]
+
+*Commonly Used in:* Microsoft Windows, Java, JavaScript
+
+### UTF-32
+
+UTF-32 is the third most widely used encoding of the Unicode. It uses fixed bit
+length of 32-bit per character. This makes it incredibly efficient in indexing
+(searching for something in the text), but incredibly inefficient in text-size
+comparison, since it uses 32-bits even for ASCII characters (which originally
+used 7-bits, extended uses 8-bits).
+</details>
 
 -------------------------------------------------------------------------------
 
@@ -616,6 +629,13 @@ Using this way of representing colors, we could represent images by processing
 every smallest part of the image, called pixels, from its color, and we have
 colored images just from 0s and 1s.
 
+Now, how would you represent videos with binary? If you remember the flipbooks
+from your childhood,
+<details>
+    <summary>Flipbook (Flickbook) Example</summary>
+![Flipbook Example](./videos/One of the Coolest Flipbooks I've Seen - Andymation (1080p, h264).mp4)[^7]
+</details>
+
 -------------------------------------------------------------------------------
 
 ### References
@@ -638,3 +658,5 @@ colored images just from 0s and 1s.
 [^6]: [CS50 - 72-73-33 as a Shade of Yellow](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide120.png) |
 [WayBack Machine](https://web.archive.org/web/20250602060438/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide120.png)
 
+[^7]: [Andymation - One of the Coolest Flipbooks I've Seen](https://www.youtube.com/watch?v=tudBOEbFt-8) | 
+[WayBack Machine](https://web.archive.org/web/20250602070336/https://www.youtube.com/watch?v=tudBOEbFt-8)
