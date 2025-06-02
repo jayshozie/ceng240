@@ -479,7 +479,14 @@ decimal system. This can be pictured as follows:
 ```
 
 You don't need to be able to read it as fast as you do decimal numbers, but it
-would be nice for you to learn it.
+would be nice for you to learn it. Computer scientists love the number 0, so
+they always include it in their numbering systems, and with that restriction
+the maximum number you could represent with `k` bits is always
+```markdown
+(2^k)-1
+```
+This is a good thing to remember, since we will use it a lot more than you
+think.
 
 <details>
     <summary>Some Exercises of Binary -> Decimal Conversion</summary>
@@ -539,10 +546,31 @@ it's early for a complete beginner, you need to know these.
 #### Types of Numbers in Computers
 
 OK, I believe it was clear how to represent positive integers (and 0) in
-binary, but how would you represent real numbers, numbers like `24.32`, or
-`π`? Let's dive into different ways of doing that.
+binary, but how would you represent real numbers, numbers like `24.32`, `π`, or
+maybe even a complex number `√-1`? Let's dive into different ways of doing
+that.
+
+<details>
+    <summary>P.S.</summary>
+
+You cannot represent `π` entirely, since it's irrational, but we can get
+pretty close.
+
+</details>
 
 TODO: CONTINUE WITH THIS PART
+
+How would you represent a non-integer number, like `24.32`, in binary? One way
+of doing that would be to divide our 8 bits into two parts. You could use 4
+bits to represent the whole part and 4 bits to represent the part after decimal
+point. This is called a fixed-point
+
+
+
+
+
+
+
 
 -------------------------------------------------------------------------------
 
