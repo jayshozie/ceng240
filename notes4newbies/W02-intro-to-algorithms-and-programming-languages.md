@@ -634,7 +634,8 @@ from your childhood,
 <details>
     <summary>Flipbook (Flickbook) Example</summary>
 
-![Flipbook Example](./videos/one-of-the-coolest-flipbooks-ive-seen-Andymation-1080p-h264.mp4)[^7]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tudBOEbFt-8?si=gMoNZT7mpgWaJPPn" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 </details>
 
 -------------------------------------------------------------------------------
