@@ -633,6 +633,7 @@ Now, how would you represent videos with binary? If you remember the flipbooks
 from your childhood,
 <details>
     <summary>Flipbook (Flickbook) Example</summary>
+
 ![Flipbook Example](./videos/one-of-the-coolest-flipbooks-ive-seen-Andymation-1080p-h264.mp4)[^7]
 </details>
 
