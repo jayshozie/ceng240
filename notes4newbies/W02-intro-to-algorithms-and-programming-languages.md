@@ -520,12 +520,13 @@ left with 0. At every step, you write the remainder of the division, and when
 you reach 0, which makes the last column 1 in our case, you have the binary
 version of your number. It's read from last to first remainder.
 
-Step|Dividend|Divisor|Quotient|Remainder
-Step 1|19|2|8|1
-Step 2|9|2|4|1
-Step 3|4|2|1|0
-Step 4|2|2|1|0
-Step 5|1|2|0|1
+| Steps | Dividend | Divisor | Quotient | Remainder |
+|-------|----------|:-------:|:--------:|----------:|
+| 1     | 19       |    2    |     9    |         1 |
+| 2     | 9        |    2    |     4    |         1 |
+| 3     | 4        |    2    |     2    |         0 |
+| 4     | 2        |    2    |     1    |         0 |
+| 5     | 1        |    2    |     0    |         1 |
 
 Which makes the binary version of the number 19, `10011`.
 </details>
