@@ -542,7 +542,7 @@ OK, I believe it was clear how to represent positive integers (and 0) in
 binary, but how would you represent real numbers, numbers like `24.32`, or
 `π`? Let's dive into different ways of doing that.
 
-
+TODO: CONTINUE WITH THIS PART
 
 -------------------------------------------------------------------------------
 
