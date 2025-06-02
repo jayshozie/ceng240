@@ -543,13 +543,78 @@ that sentence `HI!`.
 
 What would the binary representation of that message be? We can use our
 knowledge on binary to solve this problem. It should be this:
-- `01001000 01001001 00100001`, added spaces so that you can read it easily.
+- `1001000 1001001 0100001`, added spaces so that you can read it easily.
+
+ASCII used 7-bits per character, which was enough at the time for the English
+language; however, we have way more languages and characters we need to
+represent, right? There are accented characters, like the ones in French. There
+are languages like Japanese and Chinese. Using 7-bits (8-bits in the extended
+ASCII, so 128 characters) wasn't enough. That's what the Unicode Consortium
+fixed. The Unicode doesn't use a fixed bit per character system. It has
+different `encodings` for different use cases. There are three main encodings
+you should at least hear that they exist: UTF-8, UTF-16, and UTF-32.
+
+<details>
+    <summary>Deep Diving into Unicode Encodings</summary>
+
+### UTF-8
+
+UTF-8 is by far the most widely used encodings of the Unicode. It doesn't use
+fixed bit lengths for characters, unlike the ASCII.
+
+1. **8-bit Characters:** UTF-8 uses 8-bit characters for common characters
+(like basic latin letters, numbers, and common symbols). Making it backwards
+compatible with ASCII.
+2. **16-bit Characters:** It uses 16-bit characters for characters that still
+kind of common, but not as much as the latin characters. Most of these are
+pretty limited in amount compared to languages like Japanese and Chinese (e.g.,
+accented characters from European languages, Greek, Cryllic, Hebrew, Arabic).
+3. **24-bit Characters:** It uses 24-bit characters for less common characters
+like Japanese, Chinese, and Korean characters.
+4. **32-bit Characters:** It uses 32-bit characters for very uncommon
+characters and emojis.
+
+### UTF-16
+
+UTF-16 is the second most widely used encoding of the Unicode. Again, it
+doesn't use fixed bit lengths for characters.
+
+1. **16-bit Characters:** UTF-16 uses 16-bit characters for most commonly used
+characters.
+2. **32-bit Characters:** It uses 32-bit characters for less common characters,
+especially those outside of [Basic Multilingual Plane (BMP)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane)
+
+![Basic Multilingual Plane (BMP)](./images/roadmap-to-the-unicode-(bmp).svg)[^4]
 
 -------------------------------------------------------------------------------
 
-#### Representing Images with Binary
+#### Representing Images and Videos with Binary
 
-How do you represent colors with only 0s and 1s?
+How do you represent colors with only 0s and 1s? First of all, we need to
+understand how colors work. The most common way of representing colors is
+using the RGB (Red, Green, Blue) model. In this model, every color is
+represented by a combination of red, green, and blue light. Each of these
+colors can have a value between 0 and 255, which is 8 bits in binary. This
+means that every color can be represented by 3 bytes, one for each color.
+
+Let's use the numbers from our previous example. The number combination
+`72, 73, 33` represented `HI!` in ASCII as a text, but what would it represent
+as a color?
+
+![CS50 - 72-73-33 in Red-Green-Blue](./images/72-73-33-rgb-cs50Week0Slide118.png)[^5]
+
+We can somewhat guess what the color should be using our our new
+knowledge, since all three colors can have a value between 0 and 255, red and
+green should be somewhere in between. So, we have about half the way red and
+green, and a little bit of blue, which should give us a shade of yellow, right?
+
+![CS50 - 72-73-33 as a Shade of Yellow](./images/72-73-33-yellow-cs50Week0Slide120.png)[^6]
+
+And, here it is. It appears that we were right.
+
+Using this way of representing colors, we could represent images by processing
+every smallest part of the image, called pixels, from its color, and we have
+colored images just from 0s and 1s.
 
 -------------------------------------------------------------------------------
 
@@ -563,3 +628,13 @@ How do you represent colors with only 0s and 1s?
 
 [^3]: [ASCII Table](https://www.asciitable.com/asciifull.gif) | 
 [WayBack Machine](https://web.archive.org/web/20250530213724/https://www.asciitable.com/asciifull.gif)
+
+[^4]: [Wikimedia: Basic Multilingual Plane (BMP)](https://upload.wikimedia.org/wikipedia/commons/0/05/Roadmap_to_Unicode_BMP_multilingual.svg) | 
+[WayBack Machine](https://web.archive.org/web/20250602063810/https://upload.wikimedia.org/wikipedia/commons/0/05/Roadmap_to_Unicode_BMP_multilingual.svg)
+
+[^5]: [CS50 - 72-73-33 in Red-Green-Blue](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide118.png) |
+[WayBack Machine](https://web.archive.org/web/20250602060424/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide118.png)
+
+[^6]: [CS50 - 72-73-33 as a Shade of Yellow](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide120.png) |
+[WayBack Machine](https://web.archive.org/web/20250602060438/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide120.png)
+
