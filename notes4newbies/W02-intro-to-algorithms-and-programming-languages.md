@@ -335,7 +335,7 @@ pre-built application ready to go.
 ```c
 #include <stdio.h>
 
-int main() {
+int main(void) {
     printf("Hello, World!");
 
     return 0;
