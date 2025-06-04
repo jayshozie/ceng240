@@ -114,7 +114,7 @@ numbers and strings have different truthiness, so to say. Values that evaluate
 to 'True' are considered 'Truthy', and values that evaluate to 'False' are
 considered 'Falsy'. Here are some examples:
 ```python
-# Falsy Values other than 'False' itself:
+# Falsy Values along with 'False' itself:
 x = []        # Empty Lists (we'll get to lists in a minute)
 y = ()        # Empty Tuples (we'll get to tuples in a minute)
 z = {}        # Empty Dictionaries (we'll get to dictionaries in a minute)
