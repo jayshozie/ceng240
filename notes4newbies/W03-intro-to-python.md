@@ -41,7 +41,7 @@ print(x)  # Output: 7575
 </details>
 
 <details>
-    <summary>Floating-Point Numbers (float)</summary>\
+    <summary>Floating-Point Numbers (float)</summary>
 
 We've extensively talked about what floating point numbers are, but I'll give a
 quick 
