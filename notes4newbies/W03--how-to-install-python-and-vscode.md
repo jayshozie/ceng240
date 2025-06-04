@@ -184,3 +184,6 @@ Go to the site [https://code.visualstudio.com/](https://code.visualstudio.com/).
 You should see `other platforms` beneath the enormous `Download for Windows`
 button. You can select Linux or macOS from there.
 </details>
+
+I won't go into details of using VSCode, you can find thousands of tutorials
+online, and I'm not that good with VSCode, I use NeoVIM.
