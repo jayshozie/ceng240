@@ -635,8 +635,6 @@ you in a number line.
 First of all, this part is included in the course, so even though I believe
 it's early for a complete beginner, you need to know these.
 
-#### Types of Numbers in Programming Languages
-
 OK, I believe it was clear how to represent positive integers (and 0) in
 binary, but how would you represent real numbers, numbers like `24.32`, `π`, or
 maybe even a complex number `√-1`? Let's dive into different ways of doing
@@ -656,7 +654,7 @@ bits to represent the whole part and 4 bits to represent the part after decimal
 point. This is called a fixed-point number. This way of representing numbers
 has some advantages and some disadvantages.
 
-#### Approach 1 : Fixed-Point Numbers
+*Approach 1 : Fixed-Point Numbers*
 
 <details>
     <summary>Example of Fixed-Point</summary>
@@ -702,8 +700,7 @@ will become is unpredictable.
 ```
 </details>
 
-
-#### Approach 2 : Using Scientific Notation
+*Approach 2 : Using Scientific Notation*
 
 If we use scientific notation, we can fix those problems. A number in
 scientific notation (base-2) would be like this: `a*2^b` or `±M * B^(±E)`.
@@ -732,6 +729,8 @@ But, this approach itself has some problems, we need standardization.
 
 That's where [IEEE Standard for Floating-Point Arithmetic (IEEE 754)](https://en.wikipedia.org/wiki/IEEE_754)
 comes in. It was established in 1984 by [Institue of Electrical and Electronics Enginneers (IEEE)](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers).
+These types of numbers are called `floating-point numbers` and they are
+fundamentally different than how we store `integers`.
 
 <details>
     <summary>Example in IEEE 754</summary>
@@ -753,8 +752,53 @@ Exponent is 8-bit long, meaning the maximum exponent we can represent with
 32-bits is 127. The fraction (mantissa) is 23-bits long, meaning the maximum
 value that can be represented in this standard is `(2 - 2^-23) × (2^127)`, which
 is approximately 3.4028235 × 10^38
-
 </details>
+
+<details>
+    <summary>Some Quirks of IEEE 754</summary>
+
+- Zero :
+    - Exponent : All zeroes.
+    - Fraction : All zeroes
+    - +0 and -0 are different numbers, but they are equal.
+<details>
+    <summary>Zero in 32-bits</summary>
+
+```markdown
+00000000 00000000 00000000 00000000
+```
+</details>
+
+- Infinity :
+    - Exponent : All ones.
+    - Fraction : All zeroes.
+<details>
+    <summary>Positive and Negative Infinities in 32-bits</summary>
+
+```markdown
+Positive : 01111111 10000000 00000000 00000000
+Negative : 11111111 10000000 00000000 00000000
+Every bit in the fraction part must be 0, if it isn't then it would be NaN.
+```
+</details>
+
+- Not a Number (NaN) :
+    - Exponent : All ones.
+    - Fraction : Non-zero fraction.
+<details>
+    <summary>NaN in 32-bits</summary>
+
+```markdown
+s111 1111 1xxx xxxx xxxx xxxx xxxx xxxx
+As long as the rest is not completely zeros, it's considered NaN.
+```
+</details>
+</details>
+
+#### Types of Numbers in Computer Science
+
+As we've seen, we have a lot of numbers in computer science. We have `integers`
+and `floating-point numbers`, or `floats`.
 
 -------------------------------------------------------------------------------
 
