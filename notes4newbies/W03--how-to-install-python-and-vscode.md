@@ -140,3 +140,27 @@ then you certainly can fucking install Python. Show off.
 </details>
 
 </details>
+
+After installing Python, you can go into the Python interpreter with the
+command;
+```bash session
+python3
+```
+This should change your `$`, `#`, or `>` symbol to `>>>`, which means you're
+in. You can do stuff like,
+```python
+print("<your-name-goes-here>")
+# Which will print whatever you've written.
+```
+To get out of the interpreter, run the command
+```python
+exit()
+```
+and hit enter. Don't worry, we won't use the interpreter itself most of the
+time.
+
+-------------------------------------------------------------------------------
+
+# Visual Studio Code (VSCode) Installation
+
+
