@@ -592,6 +592,7 @@ CONS:
 <details>
     <summary>Example</summary>
 </details>
+
 - Location of the assumed decimal point, drastically changes the value of the
 number.
 <details>
