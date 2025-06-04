@@ -566,6 +566,8 @@ difference will result in faulty answers:
 (+2)    (-2)    (-4)
 ```
 
+
+
 Best way to fix both these issues at the same time is using something called
 `2s Compliment`. In 2s Compliment numbering system, you let the positive
 numbers be the same as before:
