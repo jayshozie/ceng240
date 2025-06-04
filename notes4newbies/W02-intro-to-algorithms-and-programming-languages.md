@@ -795,6 +795,52 @@ As long as the rest is not completely zeros, it's considered NaN.
 </details>
 </details>
 
+<details>
+    <summary>Floating-Point Number Precision Issue</summary>
+
+As you saw, we use 2 as a base in representing numbers in floats. Let's
+consider a case where we want to represent the base-10 number `4.1`.
+
+```markdown
+- 4 → 100 (base-2)
+- 0.1 →
+    - × 2 = 0.2 = 0 + 0.2
+    - × 2 = 0.4 = 0 + 0.4
+    - × 2 = 0.8 = 0 + 0.8
+    - × 2 = 1.6 = 1 + 0.6
+    - × 2 = 1.2 = 1 + 0.2
+    - × 2 = 0.4 = 0 + 0.4
+    - × 2 = 0.8 = 0 + 0.8
+    .
+    .
+    .
+```
+
+As you can see, we can never precisely show numbers that are not a multiple of
+`1/2^n`. This means we're going to lose some precision while representing those
+numbers.
+
+<details>
+    <summary>What can we do about this?</summary>
+
+1. Use integers whenever possible. Integers are lossless by nature, and almost
+every problem can be transported into the integer space.
+2. Use the most precise floating-point number provided by the high-level
+language. For example, some languages provide 64 or even 128-bit floating-point
+numbers. Use those.
+3. Use less precision floating-points only when in short of memory.
+4. Do not subtract two close valued floating-point numbers from each other. It
+is really dangerous, and can result in completely unexpected numbers.
+5. If you do addition or subtraction with two numbers which are magnitude-wise
+not comparable (one is incredibly big and the other is incredibly small), you
+will lose the proper contribution of the smaller one. Especially when you
+iterate the operation (repeat it many times), the error will accumulate.
+6. Use well-known, commonly used scientific libraries of your language of
+choosing instead of coding floating-point algorithms yourself.
+</details>
+
+</details>
+
 #### Types of Numbers in Computer Science
 
 As we've seen, we have a lot of numbers in computer science. We have `integers`
