@@ -162,6 +162,7 @@ my_list.append("hi")
 # This will append the string "hi" to the list as a separate element.
 print(my_list)  # Output: [13, "hi"]
 ```
+</details>
 
 -------------------------------------------------------------------------------
 
