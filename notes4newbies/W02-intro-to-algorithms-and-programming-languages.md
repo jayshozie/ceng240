@@ -650,8 +650,6 @@ pretty close.
 
 </details>
 
-##  TODO: FLOATING POINT NUMBERS
-
 How would you represent a non-integer number, like `24.32`, in binary? One way
 of doing that would be to divide our 8 bits into two parts. You could use 4
 bits to represent the whole part and 4 bits to represent the part after decimal
@@ -677,17 +675,14 @@ knowledge.
 </details>
 
 PROS:
-- Easy to read by computers. They will be completely sure that, after 4 bits
-for example, there will be a decimal point, and the rest are fractions, not
-whole numbers.
+- Easy to read by computers.
 
 CONS:
 <details>
     <summary>Limits the maximum and minimum numbers that can be represented.</summary>
 
-```markdown
-
-```
+Even though you have 8 whole bits in that example, you can only count up to
+`2^4 - 1`. You're using 4 bits in an 8 bit system.
 </details>
 
 <details>
@@ -702,8 +697,8 @@ Dec : 31.875
                          ^
 When you slide the decimal point from the first fixed-point number example
 once, it doesn't get multiplied by ten like we're used to. We both lose
-precision, we can only represent numbers as low as 2^-3, and we can't predict
-what the number will become.
+precision, we can only represent numbers as low as 2^-3, and what the number
+will become is unpredictable.
 ```
 </details>
 
@@ -741,7 +736,7 @@ comes in. It was established in 1984 by [Institue of Electrical and Electronics 
 <details>
     <summary>Example in IEEE 754</summary>
 
-![IEEE 754 Standard Example](./images/ieee-754-standard-example.svg)
+![IEEE 754 Standard Example](./images/ieee-754-standard-example-background.png)[^3]
 
 In this example, we have the binary number
 ```markdown
@@ -786,7 +781,7 @@ processing text.
 <details>
     <summary>The ASCII Table</summary>
 
-![ASCII Table](./images/ascii-table.gif)[^3]
+![ASCII Table](./images/ascii-table.gif)[^4]
 </details>
 
 Now, let's practice our new knowledge. Let's say your received a text with the
@@ -841,7 +836,7 @@ doesn't use fixed bit lengths for characters.
 characters.
 2. **32-bit Characters:** It uses 32-bit characters for less common characters,
 especially those outside of [Basic Multilingual Plane (BMP)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane)
-![Basic Multilingual Plane (BMP)](./images/roadmap-to-the-unicode-(bmp).svg)[^4]
+![Basic Multilingual Plane (BMP)](./images/roadmap-to-the-unicode-(bmp).svg)[^5]
 
 *Commonly Used in:* Microsoft Windows, Java, JavaScript
 
@@ -874,14 +869,14 @@ Let's use the numbers from our previous example. The number combination
 `72, 73, 33` represented `HI!` in ASCII as a text, but what would it represent
 as a color?
 
-![CS50 - 72-73-33 as Separate Red-Green-Blue](./images/72-73-33-rgb-cs50Week0Slide118.png)[^5]
+![CS50 - 72-73-33 as Separate Red-Green-Blue](./images/72-73-33-rgb-cs50Week0Slide118.png)[^6]
 
 We can somewhat guess what the color should be using our our new
 knowledge, since all three colors can have a value between 0 and 255, red and
 green should be somewhere in between. So, we have about half the way red and
 green, and a little bit of blue, which should give us a shade of yellow, right?
 
-![CS50 - 72-73-33 as a Shade of Yellow](./images/72-73-33-yellow-cs50Week0Slide120.png)[^6]
+![CS50 - 72-73-33 as a Shade of Yellow](./images/72-73-33-yellow-cs50Week0Slide120.png)[^7]
 
 And, here it is. It appears that we were right.
 
@@ -895,7 +890,7 @@ percieve them as continuous motion.
 <details>
     <summary>Flipbook (Flickbook) Example</summary>
 
-![Flipbook Example](./gifs/one-of-the-coolest-flipbooks-ive-seen-andymation.gif)[^7]
+![Flipbook Example](./gifs/one-of-the-coolest-flipbooks-ive-seen-andymation.gif)[^8]
 
 This is example is a bit weird, because it's a flipbook and it's an 18FPS gif.
 </details>
@@ -924,17 +919,20 @@ with binary.
 [^2]: [BBC - Example Algorithm Flowchart](https://www.bbc.co.uk/bitesize/guides/z3bq7ty/revision/3) | 
 [WayBack Machine](https://web.archive.org/web/20250320171857/https://bam.files.bbci.co.uk/bam/live/content/zs96tfr/large)
 
-[^3]: [ASCII Table](https://www.asciitable.com/asciifull.gif) | 
+[^3]: [IEEE 754 Standard Example](https://en.wikipedia.org/wiki/File:Float_example.svg) | 
+[WayBack Machine](https://web.archive.org/web/20250604084934/https://en.wikipedia.org/wiki/File:Float_example.svg)
+
+[^4]: [ASCII Table](https://www.asciitable.com/asciifull.gif) | 
 [WayBack Machine](https://web.archive.org/web/20250530213724/https://www.asciitable.com/asciifull.gif)
 
-[^4]: [Wikimedia: Basic Multilingual Plane (BMP)](https://upload.wikimedia.org/wikipedia/commons/0/05/Roadmap_to_Unicode_BMP_multilingual.svg) | 
+[^5]: [Wikimedia: Basic Multilingual Plane (BMP)](https://upload.wikimedia.org/wikipedia/commons/0/05/Roadmap_to_Unicode_BMP_multilingual.svg) | 
 [WayBack Machine](https://web.archive.org/web/20250602063810/https://upload.wikimedia.org/wikipedia/commons/0/05/Roadmap_to_Unicode_BMP_multilingual.svg)
 
-[^5]: [CS50 - 72-73-33 as Separate Red-Green-Blue](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide118.png) |
+[^6]: [CS50 - 72-73-33 as Separate Red-Green-Blue](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide118.png) |
 [WayBack Machine](https://web.archive.org/web/20250602060424/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide118.png)
 
-[^6]: [CS50 - 72-73-33 as a Shade of Yellow](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide120.png) |
+[^7]: [CS50 - 72-73-33 as a Shade of Yellow](https://cs50.harvard.edu/x/notes/0/cs50Week0Slide120.png) |
 [WayBack Machine](https://web.archive.org/web/20250602060438/https://cs50.harvard.edu/x/notes/0/cs50Week0Slide120.png)
 
-[^7]: [Andymation - One of the Coolest Flipbooks I've Seen](https://www.youtube.com/watch?v=tudBOEbFt-8) | 
+[^8]: [Andymation - One of the Coolest Flipbooks I've Seen](https://www.youtube.com/watch?v=tudBOEbFt-8) | 
 [WayBack Machine](https://archive.org/details/one-of-the-coolest-flipbooks-ive-seen-andymation)
