@@ -138,7 +138,7 @@ If you are on Arch Linux or one of its derivations and you're still reading,
 first of all, fuck you. Second of all, if you could install arch without issues
 then you certainly can fucking install Python. Show off.
 </details>
-
+</details>
 </details>
 
 After installing Python, you can go into the Python interpreter with the
