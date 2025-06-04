@@ -516,6 +516,8 @@ think.
 - Adding them all together, you get 79 in decimals.
 </details>
 
+##  TODO: NEGATIVE NUMBERS IN BINARY
+
 <details>
     <summary>Decimal to Binary Conversion of Integers (Included)</summary>
 
@@ -543,7 +545,7 @@ Which makes the binary version of the number 19, `10011`.
 First of all, this part is included in the course, so even though I believe
 it's early for a complete beginner, you need to know these.
 
-#### Types of Numbers in Computers
+#### Types of Numbers in Programming Languages
 
 OK, I believe it was clear how to represent positive integers (and 0) in
 binary, but how would you represent real numbers, numbers like `24.32`, `π`, or
@@ -558,12 +560,56 @@ pretty close.
 
 </details>
 
-TODO: CONTINUE WITH THIS PART
+##  TODO: FLOATING POINT NUMBERS
 
 How would you represent a non-integer number, like `24.32`, in binary? One way
 of doing that would be to divide our 8 bits into two parts. You could use 4
 bits to represent the whole part and 4 bits to represent the part after decimal
-point. This is called a fixed-point
+point. This is called a fixed-point number. This way of representing numbers
+has some advantages and some disadvantages.
+
+<details>
+    <summary>Example of Fixed-Point</summary>
+
+```markdown
+Bin : 11111111
+Dec : 15.9375
+
+2^3  2^2  2^1  2^0       2^-1 2^-2 2^-3 2^-4
+1    1    1    1    .    1    1    1    1
+                    ^
+This is where the assumed dot is when we said 4 bits to whole, 4 bits to after
+decimal point. You can calculate what number this represents with your previous
+knowledge.
+```
+</details>
+
+PROS:
+- Easy to read by computers.
+
+CONS:
+- Limits the maximum and minimum numbers that can be represented.
+<details>
+    <summary>Example</summary>
+</details>
+- Location of the assumed decimal point, drastically changes the value of the
+number.
+<details>
+    <summary>Example</summary>
+
+```markdown
+Bin : 11111111
+Dec : 31.875
+
+2^4  2^3  2^2  2^1  2^0       2^-1 2^-2 2^-3
+1    1    1    1    1    .    1    1    1
+                         ^
+When you slide the decimal point from the first fixed-point number example
+once, it doesn't get multiplied by ten like we're used to. We both lose
+precision, we can only represent numbers as low as 2^-3, and we can't predict
+what the number will become.
+```
+</details>
 
 
 
