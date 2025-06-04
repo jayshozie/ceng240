@@ -166,4 +166,21 @@ time.
 
 # Visual Studio Code (VSCode) Installation
 
+<details>
+    <summary>Windows 11/10</summary>
 
+You can install VSCode from its [website](https://code.visualstudio.com/). When
+you go in, you should see a giant button that says `Download for Windows`.
+</details>
+
+<details>
+    <summary>Linux/macOS</summary>
+
+First of all, you can use VIM/NeoVIM. I'm writing this markdown on NeoVIM right
+now; however, it's way more work than VSCode. If you don't know how to use
+VIM-based text-editors, just go with VSCode.
+
+Go to the site [https://code.visualstudio.com/](https://code.visualstudio.com/).
+You should see `other platforms` beneath the enormous `Download for Windows`
+button. You can select Linux or macOS from there.
+</details>
