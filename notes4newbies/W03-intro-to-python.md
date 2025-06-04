@@ -191,14 +191,20 @@ AttributeError: 'tuple' object has no attribute 'append'
 ```
 Don't be scared, it just says that it doesn't understand what `append` means in
 this context. This happens because you can't `append` something to a tuple, it
-simple doesn't exist. You should add the values you want to store in a tuple at
-the initiation.
+just simply doesn't exist. You should add the values you want to store in a
+tuple at the initiation.
 ```python
 my_other_tuple = (2, 3, 5, 7, 11)
 print(my_other_tuple)  # Output: (2, 3, 5, 7, 11)
 ```
 After you create that tuple, you can't change anything in it, that's why it's
 called immutable.
+</details>
+
+<details>
+    <summary>Dictionaries (dict)</summary>
+
+</details>
 
 -------------------------------------------------------------------------------
 
