@@ -451,9 +451,9 @@ one-hundred-twenty-three? If you can recall, even if you don't have to do this
 computation right now, this is how you actually understand what number does it
 represent:
 
-- 3 is in the ones place, so 3 (3 * 1)
-- 2 is in the tens place, so 20 (2 * 10)
-- 1 is in the hundreds place, so 100 (1 * 100)
+- 3 is in the ones place, so 3 (3 × 1)
+- 2 is in the tens place, so 20 (2 × 10)
+- 1 is in the hundreds place, so 100 (1 × 100)
 - Add them all together, 100 + 20 + 3, and you have 123.
 
 This way of representing numbers is called the decimal system, meaning that it
@@ -468,9 +468,9 @@ from 0 and going to infinity.
 If we were to use the same logic we did up there for 123 in decimal, let's do
 it for this number: 101
 
-- 1 is in the ones place, so 1 (1 * 1)
-- 0 is in the twos place, so 0 (0 * 2)
-- and now, 1 is in the fours place, so 4 (1 * 4)
+- 1 is in the ones place, so 1 (1 × 1)
+- 0 is in the twos place, so 0 (0 × 2)
+- and now, 1 is in the fours place, so 4 (1 × 4)
 - Adding them all together, the binary number 101 is actually 5 in our base-10
 decimal system. This can be pictured as follows:
 ```markdown
@@ -594,6 +594,9 @@ problems:
 1011 (-5) + 0110 (+6) = 0001 (+1)
 1011 (-5) + 0011 (+3) = 1110 (-2)
 ```
+
+Fun fact, this is why computers don't actually do subtraction, they only do
+addition.
 </details>
 
 You can think of it this way, in our first way of counting the negative
@@ -653,6 +656,8 @@ bits to represent the whole part and 4 bits to represent the part after decimal
 point. This is called a fixed-point number. This way of representing numbers
 has some advantages and some disadvantages.
 
+#### Approach 1 : Fixed-Point Numbers
+
 <details>
     <summary>Example of Fixed-Point</summary>
 
@@ -678,7 +683,9 @@ CONS:
 <details>
     <summary>Limits the maximum and minimum numbers that can be represented.</summary>
 
+```markdown
 
+```
 </details>
 
 <details>
@@ -699,11 +706,58 @@ what the number will become.
 </details>
 
 
+#### Approach 2 : Using Scientific Notation
 
+If we use scientific notation, we can fix those problems. A number in
+scientific notation (base-2) would be like this: `a*2^b` or `±M * B^(±E)`.
 
+<details>
+    <summary>Example : 5.75</summary>
 
+```markdown
+- 5     →                        0101
+- 0.75  →  ½ + ¼ = 2^-1 + 2^-2 = 0.11 (base-2)
+- 5.75  →                      101.11 (base-2) * 2^0
+```
+Number is then normalized so that the first significant digit is immediately to
+the left of the binary point.
 
+```markdown
+1.0111 × 2^2
+```
+Then, we can store the mantissa (M) and the exponent (E).
+</details>
 
+But, this approach itself has some problems, we need standardization.
+- Where to put the decimal point?
+- How to represent negative numbers?
+- How to represent numbers between 0 and 1?
+
+That's where [IEEE Standard for Floating-Point Arithmetic (IEEE 754)](https://en.wikipedia.org/wiki/IEEE_754)
+comes in. It was established in 1984 by [Institue of Electrical and Electronics Enginneers (IEEE)](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers).
+
+<details>
+    <summary>Example in IEEE 754</summary>
+
+![IEEE 754 Standard Example](./images/ieee-754-standard-example.svg)
+
+In this example, we have the binary number
+```markdown
+ 30       22
+ v        v
+00111110 00100000 00000000 00000000
+^        ^                        ^
+31       23                       0
+```
+Index 31 represents the sign of the number. 30 to 23 represent the exponent of
+the nummber, and 22 to 0 represent the fraction.
+
+Exponent is 8-bit long, meaning the maximum exponent we can represent with
+32-bits is 127. The fraction (mantissa) is 23-bits long, meaning the maximum
+value that can be represented in this standard is `(2-2^-23) × (2^127)`, which
+is approximately 3.4028235 × 10^38
+
+</details>
 
 -------------------------------------------------------------------------------
 
