@@ -618,6 +618,7 @@ counting.
 | 1101          |       13      |            -5           |           -3           |
 | 1110          |       14      |            -6           |           -2           |
 | 1111          |       15      |            -7           |           -1           |
+
 The problem arises from this; in sign/magnitude notation, you start from zero,
 go up, and when you arrive at the middle of the table you start from zero,
 again, and then go down. In 2s compliment notation, you start from zero, go up
