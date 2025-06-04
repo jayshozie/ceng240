@@ -516,7 +516,6 @@ think.
 - Adding them all together, you get 79 in decimals.
 </details>
 
-##  TODO: NEGATIVE NUMBERS IN BINARY
 
 <details>
     <summary>Decimal to Binary Conversion of Integers (Included)</summary>
@@ -539,6 +538,91 @@ version of your number. It's read from last to first remainder.
 
 Which makes the binary version of the number 19, `10011`.
 </details>
+
+#### Negative Numbers in Binary
+
+How could you represent negative numbers like `-31` in binary? You can assign
+one bit as the sign of the number, for example, with 8 bits to play around:
+```markdown
+Bin : 01111111
+Dec : 127
+
+We can let the first bit to be the sign of the number, 0 meaning positive and 1
+meaning negative.
+
+Bin : 11111111
+Dec : -127
+```
+This is called the Sign/Magnitude Notation, and there are several problems with
+this notation. First of all you get 2 different representations for 0:
+```markdown
+0 000 : 0
+1 000 : -0
+```
+And you need to be very careful with addition and subtraction, because the sign
+difference will result in faulty answers:
+```markdown
+0 010 + 1 010 = 1 100
+(+2)    (-2)    (-4)
+```
+
+Best way to fix both these issues at the same time is using something called
+`2s Compliment`. In 2s Compliment numbering system, you let the positive
+numbers be the same as before:
+```markdown
+0 101 = +5
+```
+But, when you want to represent a negative number, you subtract its absolute
+value from 2^n for an n-bit system:
+```markdown
+In a 4-bit system, (-5) would be 2^4 - 5 = 16 - 5 = 11(base-10) = 1011(base-2)
+```
+This way of counting has several advantages over solving the previous way's
+problems:
+
+<details>
+    <summary>0 has a single representation</summary>
+
+    ```markdown
++0 = 0 000 = -0
+    ```
+</details>
+<details>
+    <summary>Arithmetic works completely fine without checking the sign.</summary>
+
+```markdown
+1011 (-5) + 0110 (+6) = 0001 (+1)
+1011 (-5) + 0011 (+3) = 1110 (-2)
+```
+</details>
+
+You can think of it this way, in our first way of counting the negative
+numbers, we divide our table of numbers into two, then change the direction
+we're counting DOWN. That's the problem. We shouldn't change the way we're
+counting.
+| Binary Number | Decimal Value | Value in Sign/Magnitude | Value in 2s Compliment |
+|---------------|:-------------:|:-----------------------:|:----------------------:|
+| 0000          |       0       |            0            |            0           |
+| 0001          |       1       |            1            |            1           |
+| 0010          |       2       |            2            |            2           |
+| 0011          |       3       |            3            |            3           |
+| 0100          |       4       |            4            |            4           |
+| 0101          |       5       |            5            |            5           |
+| 0110          |       6       |            6            |            6           |
+| 0111          |       7       |            7            |            7           |
+| 1000          |       8       |            -0           |           -8           |
+| 1001          |       9       |            -1           |           -7           |
+| 1010          |       10      |            -2           |           -6           |
+| 1011          |       11      |            -3           |           -5           |
+| 1100          |       12      |            -4           |           -4           |
+| 1101          |       13      |            -5           |           -3           |
+| 1110          |       14      |            -6           |           -2           |
+| 1111          |       15      |            -7           |           -1           |
+The problem arises from this; in sign/magnitude notation, you start from zero,
+go up, and when you arrive at the middle of the table you start from zero,
+again, and then go down. In 2s compliment notation, you start from zero, go up
+to the middle of the table, and then go UP AGAIN, starting from the lowest
+number.
 
 ### Deep Dive into Numbering Systems
 
@@ -585,18 +669,19 @@ knowledge.
 </details>
 
 PROS:
-- Easy to read by computers.
+- Easy to read by computers. They will be completely sure that, after 4 bits
+for example, there will be a decimal point, and the rest are fractions, not
+whole numbers.
 
 CONS:
-- Limits the maximum and minimum numbers that can be represented.
 <details>
-    <summary>Example</summary>
+    <summary>Limits the maximum and minimum numbers that can be represented.</summary>
+
+
 </details>
 
-- Location of the assumed decimal point, drastically changes the value of the
-number.
 <details>
-    <summary>Example</summary>
+    <summary>Location of the assumed decimal point, drastically changes the value of the number.</summary>
 
 ```markdown
 Bin : 11111111
