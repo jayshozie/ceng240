@@ -140,6 +140,11 @@ then you certainly can fucking install Python. Show off.
 </details>
 </details>
 </details>
+</details>
+</details>
+</details>
+</details>
+</details>
 
 After installing Python, you can go into the Python interpreter with the
 command;
