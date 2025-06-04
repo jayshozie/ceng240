@@ -101,6 +101,7 @@ in the lines of "python3: command not found", then it's not installed, or it's
 not in the $PATH. Please search for the error on the Internet (in reputable
 websites such as, [stackoverflow](https://stackoverflow.com)).
 </details>
+
 <details>
     <summary>Linux</summary>
 
@@ -137,12 +138,6 @@ and check whether it's installed with the previous command.
 If you are on Arch Linux or one of its derivations and you're still reading,
 first of all, fuck you. Second of all, if you could install arch without issues
 then you certainly can fucking install Python. Show off.
-</details>
-</details>
-</details>
-</details>
-</details>
-</details>
 </details>
 </details>
 
