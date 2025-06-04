@@ -9,6 +9,6 @@ TODO:
     [x] Bools
     Container Data Types:
     [x] Lists
-    [ ] Tuples
+    [x] Tuples
     [ ] Dictionaries
     [ ] Sets

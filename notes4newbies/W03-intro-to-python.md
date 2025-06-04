@@ -77,8 +77,8 @@ number, you must specify it with the character `j`.
 ```python
 my_complex_num = 3+4j         # 'my_complex_num' is 3+4j
 print(my_complex_num)         # Output: 3+4j
-my_other_complex = -345.324j  # 'my_other_complex' is -345.324j
-print(my_other_complex)       # Output: -345.324j
+my_other_complex = -345.324j  # 'my_other_complex' is (-345.324j)
+print(my_other_complex)       # Output: (-0-345.324j)
 my_other_other_complex = my_complex_num + my_other_complex
 print(my_other_other_complex) # Output: (3-341.324j)
 print(type(my_complex_num))   # Output: <class 'complex'>
@@ -94,6 +94,7 @@ be changed.
 ```python
 my_name = "Jayshozie"  # Value of 'my_name' is "Jayshozie"
 print(my_name)         # Output: Jayshozie
+print(type(my_name))   # Output: <class 'str'>
 ```
 </details>
 
@@ -169,6 +170,7 @@ my_list.append("hi")
 # This will append the string "hi" to the list as a separate element.
 print(my_list)  # Output: [13, "hi"]
 ```
+###     TODO : ADD .pop AND OTHER METHODS OF LISTS
 </details>
 
 <details>
@@ -204,6 +206,13 @@ called immutable.
 <details>
     <summary>Dictionaries (dict)</summary>
 
+A dictionary (dict) is a mutable, unordered, mapping type. In a dictionary, you
+store `values` associated with a `key`.
+```python
+my_dict = {'name': 'Ayse', 'age': 34, 'education': 4}
+print(my_dict)  # Output: {'name': 'Ayse', 'age': 34, 'education': 4}
+print(type(my_dict))  # Output: <class 'dict'>
+```
 </details>
 
 -------------------------------------------------------------------------------
