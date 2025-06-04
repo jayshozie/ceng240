@@ -19,10 +19,10 @@ strings'. There are 2 main types of data you need to know about: Basic and
 Container.
 
 I will give you small assignments at the end of every markdown from now on. You
-can find the answers to them in the [answers](./answers) directory. I recommend
-you to work on them yourself until you are absolutely sure that you cannot do
-them, and then looking at the answers. This way you will actually try to learn
-how things work.
+can find the answers to them in the [solutions](./solutions) directory. I
+recommend you to work on them yourself until you are absolutely sure that you
+cannot do them, and then looking at the answers. This way you will actually try
+to learn how things work.
 
 P.S: In Python, to assign a value (it can be anything) to a variable, you don't
 need to specify which type it should be. Python does its best to understand
