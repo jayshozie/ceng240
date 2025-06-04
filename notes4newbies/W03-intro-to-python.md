@@ -228,7 +228,7 @@ Studio Code. I recommend for you to install
 [Python](https://www.python.org/downloads/) and
 [Visual Studio Code](https://code.visualstudio.com/) to your PC. This will help
 you a lot, since you will be able to reuse a lot of stuff. If you like to have
-even more pain than CS50's online IDE, you can use [Colab](https://colab.research.google.com/).
+even more pain than CS50's online IDE, you can use [Google Colab](https://colab.research.google.com/).
 It's incredibly cramped, but if you don't want to install anything and just
 want to pass the course it should be enough.
 
