@@ -18,6 +18,12 @@ As we've seen, a CPU cannot understand anything other than `integers` and
 strings'. There are 2 main types of data you need to know about: Basic and
 Container.
 
+I will give you small assignments at the end of every markdown from now on. You
+can find the answers to them in the [answers](./answers) directory. I recommend
+you to work on them yourself until you are absolutely sure that you cannot do
+them, and then looking at the answers. This way you will actually try to learn
+how things work.
+
 P.S: In Python, to assign a value (it can be anything) to a variable, you don't
 need to specify which type it should be. Python does its best to understand
 what you mean, and stores it itself.
@@ -148,9 +154,10 @@ learn with containers, I will give them when you need them.
 <details>
     <summary>Lists (list)</summary>
 
-A list is a mutable 'list' of values. It is ordered, meaning that the order of
-the elements matter. A list can hold any value you want to store, such as
-integers, floats, strings, and even other lists, tuples, or dictionaries.
+A list is a mutable 'list' of values, also called a sequence. It is ordered,
+meaning that the order of the elements matter. A list can hold any value you
+want to store, such as integers, floats, strings, and even other lists, tuples,
+or dictionaries.
 ```python
 # Let's create a list object.
 my_list = []  # This creates an empty list with no values in it.
@@ -163,6 +170,33 @@ my_list.append("hi")
 print(my_list)  # Output: [13, "hi"]
 ```
 </details>
+
+<details>
+    <summary>Tuples (tuple)</summary>
+
+A tuple is an immutable, ordered sequence.
+
+-------------------------------------------------------------------------------
+
+# Assignment of W03
+
+Write a Python program that takes 2 values as input, adds them, and prints the
+result. Create a Python file, naming doesn't matter but for convention you can
+use `W03.py`. Write your code in it, and run it with Python. If you don't have
+Python installed on your computer you can use [CS50's](https://cs50.dev) online
+coding environment built on top of Visual Studio Code. I recommend for you to
+install [Python](https://www.python.org/downloads/) and
+[Visual Studio Code](https://code.visualstudio.com/) to your PC. This will help
+you a lot, since you will be able to reuse a lot of stuff.
+
+Hints:
+1. You can use the function `eval(input())` to get input from the user.
+2. You should use two different variables for the values the user will give.
+3. You can use a third variable to store their product, but it's not necessary.
+4. You can print your result with `print()` function, in which you should
+specify what you're printing.
+
+
 
 -------------------------------------------------------------------------------
 
