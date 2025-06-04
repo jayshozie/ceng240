@@ -4,11 +4,11 @@ TODO:
     Basic Data Types:
     [x] Integers
     [x] Floats
-    [ ] Complex Numbers
-    [ ] Strings
-    [ ] Bools
+    [x] Complex Numbers
+    [x] Strings
+    [x] Bools
     Container Data Types:
-    [ ] Lists
+    [x] Lists
     [ ] Tuples
     [ ] Dictionaries
     [ ] Sets

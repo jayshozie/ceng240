@@ -174,7 +174,31 @@ print(my_list)  # Output: [13, "hi"]
 <details>
     <summary>Tuples (tuple)</summary>
 
-A tuple is an immutable, ordered sequence.
+A tuple is an immutable, ordered sequence. Immutable, as in you cannot change
+anything in it after you construct it. That means you also cannot use the
+method `append()`, because it doesn't exist.
+```python
+my_tuple = ()  # This creates an empty tuple with no values in it.
+my_tuple.append(34)
+```
+This line should give an error that says something like;
+```python
+Traceback (most recent call last):
+  File "<python-input-1>", line 1, in <module>
+    my_tuple.append(34)
+    ^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+```
+Don't be scared, it just says that it doesn't understand what `append` means in
+this context. This happens because you can't `append` something to a tuple, it
+simple doesn't exist. You should add the values you want to store in a tuple at
+the initiation.
+```python
+my_other_tuple = (2, 3, 5, 7, 11)
+print(my_other_tuple)  # Output: (2, 3, 5, 7, 11)
+```
+After you create that tuple, you can't change anything in it, that's why it's
+called immutable.
 
 -------------------------------------------------------------------------------
 
@@ -182,10 +206,11 @@ A tuple is an immutable, ordered sequence.
 
 Write a Python program that takes 2 values as input, adds them, and prints the
 result. Create a Python file, naming doesn't matter but for convention you can
-use `W03.py`. Write your code in it, and run it with Python. If you don't have
-Python installed on your computer you can use [CS50's](https://cs50.dev) online
-coding environment built on top of Visual Studio Code. I recommend for you to
-install [Python](https://www.python.org/downloads/) and
+use `W03-assignment.py`. Write your code in it, and run it with Python. If you
+don't have Python installed on your computer you can use
+[CS50's](https://cs50.dev) online coding environment built on top of Visual
+Studio Code. I recommend for you to install
+[Python](https://www.python.org/downloads/) and
 [Visual Studio Code](https://code.visualstudio.com/) to your PC. This will help
 you a lot, since you will be able to reuse a lot of stuff.
 
@@ -196,6 +221,7 @@ Hints:
 4. You can print your result with `print()` function, in which you should
 specify what you're printing.
 
+Example Input/Output (I/O):
 
 
 -------------------------------------------------------------------------------
