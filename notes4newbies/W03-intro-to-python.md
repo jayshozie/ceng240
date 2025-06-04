@@ -38,4 +38,12 @@ print(x)  # Output: 3
 x = 7575  # The value of 'x' in memory went from 3 to 7575.
 print(x)  # Output: 7575
 ```
+</details>
+
+<details>
+    <summary>Floating-Point Numbers (float)</summary>\
+
+We've extensively talked about what floating point numbers are, but I'll give a
+quick 
+
 
