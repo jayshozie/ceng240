@@ -15,7 +15,7 @@ will really need it from now on.
 
 As we've seen, a CPU cannot understand anything other than `integers` and
 `floating-point numbers`, also we've seen ways to make a CPU 'understand
-'strings'. There are 2 main types of data you need to know about: Basic and
+strings'. There are 2 main types of data you need to know about: Basic and
 Container.
 
 P.S: In Python, to assign a value (it can be anything) to a variable, you don't
