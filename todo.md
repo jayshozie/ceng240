@@ -2,8 +2,8 @@ TODO:
 
 [ ] Data Types in Python
     Basic Data Types:
-    [ ] Integers
-    [ ] Floats
+    [x] Integers
+    [x] Floats
     [ ] Complex Numbers
     [ ] Strings
     [ ] Bools
