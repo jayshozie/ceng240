@@ -239,6 +239,7 @@ Hints:
 4. You can print your result with `print()` function, in which you should
 specify what you're printing.
 
+```markdown
 Example Input/Output (I/O):
 
 Input:
@@ -252,6 +253,7 @@ Input:
 10
 Output:
 20
+```
 
 -------------------------------------------------------------------------------
 
