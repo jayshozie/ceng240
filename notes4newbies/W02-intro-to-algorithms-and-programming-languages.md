@@ -583,9 +583,9 @@ problems:
 <details>
     <summary>0 has a single representation</summary>
 
-    ```markdown
+```markdown
 +0 = 0 000 = -0
-    ```
+```
 </details>
 <details>
     <summary>Arithmetic works completely fine without checking the sign.</summary>
