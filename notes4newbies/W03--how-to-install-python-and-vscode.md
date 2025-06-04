@@ -44,7 +44,7 @@ Internet (in reputable websites such as, [stackoverflow](https://stackoverflow.c
 <details>
     <summary>Windows 10</summary>
 
-Search for `Terminal` in your Start menu, if it doesn't exist do `Ctrl+r` and
+Search for `Terminal` in your Start menu, if it doesn't exist do `Ctrl+R` and
 write `powershell.exe` and hit enter. You should see a window with blue
 background pop up. Write the command;
 ```pwsh
