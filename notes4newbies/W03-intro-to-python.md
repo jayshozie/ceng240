@@ -241,6 +241,17 @@ specify what you're printing.
 
 Example Input/Output (I/O):
 
+Input:
+13
+12
+Output:
+25
+
+Input:
+10
+10
+Output:
+20
 
 -------------------------------------------------------------------------------
 
