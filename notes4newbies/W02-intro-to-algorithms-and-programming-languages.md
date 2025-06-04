@@ -751,7 +751,7 @@ the nummber, and 22 to 0 represent the fraction.
 
 Exponent is 8-bit long, meaning the maximum exponent we can represent with
 32-bits is 127. The fraction (mantissa) is 23-bits long, meaning the maximum
-value that can be represented in this standard is `(2-2^-23) × (2^127)`, which
+value that can be represented in this standard is `(2 - 2^-23) × (2^127)`, which
 is approximately 3.4028235 × 10^38
 
 </details>
