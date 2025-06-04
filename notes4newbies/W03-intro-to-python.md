@@ -136,6 +136,33 @@ x = "False"  # Evaluates to 'True' because it's a non-empty string. What it
 </details>
 </details>
 
+## Container Data Types
+
+These are containers, as in they contain other values. It will be more clear
+after learning about them, but before we learn about them we need to learn a
+concept in programming called 'mutability'. It's basically whether the value of
+a variable (it can be a container or a basic data type) can be changed or not.
+We'll see examples of it in a minute. There are some 'methods' you need to
+learn with containers, I will give them when you need them.
+
+<details>
+    <summary>Lists (list)</summary>
+
+A list is a mutable 'list' of values. It is ordered, meaning that the order of
+the elements matter. A list can hold any value you want to store, such as
+integers, floats, strings, and even other lists, tuples, or dictionaries.
+```python
+# Let's create a list object.
+my_list = []  # This creates an empty list with no values in it.
+my_list.append(13)
+# This will 'append' (add as the last element) 13 to the list
+print(my_list)  # Output: [13]
+# Let's append another value.
+my_list.append("hi")
+# This will append the string "hi" to the list as a separate element.
+print(my_list)  # Output: [13, "hi"]
+```
+
 -------------------------------------------------------------------------------
 
 # Glossary
