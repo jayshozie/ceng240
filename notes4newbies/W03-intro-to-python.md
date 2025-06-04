@@ -30,13 +30,18 @@ should know, but I will talk about those when it's time.
 <details>
     <summary>Integers (int)</summary>
 
-Integers are whole numbers (e.g., 2, 18, 31, 5258489). In Python, you can
-change the value of an integer directly by re-declaring it.
+Integers are whole numbers (e.g., 2, 18, 31, 5258489). It can be positive or
+negative. In Python, you can change the value of an integer directly by
+re-declaring it.
 ```python
 x = 3     # The value of 'x' in memory is 3.
 print(x)  # Output: 3
 x = 7575  # The value of 'x' in memory went from 3 to 7575.
 print(x)  # Output: 7575
+x = -128  # The value of 'x' in memory went from 7575 to -128.
+print(x)  # Output: -128
+x = 0     # The value of 'x' in memory went from -128 to 0.
+print(x)  # Output: 0
 ```
 </details>
 
