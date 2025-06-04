@@ -28,11 +28,11 @@ After the installation is done, click on that file and run it.
 
 Search for `Terminal` in your Start menu, and hit enter. It should open
 PowerShell CLI as default. Write the command,
-```powershell
+```pwsh
 python3 --version
 ```
 to the command line and hit enter. If you see something similar to;
-```powershell
+```pwsh
 Python 3.13.3
 ```
 you are good to go. If the PowerShell gives out an error, read it. If it says
@@ -47,11 +47,11 @@ Internet (in reputable websites such as, [stackoverflow](https://stackoverflow.c
 Search for `Terminal` in your Start menu, if it doesn't exist do `Ctrl+r` and
 write `powershell.exe` and hit enter. You should see a window with blue
 background pop up. Write the command;
-```powershell
+```pwsh
 python3 --version
 ```
 to the command line and hit enter. If you see something similar to;
-```powershell
+```pwsh
 Python 3.13.3
 ```
 you are good to go. If the PowerShell gives out an error, read it. If it says
