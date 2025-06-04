@@ -12,7 +12,7 @@ to your system.
 # Python Installation
 
 <details>
-    <summary>Installation for Windows</summary>
+    <summary>Windows 11/10</summary>
 
 You can install Python from [www.python.org/downloads/](https://www.python.org/downloads/).
 When you go into the website, you'll see a yellow button that says
