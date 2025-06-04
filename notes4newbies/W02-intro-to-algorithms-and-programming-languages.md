@@ -850,8 +850,6 @@ and `floating-point numbers`, or `floats`.
 
 ### How would you represent things with binary?
 
--------------------------------------------------------------------------------
-
 <details>
     <summary>Representing Text with Binary</summary>
 
@@ -939,8 +937,6 @@ comparison, since it uses 32-bits even for ASCII characters (which originally
 used 7-bits, extended uses 8-bits).
 </details>
 </details>
-
--------------------------------------------------------------------------------
 
 <details>
     <summary>Representing Images, Videos, and Sounds with Binary</summary>
