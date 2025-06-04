@@ -623,10 +623,12 @@ counting.
 | 1111          |       15      |            -7           |           -1           |
 
 The problem arises from this; in sign/magnitude notation, you start from zero,
-go up, and when you arrive at the middle of the table you start from zero,
-again, and then go down. In 2s compliment notation, you start from zero, go up
-to the middle of the table, and then go UP AGAIN, starting from the lowest
-number.
+go up to the middle, and then start counting down. In 2s compliment notation,
+however, you start from zero, go up to the middle, then start counting up from
+the 'maximum' value up until that point. You can think of it this way, when you
+start counting from the maximum value (1111 in this case), and count the
+opposite way (subtracting 1 at every step) you count down, just like how would
+you in a number line.
 
 ### Deep Dive into Numbering Systems
 
