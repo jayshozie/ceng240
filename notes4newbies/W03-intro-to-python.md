@@ -220,8 +220,10 @@ print(type(my_dict))  # Output: <class 'dict'>
 
 -------------------------------------------------------------------------------
 
+# Useful Operations
+
 <details>
-    <summary>Useful Operations with Numerical Types</summary>
+    <summary>w/ Numerical Types</summary>
 
 ## [`type(<data>)`](https://docs.python.org/3/library/functions.html#type)
 
@@ -312,7 +314,8 @@ print(sin_of_pi, cos_of_pi, log10_of_10)
 
 -------------------------------------------------------------------------------
 
-# Useful Operations with Strings
+<details>
+    <summary>w/ Strings</summary>
 
 ## `str()`
 Example Use:
@@ -331,10 +334,12 @@ Example Use:
 ```python
 
 ```
+</details>
 
 -------------------------------------------------------------------------------
 
-# Useful Operations with Dictionaries
+<details>
+    <summary>w/ Dictionaries</summary>
 
 ## `len()`
 Example Use:
@@ -353,6 +358,7 @@ Example Use:
 ```python
 
 ```
+</details>
 
 -------------------------------------------------------------------------------
 
