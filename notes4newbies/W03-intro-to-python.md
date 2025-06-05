@@ -312,7 +312,6 @@ print(sin_of_pi, cos_of_pi, log10_of_10)
 ```
 </details>
 
--------------------------------------------------------------------------------
 
 <details>
     <summary>w/ Strings</summary>
@@ -336,7 +335,6 @@ Example Use:
 ```
 </details>
 
--------------------------------------------------------------------------------
 
 <details>
     <summary>w/ Dictionaries</summary>
