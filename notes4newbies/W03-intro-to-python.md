@@ -38,7 +38,8 @@ should know, but I will talk about those when it's time.
 
 Integers are whole numbers (e.g., 2, 18, 31, 5258489). It can be positive or
 negative. In Python, you can change the value of an integer directly by
-re-declaring it.
+re-declaring it. Integers in Python, can be of any size. It is not limited by
+bit size or anything like that.
 ```python
 x = 3           # The value of 'x' in memory is 3.
 print(x)        # Output: 3
@@ -59,7 +60,9 @@ print(type(x))  # Output: <class 'int'>
     <summary>Floating-Point Numbers (float)</summary>
 
 A float can be any real number, except irrationals we can't completely
-represent them, obivously.
+represent them, obivously. Floats are in IEEE-754 standard. If the float is
+bigger than 32-bits, than it changes it to double (64-bit) float as it is in
+IEEE-754 standard.
 ```python
 my_float = 3.14          # The value of 'my_float' in memory is 3.14
 print(my_float)          # Output: 3.14
@@ -214,6 +217,111 @@ print(my_dict)  # Output: {'name': 'Ayse', 'age': 34, 'education': 4}
 print(type(my_dict))  # Output: <class 'dict'>
 ```
 </details>
+
+-------------------------------------------------------------------------------
+
+# Useful Operations with Numerical Types
+
+## [`type(<data)`](https://docs.python.org/3/library/functions.html#type)
+
+
+Example Use:
+```python
+
+```
+
+
+## `abs(<number>)`
+Example Use:
+```python
+
+```
+
+## `pow(<number1>, <number2>`
+Example Use:
+```python
+
+```
+
+## `round(<float>)`
+Example Use:
+```python
+
+```
+
+## `sin()`, `cos()`, `log()` from the `math` Library
+Example Use:
+```python
+
+```
+
+-------------------------------------------------------------------------------
+
+# Useful Operations with Strings
+
+## `str()`
+Example Use:
+```python
+
+```
+
+## `len()`
+Example Use:
+```python
+
+```
+
+## `eval()`
+Example Use:
+```python
+
+```
+
+-------------------------------------------------------------------------------
+
+# Useful Operations with Dictionaries
+
+## `len()`
+Example Use:
+```python
+
+```
+
+## `values()`
+Example Use:
+```python
+
+```
+
+## `keys()`
+Example Use:
+```python
+
+```
+
+-------------------------------------------------------------------------------
+
+# Expressions in Python
+
+## Presedence and Associativity
+
+## Logic in Python
+
+## Type Conversion
+
+-------------------------------------------------------------------------------
+
+# Statements
+
+## Basic Statements
+
+### Assignments
+
+## Compond Statements
+
+### Conditional Statements
+
+### Repetition Statements
 
 -------------------------------------------------------------------------------
 
