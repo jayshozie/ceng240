@@ -220,8 +220,8 @@ print(type(my_dict))  # Output: <class 'dict'>
 
 -------------------------------------------------------------------------------
 
-# Useful Operations with Numerical Types
 <details>
+    <summary>Useful Operations with Numerical Types</summary>
 
 ## [`type(<data>)`](https://docs.python.org/3/library/functions.html#type)
 
