@@ -12,3 +12,5 @@ TODO:
     [x] Tuples
     [ ] Dictionaries
     [ ] Sets
+
+[ ] Useful Operations

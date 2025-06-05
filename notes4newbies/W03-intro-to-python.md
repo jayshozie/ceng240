@@ -220,41 +220,95 @@ print(type(my_dict))  # Output: <class 'dict'>
 
 -------------------------------------------------------------------------------
 
-# Useful Operations with Numerical Types
+<details>
+    <summary>Useful Operations with Numerical Types</summary>
 
 ## [`type(<data>)`](https://docs.python.org/3/library/functions.html#type)
 
+I've used this function when I was talking about types. What the function does
+is basically return the type of a variable.
 
-
-Example Use:
 ```python
+x = 1.345
+print(type(x))  # Output: <class 'float'>
 
+a = "Hello, World!"
+print(type(a))  # Output: <class 'str'>
 ```
 
+## [`abs(<number>)`](https://docs.python.org/3/library/functions.html#abs)
 
-## `abs(<number>)`
+This function takes in a numerical value, complex numbers too, and return its
+absolute value.
+
+In the case of complex numbers, its magnitude is returned.
+
 Example Use:
 ```python
+x = abs(-1243.424)
+print(x)  # Output: 1243.424
 
+comp_num = -3-4j
+print(abs(comp_num))  # Output: 5
 ```
 
-## `pow(<number1>, <number2>`
+## [`pow(<base>, <exponent>)`](https://docs.python.org/3/library/functions.html#pow)
+
+This function takes 2 numerical arguments. First one is the base, and second
+one is the exponent. It does the calculation, `x^y`. Same can be accomplished
+with `x**y`. Arguments must be numerical values.
+
+Weird Quirk: pow(0,0) = 1
+
 Example Use:
 ```python
-
+x = 2
+y = 4
+print(pow(x,y))  # Output: 16
 ```
 
-## `round(<float>)`
+## [`round(<float>)`](https://docs.python.org/3/library/functions.html#round)
+
+The argument value is rounded to the closest multiple of 10 to the power minus
+ndigits; if two multiples are equally close, rounding is done toward the even
+choice (banker's rounding).
+
 Example Use:
 ```python
+x = 2.5
+y = 1.5
+z = 0.5
 
+round_x = round(x)
+round_y = round(y)
+round_z = round(z)
+
+print(round_x, round_y, round_z)
+# Output: 2 2 0
 ```
 
 ## `sin()`, `cos()`, `log()` from the `math` Library
+
+These three functions are from the `math` library, thus the library must be
+included before their use. They are the sine, cosine, and logarithm functions
+in maths. They take their arguments in radians (rad).
+
+The base of the logarithm function is `e` as default, but it can be changed by
+providing as a separate argument separated by a comma ','.
+
 Example Use:
 ```python
+from math import sin, cos, log
 
+sin_of_pi = sin(pi)
+cos_of_pi = sin(pi)
+log10_of_10 = log(10, 10)
+
+print(sin_of_pi, cos_of_pi, log10_of_10)
+# Output:
+# 1.2246467991473532e-16 -1 1
 ```
+</details>
 
 -------------------------------------------------------------------------------
 
