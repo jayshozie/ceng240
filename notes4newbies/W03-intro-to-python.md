@@ -460,7 +460,7 @@ direct quote from [Programiz](https://www.programiz.com/python-programming/prece
 
 -------------------------------------------------------------------------------
 
-# Assignment of W03
+# Assignment 1 of W03
 
 Write a Python program that takes 2 values as input, adds them, and prints the
 result. Create a Python file, naming doesn't matter but for convention you can
@@ -502,17 +502,37 @@ Output:
 20
 ```
 
+# Assignment 2 of W03
+
+Write a Python script that takes 2 the radii of 2 circles, calculates the area
+of both, and calculates the area difference of them. If one of them are bigger
+than the other, then the script should print;
+```markdown
+{circle1} > {circle2}
+Area Difference : {area_difference}
+```
+If both are of same size, then it should print;
+```markdown
+{circle1} = {circle2}
+Area Difference : 0
+```
+
+Hints:
+1. You can use the function `eval(input())` to get input from the user.
+2. You should use two differente variables for the radii, and calculate the
+areas of each circle and store them in differente variables.
+3. You can assign a fifth variable to the area difference, but it's not
+necessary.
+4. You can print your result with `print()` function, in which you should
+specify what you're printing.
+
 -------------------------------------------------------------------------------
 
 # Glossary
 
 1. `print()` : Generic print function. Prints the value given in the argument.
 
-2. `type()` : returns the type of the given argument
-    1. Used in 'integers' subsection, it returns 'class <int>', since all
-    numbers in that section are integers.
-    2. Used in 'floats' subsection, it returns 'class <float>', since all
-    numbers in that section are floating-point numbers.
+2. 
 
 -------------------------------------------------------------------------------
 
