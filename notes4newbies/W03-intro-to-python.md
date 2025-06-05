@@ -222,7 +222,8 @@ print(type(my_dict))  # Output: <class 'dict'>
 
 # Useful Operations with Numerical Types
 
-## [`type(<data)`](https://docs.python.org/3/library/functions.html#type)
+## [`type(<data>)`](https://docs.python.org/3/library/functions.html#type)
+
 
 
 Example Use:
