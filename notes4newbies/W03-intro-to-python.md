@@ -378,8 +378,36 @@ Example Use:
 
 ## Presedence and Associativity
 
+"The combination of values, variables, operators, and function calls is termed
+as an expression. The Python interpreter can evaluate a valid expression.",
+direct quote from [Programiz](https://www.programiz.com/python-programming/precedence-associativity)[^1].
+
 <details>
-    <summary>Precedence and Associativity Table</summary>
+    <summary>Precedence and Associativity Table (basic)</summary>
+
+| Precedence |                   Operators                  |                     Description                     | Associativity |
+|:----------:|:--------------------------------------------:|:---------------------------------------------------:|:-------------:|
+|      1     |                      ()                      |                     Parantheses                     | Left to right |
+|      2     |                      **                      |                    Exponentiation                   | Right to left |
+|      3     |                  +x, -x, ~x                  |           Positive, negative, bitwise NOT           | Left to right |
+|      4     |                  \*, /, //, %                | Multiplication, division, floor division, remainder | Left to right |
+|      5     |                     +, -                     |               Addition and subtraction              | Left to right |
+|      6     |                    <<, >>                    |                        Shifts                       | Left to right |
+|      7     |                       &                      |                     Bitwise AND                     | Left to right |
+|      8     |                       ^                      |                     Bitwise XOR                     | Left to right |
+|      9     |                      \|                      |                      Bitwise OR                     | Left to right |
+|     10     | in, not in, is, is not, <, <=, >, >=, !=, == |    Comparisons, Membership Tests, Identity tests    | Left to right |
+|     11     |                     not x                    |                     Boolean NOT                     | Right to left |
+|     12     |                      and                     |                     Boolean AND                     | Left to right |
+|     13     |                      or                      |                      Boolean OR                     | Left to right |
+|     14     |                      and                     |                     Boolean AND                     | Left to right |
+
+</details>
+
+##  TODO : ADD EXPLANATION OF TABLE HERE
+
+<details>
+    <summary>Precedence and Associativity Table (detailed)</summary>
 
 | Precedence |                   Operators                  |                         Description                         | Associativity |
 |:----------:|:--------------------------------------------:|:-----------------------------------------------------------:|:-------------:|
@@ -405,7 +433,11 @@ Example Use:
 
 ## Logic in Python
 
+###   TODO : ADD EXPLANATION HERE
+
 ## Type Conversion
+
+###   TODO : ADD EXPLANATION HERE
 
 -------------------------------------------------------------------------------
 
@@ -413,9 +445,13 @@ Example Use:
 
 ## Basic Statements
 
+###   TODO : ADD EXPLANATION HERE
+
 ### Assignments
 
 ## Compond Statements
+
+###   TODO : ADD EXPLANATION HERE
 
 ### Conditional Statements
 
@@ -476,3 +512,10 @@ Output:
     numbers in that section are integers.
     2. Used in 'floats' subsection, it returns 'class <float>', since all
     numbers in that section are floating-point numbers.
+
+-------------------------------------------------------------------------------
+
+# References
+
+[^1]: [Precedence and Associativity of Operators in Python](https://www.programiz.com/python-programming/precedence-associativity) | 
+[WayBack Machine](https://web.archive.org/web/20250605144400/https://www.programiz.com/python-programming/precedence-associativity)
