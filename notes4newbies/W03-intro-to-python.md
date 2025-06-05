@@ -301,6 +301,8 @@ providing as a separate argument separated by a comma ','.
 Example Use:
 ```python
 from math import sin, cos, log
+# You can use `import math` but it has a lot of functions, it's bad practice to
+# load an entire library if you're going to use just a couple of things.
 
 sin_of_pi = sin(pi)
 cos_of_pi = sin(pi)
@@ -317,8 +319,20 @@ print(sin_of_pi, cos_of_pi, log10_of_10)
     <summary>w/ Strings</summary>
 
 ## `str()`
+
+`str()` function takes a single argument, returns the string version of the
+value given as argument.
+
 Example Use:
 ```python
+x = 13
+y = "My number: "
+
+# If you try to 'add' these two values, Python will scream at you, since they
+# are not of the same type, they can't be added.
+
+print(y + str(x))  # This won't scream at you.
+# Output: My number: 13
 
 ```
 
