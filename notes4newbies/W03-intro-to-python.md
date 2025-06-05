@@ -523,8 +523,13 @@ Hints:
 areas of each circle and store them in differente variables.
 3. You can assign a fifth variable to the area difference, but it's not
 necessary.
-4. You can print your result with `print()` function, in which you should
-specify what you're printing.
+4. You can use this to print out your calculations, but don't forget to change
+the `radius_1`, `radius_2`, and `area_diff` variables to your own variables.
+```python
+print(f"{radius_1} > {radius_2}")  # If radius 1 is larger than radius 2
+print(f"{radius_1} = {radius_2}")  # If radii are equal
+print(f"Area Difference : {area_diff}")  # The area difference
+```
 
 -------------------------------------------------------------------------------
 
