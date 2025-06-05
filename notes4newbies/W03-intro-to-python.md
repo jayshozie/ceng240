@@ -289,7 +289,7 @@ print(round_x, round_y, round_z)
 # Output: 2 2 0
 ```
 
-## `sin()`, `cos()`, `log()` from the `math` Library
+## `sin()`, `cos()`, `log()` from the [`math`](https://docs.python.org/3/library/math.html) Library
 
 These three functions are from the `math` library, thus the library must be
 included before their use. They are the sine, cosine, and logarithm functions
