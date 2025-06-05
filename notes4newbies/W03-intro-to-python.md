@@ -174,6 +174,7 @@ my_list.append("hi")
 print(my_list)  # Output: [13, "hi"]
 ```
 ###     TODO : ADD .pop AND OTHER METHODS OF LISTS
+###     TODO : ADD EXPLANATION OF NESTED LISTS AND TUPLES
 </details>
 
 <details>
