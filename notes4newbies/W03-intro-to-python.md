@@ -440,7 +440,7 @@ understand them in about 3-4 markdowns.
 |      1     |                      ()                      |                         Parantheses                         | Left to right |
 |      2     |            x[index] x[index:index]           |                     Subscription Slicing                    | Left to right |
 |      3     |                    await x                   |                       Await expression                      |      N/A      |
-|      4     |                      **                      |                        Exponentiation                       | Right to left |
+|      4     |                      \**                     |                        Exponentiation                       | Right to left |
 |      5     |                  +x, -x, ~x                  |               Positive, negative, bitwise NOT               | Left to right |
 |      6     |                \*, @, /, //, %               | Multiplication, matrix, division, floor division, remainder | Left to right |
 |      7     |                     +, -                     |                   Addition and subtraction                  | Left to right |
@@ -459,7 +459,81 @@ understand them in about 3-4 markdowns.
 
 ## Logic in Python
 
-###   TODO : ADD EXPLANATION HERE
+If you took a logic course at any point in your education this should be really
+easy for you, because it's basically the same thing. For example, let's say
+that you have a program that serves as a calculator. It's just in its first
+version so you didn't implement any functionality other than addition, but you
+did implement a way for the user to specify which action they want to take. You
+can check whether they are trying to add numbers by logic.
+```python
+num1 = eval(input("Please enter the first number: "))
+num2 = eval(input("Please enter the second number: "))
+operator = eval(input("Please enter an operator (+,-,*,/): "))
+
+if operator == '+':
+    total = num1 + num2
+    print(f"{num1} + {num2} = {total}")
+
+else:
+    print(f"An unexpected error, ocurred.")
+```
+In this example, Python checks whether the user provided the string "+" as
+input for the operator variable.
+
+There are more logic checks that can be used in Python, let me go over some of
+them.
+```python
+# You could check for multiple things in a single logic check.
+
+num1 = eval(input())
+num2 = eval(input())
+operator = eval(input())
+
+if (operator == '+' and
+    isinstance(num1, (int,float)) and
+    isinstance(num2, (int,float))):
+    """
+    Let's talk about this entire check. We know what the first one does, it
+    checks whether the variable operator is some string, but what about others?
+    There is an `and` operator in between all of them. Which means, for this
+    entire statement to be `True`, all of them must be `True`. The second check
+    is a function called `isinstance()` from the standard library of Python. It
+    returns `True` if the provided object's (num1 in our case) type is one of
+    the given. Usually it's used with a single type, but in this case, we can
+    use two. In that case those must be provided in a `tuple`, we learned what
+    that is. That means, if num1 or num2 is not either an integer or a float,
+    the program will skip that if block, and continue with the else block. The
+    else block can't check for anything, that's by design. If you want to check
+    for other stuff in the same conditional block, you should use `elif`
+    keyword. So, second and third checks are checking whether the user provided
+    numerical values for both of the variables. If they didn't then the script
+    will print "An unexpected error ocurred.".
+
+    Then, in the best case scenario, that check sums up to `True and True and
+    True`, meaning it is `True`.
+    """
+
+    total = num1 + num2
+    print(f"{num1} + {num2} = {total}")
+
+else:
+    print("An unexpected error ocurred.")
+```
+
+<details>
+    <summary>Why check that extensively?</summary>
+
+Programming 101, always expect the worst case scenario. The user may provide a
+string for the numerical values. If we don't check for that, and the user gives
+a string for the first numerical value and a numerical value for the second
+one, then when we try to add them together the Python interpreter will give an
+error. We do not want that. Even if there is an error, we want to be the ones
+that give the error, not the interpreter. So, we check if both numerical inputs
+are actually numerical values, then we check whether the operator is the one we
+want. After being sure that all those are true, then we do our calculation and
+provide the user with the result.
+</details>
+
 
 ## Type Conversion
 
