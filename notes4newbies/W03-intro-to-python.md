@@ -389,7 +389,7 @@ direct quote from [Programiz](https://www.programiz.com/python-programming/prece
 | Precedence |                   Operators                  |                     Description                     | Associativity |
 |:----------:|:--------------------------------------------:|:---------------------------------------------------:|:-------------:|
 |      1     |                      ()                      |                     Parantheses                     | Left to right |
-|      2     |                      **                      |                    Exponentiation                   | Right to left |
+|      2     |                      \**                     |                    Exponentiation                   | Right to left |
 |      3     |                  +x, -x, ~x                  |           Positive, negative, bitwise NOT           | Left to right |
 |      4     |                  \*, /, //, %                | Multiplication, division, floor division, remainder | Left to right |
 |      5     |                     +, -                     |               Addition and subtraction              | Left to right |
@@ -405,7 +405,32 @@ direct quote from [Programiz](https://www.programiz.com/python-programming/prece
 
 </details>
 
-##  TODO : ADD EXPLANATION OF TABLE HERE
+For example:
+```python
+>>> 5-7
+-2
+```
+There is no ambiguity there; however, if we were to do this:
+```python
+>>> 10 - 7 * 3
+```
+Without precedence, Python wouldn't be able to understand which operator should
+be done first. We're lucky that we do have it.
+```python
+>>> 10 - 7 * 3
+-11
+```
+
+What if there are two operators that have the same precedence? That's where
+associativity comes in. If there are two or more operators with the same
+precedence, then Python checks the associativity of those operators.
+```python
+>>> 3 * 4 / 4
+3
+```
+Python interpreter reads the operators from left to right in this case. There
+may be some operators that you don't know in there, don't worry you'll
+understand them in about 3-4 markdowns.
 
 <details>
     <summary>Precedence and Associativity Table (detailed)</summary>
