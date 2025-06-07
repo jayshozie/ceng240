@@ -200,6 +200,8 @@ There are some very important methods that you need to know with lists.
 
 ### Important Operations with Lists
 
+###     TODO : ADD THE LINKS TO THE METHODS
+
 1. [`append()`]()
 
 We've seen this method. It takes an argument, and adds that element to the
@@ -381,9 +383,7 @@ This is the recommended, and more Python-y way of sorting that list. We will
 visit the lambda functions topic after we talk about functions.
 </details>
 
-
-###     TODO : ADD .pop AND OTHER METHODS OF LISTS
-###     TODO : ADD EXPLANATION OF NESTED LISTS AND TUPLES
+And that concludes our important methods of lists.
 </details>
 
 <details>
@@ -415,10 +415,31 @@ print(my_other_tuple)  # Output: (2, 3, 5, 7, 11)
 After you create that tuple, you can't change anything in it, that's why it's
 called immutable.
 
-
 There are some important methods with tuples, too.
 
-1. 
+### Important Operations with Tuples
+###     TODO : DON'T FORGET TO COMPLETE THESE AND ADD LINKS
+
+1. [`count()`]()
+
+This is the same method with the `count()` method in lists.
+```python
+how_many_yes = ("yes", 10, 20, "yes", "yes")
+
+how_many_tho = how_many_yes.count("yes")
+
+print(how_many_tho)  # Output: 3
+```
+
+2. [`index()`]()
+
+This is the same method with the `index()` method in lists.
+```python
+my_tuple = ["my name", "is not", 30]
+index_of_30 = my_tuple.index(30)
+
+print(index_of_30)  # Output: 2
+```
 
 </details>
 
