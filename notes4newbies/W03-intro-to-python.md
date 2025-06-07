@@ -355,7 +355,7 @@ The `key` keyword argument takes basically a function that takes in a single
 argument and returns a key to use for sorting purposes.
 
 <details>
-    <summary>Formal Definition of the `key` Keyword Argument for Nerds</summary>
+    <summary>Formal Definition of the key Keyword Argument for Nerds</summary>
 
 The value of the key parameter should be a function (or other callable) that
 takes a single argument and returns a key to use for sorting purposes. This
