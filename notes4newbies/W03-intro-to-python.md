@@ -198,11 +198,9 @@ print(my_array[0][1])  # Output: 2
 
 There are some very important methods that you need to know with lists.
 
-### Important Operations with Lists
+### [Important Operations with Lists](https://docs.python.org/3/tutorial/datastructures.html)
 
-###     TODO : ADD THE LINKS TO THE METHODS
-
-1. [`append()`]()
+1. `append()`
 
 We've seen this method. It takes an argument, and adds that element to the
 list. It always adds the item to the end of that list.
@@ -214,7 +212,7 @@ my_list.append("I've just appended this string to my list!")
 print(my_list)  # Output: ["This string was in my list.", "I've just append this string to my list!"]
 ```
 
-2. [`pop()`]()
+2. `pop()`
 
 The `pop()` method takes an optional argument, which should be an index. You
 don't have to provide it. If you don't the method will remove the last item
@@ -232,7 +230,7 @@ number_three = my_list.pop(-1)
 print(number_three, my_list)  # 3 [0, 1, 2]
 ```
 
-3. [`clear()`]()
+3. `clear()`
 
 I believe it's pretty clear what this method does. Pun intended. It clears out
 the list, meaning it deletes all values stored in. Resulting list is an empty
@@ -243,7 +241,7 @@ lemme_clear_this.clear()
 print(lemme_clear_this)  # Output: []
 ```
 
-4. [`extend()`]()
+4. `extend()`
 
 The `extend()` method takes a list or tuple as argument, and adds the items in
 that list/tuple to the given list.
@@ -256,7 +254,7 @@ lemme_extend_this.extend(to_this)
 print(lemme_extend_this)  # Output: [0, 1, ['random', 'values'], 2, 4, 5, 'even', ['more', 'random values']]
 ```
 
-5. [`insert()`]()
+5. `insert()`
 
 The `insert(index, item)` method takes an index and an item (can be anything
 that can be stored in a list) and adds that item to the desired index.
@@ -269,7 +267,7 @@ print(gonna_insert_2_this)  # Output: [0, 1, '2', 3, 4]
 # what we stored is a string that has the character 2 in it.
 ```
 
-6. [`remove()`]()
+6. `remove()`
 
 The `remove()` method takes an argument, looks for that value in the list and
 removes it if it finds it. It only removes the first item it finds.
@@ -282,7 +280,7 @@ print(random_bs_go)  # Output: [1, 0, 3, 4, 5]
 # See? It didn't remove the second 0.
 ```
 
-7. [`index()`]()
+7. `index()`
 
 The `index()` method takes an argument, looks for it in the list, returns the
 first match's index.
@@ -294,7 +292,7 @@ index_of_really = this_is_getting_weird.index("really")
 print(index_of_really)  # Output: 3
 ```
 
-8. [`count()`]()
+8. `count()`
 
 The `count()` method takes an argument, looks at the list, returns how many
 copies of that values are there.
@@ -306,7 +304,7 @@ how_much_zeroes = very_much.count(0)
 print(how_much_zeroes)  # Output: 2
 ```
 
-9. [`sort()`]()
+9. `sort()`
 
 It's pretty basic. It sorts the list. If you don't provide it with a way of
 sorting it's going to assume for the best, and sort it according to the values.
@@ -417,10 +415,9 @@ called immutable.
 
 There are some important methods with tuples, too.
 
-### Important Operations with Tuples
-###     TODO : DON'T FORGET TO COMPLETE THESE AND ADD LINKS
+### [Important Operations with Tuples](https://docs.python.org/3/tutorial/datastructures.html)
 
-1. [`count()`]()
+1. `count()`
 
 This is the same method with the `count()` method in lists.
 ```python
@@ -431,7 +428,7 @@ how_many_tho = how_many_yes.count("yes")
 print(how_many_tho)  # Output: 3
 ```
 
-2. [`index()`]()
+2. `index()`
 
 This is the same method with the `index()` method in lists.
 ```python
@@ -448,13 +445,83 @@ And this concludes our important methods with tuples.
 <details>
     <summary>Dictionaries (dict)</summary>
 
-A dictionary (dict) is a mutable, unordered, mapping type. In a dictionary, you
-store `values` associated with a `key`.
+A dictionary (dict) is a mutable and unordered mapping type. In a dictionary,
+you store `values` associated with a `key`.
 ```python
 my_dict = {'name': 'Ayse', 'age': 34, 'education': 4}
 print(my_dict)  # Output: {'name': 'Ayse', 'age': 34, 'education': 4}
 print(type(my_dict))  # Output: <class 'dict'>
 ```
+
+<details>
+    <summary>Important Operations with Dictionaries</summary>
+
+###     TODO : ADD THESE
+There are a lot of stuff associated with dictionaries, so I've felt the need to
+make this section a drop-down. You don't need to know every single one of these
+with immense detail, but it would make your life real easier. For more info,
+please check the [documentation](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict).
+
+1. `list(d)`
+
+This function takes a dictionary 'd' as argument, and returns a list of its
+keys.
+```python
+my_dict = {"name": "jay", "age": 20, "cgpa": 4.00}
+# that cgpa is a lie lol
+
+print(list(my_dict))  # Output: ['name', 'age', 'cgpa']
+```
+
+2. `len(d)`
+
+This function takes a dictionary 'd' as argument, and returns the number of
+items in 'd'.
+```python
+random_bs_go = {'one': 42, 'three': 3, 'four': 4, 'two': None}
+
+print(len(random_bs_go))  # Output: 4
+```
+
+3. `d[k]`
+
+Returns the item of 'd' with key 'k'. If the key 'k' is missing, then it raises
+"KeyError" error.
+```python
+random_bs_go = {'one': 42, 'three': 3, 'four': 4, 'two': None}
+
+print(random_bs_go['one'])  # Output: 42
+
+print(random_bs_go['name'])
+# Output:
+# Traceback (most recent call last):
+#   File "<python-input-3>", line 1, in <module>
+#     print(random_bs_go['name'])
+#           ~~~~~~~~~~~~^^^^^^^^
+# KeyError: 'name'
+```
+
+4. `d[k] = value`
+
+Sets `d[k]` to `value`.
+```python
+random_bs_go = {'one': 42, 'three': 3, 'four': 4, 'two': None}
+
+random_bs_go['one'] = 100
+
+print(random_bs_go['one'])  # Output: 100
+```
+
+5. `k in d`
+
+This is more of a logic thing and not exclusive to dictionaries, but basically
+returns `True` if the dictionary 'd' has a key 'k'.
+```python
+
+```
+
+###     TODO : CONTINUE HERE
+###     TODO : DON'T FORGET TO LINK THEM
 </details>
 
 -------------------------------------------------------------------------------
@@ -572,7 +639,6 @@ y = "My number: "
 
 print(y + str(x))  # This won't scream at you.
 # Output: My number: 13
-
 ```
 
 ## `len()`
