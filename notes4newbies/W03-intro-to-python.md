@@ -315,7 +315,6 @@ unsorted_list.sort()
 
 print(unsorted_list)  # Output: [0, 1, 7, 24, 93, 73722]
 ```
-
 Here is what else you can do with the `sort()` method. Formal definition of the
 method is;
 `sort(*, key=None, reverse=False)`
@@ -325,7 +324,7 @@ arguments other than `key` or `reverse`. The `sort()` function only uses `<`
 comparisons in between items, meaning that if the sort fails at any point, then
 your list may be jumbled up.
 
-Let's see what those keyword argumenst do.
+Let's see what those keyword arguments do.
 
 ```python
 # Maybe you want to reverse the order of the list
@@ -333,9 +332,54 @@ my_reverse_ordered_list = [0, 7, 5, 9, 5, 7, 9]
 my_reverse_ordered_list.sort(reverse=True)
 print(my_reverse_ordered_list)  # Output: [9, 9, 7, 7, 5, 5, 0]
 
-# Or you want to specify a key
+# Or you want to specify a key, meaning that you want to sort the list in a
+# different way. Let's say you have a nested list, and you want to sort it with
+# respect to it's items in index[1]
+student_tuples = [
+    ('john', 'A', 15),
+    ('jane', 'B', 12),
+    ('dave', 'B', 10),
+]
+# Since we haven't talked about lambda functions yet, I'm gonna do it with a
+# normal function
 
+def return_grade(student):
+    return student[2]
+# This function takes an argument, and returns the 2nd (starting from 0) item
+
+student_tuples.sort(key=return_grade, reverse=True)
+# Let's also reverse it so that we have the highest grading student first.
+print(student_tuples)  # Output: [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]
 ```
+The `key` keyword argument takes basically a function that takes in a single
+argument and returns a key to use for sorting purposes.
+
+<details>
+    <summary>Formal Definition of the `key` Keyword Argument for Nerds</summary>
+
+The value of the key parameter should be a function (or other callable) that
+takes a single argument and returns a key to use for sorting purposes. This
+technique is fast because the key function is called exactly once for each input
+record.
+</details>
+
+<details>
+    <summary>A Better Version of the Previous Example for Nerds</summary>
+
+```python
+student_tuples = [
+    ('john', 'A', 15),
+    ('jane', 'B', 12),
+    ('dave', 'B', 10),
+]
+
+student_tuples.sort(key=lambda student: student[2], reverse=True)
+
+print(student_tuples)
+```
+This is the recommended, and more Python-y way of sorting that list. We will
+visit the lambda functions topic after we talk about functions.
+</details>
 
 
 ###     TODO : ADD .pop AND OTHER METHODS OF LISTS
