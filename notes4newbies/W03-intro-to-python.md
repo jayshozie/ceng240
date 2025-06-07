@@ -441,6 +441,8 @@ index_of_30 = my_tuple.index(30)
 print(index_of_30)  # Output: 2
 ```
 
+And this concludes our important methods with tuples.
+
 </details>
 
 <details>
