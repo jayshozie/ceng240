@@ -173,6 +173,169 @@ my_list.append("hi")
 # This will append the string "hi" to the list as a separate element.
 print(my_list)  # Output: [13, "hi"]
 ```
+
+You can access items in a list with it's index number. In most programming
+languages, including Python, we start counting from 0. We've talked about why
+in the previous markdown.
+```python
+print(my_list[0])  # Output: 13
+print(my_list[1])  # Output: "hi"
+```
+
+Lists are very useful, since Python doesn't have a way of storing arrays. You
+can nest lists, meaning you can store lists inside of lists, so on and so on.
+```python
+# Since Python doesn't have arrays, we can store a 2x2 matrix like this
+my_array = [[1,2],[3,4]]
+
+# That `array` is still a list. It's first element, a.k.a. index 0, is the list
+# [1, 2].
+print(my_array[0])  # Output: [1, 2]
+
+# If you want to access an item in that list you can do;
+print(my_array[0][1])  # Output: 2
+```
+
+There are some very important methods that you need to know with lists.
+
+1. [`append()`]()
+
+We've seen this method. It takes an argument, and adds that element to the
+list. It always adds the item to the end of that list.
+```python
+my_list = ["This string was in my list."]
+print(my_list)  # Output: ["This string was in my list."]
+
+my_list.append("I've just appended this string to my list!")
+print(my_list)  # Output: ["This string was in my list.", "I've just append this string to my list!"]
+```
+
+2. [`pop()`]()
+
+The `pop()` method takes an optional argument, which should be an index. You
+don't have to provide it. If you don't the method will remove the last item
+from the list.
+```python
+my_list = [0, 1, 2, 3, 4]
+my_list.pop()
+print(my_list)  # Output: [0, 1, 2, 3]
+
+# You can also store that value if you want.
+number_three = my_list.pop(-1)
+# You can also negatively index lists, meaning index -1 is the last item in a
+# list. It's 3 in our case.
+
+print(number_three, my_list)  # 3 [0, 1, 2]
+```
+
+3. [`clear()`]()
+
+I believe it's pretty clear what this method does. Pun intended. It clears out
+the list, meaning it deletes all values stored in. Resulting list is an empty
+list.
+```python
+lemme_clear_this = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lemme_clear_this.clear()
+print(lemme_clear_this)  # Output: []
+```
+
+4. [`extend()`]()
+
+The `extend()` method takes a list or tuple as argument, and adds the items in
+that list/tuple to the given list.
+```python
+lemme_extend_this = [0, 1, ["random", "values"], 2]
+to_this = [4, 5, "even", ["more", "random values"]]
+
+lemme_extend_this.extend(to_this)
+
+print(lemme_extend_this)  # Output: [0, 1, ['random', 'values'], 2, 4, 5, 'even', ['more', 'random values']]
+```
+
+5. [`insert()`]()
+
+The `insert(index, item)` method takes an index and an item (can be anything
+that can be stored in a list) and adds that item to the desired index.
+```python
+gonna_insert_2_this = [0, 1, 3, 4]
+gonna_insert_2_this.insert(2, "2")
+
+print(gonna_insert_2_this)  # Output: [0, 1, '2', 3, 4]
+# If you look carefully, in the index 2, we don't have the number 2 stored,
+# what we stored is a string that has the character 2 in it.
+```
+
+6. [`remove()`]()
+
+The `remove()` method takes an argument, looks for that value in the list and
+removes it if it finds it. It only removes the first item it finds.
+```python
+random_bs_go = [0, 1, 0, 3, 4, 5]
+
+random_bs_go.remove(0)
+
+print(random_bs_go)  # Output: [1, 0, 3, 4, 5]
+# See? It didn't remove the second 0.
+```
+
+7. [`index()`]()
+
+The `index()` method takes an argument, looks for it in the list, returns the
+first match's index.
+```python
+this_is_getting_weird = [0, 0, 1, "really"]
+
+index_of_really = this_is_getting_weird.index("really")
+
+print(index_of_really)  # Output: 3
+```
+
+8. [`count()`]()
+
+The `count()` method takes an argument, looks at the list, returns how many
+copies of that values are there.
+```python
+very_much = [0, 0, 1, 2, 3, 4]
+
+how_much_zeroes = very_much.count(0)
+
+print(how_much_zeroes)  # Output: 2
+```
+
+9. [`sort()`]()
+
+It's pretty basic. It sorts the list. If you don't provide it with a way of
+sorting it's going to assume for the best, and sort it according to the values.
+```python
+unsorted_list = [7, 93, 24, 1, 0, 73722]
+
+unsorted_list.sort()
+
+print(unsorted_list)  # Output: [0, 1, 7, 24, 93, 73722]
+```
+
+Here is what else you can do with the `sort()` method. Formal definition of the
+method is;
+`sort(*, key=None, reverse=False)`
+Don't worry, it's not that complicated. The asterisk (\*) means it doesn't
+accept any argument other than keyword arguments, meaning you can't give it any
+arguments other than `key` or `reverse`. The `sort()` function only uses `<`
+comparisons in between items, meaning that if the sort fails at any point, then
+your list may be jumbled up.
+
+Let's see what those keyword argumenst do.
+
+```python
+# Maybe you want to reverse the order of the list
+my_reverse_ordered_list = [0, 7, 5, 9, 5, 7, 9]
+my_reverse_ordered_list.sort(reverse=True)
+print(my_reverse_ordered_list)  # Output: [9, 9, 7, 7, 5, 5, 0]
+
+# Or you want to specify a key
+
+```
+
+
 ###     TODO : ADD .pop AND OTHER METHODS OF LISTS
 ###     TODO : ADD EXPLANATION OF NESTED LISTS AND TUPLES
 </details>
@@ -205,6 +368,12 @@ print(my_other_tuple)  # Output: (2, 3, 5, 7, 11)
 ```
 After you create that tuple, you can't change anything in it, that's why it's
 called immutable.
+
+
+There are some important methods with tuples, too.
+
+1. 
+
 </details>
 
 <details>
