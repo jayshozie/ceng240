@@ -198,6 +198,8 @@ print(my_array[0][1])  # Output: 2
 
 There are some very important methods that you need to know with lists.
 
+### Important Operations with Lists
+
 1. [`append()`]()
 
 We've seen this method. It takes an argument, and adds that element to the
