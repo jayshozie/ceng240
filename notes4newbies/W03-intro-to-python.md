@@ -1039,7 +1039,7 @@ print(f"Area Difference : {area_diff}")  # The area difference
 
 1. `print()` : Generic print function. Prints the value given in the argument.
 
-2. 
+2. `type()` : Returns the type of the value given as argument.
 
 -------------------------------------------------------------------------------
 
