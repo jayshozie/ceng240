@@ -11,6 +11,19 @@ will really need it from now on.
 
 -------------------------------------------------------------------------------
 
+# IMPORTANT NOTE
+
+This markdown is very long, and it contains way more information than you can
+learn in one sitting. I recommend you to read it slowly, understand as much as
+you can, and leave the rest of the stuff for now. You can use this markdown as
+a reference or a cheat sheet if you will. I will try to make it as up-to-date
+as I can, but don't trust it completely. For the most recent information,
+always consult to [documentation](https://docs.python.org/3/) of Python 3,
+and try to understand it. It is very well written, and it has a lot of
+information that I won't and can't possibly cover in this markdown.
+
+-------------------------------------------------------------------------------
+
 # Data Types in Python
 
 As we've seen, a CPU cannot understand anything other than `integers` and
