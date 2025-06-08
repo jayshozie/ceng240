@@ -752,6 +752,73 @@ Example Use:
 
 -------------------------------------------------------------------------------
 
+# Statements
+
+## Basic Statements
+
+###   TODO : ADD EXPLANATION HERE
+
+### Assignment Statements
+
+Assignment statements (assignments) are used to give a name (a variable) to a
+value or a result. They "bind" a name to an object in memory. They always
+involve the `=` operator (a.k.a. the assignment operator). They perform an
+action of storing a value, and do not produce a result that can immediately be
+used by another part of the code, meaning you can't assign and use an object in
+the same line of code. We've used these a lot up until this point, but it's a
+good time to give it a name.
+```python
+x = 20
+name = "jay"
+y = 243424.4324324
+my_dict = {"random": "bs", "go": True}
+
+my_tuple = ("maybe", "randomness", "was")
+my_list = ["the friends", "we", "made along", "the way"]
+```
+Above examples are all assignments. The so-to-say name before the assignment
+operator `=` is the name of the variable, the rest in what you assigned to that
+variable.
+
+### Expression Statements
+
+Expression statements (expressions) differ from assignment a lot, even though
+they look awfully similar. Expressions are used to evaluate something. They
+represent a piece of data that can be "resolved" into something. They consist
+of expressions, and produce a value. Unlike assignments, this value can be used
+immediately, even in the same line. We've also seen a lot of these. Expressions
+don't make sense on their own, they need to be paired up with other things.
+```python
+10
+"Hello, world!"
+5 + 3
+x * 2
+len("Python")
+```
+If you write these to the Python interpreter one by one, it should either
+return the value back, or give an error in the 4th line (x * 2) since we
+haven't actually 'assigned' a value to a variable called 'x', so Python doesn't
+know what we're talking about.
+
+### Clearing Confusions
+
+```python
+x = 5 * 3
+```
+The `5 * 3` part is an expression, and the entire line is an assignment. You
+want Python to resolve that 'expression' `5 * 3` and 'assign' it to a variable
+named `x`.
+
+## Compond Statements
+
+###   TODO : ADD EXPLANATION HERE
+
+### Conditional Statements
+
+### Repetition Statements
+
+-------------------------------------------------------------------------------
+
 # Expressions in Python
 
 ## Presedence and Associativity
@@ -949,73 +1016,6 @@ print(my_float, type(my_float))  # Output: 13 <class 'int'>
 # As you can see we've lost the precision of a float since we forced it into
 # becoming an integer.
 ```
-
--------------------------------------------------------------------------------
-
-# Statements
-
-## Basic Statements
-
-###   TODO : ADD EXPLANATION HERE
-
-### Assignment Statements
-
-Assignment statements (assignments) are used to give a name (a variable) to a
-value or a result. They "bind" a name to an object in memory. They always
-involve the `=` operator (a.k.a. the assignment operator). They perform an
-action of storing a value, and do not produce a result that can immediately be
-used by another part of the code, meaning you can't assign and use an object in
-the same line of code. We've used these a lot up until this point, but it's a
-good time to give it a name.
-```python
-x = 20
-name = "jay"
-y = 243424.4324324
-my_dict = {"random": "bs", "go": True}
-
-my_tuple = ("maybe", "randomness", "was")
-my_list = ["the friends", "we", "made along", "the way"]
-```
-Above examples are all assignments. The so-to-say name before the assignment
-operator `=` is the name of the variable, the rest in what you assigned to that
-variable.
-
-### Expression Statements
-
-Expression statements (expressions) differ from assignment a lot, even though
-they look awfully similar. Expressions are used to evaluate something. They
-represent a piece of data that can be "resolved" into something. They consist
-of expressions, and produce a value. Unlike assignments, this value can be used
-immediately, even in the same line. We've also seen a lot of these. Expressions
-don't make sense on their own, they need to be paired up with other things.
-```python
-10
-"Hello, world!"
-5 + 3
-x * 2
-len("Python")
-```
-If you write these to the Python interpreter one by one, it should either
-return the value back, or give an error in the 4th line (x * 2) since we
-haven't actually 'assigned' a value to a variable called 'x', so Python doesn't
-know what we're talking about.
-
-### Clearing Confusions
-
-```python
-x = 5 * 3
-```
-The `5 * 3` part is an expression, and the entire line is an assignment. You
-want Python to resolve that 'expression' `5 * 3` and 'assign' it to a variable
-named `x`.
-
-## Compond Statements
-
-###   TODO : ADD EXPLANATION HERE
-
-### Conditional Statements
-
-### Repetition Statements
 
 -------------------------------------------------------------------------------
 
