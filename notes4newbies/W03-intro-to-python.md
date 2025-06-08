@@ -587,6 +587,7 @@ print(my_dict.popitem())  # Output: ('education', 4)
 print(my_dict)  # Output: {'name': 'Ayse', 'age': 34}
 ```
 </details>
+</details>
 
 -------------------------------------------------------------------------------
 
