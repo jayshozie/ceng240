@@ -592,6 +592,9 @@ print(my_dict)  # Output: {'name': 'Ayse', 'age': 34}
 <details>
     <summary>Sets (set)</summary>
 
+    ###     TODO : ADD EXPLANATION HERE
+There are two types of sets, one type is mutable and other type is immutable.
+
 </details>
 
 -------------------------------------------------------------------------------
