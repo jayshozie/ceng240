@@ -589,6 +589,11 @@ print(my_dict)  # Output: {'name': 'Ayse', 'age': 34}
 </details>
 </details>
 
+<details>
+    <summary>Sets (set)</summary>
+
+</details>
+
 -------------------------------------------------------------------------------
 
 # Useful Operations
