@@ -31,7 +31,7 @@ def isPrime(value):
         return True
     elif value % 2 == 0:
         return False
-    else:
+    else:  # Not the most efficient algorithm, but it works, eventually
         halfOfValue = value/2
         i = 3
         while i < halfOfValue:
