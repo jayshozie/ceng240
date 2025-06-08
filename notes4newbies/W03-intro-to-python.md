@@ -456,7 +456,6 @@ print(type(my_dict))  # Output: <class 'dict'>
 <details>
     <summary>Important Operations with Dictionaries</summary>
 
-###     TODO : ADD THESE
 There are a lot of stuff associated with dictionaries, so I've felt the need to
 make this section a drop-down. You don't need to know every single one of these
 with immense detail, but it would make your life real easier. For more info,
@@ -517,11 +516,76 @@ print(random_bs_go['one'])  # Output: 100
 This is more of a logic thing and not exclusive to dictionaries, but basically
 returns `True` if the dictionary 'd' has a key 'k'.
 ```python
+random_bs_go = {'one': 42, 'three': 3, 'four': 4, 'two': None}
 
+print('one' in random_bs_go)  # Output: True
+
+# You can combine it with 'not'.
+print('five' not in random_bs_go)  # Output: True
+
+print('one' not in random_bs_go)  # Output: False
 ```
 
-###     TODO : CONTINUE HERE
-###     TODO : DON'T FORGET TO LINK THEM
+<details>
+    <summary>A Different Example</summary>
+
+```python
+student = {'name': 'ahmet yilmaz', 'age': 20, 'cgpa': 2.98}
+
+if 'age' in student:
+    print(student['age'])
+```
+</details>
+
+6. `clear()`
+
+This is a method that clears all items in a dictionary, works almost exactly
+the same as the list method.
+```python
+my_dict = {'name': 'Ayse', 'age': 34, 'education': 4}
+my_dict.clear()
+print(my_dict)  # Output: {}
+```
+
+7. `get(key, default=None)`
+
+Returns the value for 'key' if the 'key' is in the dictionary, returns None as
+default if not. Default can be changed by the argument `default`.
+```python
+my_dict = {'name': 'Ayse', 'age': 34, 'education': 4}
+print(my_dict.get('name'))  # Output: Ayse
+print(my_dict.get('surname'))  # Output: None
+
+print(my_dict.get('surname', 'No such key!'))  # Output: No such key!
+```
+
+8. `items()`
+
+Returns a view object that displays a list of a dictionary's key-value tuple
+pairs.
+```python
+my_dict = {'name': 'Ayse', 'age': 34, 'education': 4}
+print(my_dict.items())  # Output: dict_items([('name', 'Ayse'), ('age', 34), ('education', 4)])
+```
+
+9. `keys(key, [, default])`
+Returns a view object that displays a list of all the keys in the dictionary.
+```python
+my_dict = {'name': 'Ayse', 'age': 34, 'education': 4}
+print(my_dict.keys())  # Output: dict_keys(['name', 'age', 'education'])
+```
+
+10. `popitem()`
+This method removes the last inserted key-value pair from the dictionary and
+returns it as a tuple. If the dictionary is empty, it raises a KeyError. It
+works almost exactly the same as the `pop()` method in lists, except that, you
+can specify which item to pop from a list. You can't do it here. It always
+works as LIFO (last-in first-out).
+```python
+my_dict = {'name': 'Ayse', 'age': 34, 'education': 4}
+print(my_dict.popitem())  # Output: ('education', 4)
+print(my_dict)  # Output: {'name': 'Ayse', 'age': 34}
+```
 </details>
 
 -------------------------------------------------------------------------------
@@ -827,21 +891,55 @@ else:
 <details>
     <summary>Why check that extensively?</summary>
 
-Programming 101, always expect the worst case scenario. The user may provide a
-string for the numerical values. If we don't check for that, and the user gives
-a string for the first numerical value and a numerical value for the second
-one, then when we try to add them together the Python interpreter will give an
-error. We do not want that. Even if there is an error, we want to be the ones
-that give the error, not the interpreter. So, we check if both numerical inputs
-are actually numerical values, then we check whether the operator is the one we
-want. After being sure that all those are true, then we do our calculation and
-provide the user with the result.
+Programming 101: Always expect the worst case scenario. The user may provide a
+string for the numerical values, or can leave it empty instead of numericals.
+If we don't check for that, and the user gives a string for the first numerical
+value and a numerical value for the second one, then when we try to add them
+together the Python interpreter will give an error. We do not want that. Even
+if there is an error, we want to be the ones that give the error, not the
+interpreter. So, we check if both numerical inputs are actually numerical
+values, then we check whether the operator is the one we want. After being sure
+that all those are true, then we do our calculation and provide the user with
+the result.
 </details>
-
 
 ## Type Conversion
 
-###   TODO : ADD EXPLANATION HERE
+### Implicit Type Conversion
+
+In certain situations, Python automatically converts the type of your
+variables;
+```python
+my_int = 134
+print(my_int, type(my_int))  # Output: 134 <class 'int'>
+
+my_int = 13.4
+print(my_int, type(my_int))  # Output: 13.4 <class 'float'>
+
+# 'my_int' is still the same variable, but its type and value has changed,
+# because we reassigned it.
+```
+This type of type conversion is called implicit, because you don't actually
+specify which type you're converting to, and leave that decision to the Python
+interpreter. Python interpreter avoids data loss in implicit type conversion.
+
+### Explicit Type Conversion (a.k.a. Type Casting)
+
+You can also explicitly change the type of a variable with some functions. In
+this case, data loss can occur, since we're forcing it to another type.
+```python
+my_num = 13
+my_num = str(my_num)  # You can re-assign variables.
+
+print(my_num, type(my_num))  # Output: 13 <class 'str'>
+
+my_float = 13.7
+my_float = int(my_float)
+
+print(my_float, type(my_float))  # Output: 13 <class 'int'>
+# As you can see we've lost the precision of a float since we forced it into
+# becoming an integer.
+```
 
 -------------------------------------------------------------------------------
 
