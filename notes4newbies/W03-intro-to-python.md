@@ -590,10 +590,174 @@ print(my_dict)  # Output: {'name': 'Ayse', 'age': 34}
 </details>
 
 <details>
-    <summary>Sets (set)</summary>
+    <summary>Sets (set, frozenset)</summary>
 
-###     TODO : ADD EXPLANATION HERE
 There are two types of sets, one type is mutable and other type is immutable.
+The mutable set type is just called a `set`, the immutable type is called
+`frozenset`. Sets are unordered, and they do not record element position or
+order of insertion. Accordingly, sets do not support indexing, slicing, or
+other sequence-like behavior. Sets are mostly used for membership testing,
+removing duplicates from a sequence, and computing mathematical operations such
+as intersection, union, difference, and symmetric difference.
+
+Example:
+```python
+my_set = {1, 2, 3, 4, 5}
+print(my_set)  # Output: {1, 2, 3, 4, 5}
+my_frozenset = frozenset([1, 2, 3, 4, 5])
+print(my_frozenset)  # Output: frozenset({1, 2, 3, 4, 5})
+```
+
+### [Important Operations with Sets](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
+
+I will tell you which method can be use with which type of set.
+
+1. `add()`
+
+This method adds an element to the set. It only works with mutable sets, not
+with frozensets.
+```python
+my_set = {1, 2, 3}
+my_set.add(4)
+print(my_set)  # Output: {1, 2, 3, 4}
+```
+
+2. `clear()`
+
+This method removes all elements from the set. It only works with mutable sets,
+not with frozensets.
+```python
+my_set = {1, 2, 3, 4, 5}
+my_set.clear()
+print(my_set)  # Output: set()
+```
+
+3. `difference()`
+
+This method returns a new set with elements in the first set that are not in
+the second set. It works with both mutable and immutable sets.
+```python
+my_set1 = {1, 2, 3, 4, 5}
+my_set2 = {3, 4, 5, 6, 7}
+my_difference = my_set1.difference(my_set2)
+print(my_difference)  # Output: {1, 2}
+# Note: This method only returns the items that are in the first set that are
+# not in the second set. It does not return items that are in the second set
+# that are not in the first set.
+
+# You can also use the `-` operator to achieve the same result.
+same_difference_diff_variable = my_set1 - my_set2
+print(same_difference_diff_variable)  # Output: {1, 2}
+```
+
+4. `intersection()`
+
+This method returns a new set with elements that are common to both sets. It
+works with both mutable and immutable sets.
+```python
+my_set1 = {1, 2, 3, 4, 5}
+my_set2 = {3, 4, 5, 6, 7}
+my_intersection = my_set1.intersection(my_set2)
+print(my_intersection)  # Output: {3, 4, 5}
+
+# You can also use the `&` operator to achieve the same result.
+same_intersection_diff_variable = my_set1 & my_set2
+print(my_intersection)  # Output: {3, 4, 5}
+```
+
+5. `isdisjoint()`
+
+This method returns `True` if two sets have no elements in common, otherwise
+it returns `False`. It works with both mutable and immutable sets.
+```python
+my_set1 = {1, 2, 3}
+my_set2 = {4, 5, 6}
+print(my_set1.isdisjoint(my_set2))  # Output: True
+my_set3 = {2, 3, 4}
+print(my_set1.isdisjoint(my_set3))  # Output: False
+```
+
+6. `issubset()`
+
+This method returns `True` if all elements of the first set are in the second
+set, otherwise it returns `False`. It works with both mutable and immutable
+sets.
+```python
+my_set1 = {1, 2, 3}
+my_set2 = {1, 2, 3, 4, 5}
+print(my_set1.issubset(my_set2))  # Output: True
+my_set3 = {1, 2, 6}
+print(my_set1.issubset(my_set3))  # Output: False
+
+# You can also use the `<=` operator to achieve the same result.
+same_issubset_diff_variable = my_set1 <= my_set2
+print(same_issubset_diff_variable)  # Output: True
+```
+
+7. `issuperset()`
+
+This method returns `True` if all elements of the second set are in the first
+set, otherwise it returns `False`. It works with both mutable and immutable
+sets.
+```python
+my_set1 = {1, 2, 3, 4, 5}
+my_set2 = {1, 2, 3}
+print(my_set1.issuperset(my_set2))  # Output: True
+my_set3 = {1, 2, 6}
+print(my_set1.issuperset(my_set3))  # Output: False
+
+# You can also use the `>=` operator to achieve the same result.
+same_issuperset_diff_variable = my_set1 >= my_set2
+print(same_issuperset_diff_variable)  # Output: True
+```
+
+8. `symmetric_difference()`
+
+This method returns a new set with elements in either the first or second set,
+but not both. It works with both mutable and immutable sets.
+```python
+my_set1 = {1, 2, 3, 4, 5}
+my_set2 = {3, 4, 5, 6, 7}
+my_symmetric_difference = my_set1.symmetric_difference(my_set2)
+print(my_symmetric_difference)  # Output: {1, 2, 6, 7}
+
+# You can also use the `^` operator to achieve the same result.
+same_symmetric_difference_diff_variable = my_set1 ^ my_set2
+print(same_symmetric_difference_diff_variable)  # Output: {1, 2, 6, 7}
+```
+
+9. `union()`
+
+This method returns a new set with all elements from both sets. It works with
+both mutable and immutable sets.
+```python
+my_set1 = {1, 2, 3, 4, 5}
+my_set2 = {3, 4, 5, 6, 7}
+my_union = my_set1.union(my_set2)
+print(my_union)  # Output: {1, 2, 3, 4, 5, 6, 7}
+
+# You can also use the `|` operator to achieve the same result.
+same_union_diff_variable = my_set1 | my_set2
+print(same_union_diff_variable)  # Output: {1, 2, 3, 4, 5, 6, 7}
+```
+
+10. `update()`
+
+This method updates the first set with elements from the second set. It only
+works with mutable sets, not with frozensets.
+```python
+my_set1 = {1, 2, 3}
+my_set2 = {3, 4, 5, 6, 7}
+my_set1.update(my_set2)
+print(my_set1)  # Output: {1, 2, 3, 4, 5, 6, 7}
+
+# You can also use the `|=` operator to achieve the same result.
+my_set1 |= my_set2
+print(my_set1)  # Output: {1, 2, 3, 4, 5, 6, 7}
+```
+
+You can check the rest of the methods in the
+[documentation](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset).
 
 </details>
 
@@ -755,8 +919,6 @@ Example Use:
 # Statements
 
 ## Basic Statements
-
-###   TODO : ADD EXPLANATION HERE
 
 ### Assignment Statements
 
