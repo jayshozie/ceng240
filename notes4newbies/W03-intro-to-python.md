@@ -851,7 +851,7 @@ direct quote from [Programiz](https://www.programiz.com/python-programming/prece
 
 For example:
 ```python
->>> 5-7
+>>> 5 - 7
 -2
 ```
 There is no ambiguity there; however, if we were to do this:
