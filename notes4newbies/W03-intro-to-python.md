@@ -966,7 +966,7 @@ y = 243424.4324324
 my_dict = {"random": "bs", "go": True}
 
 my_tuple = ("maybe", "randomness", "was")
-my_list = ["the friends", "we've", "made along", "the way"]
+my_list = ["the friends", "we", "made along", "the way"]
 ```
 Above examples are all assignments. The so-to-say name before the assignment
 operator `=` is the name of the variable, the rest in what you assigned to that
