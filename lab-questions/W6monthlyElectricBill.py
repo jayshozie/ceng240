@@ -7,23 +7,25 @@ So, here is the thing. I don't remember this question entirely.
 How, you ask? Please check the ANNOUNCEMENT.md in the root of the repo.
 
 The question was basically, here is this class, we have 2 methods in it.
-When you create the object of the class, you provide it with things, then
-in the second method it calculated something.
-Then you were asked the code the last method called bill, which gave a list of
-things.
+When you create the object of the class, you provide it with things,
+then in the second method it calculated something.
+Then you were asked the code the last method called bill, which gave a
+list of things.
 
 I have no idea what the initialization arguments were, but basically it
-calculated the total electricity consumption, total price before the discount,
-total discount amount and the total price after the discount; and returned
-these in a list.
+calculated the total electricity consumption, total price before the
+discount, total discount amount and the total price after the discount;
+and returned these in a list.
 
 The discount was 20% off on weekends.
 
 If I remember correctly while initializing the object, you provided a
-price/kW or something, and the discount was applied on weekends. If I remember
-correctly you were allowed to assume the month started on a monday.
+price/kW or something, and the discount was applied on weekends. If I
+remember correctly you were allowed to assume the month started on a
+monday.
 
-If you find an error in this solution, please open up and issue or send a PR.
+If you find an error in this solution, please open up an issue or send a
+PR.
 """
 
 import random as rand
