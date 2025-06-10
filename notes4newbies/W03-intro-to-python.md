@@ -944,8 +944,7 @@ Example Use:
 
 ## Presedence and Associativity
 
->
-The combination of values, variables, operators, and function calls is termed
+> The combination of values, variables, operators, and function calls is termed
 as an expression. The Python interpreter can evaluate a valid expression.
 
 Direct Quote from:
