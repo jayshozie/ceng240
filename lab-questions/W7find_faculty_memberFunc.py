@@ -1,8 +1,8 @@
 """
 Question asks the developer to implement a function formatted like this:
     find_faculty_member(member_name, file_name)
-        Takes a member name and a file name, returns the faculty member's
-        office.
+        Takes a member name and a file name, returns the faculty
+        member's office.
         
         Arguments
         ---------
@@ -23,8 +23,8 @@ E.g.:
 Ahmet Mehmet Yilmaz A130
 Ayse Yildirim A131
 
-Names can be 2 or 3 words separated by ' ' character, name and office is also
-separated by ' ' character.
+Names can be 2 or 3 words separated by ' ' character, name and office is
+also separated by ' ' character.
 
 Hint:
 You can use <var>.rsplit() to split the variable.
@@ -43,11 +43,13 @@ def find_faculty_member(memName, fName):
 
     with open(fName, 'r') as faculty:
         for line in faculty:
-            if not line:  # Handles empty lines, even if it doesn't exist
+            if not line:
+                # Handles empty lines, even if it doesn't exist
                 continue
             line = line.strip()  # Handles '\n' characters
 
-            parts = line.rsplit(' ', 1)  # rsplit since ' ' is in the names too
+            parts = line.rsplit(' ', 1)
+            # rsplit since ' ' is in the names too
             
             member_raw = parts[0]
             office_raw = parts[1]
@@ -62,8 +64,8 @@ def find_faculty_member(memName, fName):
             # else:
             #     return None
             # I almost got 50/100 because of the above block.
-            # It returns 'None' if the first line doesn't include the member
-            # name. Thus it's faulty.
+            # It returns 'None' if the first line doesn't include the
+            # member name. Thus it's faulty.
 
 
 # Test Cases
