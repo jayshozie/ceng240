@@ -1257,6 +1257,17 @@ else:  # If not (all other checks failed)
     print("User is not an adult, they cannot enter.")  # do this
 ```
 
+<details>
+    <summary>Some Python-y Stuff in Conditional Statements</summary>
+
+</details>
+
+
+<details>
+    <summary>A Lot of Conditional Examples</summary>
+
+</details>
+
 ### Repetition Statements
 
 ###   TODO : ADD EXPLANATION HERE
