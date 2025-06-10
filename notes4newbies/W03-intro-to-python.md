@@ -1260,7 +1260,12 @@ else:  # If not (all other checks failed)
 <details>
     <summary>Some Python-y Stuff in Conditional Statements</summary>
 
-
+If you wish to continue with your Python journey outside of this course, I
+highly recommend you to check out [PEP8](https://peps.python.org/pep-0008/).
+PEPs are basically guidelines to how to write Python styled code. There are
+some standards that you should follow while writing Python code. PEPs give you
+those standards. [PEP8](https://peps.python.org/pep-0008/) is a good starting
+point, in my opinion.
 
 </details>
 
