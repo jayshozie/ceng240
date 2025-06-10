@@ -59,8 +59,8 @@ fuck up your code. Don't do it, be careful not to do it accidentally.
 
 - Variable names are case-sensitive in Python, so `a` and `A` are two different
 variables.
-- Variable names can contain letters a-z, A-Z, numbers 0-9, the underscore `_`
-character, and nothing else.
+- Variable names can contain English letters a-z, A-Z, numbers 0-9, the
+underscore `_` character, and nothing else.
 - Variable names can only start with a letter or the underscore `_` character,
 meaning the variable names `10a`, `$a`, and `var$` are invalid.
 - Variable names cannot be one of the keywords in Python:
