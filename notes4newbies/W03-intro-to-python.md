@@ -1209,9 +1209,9 @@ whatever is after that check (indented code block).
 ## Compond Statements
 
 > Compound statements contain (groups of) other statements; they affect or
-> control the execution of those other statements in some way. In general,
-> compound statements span multiple lines, although in simple incarnations a
-> whole compound statement may be contained in one line.
+control the execution of those other statements in some way. In general,
+compound statements span multiple lines, although in simple incarnations a
+whole compound statement may be contained in one line.
 
 Direct Quote from:
 [Python Documentation](https://docs.python.org/3/reference/compound_stmts.html).
