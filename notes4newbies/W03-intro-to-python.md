@@ -1206,7 +1206,6 @@ whatever is after that check (indented code block).
 
 ## Compond Statements
 
-###   TODO : ADD EXPLANATION HERE
 "Compound statements contain (groups of) other statements; they affect or
 control the execution of those other statements in some way. In general,
 compound statements span multiple lines, although in simple incarnations a
@@ -1258,8 +1257,9 @@ else:  # If not (all other checks failed)
     print("User is not an adult, they cannot enter.")  # do this
 ```
 
-
 ### Repetition Statements
+
+###   TODO : ADD EXPLANATION HERE
 
 -------------------------------------------------------------------------------
 
