@@ -51,3 +51,43 @@ If the data is mutable, then we have a problem:
 [1, 2, 3]
 ```
 </details>
+
+This is called aliasing, and even though it can be useful, it most likely will
+fuck up your code. Don't do it, be careful not to do it accidentally.
+
+## Variable Names
+
+- Variable names are case-sensitive in Python, so 'a' and 'A' are two different
+variables.
+- Variable names can contain letters a-z, A-Z, numbers 0-9, the underscore '\_'
+character, and nothing else.
+- Variable names can only start with a letter or the underscore '\_' character,
+meaning the variable names `10a`, `$a`, and `var$` are invalid.
+- Variable names cannot be one of the keywords in Python:
+<details>
+    <summary>List of Reserved Names in Python</summary>
+
+|        |          |         |          |        |
+|--------|----------|---------|----------|--------|
+| False  | await    | else    | import   | pass   |
+| None   | break    | except  | in       | raise  |
+| True   | class    | finally | is       | return |
+| and    | continue | for     | lambda   | try    |
+| as     | def      | from    | nonlocal | while  |
+| assert | del      | global  | not      | with   |
+| async  | elif     | if      | or       | yield  |
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
