@@ -5,7 +5,9 @@
 def man(p1,p2):
     return abs(p1[1]-p2[1]) + abs(p1[0]-p2[0])
 
-def closest_points(points): # Takes in a list of tuples, representing coordinates in a 2D plane. Returns the closest, according to manhattan distance.
+def closest_points(points):
+    # Takes in a list of tuples, representing coordinates in a 2D plane. Returns the closest, according to manhattan distance.
+
     closest = []
     shortest = float('inf')
     outer = 0

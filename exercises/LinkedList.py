@@ -12,7 +12,8 @@ class Node:
     """
     def __init__(self, data):
         """
-        Initializes a Node object with the given data and sets the next pointer to None.
+        Initializes a Node object with the given data and sets the next pointer
+        to None.
 
         Args:
             data: The data to store in the node.

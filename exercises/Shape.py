@@ -7,16 +7,16 @@ import math
 class Shape:
     """
     A base class for geometric shapes.
-    This class provides a blueprint for creating shape objects and includes methods
-    to calculate the area, perimeter, and semi-perimeter of a shape. Subclasses
-    should override the `_CalcArea` and `_CalcPeri` methods to provide specific
-    implementations for different shapes.
+    This class provides a blueprint for creating shape objects and includes
+    methods to calculate the area, perimeter, and semi-perimeter of a shape.
+    Subclasses should override the `_CalcArea` and `_CalcPeri` methods to
+    provide specific implementations for different shapes.
 
     Methods:
     --------
     _CalcArea():
-        Abstract method to calculate the area of the shape. Must be implemented
-        by subclasses.
+        Abstract method to calculate the area of the shape. Must be
+        implemented by subclasses.
     _CalcPeri():
         Abstract method to calculate the perimeter of the shape. Must be
         implemented by subclasses.
@@ -56,7 +56,8 @@ class Circle(Shape):
     TypeError
         If the radius or angle is not a numeric value.
     ValueError
-        If the radius is negative or the absolute value of the angle is not in the range (0, 2π].
+        If the radius is negative or the absolute value of the angle is not
+        in the range (0, 2π].
     """
 
     def __init__(self, radius, angle=(2*math.pi)):
@@ -75,7 +76,8 @@ class Circle(Shape):
         TypeError
             If the radius or angle is not a numeric value.
         ValueError
-            If the radius is negative or the absolute value of the angle is not in the range (0, 2π].
+            If the radius is negative or the absolute value of the angle is not
+            in the range (0, 2π].
         """
 
         if not isinstance(radius, (int, float)) or not isinstance(angle, (int, float)):

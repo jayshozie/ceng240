@@ -2,7 +2,9 @@
 # Copyright (c) 2025 Emir Baha Yıldırım
 # Please see the LICENSE file for more details.
 
-def matrMult(A, B): # Takes in 2 matrices as nested lists, returns the matrix multiplication of the given matrices, if possible.
+def matrMult(A, B):
+    # Takes in 2 matrices as nested lists, returns the matrix multiplication of the given matrices, if possible.
+
     # Get the dimensions of the matrices.
     rows_A, cols_A = len(A), len(A[0])
     rows_B, cols_B = len(B), len(B[0])
