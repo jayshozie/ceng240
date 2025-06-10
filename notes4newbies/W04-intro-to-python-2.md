@@ -76,6 +76,7 @@ as      def       from     nonlocal  while
 assert  del       global   not       with
 async   elif      if       or        yield
 ```
+Latest Version: [Documentation](https://docs.python.org/3/reference/lexical_analysis.html#keywords)
 </details>
 
 
