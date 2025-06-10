@@ -1262,6 +1262,20 @@ else:  # If not (all other checks failed)
 ```
 
 <details>
+    <summary>An Example with Only an if Case</summary>
+
+```python
+val = int(input())
+
+if val >= 0:
+    print("Positive number.")
+```
+
+I know it doesn't make much sense, but I couldn't think of another example.
+</details>
+
+
+<details>
     <summary>Some Python-y Stuff in Conditional Statements</summary>
 
 If you wish to continue with your Python journey outside of this course, I
