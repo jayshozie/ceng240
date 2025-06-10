@@ -1,5 +1,6 @@
 """
-Write a function called find_best_candidate, with the following definition:
+Write a function called find_best_candidate, with the following
+definition:
     find_best_candidate(file_name)
     
     Arguments:
@@ -11,8 +12,9 @@ Write a function called find_best_candidate, with the following definition:
     "candidate_name, score" : string
 
 find_best_candidate will take a file in which there will be a list of
-candidate_names, graduation, entrance exam, interview and ALES exam scores, and
-return the name and the total score of the highest graded candidate.
+candidate_names, graduation, entrance exam, interview and ALES exam
+scores, and return the name and the total score of the highest graded
+candidate.
 
 Formatting of the file is as follows:
 <candidate name> <graduation_score> <entrance> <interview> <ales_score>
@@ -28,7 +30,6 @@ The total score of a candidate is calculated like this:
 30% - Interview Score
 10% - ALES Exam Score
 All scores are floating point numbers between 0.0 and 100.0.
-
 
 Example:
 --------
