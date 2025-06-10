@@ -946,7 +946,8 @@ Example Use:
 
 > The combination of values, variables, operators, and function calls is termed
 > as an expression. The Python interpreter can evaluate a valid expression.
-direct quote from
+
+Direct Quote from:
 [Programiz](https://www.programiz.com/python-programming/precedence-associativity)[^1].
 
 <details>
