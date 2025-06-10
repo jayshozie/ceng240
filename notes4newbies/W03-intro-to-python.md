@@ -929,120 +929,6 @@ Example Use:
 
 -------------------------------------------------------------------------------
 
-# Statements
-
-## Basic Statements
-
-### Assignment Statements
-
-Assignment statements (assignments) are used to give a name (a variable) to a
-value or a result. They "bind" a name to an object in memory. They always
-involve the `=` operator (a.k.a. the assignment operator). They perform an
-action of storing a value, and do not produce a result that can immediately be
-used by another part of the code, meaning you can't assign and use an object in
-the same line of code. We've used these a lot up until this point, but it's a
-good time to give it a name.
-```python
-x = 20
-name = "jay"
-y = 243424.4324324
-my_dict = {"random": "bs", "go": True}
-
-my_tuple = ("maybe", "randomness", "was")
-my_list = ["the friends", "we", "made along", "the way"]
-```
-Above examples are all assignments. The so-to-say name before the assignment
-operator `=` is the name of the variable, the rest in what you assigned to that
-variable.
-
-### Expression Statements
-
-Expression statements (expressions) differ from assignment a lot, even though
-they look awfully similar. Expressions are used to evaluate something. They
-represent a piece of data that can be "resolved" into something. They consist
-of expressions, and produce a value. Unlike assignments, this value can be used
-immediately, even in the same line. We've also seen a lot of these. Expressions
-don't make sense on their own, they need to be paired up with other things.
-```python
-10
-"Hello, world!"
-5 + 3
-x * 2
-len("Python")
-```
-If you write these to the Python interpreter one by one, it should either
-return the value back, or give an error in the 4th line (x * 2) since we
-haven't actually 'assigned' a value to a variable called 'x', so Python doesn't
-know what we're talking about.
-
-### Clearing Confusions
-
-```python
-x = 5 * 3
-```
-The `5 * 3` part is an expression, and the entire line is an assignment. You
-want Python to resolve that 'expression' `5 * 3` and 'assign' it to a variable
-named `x`.
-
-## Compond Statements
-
-###   TODO : ADD EXPLANATION HERE
-"Compound statements contain (groups of) other statements; they affect or
-control the execution of those other statements in some way. In general,
-compound statements span multiple lines, although in simple incarnations a
-whole compound statement may be contained in one line.", a direct quote from
-the [documentation](https://docs.python.org/3/reference/compound_stmts.html).
-
-To simplify things, they are basically a compilation of the basic statements we
-have just seen, with a bit of extra stuff.
-
-### Conditional Statements
-
-If you remember the [W02](./W01-intro.md) markdown, we've talked about an
-operation type called conditionals. Now we're going to learn what do they
-actually mean and how are they constructed.
-
-Conditionals are, basically, conditions that we need the computer to check and
-act accordingly. They are one of the foundations of programming, and without
-conditionals it would be incredibly hard to code, because you would need to
-exactly know what will happen, and sometimes it's not even possible.
-
-Let's see a very basic example of a conditional.
-```python
-val = eval(input())  # We are asking the input of the user.
-
-if val == "Hi":  # We're checking whether the user said "Hi". If yes,
-    print("Hi")  # we do this.
-elif val == "Hello": # If the user did not say "Hi", but said "Hello", then
-    print("Hello")  # we say "Hello".
-else:  # If the user did not say "Hi" or "Hello", we say
-    print("Ready")  # "Ready"
-```
-In Python, you have 3 different check tools, so-to-say. You always start with
-an 'if' case, because that's the syntax (how the code should be written,
-otherwise the Python interpreter won't understand what is happening and scream
-at you). Then, if you need to check for another case, you should use 'elif',
-standing for 'else if', and another condition. If you don't provide another
-condition with the 'elif' case Python interpreter will, again, scream at you,
-because it doesn't know what to check for. After every check you want is done,
-we have the 'else' case. It's basically the last resort, if every other check
-has failed, then the Python interpreter will run the code you have written in
-that block. A side note, you don't need to provide an 'elif' or 'else' case,
-they're not forced, but optional.
-```python
-usr_age = int(input())  # We take an input from the user and store it as int
-
-if usr_age >= 18:  # Check whether the usr_age is greater than or equal to 18
-    print("User is an adult, they can enter.")  # if yes, do this
-else:  # If not (all other checks failed)
-    print("User is not an adult, they cannot enter.")  # do this
-```
-
-
-### Repetition Statements
-
--------------------------------------------------------------------------------
-
 # Expressions in Python
 
 ## Presedence and Associativity
@@ -1240,6 +1126,120 @@ print(my_float, type(my_float))  # Output: 13 <class 'int'>
 # As you can see we've lost the precision of a float since we forced it into
 # becoming an integer.
 ```
+
+-------------------------------------------------------------------------------
+
+# Statements
+
+## Basic Statements
+
+### Assignment Statements
+
+Assignment statements (assignments) are used to give a name (a variable) to a
+value or a result. They "bind" a name to an object in memory. They always
+involve the `=` operator (a.k.a. the assignment operator). They perform an
+action of storing a value, and do not produce a result that can immediately be
+used by another part of the code, meaning you can't assign and use an object in
+the same line of code. We've used these a lot up until this point, but it's a
+good time to give it a name.
+```python
+x = 20
+name = "jay"
+y = 243424.4324324
+my_dict = {"random": "bs", "go": True}
+
+my_tuple = ("maybe", "randomness", "was")
+my_list = ["the friends", "we", "made along", "the way"]
+```
+Above examples are all assignments. The so-to-say name before the assignment
+operator `=` is the name of the variable, the rest in what you assigned to that
+variable.
+
+### Expression Statements
+
+Expression statements (expressions) differ from assignment a lot, even though
+they look awfully similar. Expressions are used to evaluate something. They
+represent a piece of data that can be "resolved" into something. They consist
+of expressions, and produce a value. Unlike assignments, this value can be used
+immediately, even in the same line. We've also seen a lot of these. Expressions
+don't make sense on their own, they need to be paired up with other things.
+```python
+10
+"Hello, world!"
+5 + 3
+x * 2
+len("Python")
+```
+If you write these to the Python interpreter one by one, it should either
+return the value back, or give an error in the 4th line (x * 2) since we
+haven't actually 'assigned' a value to a variable called 'x', so Python doesn't
+know what we're talking about.
+
+### Clearing Confusions
+
+```python
+x = 5 * 3
+```
+The `5 * 3` part is an expression, and the entire line is an assignment. You
+want Python to resolve that 'expression' `5 * 3` and 'assign' it to a variable
+named `x`.
+
+## Compond Statements
+
+###   TODO : ADD EXPLANATION HERE
+"Compound statements contain (groups of) other statements; they affect or
+control the execution of those other statements in some way. In general,
+compound statements span multiple lines, although in simple incarnations a
+whole compound statement may be contained in one line.", a direct quote from
+the [documentation](https://docs.python.org/3/reference/compound_stmts.html).
+
+To simplify things, they are basically a compilation of the basic statements we
+have just seen, with a bit of extra stuff.
+
+### Conditional Statements
+
+If you remember the [W02](./W01-intro.md) markdown, we've talked about an
+operation type called conditionals. Now we're going to learn what do they
+actually mean and how are they constructed.
+
+Conditionals are, basically, conditions that we need the computer to check and
+act accordingly. They are one of the foundations of programming, and without
+conditionals it would be incredibly hard to code, because you would need to
+exactly know what will happen, and sometimes it's not even possible.
+
+Let's see a very basic example of a conditional.
+```python
+val = eval(input())  # We are asking the input of the user.
+
+if val == "Hi":  # We're checking whether the user said "Hi". If yes,
+    print("Hi")  # we do this.
+elif val == "Hello": # If the user did not say "Hi", but said "Hello", then
+    print("Hello")  # we say "Hello".
+else:  # If the user did not say "Hi" or "Hello", we say
+    print("Ready")  # "Ready"
+```
+In Python, you have 3 different check tools, so-to-say. You always start with
+an 'if' case, because that's the syntax (how the code should be written,
+otherwise the Python interpreter won't understand what is happening and scream
+at you). Then, if you need to check for another case, you should use 'elif',
+standing for 'else if', and another condition. If you don't provide another
+condition with the 'elif' case Python interpreter will, again, scream at you,
+because it doesn't know what to check for. After every check you want is done,
+we have the 'else' case. It's basically the last resort, if every other check
+has failed, then the Python interpreter will run the code you have written in
+that block. A side note, you don't need to provide an 'elif' or 'else' case,
+they're not forced, but optional.
+```python
+usr_age = int(input())  # We take an input from the user and store it as int
+
+if usr_age >= 18:  # Check whether the usr_age is greater than or equal to 18
+    print("User is an adult, they can enter.")  # if yes, do this
+else:  # If not (all other checks failed)
+    print("User is not an adult, they cannot enter.")  # do this
+```
+
+
+### Repetition Statements
 
 -------------------------------------------------------------------------------
 
