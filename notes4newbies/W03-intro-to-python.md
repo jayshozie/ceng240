@@ -1276,7 +1276,7 @@ I know it doesn't make much sense, but I couldn't think of another example.
 
 
 <details>
-    <summary>Some Python-y Stuff in Conditional Statements</summary>
+    <summary>Some Formatting of Python in Conditional Statements</summary>
 
 If you wish to continue with your Python journey outside of this course, I
 highly recommend you to check out [PEP8](https://peps.python.org/pep-0008/).
