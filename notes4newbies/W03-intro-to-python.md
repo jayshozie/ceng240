@@ -1195,6 +1195,15 @@ The `5 * 3` part is an expression, and the entire line is an assignment. You
 want Python to resolve that 'expression' `5 * 3` and 'assign' it to a variable
 named `x`.
 
+```python
+if x > 5:
+    print(x)
+```
+The `x > 5` part is an expression, and the entire line is a conditional
+expression. In that line, we want Python to resole tha expression `x > 5`, and
+if the answer to that expression (check) is `True`, than we want it to do
+whatever is after that check (indented code block).
+
 ## Compond Statements
 
 ###   TODO : ADD EXPLANATION HERE
