@@ -1208,11 +1208,13 @@ whatever is after that check (indented code block).
 
 ## Compond Statements
 
-"Compound statements contain (groups of) other statements; they affect or
-control the execution of those other statements in some way. In general,
-compound statements span multiple lines, although in simple incarnations a
-whole compound statement may be contained in one line.", a direct quote from
-the [documentation](https://docs.python.org/3/reference/compound_stmts.html).
+> Compound statements contain (groups of) other statements; they affect or
+> control the execution of those other statements in some way. In general,
+> compound statements span multiple lines, although in simple incarnations a
+> whole compound statement may be contained in one line.
+
+Direct Quote from:
+[Python Documentation](https://docs.python.org/3/reference/compound_stmts.html).
 
 To simplify things, they are basically a compilation of the basic statements we
 have just seen, with a bit of extra stuff.
