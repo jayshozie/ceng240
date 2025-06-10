@@ -5,8 +5,8 @@ Question 1:
 
 File Handling Sample Question
 
-Suppose you have an IMDB movies dataset in CSV format. Each line contains the
-following movie information:
+Suppose you have an IMDB movies dataset in CSV format. Each line
+contains the following movie information:
 
     * Series_Title -> Title of the movie
     * Released_Year -> Year at which that movie released
@@ -18,17 +18,17 @@ following movie information:
 
 You are expected to write a function,
     `movie_func(file_str, director_str, star_str, genre_str)`
-thet return a list of `Series_Title`(s) of the movies where `star_str` has
-acted (either as Star1 or as Star2) or the movie were directed by the
-`director_str`.
+thet return a list of `Series_Title`(s) of the movies where `star_str`
+has acted (either as Star1 or as Star2) or the movie were directed by
+the `director_str`.
 
-The `file_str` argument is the file name given as a string, `director_str` is
-the name of the director, `star_str` argument is the name of the star you are
-searching for and `genre_str` is a movie genre. For testing your code, you may
-use the provided "data.csv" file.
+The `file_str` argument is the file name given as a string,
+`director_str` is the name of the director, `star_str` argument is the
+name of the star you are searching for and `genre_str` is a movie genre.
+For testing your code, you may use the provided "data.csv" file.
 
-The columns are separated by a '|' character. The content of the sample file
-you receive looks like the below:
+The columns are separated by a '|' character. The content of the sample
+file you receive looks like the below:
 
 '''
 Series_Title|Released_Year|Genre|IMDB_Rating|Director|Star1|Star2
@@ -45,13 +45,14 @@ Fight Club|1999|Drama|8.8|David Fincher|Brad Pitt|Edward Norton
 
 Function Definition
 -------------------
-As said, your function must return a list of `Series_Titles`(s) fo the movies
-where `star_str` has acted (either as Star1 or as Star2) or the movie were
-directed by the `director_str`, and, in addition to this, the movie must
-include the given `genre_str`.
+As said, your function must return a list of `Series_Titles`(s) fo the
+movies where `star_str` has acted (either as Star1 or as Star2) or the
+movie were directed by the `director_str`, and, in addition to this, the
+movie must include the given `genre_str`.
 
-Note that the genre field may contain one or many genres which are separeted by
-comma(s) ','. Hence, you need to split the genre field and check for a match.
+Note that the genre field may contain one or many genres which are
+separated by comma(s) ','. Hence, you need to split the genre field and
+check for a match.
 
 Hint:
 -----
@@ -59,20 +60,21 @@ Hint:
     * You can use built-in string methods. Especially the `.split()`,
         `.lower()` and `.strip()` functions might be useful.
     * Be aware of newline symbols `\n` at the end of each line. You are
-        expected to handle them. You can call the `.strip()` function to remove
-        `\n` at the end of each line.
+        expected to handle them. You can call the `.strip()` function to
+        remove `\n` at the end of each line.
 
 Notes:
 ------
-    * Your function shall receive its data via its parameters only. In other
-        words, your solution must not contain the `input()` function.
-    * Your function shall return its result, the IMDB ratings, as a list. It
-        should not print anything.
-    * Any return value that doesn't conform with the expected output type will
-        be graded as zero.
+    * Your function shall receive its data via its parameters only. In
+        other words, your solution must not contain the `input()`
+        function.
+    * Your function shall return its result, the IMDB ratings, as a
+        list. It should not print anything.
+    * Any return value that doesn't conform with the expected output
+        type will be graded as zero.
     * Function name must be `movie_func`.
-    * There won't be any erroneous test cases. Therefore you do not need to
-        check for empty or missing fields etc.
+    * There won't be any erroneous test cases. Therefore you do not need
+        to check for empty or missing fields etc.
 
 Sample Run:
 -----------
@@ -98,7 +100,9 @@ def movie_func(file_str, director_str, star_str, genre_str):
         if (director_str == args[4] or
                 star_str == args[5] or
                 star_str == args[6]):
-            genres = args[2].split(',')  # Split the genre field with `,`
+
+            # Split the genre field with `,`
+            genres = args[2].split(',')
 
             for genre in genres:
                 if genre_str == genre:
@@ -112,9 +116,9 @@ def movie_func(file_str, director_str, star_str, genre_str):
 # Every line after this notice is licensed with MIT License with the name
 # provided in the LICENSE file. Please see the LICENSE file for more details.
 """
-Weirdly, I don't have an issue with this solution except one thing. It's pretty
-straight forward and easy to understand. To the senior ceng student who wrote
-this question, thank you for your service.
+Weirdly, I don't have an issue with this solution except one thing. It's
+pretty straight forward and easy to understand. To the senior ceng
+student who wrote this question, thank you for your service.
 
 My only problem is that the answer never actually closes the file.
 """

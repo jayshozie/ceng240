@@ -3,8 +3,8 @@
 """
 Question:
 
-You are going to implement a function that processes a list of transactions.
-The function definition and its parameters are as follows:
+You are going to implement a function that processes a list of
+transactions. The function definition and its parameters are as follows:
 
 process_transactions(transactions, lower_bound, upper_bound)
 * transactions : A list of floats
@@ -13,14 +13,14 @@ process_transactions(transactions, lower_bound, upper_bound)
 
 The function should return a list of three items:
 
-1. The first item is a list containing the transactions lower than or equal to
-    the lower_bound.
+1. The first item is a list containing the transactions lower than or
+    equal to the lower_bound.
 
 2. The second item is a list containing the transactions between the
     lower_bound and the upper_bound.
 
-3. The third item is a list containing the transactions greater than or equal
-    to the upper_bound.
+3. The third item is a list containing the transactions greater than or
+    equal to the upper_bound.
 
 Hint: Create separate empty lists for the three items and fill them up
     accordingly.
@@ -59,8 +59,8 @@ def process_transacions(transactions, lower_bound, upper_bound):
 # Every line after this notice is licensed with MIT License with the name
 # provided in the LICENSE file. Please see the LICENSE file for more details.
 """
-I don't have much to say about this problem, since it's so easy, the answer
-is pretty straightforward.
+I don't have much to say about this problem, since it's so easy, the
+answer is pretty straightforward.
 """
 
 # My Solution
@@ -81,4 +81,5 @@ def my_process_transactions(transactions, lower, upper):
 
 
 # If you have any questions please don't hesitate to reach out.
-# You can open up an issue, if you didn't understand something in this file.
+# You can open up an issue, if you didn't understand something in this
+# file.

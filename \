@@ -155,8 +155,8 @@ elif 600 <= usage:
 # care.
 
 
-# Technically we could use dictionaries for this part, it would be
-# cleaner. So I'll give both solutions.
+# Technically we could use dictionaries for this part, it would be cleaner.
+# So I'll give both solutions.
 
 # Dictionary Solution
 """
@@ -167,9 +167,9 @@ for c in cities:
     else:
         base_price -= 1
 """
-# This for loop will iterate through the dictionary, and if the city
-# matches the input, adds its value to the base_price, if none does,
-# then the base_price is decreased by 1.
+# This for loop will iterate through the dictionary, and if the city matches
+# the input, adds its value to the base_price, if none does, then the
+# base_price is decreased by 1.
 
 # If-Else Clause Solution
 if city == "istanbul":
@@ -178,8 +178,8 @@ elif city == "ankara":
     base_price += 2
 else:
     base_price -= 1
-# This checks one by one if the input matches a certain string. This is
-# harder to manage in greater sets.
+# This checks one by one if the input matches a certain string. This is harder
+# to manage in greater sets.
 
 total = base_price * usage
 print("%.2f" % total)
@@ -188,53 +188,53 @@ print("%.2f" % total)
 """
 Question 2:
 
-You are working for a flower shop and your company decided to open an
-online shop due to the Covid-19 pandemic. Your job is to implement a
-part of the online shopping software. Specifically:
+You are working for a flower shop and your company decided to open an online
+shop due to the Covid-19 pandemic. Your job is to implement a part of the
+online shopping software. Specifically:
 
-* You will read 3 numbers one by one. First one will encode the flower
-    name, second one will encode the color of the flower(s), third one
-    will encode the amount of flowers.
+* You will read 3 numbers one by one. First one will encode the flower name,
+    second one will encode the color of the flower(s), third one will encode
+    the amount of flowers.
 
 * Encoding of the flower name is as such:
-    - If the most significant (leftmost) digit of the first number is 7,
-        the requested flower is Rose.
-    - If the most significant (leftmost) digit of the first number is 8,
-        the requested flower is Tulip.
+    - If the most significant (leftmost) digit of the first number is 7, the
+        requested flower is Rose.
+    - If the most significant (leftmost) digit of the first number is 8, the
+        requested flower is Tulip.
     - Otherwise the requested flower is Orchid.
 
 * Encoding of the color is as such:
-    - If the least significant (rightmost) digit of the second number is
-        0, 1, 2, or 3 the color is White.
-    - If the least significant (rightmost) digit of the second number is
-        4, 5, or 6 the color is Pink.
-    - If the least significant (rightmost) digit of the second number is
-        7, 8, or 9 the color is Red.
+    - If the least significant (rightmost) digit of the second number is 0, 1
+        2, or 3 the color is White.
+    - If the least significant (rightmost) digit of the second number is 4, 5
+        or 6 the color is Pink.
+    - If the least significant (rightmost) digit of the second number is 7, 8
+        or 9 the color is Red.
 
-* There is no actualy encoding for the number of flowers. The third
-    number will directly be the number of flowers ordered by the
-    customer; however, there are restrictions about flower amounts:
-    - At most 100 Roses can be ordered at once. If more than 100 Roses
-        are requested the order is Invalid.
-    - At most 50 Tulips can be ordered at once. If more than 50 Tulips
-        are requested the order is Invalid.
-    - At most 30 Orchids can be ordered at once. If more than 30 Orchids
-        are requested the order is Invalid.
+* There is no actualy encoding for the number of flowers. The third number will
+    directly be the number of flowers ordered by the costumer; however, there
+    are restrictions about flower amounts:
+    - At most 100 Roses can be ordered at once. If more than 100 Roses are
+        requested the order is Invalid.
+    - At most 50 Tulips can be ordered at once. If more than 50 Tulips are
+        requested the order is Invalid.
+    - At most 30 Orchids can be ordered at once. If more than 30 Orchids are
+        requested the order is Invalid.
 
 * At the end, you will print the order information as such:
     - If the order is invalid, you will print "Invalid!".
-    - If the order is valid, you will print the flower name, color and
-        the amount without spaces. For example for 10 pink roses you
-        will print "RosePink10". (Yes, flower name and the color will
-        start with uppercase letters.)
+    - If the order is valid, you will print the flower name, color and the
+        amount without spaces. For example for 10 pink roses you will print
+        "RosePink10". (Yes, flower name and the color will start with uppercase
+        letters.)
 
-Hint 1: You may need to convert the type of the input strings to
-    integers for some operations, and some of them may needed to be
-    converted back to string type at the end.
+Hint 1: You may need to convert the type of the input strings to integers for
+    some operations, and some of them may needed to be converted back to
+    string type at the end.
 
-Hint 2: The most significant digit of 1234 is 1, the least significant
-    digit of it is 4. Similarly, for 781, 7 is the most significant
-    digit and 1 is the least significant.
+Hint 2: The most signnificant digit of 1234 is 1, the least significant digit
+    of it is 4. Similarly, for 781, 7 is the most significant digit and 1 is
+    the least significant.
 
 Sample I/O:
 -----------
@@ -265,8 +265,8 @@ Input:
 Output:
 Invalid!
 
-Note: Last input is invalid since it requests 40 white orchids but the
-    maximum permitted amount for orchids is 30.
+Note: Last input is invalid since it requests 40 white orchids but the maximum
+    permitted amount for orchids is 30.
 """
 
 # Sample Solution
@@ -307,14 +307,13 @@ else:
 """
 That was a roller coaster. Yes, technically speaking, this is a correct
 answer to the question; however, using this many if-else statements is a
-nightmare incoming, but the question is weirdly specific, you don't have
-many choices here.
+nightmare incoming, but the question is weirdly specific, you don't have many
+choices here. Di
 """
 
-# I will use lists for this solution, yes you can use if statements,
-# too. Just show me how you're going to manage it when there is 20
-# different flower names, 80 different colors, and 20 different maximum
-# order amounts.
+# I will use lists for this solution, yes you can use if statements, too.
+# Just show me how you're going to manage it when there is 20 different flower
+# names, 80 different colors, and 20 different maximum order amounts.
 
 # My Solution
 
@@ -361,5 +360,4 @@ else:
 
 
 # If you have any questions please don't hesitate to reach out.
-# You can open up an issue, if you didn't understand something in this
-# file.
+# You can open up an issue, if you didn't understand something in this file.

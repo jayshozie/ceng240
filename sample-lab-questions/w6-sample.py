@@ -5,27 +5,35 @@ Question:
 
 OO Operations on Built-in Objects
 
-Write a Python class called `CustomList` that inherits from the built-in `list`
-class. Override the `append` method so that every time an item is appended, the
-list prints a message:
+Write a Python class called `CustomList` that inherits from the built-in
+`list` class. Override the `append` method so that every time an item is
+appended, the list prints a message:
     "Appending <item> to the list."
 
-Add a new method to `CustomList` called `sum_elements` that returns the sum of
-all numeric elements in the list. If a non-numeric element is encountered, it
-should skip that element and continue.
+Add a new method to `CustomList` called `sum_elements` that returns the
+sum of all numeric elements in the list. If a non-numeric element is
+encountered, it should skip that element and continue.
 
 Testing the Modified Class
+--------------------------
 
-# Creating an instance of CustomList
-custom_list = CustomList()  # This should return an empty list
+# Creating an instance of CustomList, this should return an empty list
+custom_list = CustomList()
 
 # Append numbers and a string
-custom_list.append(5)  # Should print: Appending 5 to the list.
-custom_list.append(10)  # Should print: Appending 5 to the list.
-custom_list.append('hello')  # Should print: Appending hello to the list.
+
+custom_list.append(5)
+# Should print: Appending 5 to the list.
+
+custom_list.append(10)
+# Should print: Appending 5 to the list.
+
+custom_list.append('hello')
+# Should print: Appending hello to the list.
 
 # Print the updated list
-print("Updated List:", custom_list)  # Output: Updated List: [5, 10, 'hello']
+print("Updated List:", custom_list)
+# Output: Updated List: [5, 10, 'hello']
 
 # Calling `sum_elements` and print the result
 sum_result = custom_list.sum_elements()
@@ -44,7 +52,9 @@ class CustomList(list):
     def sum_elements(self):
         total = 0
         for item in self:
-            if isinstance(item, (int, float)):  # Check if the item is numeric
+            if isinstance(item, (int, float)):
+                # Check if the item is numeric
+
                 total += item
 
         return total
@@ -54,12 +64,18 @@ class CustomList(list):
 custom_list = CustomList()  # This should return an empty list
 
 # Append numbers and a string
-custom_list.append(5)  # Should print: Appending 5 to the list.
-custom_list.append(10)  # Should print: Appending 5 to the list.
-custom_list.append('hello')  # Should print: Appending hello to the list.
+custom_list.append(5)
+# Should print: Appending 5 to the list.
+
+custom_list.append(10)
+# Should print: Appending 5 to the list.
+
+custom_list.append('hello')
+# Should print: Appending hello to the list.
 
 # Print the updated list
-print("Updated List:", custom_list)  # Output: Updated List: [5, 10, 'hello']
+print("Updated List:", custom_list)
+# Output: Updated List: [5, 10, 'hello']
 
 # Calling `sum_elements` and print the result
 sum_result = custom_list.sum_elements()
@@ -71,6 +87,6 @@ print("Sum of numeric elements:", sum_result)
 # Every line after this notice is licensed with MIT License with the name
 # provided in the LICENSE file. Please see the LICENSE file for more details.
 """
-I don't have an issue with this solution, I'll check in the future whether it
-can be improved.
+I don't have an issue with this solution, I'll check in the future
+whether it can be improved.
 """
