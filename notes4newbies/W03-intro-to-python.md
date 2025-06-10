@@ -11,7 +11,7 @@ will really need it from now on.
 
 -------------------------------------------------------------------------------
 
-# IMPORTANT NOTE
+# IMPORTANT NOTE 1
 
 This markdown is very long, and it contains way more information than you can
 learn in one sitting. I recommend you to read it slowly, understand as much as
@@ -21,6 +21,17 @@ as I can, but don't trust it completely. For the most recent information,
 always consult to [documentation](https://docs.python.org/3/) of Python 3,
 and try to understand it. It is very well written, and it has a lot of
 information that I won't and can't possibly cover in this markdown.
+
+-------------------------------------------------------------------------------
+
+# IMPORTANT NOTE 2
+
+Another thing is that, since these are incredibly foundational in programming,
+there is no actual order that they should be studied. These topics are
+incredibly intertwined, and should be studied as a whole. Please, if you don't
+understand something, continue. Don't stop just because you didn't understand
+something, because there is a possibility that it's been explained in a further
+section.
 
 -------------------------------------------------------------------------------
 
