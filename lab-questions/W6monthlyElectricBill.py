@@ -67,6 +67,7 @@ for v in range(0, 30):
 print(my_bill.consumption)
 print(my_bill.bill())
 
+
 """
 Apparently I had another copy of Copilot's solution of this question.
 Here it is:
@@ -83,11 +84,12 @@ class WeekBill:
 
     def bill(self):
         # This method should calculate the total consumption, weekend
-        #   consumption, discount, and total bill.
+        # consumption, discount, and total bill.
         # The discount is 20% for weekends.
         # The total bill is the total consumption minus the discount.
         # Return the answer as a dictionary like this:
-        # Return : {'totalcons': totalcons, 'weekendcons': weekendcons, 'discount': discount, 'total': total}
+        # Return : {'totalcons': totalcons, 'weekendcons': weekendcons,
+        # 'discount': discount, 'total': total}
 
         # Initialize variables
         totalcons = 0
@@ -99,7 +101,8 @@ class WeekBill:
 
             # Check if the day is a weekend (Saturday or Sunday)
             # In a month, days 6, 7, 13, 14, 20, 21, 27, 28 are weekends
-            if day % 7 == 5 or day % 7 == 6:  # 0-indexed, so 5 is Saturday, 6 is Sunday
+            if day % 7 == 5 or day % 7 == 6:
+                # 0-indexed, so 5 is Saturday, 6 is Sunday
                 weekendcons += self.consumptions[day]
 
         # Calculate discount (20% of weekend consumption)
