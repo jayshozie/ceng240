@@ -128,7 +128,22 @@ SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in positio
 
 ## Byte Strings (`b`, `B` prefix)
 
-The prefixes `b` and `B` indicates a **byte string literal**.
+The prefixes `b` and `B` indicates a **byte string literal**. Characters in
+byte strings are not stored as Unicode characters, but bytes.
+```python
+byte_data = b"Hello, World!"
+print(byte_data)  # Output: b'Hello, World!'
+print(type(byte_data))  # Output: <class 'bytes'>
+```
+You can't mix normal strings with byte strings, Python will raise a TypeError.
+```python
+new_str = byte_data + "will give error"
+"Traceback (most recent call last):"
+"  File "<python-input-14>", line 1, in <module>"
+"    new_str = byte_data + "will give error""
+"              ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~"
+"TypeError: can't concat str to bytes"
+```
 
 ## Unicode Strings (`u`, `U` prefix)
 
