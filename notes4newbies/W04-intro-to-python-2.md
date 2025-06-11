@@ -108,8 +108,8 @@ raw strings.
 >>> print(r"C:\Users\foo\bar")
 C:\Users\foo\bar
 ```
-If you were to use a normal string literal with that, you would probably get an
-error:
+If you were to use a normal string literal with that, you would probably get
+some kind of an error:
 ```python
 >>> print("C:\Users\foo\bar")
   File "<python-input-8>", line 1
