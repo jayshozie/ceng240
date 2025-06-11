@@ -128,7 +128,7 @@ SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in positio
 
 ## Byte Strings (`b`, `B` prefix)
 
-The prefixes `b` and `B` indicatees a **byte string literal**.
+The prefixes `b` and `B` indicates a **byte string literal**.
 
 ## Unicode Strings (`u`, `U` prefix)
 
