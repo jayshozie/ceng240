@@ -149,7 +149,6 @@ age = input("Please enter your age:")
 print(f"Your age is {age}. Stored.")  # User entered 18 as input
 # Output: Your age is 18. Stored.
 ```
-
 </details>
 
 
