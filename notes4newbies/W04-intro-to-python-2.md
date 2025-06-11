@@ -92,8 +92,8 @@ type is `string literal`, we will work with that.
 
 ## Raw Strings (`r`, `R` prefix)
 
-The prefixes `r` and `R` indicates a **raw string**. If you've messed around
-with the interpreter up until now, you may have noticed that the `\`
+The prefixes `r` and `R` indicates a **raw string literal**. If you've messed
+around with the interpreter up until now, you may have noticed that the `\`
 (backslash) character cannot be used in string literals, because it's reserved
 as the escape character. You can do stuff like this:
 ```python
@@ -101,14 +101,16 @@ as the escape character. You can do stuff like this:
 "Hi."
 "My name is Jay."
 "I'm gonna fail all my courses this semester."
-# There won't be `"` normally, I've added them for correct coloring on GitHub
+# There won't be `"` characters normally, I've added them for correct coloring
+# on GitHub
 ```
 But sometimes you do want to use the backslash character, then you should use
 raw strings.
 ```python
 >>> print(r"C:\Users\foo\bar")
 "C:\Users\foo\bar"
-# There won't be `"` normally, I've added them for correct coloring on GitHub
+# There won't be `"` characters normally, I've added them for correct coloring
+# on GitHub
 ```
 If you were to use a normal string literal with that, you would probably get
 some kind of an error:
@@ -125,6 +127,8 @@ SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in positio
 ```
 
 ## Byte Strings (`b`, `B` prefix)
+
+The prefixes `b` and `B` indicatees a **byte string literal**.
 
 ## Unicode Strings (`u`, `U` prefix)
 
