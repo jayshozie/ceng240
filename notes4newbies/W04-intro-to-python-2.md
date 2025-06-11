@@ -87,8 +87,70 @@ As you might've seen in the previous examples, the `print()` and the `input()`
 functions have a lot of functionality and 'settings'. Let's dive in.
 
 First, we need to talk about different kinds of strings. We've seen the generic
-string type, but there are more.
+string type, but there are more. If you remember, the full name of the string
+type is `string literal`, we will work with that.
 
+## Raw Strings (`r`, `R` prefix)
+
+The prefixes `r` and `R` indicates a **raw string**. If you've messed around
+with the interpreter up until now, you may have noticed that the `\`
+(backslash) character cannot be used in string literals, because it's reserved
+as the escape character. You can do stuff like this:
+```python
+>>> print("Hi.\nMy name is Jay.\nI'm gonna fail all my courses this semester.")
+Hi.
+My name is Jay.
+I'm gonna fail all my courses this semester.
+```
+But sometimes you do want to use the backslash character, then you should use
+raw strings.
+```python
+>>> print(r"C:\Users\foo\bar")
+C:\Users\foo\bar
+```
+If you were to use a normal string literal with that, you would probably get an
+error:
+```python
+>>> print("C:\Users\foo\bar")
+  File "<python-input-8>", line 1
+    print("C:\Users\foo\bar")
+          ^^^^^^^^^^^^^^^^^^
+SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape
+```
+
+## Byte Strings (`b`, `B` prefix)
+
+## Unicode Strings (`u`, `U` prefix)
+
+## Formatted Strings (f-Strings)
+
+Formatted strings (a.k.a. f-strings) are a way of 
+
+It's achieved by either using the `f` prefix before the string, or using the
+`format()` method for strings.
+```python
+my_str = "This is a {0} string literal."
+my_fstr = f"This is a formatted string."
+my_other_fstr = my_str.format('formatted')
+
+print(my_str)  # Output: This is a {0} string literal.
+print(my_fstr)  # Output: This is a formatted string.
+print(my_other_fstr)  # Output: This is a formatted string literal.
+```
+Not exactly the best examples, but we will see better ones in a minute.
+
+<details>
+    <summary>Better Examples</summary>
+
+```python
+age = input("Please enter your age:")
+# This line print the string literal "Please enter your age:" & waits for input
+
+print(f"Your age is {age}. Stored.")  # User entered 18 as input
+# Output: Your age is 18. Stored.
+```
+
+</details>
 
 
 Latest Version: [Documentation](https://docs.python.org/3.13/reference/lexical_analysis.html#string-and-bytes-literals)
