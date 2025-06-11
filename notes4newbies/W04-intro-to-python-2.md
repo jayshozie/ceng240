@@ -98,32 +98,27 @@ around with the interpreter up until now, you may have noticed that the `\`
 as the escape character. You can do stuff like this:
 ```python
 >>> print("Hi.\nMy name is Jay.\nI'm gonna fail all my courses this semester.")
-"Hi."
-"My name is Jay."
-"I'm gonna fail all my courses this semester."
-# There won't be `"` characters normally, I've added them for correct coloring
-# on GitHub
+# Output:
+# Hi.
+# My name is Jay.
+# I'm gonna fail all my courses this semester.
 ```
 But sometimes you do want to use the backslash character, then you should use
 raw strings.
 ```python
 >>> print(r"C:\Users\foo\bar")
-"C:\Users\foo\bar"
-# There won't be `"` characters normally, I've added them for correct coloring
-# on GitHub
+# Output:
+# C:\Users\foo\bar
 ```
 If you were to use a normal string literal with that, you would probably get
 some kind of an error:
 ```python
 >>> print("C:\Users\foo\bar")
-"""
-  File "<python-input-8>", line 1
-    print("C:\Users\foo\bar")
-          ^^^^^^^^^^^^^^^^^^
-SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape
-"""
-# There won't be `"""` characters normally, I've added them for correct
-# coloring on GitHub
+# Output:
+#   File "<python-input-8>", line 1
+#     print("C:\Users\foo\bar")
+#           ^^^^^^^^^^^^^^^^^^
+# SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape
 ```
 
 ## Byte Strings (`b`, `B` prefix)
@@ -138,11 +133,12 @@ print(type(byte_data))  # Output: <class 'bytes'>
 You can't mix normal strings with byte strings, Python will raise a TypeError.
 ```python
 new_str = byte_data + "will give error"
-"Traceback (most recent call last):"
-"  File "<python-input-14>", line 1, in <module>"
-"    new_str = byte_data + "will give error""
-"              ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~"
-"TypeError: can't concat str to bytes"
+# Output:
+# Traceback (most recent call last):
+#   File "<python-input-14>", line 1, in <module>
+#     new_str = byte_data + "will give error"
+#               ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+# TypeError: can't concat str to bytes
 ```
 
 ## Unicode Strings (`u`, `U` prefix)
