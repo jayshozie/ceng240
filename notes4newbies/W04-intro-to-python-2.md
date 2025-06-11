@@ -81,7 +81,19 @@ Latest Version: [Documentation](https://docs.python.org/3/reference/lexical_anal
 
 -------------------------------------------------------------------------------
 
-# Actions I/O
+# More Info About the `print()` and `input()` Functions
+
+As you might've seen in the previous examples, the `print()` and the `input()`
+functions have a lot of functionality and 'settings'. Let's dive in.
+
+First, we need to talk about different kinds of strings. We've seen the generic
+string type, but there are more.
+
+
+Latest Version: [Documentation](https://docs.python.org/3.13/reference/lexical_analysis.html#string-and-bytes-literals)
+
+
+
 
 
 
