@@ -93,7 +93,50 @@ string type, but there are more.
 
 Latest Version: [Documentation](https://docs.python.org/3.13/reference/lexical_analysis.html#string-and-bytes-literals)
 
+-------------------------------------------------------------------------------
 
+# Ignored Syntax in Python
+
+There are some intentional syntax in Python, actually in all programming
+languages, that the interpreter (or compiler) automatically ignores.
+
+In-Line Comments
+```python
+x = 5  # Python interpreter will ignore everything after the '#' character
+```
+
+Multi-line Comments (used for docstrings)
+```python
+"""
+Everything in 3 `"` character combos are ignored
+    by the Python interpreter.
+        You can do whatever you want in these
+                and
+
+    the Python
+
+                interpreter
+
+
+will ignore these lines.
+"""
+```
+
+`pass` Keyword
+```python
+
+if <a_condition>:
+    pass  # @TODO Add this later
+else:
+    statement-1
+    statement-2
+```
+With the `pass` keyword you can skip that block without errors, because if you
+don't put anything indented after `if`, `elif`, `else`, `for`, `while` blocks
+Python will give out an error. You can get rid of the error by using the `pass`
+keyword.
+
+-------------------------------------------------------------------------------
 
 
 
