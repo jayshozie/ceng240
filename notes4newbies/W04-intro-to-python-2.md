@@ -112,8 +112,6 @@ If you were to use a normal string literal with that, you would probably get
 some kind of an error:
 ```pycon
 >>> print("C:\Users\foo\bar")
-```
-```Python traceback
 Traceback (most recent call last):
   File "<python-input-8>", line 1
     print("C:\Users\foo\bar")
@@ -133,8 +131,7 @@ print(type(byte_data))  # Output: <class 'bytes'>
 You can't mix normal strings with byte strings, Python will raise a TypeError.
 ```pycon
 >>> new_str = byte_data + "will give error"
-```
-```Python traceback
+Output:
 Traceback (most recent call last):
   File "<python-input-14>", line 1, in <module>
     new_str = byte_data + "will give error"
