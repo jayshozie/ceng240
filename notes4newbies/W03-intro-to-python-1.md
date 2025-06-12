@@ -1290,7 +1290,7 @@ Even if you won't please read the rest of this dropdown.
 If we go back to our main subject, there are some stuff that you should know
 about how to construct conditionals.
 
-### `if <true>:`
+### `if a_true_condition == True:`
 
 If you are checking for the truthines of something, do not say check with True
 instead just leave it as is.
@@ -1360,6 +1360,10 @@ if isinstance(foo, bar): ...
 Don't:
 ```python
 if type(foo) == type(bar): ...
+```
+Worse:
+```python
+if type(foo) is type(bar): ...
 ```
 
 ### `if len(seq):`
