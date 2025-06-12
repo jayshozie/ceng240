@@ -112,7 +112,7 @@ raw strings.
 ```
 If you were to use a normal string literal with that, you would probably get
 some kind of an error:
-```python
+```pycon
 >>> print("C:\Users\foo\bar")
 # Output:
 #   File "<python-input-8>", line 1
