@@ -9,7 +9,7 @@ Please see the LICENSE file for more details.
 ## Aliasing Issue in Python
 
 Every data, constant or not, has an identifier, stored as an integer in Python.
-```python
+```pycon
 >>> a = 1
 >>> b = 1
 >>> id(1)
@@ -20,7 +20,7 @@ Every data, constant or not, has an identifier, stored as an integer in Python.
 140165965326288
 ```
 If the data is mutable, then we have a problem:
-```python
+```pycon
 >>> a = ['a', 'b']
 >>> b = a
 >>> b[0] = 0
@@ -30,14 +30,14 @@ If the data is mutable, then we have a problem:
 <details>
     <summary>More Examples</summary>
 
-```python
+```pycon
 >>> a = 4
 >>> b = [1, 2, 3, a]
 >>> a = 8
 >>> print(b)
 [1, 2, 3, 4]  # This is even worse than the previous example
 ```
-```python
+```pycon
 >>> a = [1,2]
 >>> b = [1,2,a]
 >>> a
@@ -96,19 +96,19 @@ The prefixes `r` and `R` indicates a **raw string literal**. If you've messed
 around with the interpreter up until now, you may have noticed that the `\`
 (backslash) character cannot be used in string literals, because it's reserved
 as the escape character. You can do stuff like this:
-```python
+```pycon
 >>> print("Hi.\nMy name is Jay.\nI'm gonna fail all my courses this semester.")
-# Output:
-# Hi.
-# My name is Jay.
-# I'm gonna fail all my courses this semester.
+Output:
+Hi.
+My name is Jay.
+I'm gonna fail all my courses this semester.
 ```
 But sometimes you do want to use the backslash character, then you should use
 raw strings.
-```python
+```pycon
 >>> print(r"C:\Users\foo\bar")
-# Output:
-# C:\Users\foo\bar
+Output:
+C:\Users\foo\bar
 ```
 If you were to use a normal string literal with that, you would probably get
 some kind of an error:
@@ -131,14 +131,14 @@ print(byte_data)  # Output: b'Hello, World!'
 print(type(byte_data))  # Output: <class 'bytes'>
 ```
 You can't mix normal strings with byte strings, Python will raise a TypeError.
-```python
-new_str = byte_data + "will give error"
-# Output:
-# Traceback (most recent call last):
-#   File "<python-input-14>", line 1, in <module>
-#     new_str = byte_data + "will give error"
-#               ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-# TypeError: can't concat str to bytes
+```pycon
+>>> new_str = byte_data + "will give error"
+Output:
+Traceback (most recent call last):
+  File "<python-input-14>", line 1, in <module>
+    new_str = byte_data + "will give error"
+              ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+TypeError: can't concat str to bytes
 ```
 
 ## Unicode Strings (`u`, `U` prefix)
