@@ -143,6 +143,19 @@ new_str = byte_data + "will give error"
 
 ## Unicode Strings (`u`, `U` prefix)
 
+The prefixes `u` and `U` indicates a **Unicode string literal**. This is the
+same type of strings that I've been talking about as `normal` strings. This
+prefix still exists only for backwards compatibility with Python 2, you don't
+need to use it.
+```python
+print(u"Same string, same encoding, same storing type.")
+# Output: Same string, same encoding, same storing type.
+print("Same string, same encoding, same storing type.")
+# Output: Same string, same encoding, same storing type.
+```
+The `u` prefix is not necessary in Python 3, as all strings are Unicode by
+default. However, you can still use it if you want to make it explicit.
+
 ## Formatted Strings (f-Strings)
 
 Formatted strings (a.k.a. f-strings) are a way of 
@@ -184,7 +197,12 @@ print(f"{pi_approx:.2f}")
 print("{:.2f}".format(pi_approx))
 # Output: 3.14
 ```
-
+In the first example, you use the variable just like you would without changing
+the value, but then use a `:` colon character and then the formatting
+specification, which is `.2f` in this case, meaning that you want to show the
+value as a float with two decimal places. In the second example, you use the
+`format()` method of the string, and pass the formatting specification as an
+argument to the method.
 
 Latest Version: [Documentation](https://docs.python.org/3.13/reference/lexical_analysis.html#string-and-bytes-literals)
 
