@@ -130,6 +130,8 @@ print(type(byte_data))  # Output: <class 'bytes'>
 You can't mix normal strings with byte strings, Python will raise a TypeError.
 ```pycon
 >>> new_str = byte_data + "will give error"
+```
+```Python traceback
 Traceback (most recent call last):
   File "<python-input-14>", line 1, in <module>
     new_str = byte_data + "will give error"
