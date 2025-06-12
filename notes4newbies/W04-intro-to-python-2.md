@@ -183,6 +183,9 @@ age = input("Please enter your age:")
 print(f"Your age is {age}. Stored.")  # User entered 18 as input
 # Output: Your age is 18. Stored.
 ```
+
+###     TODO : ADD MORE EXAMPLES
+
 </details>
 
 There are some little quirks with formatting numerical values in f-strings. For
@@ -202,9 +205,11 @@ the value, but then use a `:` colon character and then the formatting
 specification, which is `.2f` in this case, meaning that you want to show the
 value as a float with two decimal places. In the second example, you use the
 `format()` method of the string, and pass the formatting specification as an
-argument to the method.
+argument to the method. This is called the
+[format specification mini-language](https://docs.python.org/3.13/library/string.html#format-specification-mini-language).
 
-Latest Version: [Documentation](https://docs.python.org/3.13/reference/lexical_analysis.html#string-and-bytes-literals)
+Latest Documentation of String and Bytes Literals:
+[Documentation](https://docs.python.org/3.13/reference/lexical_analysis.html#string-and-bytes-literals)
 
 -------------------------------------------------------------------------------
 
