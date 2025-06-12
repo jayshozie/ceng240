@@ -172,6 +172,19 @@ print(f"Your age is {age}. Stored.")  # User entered 18 as input
 ```
 </details>
 
+There are some little quirks with formatting numerical values in f-strings. For
+example, let's say that you want to show only the first two decimal places in
+a float you calculated, here's two ways how you can achieve that.
+```python
+pi_approx = 22/7
+
+print(f"{pi_approx:.2f}")
+# Output: 3.14
+
+print("{:.2f}".format(pi_approx))
+# Output: 3.14
+```
+
 
 Latest Version: [Documentation](https://docs.python.org/3.13/reference/lexical_analysis.html#string-and-bytes-literals)
 
@@ -206,7 +219,6 @@ will ignore these lines.
 
 `pass` Keyword
 ```python
-
 if <a_condition>:
     pass  # @TODO Add this later
 else:
