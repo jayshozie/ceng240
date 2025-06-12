@@ -1290,7 +1290,7 @@ Even if you won't please read the rest of this dropdown.
 If we go back to our main subject, there are some stuff that you should know
 about how to construct conditionals.
 
-#### `if <true>:`
+### `if <true>:`
 
 If you are checking for the truthines of something, do not say check with True
 instead just leave it as is.
@@ -1304,7 +1304,7 @@ Don't:
 if some_bool == True: ...
 ```
 
-2. `if some_really_long_condition and\n some_other_really_long_condition:`
+### `if some_really_long_condition and\n some_other_really_long_condition:`
 
 If the stuff you're checking in the if statement is too long (80 characters to
 be precise), you should put the checks in parantheses and go into a new line:
@@ -1321,7 +1321,7 @@ Don't:
 if some_really_long_condition and some_other_really_long_condition and some_other_other_really_long_condition: ...
 ```
 
-3. `if not foo is None:`
+### `if not foo is None:`
 
 If you're checking for something is not None type, use `is not` operator.
 
@@ -1334,7 +1334,7 @@ Don't:
 if not foo is None: ...
 ```
 
-4. `if foo[:3] == "bar":`
+### `if foo[:3] == "bar":`
 
 Use `''.startswith()` and `''.endswith()` functions instead of slicing to
 check for prefixes or suffixes.
@@ -1348,7 +1348,7 @@ Don't:
 if foo[:3] == 'bar': ...
 ```
 
-5. `if type(foo) is type(bar):`
+### `if type(foo) is type(bar):`
 
 If you're checking for the type of an object, use `isinstance()` instead of
 comparing types directly.
@@ -1362,7 +1362,7 @@ Don't:
 if type(foo) == type(bar): ...
 ```
 
-6. `if len(seq):`
+### `if len(seq):`
 
 For sequences, (strings, lists, tuples), use the fact that empty sequences are
 false.
