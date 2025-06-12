@@ -114,11 +114,11 @@ If you were to use a normal string literal with that, you would probably get
 some kind of an error:
 ```pycon
 >>> print("C:\Users\foo\bar")
-# Output:
-#   File "<python-input-8>", line 1
-#     print("C:\Users\foo\bar")
-#           ^^^^^^^^^^^^^^^^^^
-# SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape
+Output:
+  File "<python-input-8>", line 1
+    print("C:\Users\foo\bar")
+          ^^^^^^^^^^^^^^^^^^
+SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape
 ```
 
 ## Byte Strings (`b`, `B` prefix)
