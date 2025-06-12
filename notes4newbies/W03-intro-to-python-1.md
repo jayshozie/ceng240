@@ -1290,7 +1290,7 @@ Even if you won't please read the rest of this dropdown.
 If we go back to our main subject, there are some stuff that you should know
 about how to construct conditionals.
 
-1. `if <true>:`
+## `if <true>:`
 
 If you are checking for the truthines of something, do not say check with True
 instead just leave it as is.
