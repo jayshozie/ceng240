@@ -1336,7 +1336,7 @@ if not foo is None: ...
 
 4. `if foo[:3] == "bar":`
 
-User `''.startswith()` and `''.endswith()` functions instead of slicing to
+Use `''.startswith()` and `''.endswith()` functions instead of slicing to
 check for prefixes or suffixes.
 
 Do:
