@@ -1348,7 +1348,7 @@ Don't:
 if foo[:3] == 'bar': ...
 ```
 
-4. `if type(foo) is type(bar):`
+5. `if type(foo) is type(bar):`
 
 If you're checking for the type of an object, use `isinstance()` instead of
 comparing types directly.
@@ -1362,7 +1362,7 @@ Don't:
 if type(foo) == type(bar): ...
 ```
 
-5. `if len(seq):`
+6. `if len(seq):`
 
 For sequences, (strings, lists, tuples), use the fact that empty sequences are
 false.
@@ -1377,7 +1377,6 @@ Don't
 if len(seq): ...
 if not len(seq): ...
 ```
-
 </details>
 
 
