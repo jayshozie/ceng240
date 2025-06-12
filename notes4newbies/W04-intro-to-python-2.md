@@ -98,7 +98,6 @@ around with the interpreter up until now, you may have noticed that the `\`
 as the escape character. You can do stuff like this:
 ```pycon
 >>> print("Hi.\nMy name is Jay.\nI'm gonna fail all my courses this semester.")
-Output:
 Hi.
 My name is Jay.
 I'm gonna fail all my courses this semester.
@@ -107,14 +106,12 @@ But sometimes you do want to use the backslash character, then you should use
 raw strings.
 ```pycon
 >>> print(r"C:\Users\foo\bar")
-Output:
 C:\Users\foo\bar
 ```
 If you were to use a normal string literal with that, you would probably get
 some kind of an error:
 ```pycon
 >>> print("C:\Users\foo\bar")
-Output:
   File "<python-input-8>", line 1
     print("C:\Users\foo\bar")
           ^^^^^^^^^^^^^^^^^^
@@ -133,7 +130,6 @@ print(type(byte_data))  # Output: <class 'bytes'>
 You can't mix normal strings with byte strings, Python will raise a TypeError.
 ```pycon
 >>> new_str = byte_data + "will give error"
-Output:
 Traceback (most recent call last):
   File "<python-input-14>", line 1, in <module>
     new_str = byte_data + "will give error"
