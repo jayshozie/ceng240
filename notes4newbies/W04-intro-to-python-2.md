@@ -113,7 +113,7 @@ some kind of an error:
 ```pycon
 >>> print("C:\Users\foo\bar")
 ```
-```304
+```Python traceback
 Traceback (most recent call last):
   File "<python-input-8>", line 1
     print("C:\Users\foo\bar")
