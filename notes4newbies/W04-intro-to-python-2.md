@@ -112,6 +112,9 @@ If you were to use a normal string literal with that, you would probably get
 some kind of an error:
 ```pycon
 >>> print("C:\Users\foo\bar")
+```
+```304
+Traceback (most recent call last):
   File "<python-input-8>", line 1
     print("C:\Users\foo\bar")
           ^^^^^^^^^^^^^^^^^^
