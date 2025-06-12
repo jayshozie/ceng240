@@ -1384,11 +1384,13 @@ if not len(seq): ...
 <details>
     <summary>A Lot of Conditional Examples</summary>
 
+###     TODO : ADD EXAMPLES
+
 </details>
 
 ### Repetition Statements
 
-###   TODO : ADD EXPLANATION HERE
+###     TODO : ADD EXPLANATION HERE
 
 -------------------------------------------------------------------------------
 
