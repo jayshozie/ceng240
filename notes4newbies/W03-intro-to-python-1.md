@@ -1304,7 +1304,7 @@ Don't:
 if some_bool == True: ...
 ```
 
-2. `if (some_really_long_condition and\n some_other_really_long_condition:`
+2. `if some_really_long_condition and\n some_other_really_long_condition:`
 
 If the stuff you're checking in the if statement is too long (80 characters to
 be precise), you should put the checks in parantheses and go into a new line:
