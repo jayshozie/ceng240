@@ -172,7 +172,7 @@ print(my_other_fstr)  # Output: This is a formatted string literal.
 Not exactly the best examples, but we will see better ones in a minute.
 
 <details>
-    <summary>Better Examples</summary>
+    <summary>A Better Example</summary>
 
 ```python
 age = input("Please enter your age:")
@@ -181,9 +181,6 @@ age = input("Please enter your age:")
 print(f"Your age is {age}. Stored.")  # User entered 18 as input
 # Output: Your age is 18. Stored.
 ```
-
-###     TODO : ADD MORE EXAMPLES
-
 </details>
 
 There are some little quirks with formatting numerical values in f-strings. For
@@ -250,17 +247,3 @@ With the `pass` keyword you can skip that block without errors, because if you
 don't put anything indented after `if`, `elif`, `else`, `for`, `while` blocks
 Python will give out an error. You can get rid of the error by using the `pass`
 keyword.
-
--------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
