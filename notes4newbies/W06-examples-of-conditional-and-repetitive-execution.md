@@ -247,6 +247,8 @@ else:
         print(f"{coordinate} is in quadrant IV.")
 ```
 
+That's a lot of if statements. It looks messy and hard to maintain, I wonder if
+we can make it better? :)
 </details>
 
 
