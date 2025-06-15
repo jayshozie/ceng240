@@ -1383,7 +1383,6 @@ if not len(seq): ...
 ```
 </details>
 
-
 <details>
     <summary>A Lot of Conditional Examples</summary>
 
@@ -1392,6 +1391,36 @@ if not len(seq): ...
 </details>
 
 ### Repetition Statements
+
+Sometimes, you want to repeat a block of code multiple times. For example, you
+want to print a statement 5 times, you can do;
+```python
+print("some statement that i want the user to see")
+print("some statement that i want the user to see")
+print("some statement that i want the user to see")
+print("some statement that i want the user to see")
+print("some statement that i want the user to see")
+```
+This sure will work. It will print that exact statement 5 times, but what if
+you want to change what you want to say, or maybe you want them to differ from
+one another? What can you do? That's when repetition statements come in.
+```python
+for i in range(5):
+    print("some statement that i want the user to see")
+```
+This will do the exact same thing, it will print that line 5 times, and if you
+want to change the thing you want to print, you can just do it once and it will
+just work. Also in the first example, there is a problem. OK, it is easy to
+check whether you did everything right with 5 lines of code, but what if it was
+50, or 500, or maybe even 5000 lines of code. Then we'll run into a problem.
+You will definitely miss something, and it'll become incredibly hard to debug.
+
+<details>
+    <summary>A Lot of Repetition Examples</summary>
+
+###     TODO : ADD EXAMPLES
+
+</details>
 
 ###     TODO : ADD EXPLANATION HERE
 
