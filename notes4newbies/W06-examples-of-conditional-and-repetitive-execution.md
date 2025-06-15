@@ -51,6 +51,6 @@ Please see the LICENSE file for more details.
 -------------------------------------------------------------------------------
 
 All example questions are taken from
-[W3Resource.com](https://www.w3resource.com/c-programming-exercises/for-loop/index.php).
+[W3Resource.com](https://www.w3resource.com/c-programming-exercise).
 Some of them are changed a little bit, because I felt like they would be better
 examples of the real world coding practices.
