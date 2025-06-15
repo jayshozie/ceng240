@@ -10,6 +10,39 @@ Please see the LICENSE file for more details.
 
 ### Equality Check of Two Numbers
 
+This is a pretty basic and easy program. It should receive 2 numbers as input,
+check whether they are equal to each other.
+
+Regulations:
+- If the result to the check is true, your program should print:
+```markdown
+{number1} is equal to {number2}.
+```
+- If the result to the check is false, your program should print:
+```markdown
+{number1} is not equal to {numebr2}.
+```
+
+Hints:
+- You can use the function `eval(input())` to get input from the user.
+- You can assume the user will only provide valid inputs, meaning the user will
+only provide numerical values. You don't need to error handle the case where
+the user provides a string, or a list, etc.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+num1 = eval(input("Please enter the first number: "))
+num2 = eval(input("Please enter the second number: "))
+
+if num1 == num2:
+    print(f"{num1} is equal to {num2}.")
+else:
+    print(f"{num1} is not equal to {num2}.")
+```
+</details>
+
 ### Even or Odd Check
 
 ### Voting Eligibility
