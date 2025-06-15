@@ -134,6 +134,24 @@ Let's write the third algorithm in something called 'pseudocode'.
 <details>
     <summary>A Flowchart Representation of That Algorithm</summary>
 
+```mermaid
+---
+title: Finding a Person in a Phonebook Flowchart
+---
+flowchart TB
+
+    id1[Start] -> id1(Pick up phonebook)
+    id1(Pick up phonebook) -> id1(Open the middle of book)
+    id1(Open the middle of book) -> id1(Look at page)
+    id1(Look at page) -> id1{{Is person on the page?}}
+    id1{{Is this person on the page?}} -->|Yes|id1(Call person)
+    id1{{Is this person on the page?}} -->|No|id1{{Is the person on left or right half}}
+    id1{{Is the person on left or right half}} -->|Left|id1(Open to middle of left of book)
+    id1(Open to middle of left of book) -> id1(Look at page)
+    id1{{Is the person on left or right half}} -->|Right|id1(Open to middle of right of book)
+    id1(Open to middle of right of book) -> id1(Look at page)
+```
+
 ![Finding a Person in a Phonebook Flowchart](./images/phonebook-algorithm-flowchart.png)
 </details>
 
