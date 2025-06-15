@@ -31,7 +31,7 @@ there is no actual order that they should be studied. These topics are
 incredibly intertwined, and should be studied as a whole. Please, if you don't
 understand something, continue. Don't stop just because you didn't understand
 something, because there is a possibility that it's been explained in a further
-section.
+section, or you will understand it down the road.
 
 -------------------------------------------------------------------------------
 
