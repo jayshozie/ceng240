@@ -262,7 +262,7 @@ find it in the dropdown below.
 
 |ASCII Number|Character|ASCII Number|Character|ASCII Number|Character|
 |:----------:|:-------:|:----------:|:-------:|:----------:|:-------:|
-|32|space|64|@ |96 | `|
+|32|space|64|@ |96 |\`|
 |33|  !  |65|A |97 | a|
 |34|  "  |66|B |98 | b|
 |35|  #  |67|C |99 | c|
