@@ -1454,6 +1454,17 @@ Here is the syntax of a `while` loop:
 <details>
     <summary>A Lot of While Loop Examples</summary>
 
+- Print Numbers Using a While Loop
+
+- Sum of Positive Integers Until 0
+
+- Sum Until Negative Number
+
+- Random Number Guessing Game
+
+- Simple Password Validation
+
+
 </details>
 
 ###     TODO : ADD EXPLANATION HERE
