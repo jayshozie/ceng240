@@ -1459,9 +1459,6 @@ while i < 6:
     # intuitive, but we will get to them later anyway.
 ```
 
-
-###     TODO : ADD EXPLANATION HERE
-
 -------------------------------------------------------------------------------
 
 # Assignment 1 of W03
