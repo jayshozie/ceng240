@@ -260,7 +260,6 @@ find it in the dropdown below.
 <details>
     <summary>ASCII Printable Special Characters</summary>
 
-```markdown
 |ASCII Number|Character|ASCII Number|Character|
 |:----------:|:-------:|:----------:|:-------:|
 |32|space|64| @|96 | `|
@@ -295,7 +294,6 @@ find it in the dropdown below.
 |61|  =  |93| ]|125| }|
 |62|  >  |94| ^|126| ~|
 |63|  ?  |95| _|   |  |
-```
 
 <details>
     <summary>Alphabeticals</summary>
