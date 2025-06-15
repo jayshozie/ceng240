@@ -138,8 +138,7 @@ Let's write the third algorithm in something called 'pseudocode'.
 ---
 title: Finding a Person in a Phonebook Flowchart
 ---
-flowchart TB
-
+flowchart TB;
     id1[Start] -> id2(Pick up phonebook)
     id2(Pick up phonebook) -> id3(Open the middle of book)
     id3(Open the middle of book) -> id4(Look at page)
