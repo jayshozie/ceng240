@@ -1415,10 +1415,42 @@ check whether you did everything right with 5 lines of code, but what if it was
 50, or 500, or maybe even 5000 lines of code. Then we'll run into a problem.
 You will definitely miss something, and it'll become incredibly hard to debug.
 
-<details>
-    <summary>A Lot of Repetition Examples</summary>
+Here is the syntax of a `for` loop:
+```markdown
+for_stmt ::= "for" target_list "in" starred_list ":" suite
+             ["else" ":" suite]
+```
+[The for Statement](https://docs.python.org/3/reference/compound_stmts.html#for)
+I know it looks complicated, but it actually isn't. What it says is, you put
+the keyword `for` first, then a `target_list`, and a `starred_list`. A
+`target_list` list is any iterable variable, mostly integers, it's `i` in our
+example. Then you need to provide a `starred_list`, it should be an iterable
+object, such as ranges, lists, etc. An iterable object is any Python object
+capable of returning its members one at a time, permitting it to be iterated
+over a loop. Lists are a perfect candidate for this type of operation.
 
-###     TODO : ADD EXAMPLES
+
+<details>
+    <summary>A Lot of For Loop Examples</summary>
+
+- Print First 10 Natural Numbers
+
+- Sum of First 10 Natural Numbers
+
+- Display n Terms of Natural Numbers and Their Sum
+
+- Sum and Average of 10 Numbers as Input
+
+- Display Cubes of Numbers Up to an Integer
+
+- Factorial Calculation
+
+</details>
+
+Here is the syntax of a `while` loop:
+
+<details>
+    <summary>A Lot of While Loop Examples</summary>
 
 </details>
 
