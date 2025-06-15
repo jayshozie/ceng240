@@ -139,16 +139,16 @@ Let's write the third algorithm in something called 'pseudocode'.
 title: Finding a Person in a Phonebook Flowchart
 ---
 flowchart TB;
-    id1[Start] -> id2(Pick up phonebook);
-    id2(Pick up phonebook) -> id3(Open the middle of book);
-    id3(Open the middle of book) -> id4(Look at page);
-    id4(Look at page) -> id5{{Is person on the page?}};
+    id1[Start] --> id2(Pick up phonebook);
+    id2(Pick up phonebook) --> id3(Open the middle of book);
+    id3(Open the middle of book) --> id4(Look at page);
+    id4(Look at page) --> id5{{Is person on the page?}};
     id5{{Is this person on the page?}} -->|Yes|id7(Call person);
     id5{{Is this person on the page?}} -->|No|id8{{Is the person on left or right half}};
     id8{{Is the person on left or right half}} -->|Left|id9(Open to middle of left of book);
-    id9(Open to middle of left of book) -> id4(Look at page);
+    id9(Open to middle of left of book) --> id4(Look at page);
     id10{{Is the person on left or right half}} -->|Right|id11(Open to middle of right of book);
-    id11(Open to middle of right of book) -> id4(Look at page);
+    id11(Open to middle of right of book) --> id4(Look at page);
 ```
 
 ![Finding a Person in a Phonebook Flowchart](./images/phonebook-algorithm-flowchart.png)
