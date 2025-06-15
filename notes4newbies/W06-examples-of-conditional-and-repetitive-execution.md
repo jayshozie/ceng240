@@ -325,10 +325,27 @@ adding a separate if-else check for every single one of them.
 user know. (P.S.: You can check all characters if you want, but that's not
 necessary.)
 - The `space` (` `) character is also a special character.
+- Please don't forget to check the example I/O section.
 
 Hints:
 - You can use `eval(input())` to get input from the user.
 - I
+
+<details>
+    <summary>Expected I/O</summary>
+
+```markdown
+Input:
+@
+Output:
+'@' is a special character.
+
+Input:
+k
+Output:
+'k' is an alphabet character.
+```
+</details>
 
 
 -------------------------------------------------------------------------------
