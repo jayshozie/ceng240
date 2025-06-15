@@ -1390,6 +1390,8 @@ if not len(seq): ...
 
 </details>
 
+-------------------------------------------------------------------------------
+
 ### Repetition Statements
 
 Sometimes, you want to repeat a block of code multiple times. For example, you
