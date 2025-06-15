@@ -6,6 +6,22 @@ Please see the LICENSE file for more details.
 
 # Examples of Conditional and Repetitive Execution
 
+-------------------------------------------------------------------------------
+
+## A Lot of Conditional Examples
+
+### Equality Check of Two Numbers
+
+### Even or Odd Check
+
+### Voting Eligibility
+
+### Coordinate Quadrant Identification
+
+### Character Type Classification
+
+-------------------------------------------------------------------------------
+
 ## A Lot of For Loop Examples
 
 ### Print First 10 Natural Numbers

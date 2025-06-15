@@ -1383,13 +1383,6 @@ if not len(seq): ...
 ```
 </details>
 
-<details>
-    <summary>A Lot of Conditional Examples</summary>
-
-###     TODO : ADD EXAMPLES
-
-</details>
-
 -------------------------------------------------------------------------------
 
 ### Repetition Statements
@@ -1422,7 +1415,7 @@ Here is the syntax of a `for` loop:
 for_stmt ::= "for" target_list "in" starred_list ":" suite
              ["else" ":" suite]
 ```
-[The for Statement](https://docs.python.org/3/reference/compound_stmts.html#for)
+[The for Statement](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement)
 I know it looks complicated, but it actually isn't. What it says is, you put
 the keyword `for` first, then a `target_list`, and a `starred_list`. A
 `target_list` list is any iterable variable, mostly integers, it's `i` in our
@@ -1431,41 +1424,27 @@ object, such as ranges, lists, etc. An iterable object is any Python object
 capable of returning its members one at a time, permitting it to be iterated
 over a loop. Lists are a perfect candidate for this type of operation.
 
-
-<details>
-    <summary>A Lot of For Loop Examples</summary>
-
-- Print First 10 Natural Numbers
-
-- Sum of First 10 Natural Numbers
-
-- Display n Terms of Natural Numbers and Their Sum
-
-- Sum and Average of 10 Numbers as Input
-
-- Display Cubes of Numbers Up to an Integer
-
-- Factorial Calculation
-
-</details>
-
 Here is the syntax of a `while` loop:
-
-<details>
-    <summary>A Lot of While Loop Examples</summary>
-
-- Print Numbers Using a While Loop
-
-- Sum of Positive Integers Until 0
-
-- Sum Until Negative Number
-
-- Random Number Guessing Game
-
-- Simple Password Validation
-
-
-</details>
+```markdown
+while_stmt ::= "while" assignment_expression ":" suite
+               ["else" ":" suite]
+```
+[The while Statement](https://docs.python.org/3/reference/compound_stmts.html#the-while-statement)
+Again, I know it looks complicated, but it really isn't. It just says that, you
+need to put the keyword `while`, then you put an `assignment_expression`,
+meaning that you state something, such as `i < 6`, and want that block of code
+to be executed until that statement is `False`. Get it? You check for
+something, and it happens `while` it's True. We can write the exact same
+program as a while loop.
+```python
+i = 0
+while i < 6:
+    print("some statement that i want the user to see")
+    i += 1
+    # This is just a shorthand for `i = i + 1`.
+    # There are other example like `i -= 1` or `i *= 2`, they're pretty
+    # intuitive, but we will get to them later anyway.
+```
 
 ###     TODO : ADD EXPLANATION HERE
 
