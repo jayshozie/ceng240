@@ -10,7 +10,7 @@ Please see the LICENSE file for more details.
 
 ### Equality Check of Two Numbers
 <details>
-    <summary><font size="15">Equality Check of Two Numbers</font></summary>
+    <summary><font size="25">Equality Check of Two Numbers</font></summary>
 
 </details>
 
