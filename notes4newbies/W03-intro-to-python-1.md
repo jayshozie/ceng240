@@ -1410,7 +1410,6 @@ check whether you did everything right with 5 lines of code, but what if it was
 50, or 500, or maybe even 5000 lines of code. Then we'll run into a problem.
 You will definitely miss something, and it'll become incredibly hard to debug.
 
-1. The `for` Loop:
 #### The `for` Statement
 
 `for` loops are mostly used in iterations where you know how long the entire
@@ -1431,7 +1430,7 @@ object, such as ranges, lists, etc. An iterable object is any Python object
 capable of returning its members one at a time, permitting it to be iterated
 over a loop. Lists are a perfect candidate for this type of operation.
 
-2. The `while` Loop:
+#### The `while` Statement
 
 `while` loops are used when you don't know how many iterations it'll take, but
 they can be used interchangeably. For example, if you want to check if the user
