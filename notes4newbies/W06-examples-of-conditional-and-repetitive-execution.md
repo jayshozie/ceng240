@@ -20,7 +20,7 @@ Regulations:
 ```
 - If the result to the check is false, your program should print:
 ```markdown
-{number1} is not equal to {numebr2}.
+{number1} is not equal to {number2}.
 ```
 
 Hints:
