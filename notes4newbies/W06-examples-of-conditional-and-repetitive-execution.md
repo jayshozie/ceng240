@@ -83,6 +83,20 @@ elif num % 2 == 1:
 else:
     print("{num} is neither even nor odd.")
 ```
+
+Alternative Solution (preferably a better one):
+
+```python
+num = eval(input("Please enter a numerical value: "))
+
+if isinstance(num, (int, float)):
+    if num % 2 == 0:
+        print("{num} is even.")
+    elif num % 2 == 1:
+        print("{num} is odd.")
+else:
+    print("{num} is neither even nor odd")
+```
 </details>
 
 
