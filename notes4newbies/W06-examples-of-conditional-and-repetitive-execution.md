@@ -77,15 +77,16 @@ handle that.
 num = eval(input("Please enter a numerical value: "))
 
 if num % 2 == 0:
-    print("{num} is even.")
+    print(f"{num} is even.")
 elif num % 2 == 1:
-    print("{num} is odd.")
+    print(f"{num} is odd.")
 else:
-    print("{num} is neither even nor odd.")
+    print(f"{num} is neither even nor odd.")
 ```
+This solution assumes the user will not provide a complex number, because the
+`%` operator cannot be used between a complex and an int.
 
-Alternative Solution (preferably a better one):
-
+- Alternative Solution (w/ Error Handling)
 ```python
 num = eval(input("Please enter a numerical value: "))
 
@@ -99,6 +100,12 @@ if isinstance(num, (int, float)):
 else:
     print(f"{num} is neither even nor odd")
 ```
+This doesn't assume that. It explicitly checks whether the given number is an
+int or float, if it isn't it automatically sends it to the else case, which
+prints it's neither even nor odd; otherwise it checks whether it's divisible
+by two. If it is divisible, it prints it's even, if the remainder is 1 however,
+then it prints it's odd. If the provided number is a decimal number such as
+`34.2`, then it prints it's neither even nor odd.
 </details>
 
 
