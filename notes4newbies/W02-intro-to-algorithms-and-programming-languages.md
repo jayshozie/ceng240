@@ -134,7 +134,6 @@ Let's write the third algorithm in something called 'pseudocode'.
 <details>
     <summary>A Flowchart Representation of That Algorithm</summary>
 
-
 ![Finding a Person in a Phonebook Flowchart](./images/phonebook-algorithm-flowchart.png)
 </details>
 
@@ -194,18 +193,6 @@ for different operations, for example.
 <details>
     <summary>Flowchart Example</summary>
 
-```mermaid
----
-title: Finding a Person in a Phonebook Flowchart
----
-flowchart TB;
-    id1[Start] --> id2(Input: 'Which is the best subject?');
-    id2(Input: 'Which is the best subject?') --> id3(Does answer = 'Computer Science'?);
-    id3(Does answer = 'Computer Science'?) -->|Yes|id4(Output 'Of course it is!');
-    id3(Does answer = 'Computer Science'?) -->|No|id5(Output 'Try Again!');
-    id5(Output 'Try Again!') --> id2(Input: 'Which is the best subject?');
-    id4(Output 'Of course it is!') --> id6[Stop]
-```
 ![1.3.1 - Example Algorithm Flowchart](./images/algorithm-flowchart-example.png)[^2]
 
 In this funny example, the algorithm asks for the user's favorite subject. If
