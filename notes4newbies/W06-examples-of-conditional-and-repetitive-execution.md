@@ -9,6 +9,10 @@ Please see the LICENSE file for more details.
 ## A Lot of Conditional Examples
 
 ### Equality Check of Two Numbers
+<details>
+    <summary>Equality Check of Two Numbers</summary>
+
+</details>
 
 This is a pretty basic and easy program. It should receive 2 numbers as input,
 check whether they are equal to each other.
