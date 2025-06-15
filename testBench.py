@@ -1,9 +1,25 @@
-age = eval(input("Please enter your age: "))
+coordinate = eval(input())
 
-if isinstance(age, (int, float)):
-    if age >= 18:
-        print(f"You are {age} years old. You're a legal adult.")
-    else:
-        print(f"You are {age} years old. You're not a legal adult.")
+if (coordinate[0] == 0 or
+    coordinate[1] == 0):
+
+    if coordinate[0] == 0 and coordinate[1] > 0:
+        print(f"{coordinate} is between quadrant I and II.")
+    elif coordinate[0] == 0 and coordinate[1] < 0:
+        print(f"{coordinate} is between quadrant III and IV.")
+    elif coordinate[0] > 0 and coordinate[1] == 0:
+        print(f"{coordinate} is between quadrant I and IV.")
+    elif coordinate[0] < 0 and coordinate[1] == 0:
+        print(f"{coordinate} is between quadrant II and III.")
+    elif coordinate[0] == 0 and coordinate[1] == 0:
+        print(f"{coordinate} is the origin")
+
 else:
-    print(f"You've entered {age} as your age. Please enter a valid number.")
+    if coordinate[0] > 0 and coordinate[1] > 0:
+        print(f"{coordinate} is in quadrant I.")
+    elif coordinate[0] < 0 and coordinate[1] > 0:
+        print(f"{coordinate} is in quadrant II.")
+    elif coordinate[0] < 0 and coordinate[1] < 0:
+        print(f"{coordinate} is in quadrant III.")
+    elif coordinate[0] > 0 and coordinate[1] < 0:
+        print(f"{coordinate} is in quadrant IV.")

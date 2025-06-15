@@ -4,7 +4,8 @@ Please see the LICENSE file for more details.
 
 -------------------------------------------------------------------------------
 
-# Examples of Conditional and Repetitive Execution
+<details>
+    <summary>My Examples of Conditional and Repetitive Execution</summary>
 
 ## A Lot of Conditional Examples
 
@@ -159,6 +160,94 @@ provides a valid age. It would be a good exercise.
 
 ### Coordinate Quadrant Identification
 
+In this program, the user will provide us a tuple of numbers, and we will
+return in which quadrant of a Cartesian coordinate system it should be located.
+
+Regulations:
+- You should print with the following format:
+```markdown
+{point} is located in quadrant I.
+{point} is located in quadrant II.
+{point} is located in quadrant III.
+{point} is located in quadrant IV.
+```
+- If the user provides a point which lies on one of the axes, then the program
+should decide which two quadrants its in between and print with the following
+format:
+```markdown
+{point} is located between quadrant I and IV.
+{point} is located between quadrant I and II.
+{point} is located between quadrant II and III.
+{point} is located between quadrant III and IV.
+```
+- You can assume the user will provide the coordinate in the correct format
+using tuples.
+
+Hint:
+- You can use `eval(input())` to get input from the user.
+- You can check individual coordinates by using their index. For example,
+```python
+# If the tuple is given as
+eg_tuple = (1, 1)
+# You can access the first item with
+eg_tuple[0]
+```
+- I highly recommend you to check the example I/O section.
+
+<details>
+    <summary>Example I/O</summary>
+
+Input:
+(10, 24)
+Output:
+(10, 24) is in quadrant I.
+
+Input:
+(0, 0)
+Output:
+(0, 0) is the origin.
+
+Input:
+(0, 1)
+Output:
+(0, 1) is between quadrants I and II.
+</details>
+
+
+<details>
+    <summary>Solution</summary>
+
+```python
+coordinate = eval(input("Please enter a valid coordinate: "))
+
+if (coordinate[0] == 0 or
+    coordinate[1] == 0):
+
+    if coordinate[0] == 0 and coordinate[1] > 0:
+        print(f"{coordinate} is between quadrant I and II.")
+    elif coordinate[0] == 0 and coordinate[1] < 0:
+        print(f"{coordinate} is between quadrant III and IV.")
+    elif coordinate[0] > 0 and coordinate[1] == 0:
+        print(f"{coordinate} is between quadrant I and IV.")
+    elif coordinate[0] < 0 and coordinate[1] == 0:
+        print(f"{coordinate} is between quadrant II and III.")
+    elif coordinate[0] == 0 and coordinate[1] == 0:
+        print(f"{coordinate} is the origin")
+
+else:
+    if coordinate[0] > 0 and coordinate[1] > 0:
+        print(f"{coordinate} is in quadrant I.")
+    elif coordinate[0] < 0 and coordinate[1] > 0:
+        print(f"{coordinate} is in quadrant II.")
+    elif coordinate[0] < 0 and coordinate[1] < 0:
+        print(f"{coordinate} is in quadrant III.")
+    elif coordinate[0] > 0 and coordinate[1] < 0:
+        print(f"{coordinate} is in quadrant IV.")
+```
+
+</details>
+
+
 ### Character Type Classification
 
 -------------------------------------------------------------------------------
@@ -191,7 +280,9 @@ provides a valid age. It would be a good exercise.
 
 ### Simple Password Validation
 
--------------------------------------------------------------------------------
+
+</details
+
 
 All example questions are taken from
 [W3Resource.com](https://www.w3resource.com/c-programming-exercise).
