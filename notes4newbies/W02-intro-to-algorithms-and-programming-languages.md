@@ -134,22 +134,6 @@ Let's write the third algorithm in something called 'pseudocode'.
 <details>
     <summary>A Flowchart Representation of That Algorithm</summary>
 
-```mermaid
----
-title: Finding a Person in a Phonebook Flowchart
----
-flowchart TB;
-    id1[Start] --> id2(Pick up phonebook);
-    id2(Pick up phonebook) --> id3(Open the middle of book);
-    id3(Open the middle of book) --> id4(Look at page);
-    id4(Look at page) --> id5{{Is person on the page?}};
-    id5{{Is this person on the page?}} -->|Yes|id7(Call person);
-    id5{{Is this person on the page?}} -->|No|id8{{Is the person on left or right half}};
-    id8{{Is the person on left or right half}} -->|Left|id9(Open to middle of left of book);
-    id8{{Is the person on left or right half}} -->|Right|id10(Open to middle of right of book);
-    id9(Open to middle of left of book) --> id4(Look at page);
-    id10(Open to middle of right of book) --> id4(Look at page);
-```
 
 ![Finding a Person in a Phonebook Flowchart](./images/phonebook-algorithm-flowchart.png)
 </details>
@@ -210,6 +194,18 @@ for different operations, for example.
 <details>
     <summary>Flowchart Example</summary>
 
+```mermaid
+---
+title: Finding a Person in a Phonebook Flowchart
+---
+flowchart TB;
+    id1[Start] --> id2(Input: 'Which is the best subject?');
+    id2(Input: 'Which is the best subject?') --> id3(Does answer = 'Computer Science'?);
+    id3(Does answer = 'Computer Science'?) -->|Yes|id4(Output 'Of course it is!');
+    id3(Does answer = 'Computer Science'?) -->|No|id5(Output 'Try Again!');
+    id5(Output 'Try Again!') --> id2(Input: 'Which is the best subject?');
+    id4(Output 'Of course it is!') --> id6[Stop]
+```
 ![1.3.1 - Example Algorithm Flowchart](./images/algorithm-flowchart-example.png)[^2]
 
 In this funny example, the algorithm asks for the user's favorite subject. If
