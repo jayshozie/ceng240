@@ -385,7 +385,6 @@ digits = [chr(i) for i in range(ord('0'), ord('9') + 1)]
 
 input_char = str(input("Please enter a character: "))
 
-
 if input_char in alphabeticals:
     print(f"{input_char} is an alphabetical character.")
 elif input_char in digits:
@@ -393,7 +392,9 @@ elif input_char in digits:
 else:
     print(f"{input_char} is a special character.")
 ```
-
+This is a way cleaner solution, but it requires a lot the `ord()` function and
+list comprehension is a bit complex relative to just writing out all the
+characters we need.
 </details>
 
 -------------------------------------------------------------------------------
