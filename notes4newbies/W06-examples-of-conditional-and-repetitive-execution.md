@@ -281,7 +281,7 @@ else:
 ### Simple Password Validation
 
 
-</details
+</details>
 
 
 All example questions are taken from
