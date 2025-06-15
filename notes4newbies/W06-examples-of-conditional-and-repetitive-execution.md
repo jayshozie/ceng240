@@ -6,43 +6,37 @@ Please see the LICENSE file for more details.
 
 # Examples of Conditional and Repetitive Execution
 
+## A Lot of For Loop Examples
 
+### Print First 10 Natural Numbers
 
+### Sum of First 10 Natural Numbers
 
+### Display n Terms of Natural Numbers and Their Sum
 
-<details>
-    <summary>A Lot of For Loop Examples</summary>
+### Sum and Average of 10 Numbers as Input
 
-- Print First 10 Natural Numbers
+### Display Cubes of Numbers Up to an Integer
 
-- Sum of First 10 Natural Numbers
+### Factorial Calculation
 
-- Display n Terms of Natural Numbers and Their Sum
+-------------------------------------------------------------------------------
 
-- Sum and Average of 10 Numbers as Input
+## A Lot of While Loop Examples
 
-- Display Cubes of Numbers Up to an Integer
+### Print Numbers Using a While Loop
 
-- Factorial Calculation
+### Sum of Positive Integers Until 0
 
-</details>
+### Sum Until Negative Number
 
-Here is the syntax of a `while` loop:
+### Random Number Guessing Game
 
-<details>
-    <summary>A Lot of While Loop Examples</summary>
+### Simple Password Validation
 
-- Print Numbers Using a While Loop
-
-- Sum of Positive Integers Until 0
-
-- Sum Until Negative Number
-
-- Random Number Guessing Game
-
-- Simple Password Validation
-
-</details>
+-------------------------------------------------------------------------------
 
 All example questions are taken from
 [W3Resource.com](https://www.w3resource.com/c-programming-exercises/for-loop/index.php).
+Some of them are changed a little bit, because I felt like they would be better
+examples of the real world coding practices.
