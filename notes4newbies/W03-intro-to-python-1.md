@@ -1410,12 +1410,18 @@ check whether you did everything right with 5 lines of code, but what if it was
 50, or 500, or maybe even 5000 lines of code. Then we'll run into a problem.
 You will definitely miss something, and it'll become incredibly hard to debug.
 
-Here is the syntax of a `for` loop:
+1. The `for` Loop:
+
+`for` loops are mostly used in iterations where you know how long the entire
+iteration will take. For example, in our first example, we know that it should
+happen 5 times. It's better to use a `for` loop in that case, since we know it
+ahead of time. Here is the official syntax of `for` loop:
 ```markdown
 for_stmt ::= "for" target_list "in" starred_list ":" suite
              ["else" ":" suite]
 ```
 [The for Statement](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement)
+
 I know it looks complicated, but it actually isn't. What it says is, you put
 the keyword `for` first, then a `target_list`, and a `starred_list`. A
 `target_list` list is any iterable variable, mostly integers, it's `i` in our
@@ -1424,12 +1430,19 @@ object, such as ranges, lists, etc. An iterable object is any Python object
 capable of returning its members one at a time, permitting it to be iterated
 over a loop. Lists are a perfect candidate for this type of operation.
 
-Here is the syntax of a `while` loop:
+2. The `while` Loop:
+
+`while` loops are used when you don't know how many iterations it'll take, but
+they can be used interchangeably. For example, if you want to check if the user
+provided the correct password, you don't know how many times they will enter
+the wrong password, so it's best to use a `while` loop in that case. Here is
+the offical syntax of `while` loop:
 ```markdown
 while_stmt ::= "while" assignment_expression ":" suite
                ["else" ":" suite]
 ```
 [The while Statement](https://docs.python.org/3/reference/compound_stmts.html#the-while-statement)
+
 Again, I know it looks complicated, but it really isn't. It just says that, you
 need to put the keyword `while`, then you put an `assignment_expression`,
 meaning that you state something, such as `i < 6`, and want that block of code
@@ -1445,6 +1458,7 @@ while i < 6:
     # There are other example like `i -= 1` or `i *= 2`, they're pretty
     # intuitive, but we will get to them later anyway.
 ```
+
 
 ###     TODO : ADD EXPLANATION HERE
 
