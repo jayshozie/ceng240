@@ -6,8 +6,6 @@ Please see the LICENSE file for more details.
 
 # Examples of Conditional and Repetitive Execution
 
--------------------------------------------------------------------------------
-
 ## A Lot of Conditional Examples
 
 ### Equality Check of Two Numbers
