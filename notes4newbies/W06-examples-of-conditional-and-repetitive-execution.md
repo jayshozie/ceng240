@@ -197,6 +197,7 @@ eg_tuple[0]
 <details>
     <summary>Example I/O</summary>
 
+```markdown
 Input:
 (10, 24)
 Output:
@@ -211,6 +212,7 @@ Input:
 (0, 1)
 Output:
 (0, 1) is between quadrants I and II.
+```
 </details>
 
 
