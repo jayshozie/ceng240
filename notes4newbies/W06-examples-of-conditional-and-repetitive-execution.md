@@ -45,6 +45,47 @@ else:
 
 ### Even or Odd Check
 
+In this program, we are expected to receive a numerical input (it can be an
+int, or float number), check it's even or odd, and provide that information
+with the user.
+
+Regulations:
+- If the given nummber is even, the program should print:
+```markdown
+{num} is even.
+```
+- If the given nummber is odd, the program should print:
+```markdown
+{num} is odd.
+```
+- If the given nummber is neither even nor odd, the program should print:
+```markdown
+{num} is neither even nor odd.
+```
+
+Hints:
+- You can use the function `eval(input())` to get input from the user.
+- You should NOT assume the user will provide an integer. You should check that
+if the given value is a whole number.
+- You can assume the user will NOT enter a complex number, so no need to error
+handle that.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+num = eval(input("Please enter a numerical value: "))
+
+if num % 2 == 0:
+    print("{num} is even.")
+elif num % 2 == 1:
+    print("{num} is odd.")
+else:
+    print("{num} is neither even nor odd.")
+```
+</details>
+
+
 ### Voting Eligibility
 
 ### Coordinate Quadrant Identification
