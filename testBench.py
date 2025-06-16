@@ -1,6 +1,12 @@
+upper_limit = eval(input("Please enter an upper limit: "))
+num_list = []
 total = 0
-for i in range(11):
-    total += i
-    print(f"DEBUG: i = {i} | total = {total}")
 
-print(f"LAST STATE: i = {i} | total = {total}")
+if upper_limit > 0:
+    for i in range(upper_limit):
+        num_list.append(i+1)
+        
+total = sum(num_list)
+
+print(f"Numbers : {num_list}")
+print(f"Total : {total}")

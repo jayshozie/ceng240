@@ -435,7 +435,7 @@ Regulations;
 
 Hints:
 - `range(10)` gives you a range from `0` to `9`.
-- You ccan use `print()` function to print your result.
+- You can use `print()` function to print your result.
 
 <details>
     <summary>Solution</summary>
@@ -449,7 +449,44 @@ print(total)
 ```
 </details>
 
-### Display n Terms of Natural Numbers and Their Sum
+### Display n Terms of Positive Natural Numbers and Their Sum
+
+In this program, we're going to take a positive natural number from the user as
+input, then we will print all positive natural numbers until the input. We will
+also calculate their sum and print that too.
+
+Regulations:
+- Your program should print in the following format. Let's say the user
+provided 10 as input.
+```markdown
+Numbers : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Total : 55
+```
+
+Hints:
+- You can use the `range()` function with a variable.
+- You can use `print(f"")` to print your result with the given format. Remember
+f-strings.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+upper_limit = eval(input("Please enter an upper limit: "))
+num_list = []
+total = 0
+
+if upper_limit > 0:
+    for i in range(upper_limit):
+        num_list.append(i+1)
+        
+total = sum(num_list)
+
+print(f"Numbers : {num_list}")
+print(f"Total : {total}")
+```
+</details>
+
 
 ### Sum and Average of 10 Numbers as Input
 
