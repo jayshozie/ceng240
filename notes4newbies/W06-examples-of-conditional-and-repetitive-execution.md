@@ -795,11 +795,154 @@ the program will give out an error. We can fix this after
 <details>
     <summary>Optional Regulation Solution</summary>
 
+```python
+grades = []
+average = 0
+mode = 0
+
+print("|-----------------------------------------|\n",
+      "|            Grade Calculator             |\n",
+      "|-----------------------------------------|\n",
+      "|Mode 0: Exclude highest and lowest grades|\n",
+      "|Mode 1: Exclude highest grade            |\n",
+      "|Mode 2: Exclude lowest grade             |\n",
+      "|Mode 3: Include all grades               |\n",
+      "|Default : Mode 0                         |\n",
+      "|-----------------------------------------|", sep='')
+
+mode = input("Please pick a mode : ")
+try:  # is mode numerical
+    mode = int(mode)
+except ValueError:
+    print(f"You've entered '{mode}' as mode. Invalid, calculating with mode 0.")
+    mode = 0  # default mode 0
+
+while True:
+    new_grade = input("Please enter the next grade : ")
+    if not isinstance(new_grade, (int, float)):  # if not numerical
+        try:
+            new_grade = float(new_grade)  # is numerical?
+        except ValueError:
+            print(f"You've entered '{new_grade}' as grade. Invalid, continuing.")
+            new_grade = None
+            # continue with loop
+            continue
+
+    if new_grade < 0.0:
+        break
+
+    if new_grade is not None:  # don't append 0, will get deleted as lowest
+        grades.append(new_grade)
+
+grades.sort()  # sort for easier pop
+if len(grades) >= 3:  # we need to pop
+    if mode == 0:
+        grades.pop(-1)  # Delete last element
+        grades.pop(0)  # Delete first element
+    elif mode == 1:
+        grades.pop(-1)
+    elif mode == 2:
+        grades.pop(0)
+    elif mode == 3:
+        pass
+    average = sum(grades) / len(grades)
+
+elif len(grades) == 2:  # doesn't make sense to get rid of other values
+    average = sum(grades) / len(grades)
+else:  # what other value
+    average = int(grades[0])
+
+print(f"Grades : {grades}")
+print(f"Average : {average:.2f}%")
+```
+There are a lot of stuff that you haven't learned in this kinda-advanced
+solution. If you don't understand something, don't worry we'll cover all of
+them eventually.
+</details>
+</details>
+
+### Random Number Guesser Game
+
+In this program, you're expected to create a game. In this game computer will
+pick a random integer between 1 and 10. The user will try to guess it at every
+iteration. Break if they guessed correctly.
+
+Regulations:
+- Your program should print: `Wrong guess! Try again.`, if the user doesn't
+guess correctly, and print: `Correct!`, if the user guesses correctly, and end
+the program.
+- OPTIONAL (Easy): You can handle error cases, such as user entering a
+non-numerical value.
+
+Hints:
+- You can use the `random` standard library.
+- You can use `randint(1, 10)` for picking a random value between 1 and 10.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+import random
+
+num = random.randint(1, 10)
+
+print(
+"|--------------------------------------|\n",
+"|------------Guess My Number-----------|\n",
+"|--------------------------------------|\n",
+"| I have picked a number between 0 and |\n",
+"| 10. Take a guess.                    |\n",
+"|--------------------------------------|\n",
+sep='')
+
+while True:
+    guess = int(input("My Guess: "))
+
+    if guess == num:
+        print("Correct!")
+        break
+    else:
+        print("Wrong guess! Try again.")
+        continue
+```
+This solution will give ValueError if the user inputs anything other than an
+integer.
+
+<details>
+    <summary>Optional Regulation Solution</summary>
+
+```python
+import random
+
+num = random.randint(1, 10)
+
+print(
+"|--------------------------------------|\n",
+"|------------Guess My Number-----------|\n",
+"|--------------------------------------|\n",
+"| I have picked a number between 0 and |\n",
+"| 10. Take a guess.                    |\n",
+"|--------------------------------------|\n",
+sep='')
+
+while True:
+    guess = input("My Guess: ")
+    try:
+        guess = int(guess)
+    except ValueError:
+        print(f"You've entered a non-int value ({guess}). Please try again.")
+        continue
+
+    if guess == num:
+        print("Correct!")
+        break
+    else:
+        print("Wrong guess! Try again.")
+        continue
+```
 </details>
 
 </details>
-
-### Random Number Guessing Game
 
 ### Simple Password Validation
 
