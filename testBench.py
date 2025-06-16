@@ -1,13 +1,12 @@
-upper_bound = eval(input("Please enter an upper bound: "))
-num_list = []
+num = eval(input("Factorial of (must be an integer)? : "))
 counter = 1
+output = 1
 
-for i in range(upper_bound):
-    if counter**3 > upper_bound:
-        break
+if num == 0:
+    print(f"0! = 1")
+else:
+    for i in range(num):
+        output *= counter
+        counter += 1
 
-    num_list.append(counter**3)
-    counter += 1
-
-print(f"Upper Bound : {upper_bound}")
-print(f"Numbers : {num_list}")
+    print(f"{num}! = {output}")

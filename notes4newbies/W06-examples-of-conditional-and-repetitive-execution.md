@@ -608,10 +608,43 @@ counter variable, even if it's in a for loop and not a while loop, is good
 practice in some use cases.
 </details>
 
-
-
-
 ### Factorial Calculation
+
+In this example, the user will give us a number, and we will calculate the
+factorial of that number.
+
+Regulations:
+- You should print your result in the following format: (number 5 as input)
+```text
+5! = 125
+```
+- You should calculate the factorial of the given number using a for loop.
+
+Hints:
+- You can use a counter variable, just like the previous example.
+- You can print out your result using `print(f"")`, remember f-strings.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+num = eval(input("Factorial of (must be an integer)? : "))
+counter = 1  # you can start the counter from 2
+output = 1
+
+if num == 0:
+    print(f"0! = 1")
+    # since we can't calculate it with multiplication
+    # because it's a definition, not a calculation
+else:
+    for i in range(num):
+        output *= counter
+        counter += 1
+
+    print(f"{num}! = {output}")
+```
+
+</details>
 
 -------------------------------------------------------------------------------
 
