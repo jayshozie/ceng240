@@ -891,7 +891,7 @@ print(
 "|--------------------------------------|\n",
 "|------------Guess My Number-----------|\n",
 "|--------------------------------------|\n",
-"| I have picked a number between 0 and |\n",
+"| I have picked a number between 1 and |\n",
 "| 10. Take a guess.                    |\n",
 "|--------------------------------------|\n",
 sep='')
@@ -921,7 +921,7 @@ print(
 "|--------------------------------------|\n",
 "|------------Guess My Number-----------|\n",
 "|--------------------------------------|\n",
-"| I have picked a number between 0 and |\n",
+"| I have picked a number between 1 and |\n",
 "| 10. Take a guess.                    |\n",
 "|--------------------------------------|\n",
 sep='')
