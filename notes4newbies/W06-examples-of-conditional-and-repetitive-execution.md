@@ -549,13 +549,12 @@ Solution w/ a for Loop:
 input_list = eval(input("Please enter 10 numbers, separated by commas (,): "))
 sum = 0
 for i in range(len(input_list)):
-    sum += num_list[i]
+    sum += input_list[i]
 mean = sum / 10
 
 print(f"Sum : {sum}")
 print(f"Average (mean) : {mean}")
 ```
-
 </details>
 
 ### Display Cubes of Numbers Up to an Integer
