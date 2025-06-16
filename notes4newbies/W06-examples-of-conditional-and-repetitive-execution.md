@@ -599,6 +599,13 @@ and why did we use the keyword `break`. Basically, at every iteration, it
 checks whether we're over our upper bound. If we're not, then no problem.
 Continue with the rest of the code. If we are, however, then it "breaks" out of
 the loop and does whatever is next after the loop.
+
+Why did I use a variable named `counter`?
+
+Because, first of all we need a way to acquire integers up until our upper
+bound. We also need to stop when we've overshot the upper bound. Using a
+counter variable, even if it's in a for loop and not a while loop, is good
+practice in some use cases.
 </details>
 
 
