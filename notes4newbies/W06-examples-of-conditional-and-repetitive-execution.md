@@ -629,7 +629,8 @@ Hints:
 
 ```python
 num = eval(input("Factorial of (must be an integer)? : "))
-counter = 1  # you can start the counter from 2
+counter = 1
+# you can start the counter from 2 but you need to add num=1 separately
 output = 1
 
 if num == 0:
