@@ -82,7 +82,7 @@ else:
 
 # Repetitive Execution
 
-For more info visit [week 3's markdown](./W03-intro-to-python-1.md#The_`for`_Statement).
+For more info visit [week 3's markdown](./W03-intro-to-python-1.md#the-for-statement).
 
 ###     TODO : DON'T FORGET NESTED STUFF
 
