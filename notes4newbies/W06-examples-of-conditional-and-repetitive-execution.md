@@ -403,6 +403,28 @@ characters we need.
 
 ### Print First 10 Natural Numbers
 
+Inn this program, we're expected to print out the first 10 natural numbers
+without writing them explicitly. Since we're learning about for loops and not
+while loops we're expected to use for loops.
+
+Regulations:
+- Your program should only print the natural numbers without explicitly
+declaring what numbers you're printing in anywhere in your program.
+
+Hints:
+- `range(10)` gives you a range from `0` to `9`.
+- You can use `print()` function to print out the numbers.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+for i in range(10):
+    print(i+1)
+```
+    
+</details>
+
 ### Sum of First 10 Natural Numbers
 
 ### Display n Terms of Natural Numbers and Their Sum
