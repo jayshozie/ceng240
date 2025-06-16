@@ -947,10 +947,125 @@ while True:
 
 ### Simple Password Validation
 
-</details>
+This exercise is not much different from others. You're expected to write a
+program that loops indefinitely until the user provides the correct password.
 
+Regulations:
+- OPTIONAL (Intermediate) : Allow the user to set their own password.
+- OPTIONAL (Easy) : Instead of getting the password with `input()`, you can use
+`getpass.getpass()` from the `getpass` library.
+
+Hints:
+- You don't need to encode the passwords, that's a completely different and
+really hard subject. You can just store the password (string literal) in a
+variable.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+password = "some-string-literal"
+
+while True:
+    input_password = input("Please enter your password: ")
+    if input_password == password:
+        print("Correct.")
+        break
+    else:
+        print("Incorrect password, please try again")
+        continue
+```
+This works, but everyone can see what the user enters as password. Not safe.
+
+<details>
+    <summary>Optional Regulation Solution</summary>
+
+```python
+from getpass import getpass
+
+password = None
+mode = None
+
+print(
+"|-------------------------------------------|\n",
+"|       Completely-Secure-Interface         |\n",
+"|-------------------------------------------|\n",
+"| Enter Mode : 1                            |\n",
+"| Set Mode   : 0                            |\n",
+"|-------------------------------------------|\n",
+sep='')
+
+while True:
+    if password is None:
+        print(
+            "|-------------------------------------------|\n",
+            "| Set a password to use this interface.     |\n",
+            "|-------------------------------------------|",
+        sep='')
+        mode = 0
+    else:
+        print(
+            "|-------------------------------------------|\n",
+            "| Enter/Set :                               |\n",
+            "|-------------------------------------------|",
+        sep='')
+        mode = input()
+
+    try:
+        mode = int(mode)
+    except ValueError:
+        print(
+            f"|-------------------------------------------|\n",
+            f"| You've entered an invalid input           |\n",
+            f"| ('{mode}'), please try again.             |\n",
+            f"|-------------------------------------------|",
+        sep='')
+        continue
+
+    if mode == 1 and password is not None:
+        print(
+            "|-------------------------------------------|\n",
+            "| Please enter your password:               |\n",
+            "|-------------------------------------------|",
+        sep='')
+        pwd_try = getpass(" ")
+        if pwd_try == password:
+            print(
+                "|-------------------------------------------|\n",
+                "| Password is correct.                      |\n",
+                "|-------------------------------------------|",
+            sep='')
+            break
+        else:
+            print(
+                "|-------------------------------------------|\n",
+                "| Incorrect password, please try again.     |\n",
+                "|-------------------------------------------|",
+            sep='')
+            continue
+    elif mode == 0:
+        print(
+            "|-------------------------------------------|\n",
+            "| Please enter your new password:           |\n",
+            "|-------------------------------------------|",
+        sep='')
+        password = getpass(" ")
+        continue
+```
+Eh, as pretty as it gets in a CLI. This is safer on the user side, but it's
+still not safe. Don't forget, we're still storing the password as a string
+literal, without encoding.
+</details>
+</details>
 
 All example questions are taken from
 [W3Resource.com](https://www.w3resource.com/c-programming-exercise).
 Some of them are changed a little bit, because I felt like they would be better
 examples of the real world coding practices.
+</details>
+
+<details>
+    <summary>Examples from the Slides</summary>
+
+
+</details>

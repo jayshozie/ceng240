@@ -1,29 +1,70 @@
-import random
+from getpass import getpass
 
-num = random.randint(1, 10)
+password = None
+mode = None
 
 print(
-"|--------------------------------------|\n",
-"|------------Guess My Number-----------|\n",
-"|--------------------------------------|\n",
-"| I have picked a number between 0 and |\n",
-"| 10. Take a guess.                    |\n",
-"|--------------------------------------|\n",
+"|-------------------------------------------|\n",
+"|       Completely-Secure-Interface         |\n",
+"|-------------------------------------------|\n",
+"| Enter Mode : 1                            |\n",
+"| Set Mode   : 0                            |\n",
+"|-------------------------------------------|\n",
 sep='')
 
-print(f"DEBUG : num = {num}")
-
 while True:
-    guess = input("My Guess: ")
+    if password is None:
+        print(
+            "|-------------------------------------------|\n",
+            "| Set a password to use this interface.     |\n",
+            "|-------------------------------------------|",
+        sep='')
+        mode = 0
+    else:
+        print(
+            "|-------------------------------------------|\n",
+            "| Enter/Set :                               |\n",
+            "|-------------------------------------------|",
+        sep='')
+        mode = input()
+
     try:
-        guess = int(guess)
+        mode = int(mode)
     except ValueError:
-        print(f"You've entered a non-int value ({guess}). Please try again.")
+        print(
+            f"|-------------------------------------------|\n",
+            f"| You've entered an invalid input           |\n",
+            f"| ('{mode}'), please try again.             |\n",
+            f"|-------------------------------------------|",
+        sep='')
         continue
 
-    if guess == num:
-        print("Correct!")
-        break
-    else:
-        print("Wrong guess! Try again.")
+    if mode == 1 and password is not None:
+        print(
+            "|-------------------------------------------|\n",
+            "| Please enter your password:               |\n",
+            "|-------------------------------------------|",
+        sep='')
+        pwd_try = getpass(" ")
+        if pwd_try == password:
+            print(
+                "|-------------------------------------------|\n",
+                "| Password is correct.                      |\n",
+                "|-------------------------------------------|",
+            sep='')
+            break
+        else:
+            print(
+                "|-------------------------------------------|\n",
+                "| Incorrect password, please try again.     |\n",
+                "|-------------------------------------------|",
+            sep='')
+            continue
+    elif mode == 0:
+        print(
+            "|-------------------------------------------|\n",
+            "| Please enter your new password:           |\n",
+            "|-------------------------------------------|",
+        sep='')
+        password = getpass(" ")
         continue
