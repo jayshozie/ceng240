@@ -690,19 +690,18 @@ while i < num:
 Usually, this would be the standard practice.
 </details>
 
-### Sum of Numbers Until 0
+### Sum of Positive Integers Until 0
 
-In this exercise, you will get input from the user and add them up until the
-total hits 0. The user can give positive numbers as much as they want, but if
-that total hits 0.
+In this exercise, you are expected to write a program that adds up the given
+numbers until the user enters 0.
 
 Regulations:
 - You should print out the total at every iteration.
 - Your program should end like this:
 ```text
-Total : 10
--- user enters -10
-Total : 0
+Total : 27
+-- user enters 0
+Total : 27
 Done.
 ```
 
@@ -710,8 +709,7 @@ Hints:
 - You can use `eval(input())` to get input from the user.
 - You don't need to keep track of the total iteration count, but you should
 keep track of the total.
-- You can use a `while True:` loop and `break` when the total hits 0, or you
-can loop until total hits 0.
+- It would be best to use a `while True:` loop.
 
 <details>
     <summary>Solution</summary>
@@ -728,20 +726,15 @@ while True:
     else:
         continue
 
-    if total == 0:
+    if num <= 0:
         print(f"Total : {total}")
         print(f"Done.")
         break
-    else:
-        continue
 ```
-If it works, it works. There are some problems with this code, since if you
-just hit enter without writing anything Python interpreter cannot evaluate that
-so it gives out an error. You can fix this by converting the num to int or
-float, but it's not that necessary in this context.
+
 </details>
 
-### Sum Until Negative Number
+###     TODO : ADD A NEW EXERCISE
 
 ### Random Number Guessing Game
 

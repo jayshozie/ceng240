@@ -9,9 +9,7 @@ while True:
     else:
         continue
 
-    if total == 0:
+    if num <= 0:
         print(f"Total : {total}")
         print(f"Done.")
         break
-    else:
-        continue
