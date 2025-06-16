@@ -4,8 +4,10 @@
 
 # Solution
 
-with open("sample_text.txt", 'r') as input_file, \
-     open("processed_output.txt", 'w') as output_file:
+with (
+    open("sample_text.txt", 'r') as input_file,
+    open("processed_output.txt", 'w') as output_file,
+):
 
     for line in input_file:
         processed_line = line.upper()
