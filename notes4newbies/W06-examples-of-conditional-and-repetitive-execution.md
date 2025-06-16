@@ -951,9 +951,9 @@ This exercise is not much different from others. You're expected to write a
 program that loops indefinitely until the user provides the correct password.
 
 Regulations:
-- OPTIONAL (Intermediate) : Allow the user to set their own password.
 - OPTIONAL (Easy) : Instead of getting the password with `input()`, you can use
 `getpass.getpass()` from the `getpass` library.
+- OPTIONAL (Intermediate) : Allow the user to set their own password.
 
 Hints:
 - You don't need to encode the passwords, that's a completely different and
