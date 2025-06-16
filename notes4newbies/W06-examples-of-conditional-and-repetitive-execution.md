@@ -420,7 +420,7 @@ Hints:
 
 ```python
 for i in range(10):
-    print(i+1)
+    print(i+1)  # we don't want to print 0
 ```
 </details>
 
@@ -442,9 +442,11 @@ Hints:
 
 ```python
 total = 0
-for i in range(10):
+for i in range(11):
+    total += i
     print(f"DEBUG: i = {i} | total = {total}")
-    total += i+1
+
+print(f"LAST STATE: i = {i} | total = {total}")
 ```
 
 </details>
