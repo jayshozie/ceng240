@@ -21,34 +21,7 @@ condition is true.
 - Conditional EXPRESSION is an expression that evaluates to a value based on a
 condition.
 
-## Conditional Execution
-
-Conditional execution is a statement that executes a block of code if a
-condition is true. It is often used to control the flow of a program based on
-the evaluation of a condition. The most common form of conditional execution is
-the `if` statement, which allows you to execute a block of code if a specified
-condition is true. If the condition is false, the block of code is skipped.
-```python
-if condition:
-    <some_code>
-elif another_condition:
-    <some_other_code>
-else:
-    <some_another_code>
-```
-
-### Example
-```python
-age = 20
-if age < 18:
-    print("You are a minor.")
-elif age < 65:
-    print("You are an adult.")
-else:
-    print("You are a senior citizen.")
-```
-
-## Conditional Expression
+## Conditional Expressions
 
 Conditional expression is an expression that evaluates to a value based on a
 condition. It is often used to assign a value to a variable based on the
@@ -73,8 +46,35 @@ status = "minor" if age < 18 else "adult"
 print(status)  # Output: adult
 ```
 
+## Nested Conditional Execution
 
-###     TODO : DON'T FORGET NESTED STUFF
+Nested conditional execution is when you have a conditional statement inside
+another conditional statement. This allows you to check multiple conditions
+and execute different blocks of code based on the evaluation of those conditions.
+```python
+if <condition1>:
+    # Block of code if condition1 is true
+    if <condition2>:
+        # Block of code if condition1 AND condition2 is true
+    else:
+        # Block of code if condition1s true AND condition2 is false
+else:
+    # Block of code if condition1 is false
+```
+
+### Example
+```python
+age = 20
+if age < 18:
+    print("You are a minor.")
+else:
+    if age < 65:
+        print("You are an adult.")
+    else:
+        print("You are a senior citizen.")
+
+# Output: You are an adult.
+```
 
 -------------------------------------------------------------------------------
 
