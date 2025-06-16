@@ -653,6 +653,43 @@ else:
 
 ### Print Numbers Using a While Loop
 
+In this exercise, you're expected to print a given amount of numbers. You
+should take input from the user, and print positive natural numbers up until
+the upper bound.
+
+Regulations:
+- You should print every number in another line.
+
+Hints:
+- You can use `eval(input())` to get input from the user.
+- You should create a counter variable.
+
+<details>
+    <summary>Solution</summary>
+        
+```python
+num = eval(input("Please enter an upper bound : "))
+
+i = 1
+while i <= num:
+    print(i)
+    i += 1
+```
+
+For the ease of understanding, I've started my iterator from 1, but you would
+start it from 0 as a standard, because it's mostly easier to understand.
+
+```python
+num = eval(input("Please enter an upper bound : "))
+
+i = 0
+while i < num:
+    print(i+1)
+    i += 1
+```
+Usually, this would be the standard practice.
+</details>
+
 ### Sum of Positive Integers Until 0
 
 ### Sum Until Negative Number

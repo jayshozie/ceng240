@@ -1,12 +1,6 @@
-num = eval(input("Factorial of (must be an integer)? : "))
-counter = 1
-output = 1
+num = eval(input("Please enter an upper bound : "))
 
-if num == 0:
-    print(f"0! = 1")
-else:
-    for i in range(num):
-        output *= counter
-        counter += 1
-
-    print(f"{num}! = {output}")
+i = 0
+while i < num:
+    print(i+1)
+    i += 1
