@@ -485,6 +485,26 @@ total = sum(num_list)
 print(f"Numbers : {num_list}")
 print(f"Total : {total}")
 ```
+
+You can sum the numbers in the `num_list` using a for loop too, but the `sum()`
+function is simpler.
+```python
+upper_limit = eval(input("Please enter an upper limit: "))
+num_list = []
+total = 0
+
+if upper_limit > 0:
+    for i in range(upper_limit):
+        num_list.append(i+1)
+        
+for i in range(len(num_list)):
+    total += num_list[i]
+
+print(f"Numbers : {num_list}")
+print(f"Total : {total}")
+```
+In this case, you need to define a range with its length as the length of the
+`num_list` list.
 </details>
 
 
