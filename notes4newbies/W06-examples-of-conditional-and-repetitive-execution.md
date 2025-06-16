@@ -422,7 +422,6 @@ Hints:
 for i in range(10):
     print(i+1)
 ```
-    
 </details>
 
 ### Sum of First 10 Natural Numbers
