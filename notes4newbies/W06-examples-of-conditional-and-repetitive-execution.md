@@ -458,7 +458,7 @@ also calculate their sum and print that too.
 Regulations:
 - Your program should print in the following format. Let's say the user
 provided 10 as input.
-```markdown
+```text
 Numbers : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 Total : 55
 ```
