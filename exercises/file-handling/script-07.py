@@ -4,8 +4,10 @@
 
 # Solution
 
-with open('products.csv', 'r') as products, \
-     open('category_counts.txt', 'w') as output:
+with (
+    open('products.csv', 'r') as products,
+    open('category_counts.txt', 'w') as output,
+):
 
     categories = {}
     is_header = True
