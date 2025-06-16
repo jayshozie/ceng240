@@ -1274,7 +1274,6 @@ if val >= 0:
 I know it doesn't make much sense, but I couldn't think of another example.
 </details>
 
-
 <details>
     <summary>Some Formatting of Python in Conditional Statements</summary>
 
