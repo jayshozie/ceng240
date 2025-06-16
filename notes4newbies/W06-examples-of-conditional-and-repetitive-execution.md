@@ -509,6 +509,55 @@ In this case, you need to define a range with its length as the length of the
 
 ### Sum and Average of 10 Numbers as Input
 
+In this program, the user will provide us with 10 numbers as input and we will
+calculate their sum and average (mean), and print out our results.
+
+Regulations:
+- You can assume the user will provide the numbers in a list or a tuple. You
+can ask for 10 different inputs too, but that's too much hustle.
+- Average can be a decimal number, if it calculates to that you need to show
+it, you can't use integers for that.
+- You should print out your result in the following format. Let's say the user
+gave the numbers [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```text
+Sum : 55
+Average (mean) : 5.5
+```
+
+Hints:
+- You can use `eval(input())` to get the input from the user as a list or
+tuple.
+- You can use the `sum()` function to calculate the sum of the numbers, or you
+can write a for loop like the previous example.
+
+<details>
+    <summary>Solution</summary>
+
+Solution w/o a for Loop:
+```python
+input_list = eval(input("Please enter 10 numbers, separated by commas (,): "))
+
+sum = sum(input_list)
+mean = sum / 10
+
+print(f"Sum : {sum}")
+print(f"Average (mean) : {mean}")
+```
+
+Solution w/ a for Loop:
+```python
+input_list = eval(input("Please enter 10 numbers, separated by commas (,): "))
+sum = 0
+for i in range(len(input_list)):
+    sum += num_list[i]
+mean = sum / 10
+
+print(f"Sum : {sum}")
+print(f"Average (mean) : {mean}")
+```
+
+</details>
+
 ### Display Cubes of Numbers Up to an Integer
 
 ### Factorial Calculation
