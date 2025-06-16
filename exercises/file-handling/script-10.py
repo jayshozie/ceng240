@@ -6,8 +6,10 @@
 
 summary = {}
 
-with open("product_sales.csv", 'r') as sales, \
-     open("product_summary.txt", 'w') as sales_summary:
+with (
+    open("product_sales.csv", 'r') as sales,
+    open("product_summary.txt", 'w') as sales_summary,
+):
 
     is_header = True
     for line in sales:
