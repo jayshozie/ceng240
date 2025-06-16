@@ -1,8 +1,13 @@
-input_list = eval(input("Please enter 10 numbers, separated by commas (,): "))
-sum = 0
-for i in range(len(input_list)):
-    sum += input_list[i]
-mean = sum / 10
+upper_bound = eval(input("Please enter an upper bound: "))
+num_list = []
+counter = 1
 
-print(f"Sum : {sum}")
-print(f"Average (mean) : {mean}")
+for i in range(upper_bound):
+    if counter**3 > upper_bound:
+        break
+
+    num_list.append(counter**3)
+    counter += 1
+
+print(f"Upper Bound : {upper_bound}")
+print(f"Numbers : {num_list}")

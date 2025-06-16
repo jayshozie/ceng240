@@ -559,6 +559,51 @@ print(f"Average (mean) : {mean}")
 
 ### Display Cubes of Numbers Up to an Integer
 
+In this example, the user will provide us an upper bound. We will print the
+cubes of numbers up until that upper bound. If the given number is a cubed int
+then you can also include that.
+
+Regulations:
+- Print in the following format: (given 27 as input)
+```text
+Upper Bound : 27
+Numbers : [1, 8, 27]
+```
+- Use a for loop to add the cubed numbers to your output list.
+
+Hints:
+- You can cube the numbers using the `pow()` function or `num ** 3`, a.k.a.
+power operator.
+- You can print out your result with `print(f"")`, remember f-strings.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+upper_bound = eval(input("Please enter an upper bound: "))
+num_list = []
+counter = 1
+
+for i in range(upper_bound):
+    if counter**3 > upper_bound:
+        break
+
+    num_list.append(counter**3)
+    counter += 1
+
+print(f"Upper Bound : {upper_bound}")
+print(f"Numbers : {num_list}")
+```
+If you remember conditionals from W05, you should understand why did we check
+and why did we use the keyword `break`. Basically, at every iteration, it
+checks whether we're over our upper bound. If we're not, then no problem.
+Continue with the rest of the code. If we are, however, then it "breaks" out of
+the loop and does whatever is next after the loop.
+</details>
+
+
+
+
 ### Factorial Calculation
 
 -------------------------------------------------------------------------------
