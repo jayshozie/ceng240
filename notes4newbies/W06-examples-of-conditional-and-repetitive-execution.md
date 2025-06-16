@@ -447,7 +447,6 @@ for i in range(11):
 
 print(total)
 ```
-
 </details>
 
 ### Display n Terms of Natural Numbers and Their Sum
