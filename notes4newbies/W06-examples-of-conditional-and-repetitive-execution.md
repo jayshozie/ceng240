@@ -401,7 +401,7 @@ characters we need.
 
 ## A Lot of For Loop Examples
 
-### Print First 10 Natural Numbers
+### Print First 10 Positive Natural Numbers
 
 In this program, we're expected to print out the first 10 natural numbers
 without writing them explicitly. Since we're learning about for loops and not
@@ -424,7 +424,30 @@ for i in range(10):
 ```
 </details>
 
-### Sum of First 10 Natural Numbers
+### Sum of First 10 Positive Natural Numbers
+
+In this program, we're expected to print the sum of first 10 natural numbers
+without calculating it ourself. Again, since we're learning about for loops,
+don't calculate it and just print, use a for loop instead.
+
+Regulations;
+- Your program should only print the total, and nothing else.
+
+Hints:
+- `range(10)` gives you a range from `0` to `9`.
+- You ccan use `print()` function to print your result.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+total = 0
+for i in range(10):
+    print(f"DEBUG: i = {i} | total = {total}")
+    total += i+1
+```
+
+</details>
 
 ### Display n Terms of Natural Numbers and Their Sum
 
