@@ -403,7 +403,7 @@ characters we need.
 
 ### Print First 10 Natural Numbers
 
-Inn this program, we're expected to print out the first 10 natural numbers
+In this program, we're expected to print out the first 10 natural numbers
 without writing them explicitly. Since we're learning about for loops and not
 while loops we're expected to use for loops.
 
