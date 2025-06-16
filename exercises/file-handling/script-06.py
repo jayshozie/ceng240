@@ -4,8 +4,10 @@
 
 # Solution
 
-with open('products.csv', 'r') as products, \
-     open('electronics_summary.txt', 'w') as summary:
+with (
+    open('products.csv', 'r') as products,
+    open('electronics_summary.txt', 'w') as summary,
+):
     total_value = 0
     in_stock_items = []
     for line in products:
