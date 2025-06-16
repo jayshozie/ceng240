@@ -6,8 +6,8 @@ Please see the LICENSE file for more details.
 
 # Note
 
-One of the stupid things about this course, they do explain these stuff in
-week 3. I won't go into much detail, because I did in
+This is one of the stupidest things about this course, they do explain these
+stuff in week 3. I won't go into much detail, because I did in
 [week 3's markdown](./W03-intro-to-python-1.md). You can find example in
 [week 6's markdown](./W06-examples-of-conditional-and-repetitive-execution.md).
 
