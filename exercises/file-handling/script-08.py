@@ -13,8 +13,10 @@ total_revenue = 0.0
 processed_sales_records = []
 
 try:
-    with (open('sales_data.csv', 'r') as data, \
-          open('sales_summary.txt', 'w') as summary):
+    with (
+        open('sales_data.csv', 'r') as data,
+        open('sales_summary.txt', 'w') as summary,
+    ):
 
         is_header = True
 
@@ -71,9 +73,6 @@ try:
                 f"{record['region']} - {record['product']}: "
                 f"{record['units_sold']} units, Revenue: ${record['revenue']:.2f}\n"
             )
-
-
-
 except FileNotFoundError:  # Handling FileNotFoundError error
     print("Warning: sales_data.csv not found. Aborting.")
     sys.exit(1)
