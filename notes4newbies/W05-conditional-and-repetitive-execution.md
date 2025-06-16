@@ -51,7 +51,8 @@ print(status)  # Output: adult
 
 Nested conditional execution is when you have a conditional statement inside
 another conditional statement. This allows you to check multiple conditions
-and execute different blocks of code based on the evaluation of those conditions.
+and execute different blocks of code based on the evaluation of those
+conditions.
 ```python
 if <condition1>:
     # Block of code if condition1 is true
@@ -80,6 +81,8 @@ else:
 -------------------------------------------------------------------------------
 
 # Repetitive Execution
+
+For more info visit [week 3's markdown](./W03-intro-to-python-1.md#The_`for`_Statement).
 
 ###     TODO : DON'T FORGET NESTED STUFF
 
