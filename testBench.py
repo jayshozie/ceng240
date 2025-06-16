@@ -6,8 +6,6 @@ while True:
 
     if isinstance(num, (int,float)):
         total += num
-    else:
-        continue
 
     if num <= 0:
         print(f"Total : {total}")

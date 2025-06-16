@@ -723,14 +723,20 @@ while True:
 
     if isinstance(num, (int,float)):
         total += num
-    else:
-        continue
 
     if num <= 0:
         print(f"Total : {total}")
         print(f"Done.")
         break
 ```
+Line 7 and 8 is just error handling, we'll get to the basics and advanced
+techniques in [week 11's markdown](./W11). The `isinstance()` function checks
+whether the given variable is one of the given types.
+
+###     TODO : FIX HYPERLINK WHEN W11 IS DONE
+
+One good thing about this solution is that it automatically works with floats,
+too. You don't need to change anything.
 </details>
 
 ###     TODO : ADD A NEW EXERCISE
