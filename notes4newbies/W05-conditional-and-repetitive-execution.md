@@ -17,7 +17,8 @@ stuff in week 3. I won't go into much detail, because I did in
 
 The difference between conditional execution and conditional expression is that
 - Conditional EXECUTION is a statement that executes a block of code if a
-condition is true.
+condition is true. You can find the explanation of conditional execution in
+[week 3's markdown](./W03-intro-to-python-1.md).
 - Conditional EXPRESSION is an expression that evaluates to a value based on a
 condition.
 
