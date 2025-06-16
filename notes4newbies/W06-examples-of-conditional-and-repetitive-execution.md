@@ -731,7 +731,6 @@ while True:
         print(f"Done.")
         break
 ```
-
 </details>
 
 ###     TODO : ADD A NEW EXERCISE
