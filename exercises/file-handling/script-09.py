@@ -4,8 +4,10 @@
 
 # Solution
 
-with open("server_logs.txt", 'r') as logs, \
-     open("ip_summary.txt", 'w') as summary:
+with (
+    open("server_logs.txt", 'r') as logs,
+    open("ip_summary.txt", 'w') as summary,
+):
 
     all_ip_addr = {}
     sorted_ips = {}
