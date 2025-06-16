@@ -507,7 +507,6 @@ In this case, you need to define a range with its length as the length of the
 `num_list` list.
 </details>
 
-
 ### Sum and Average of 10 Numbers as Input
 
 ### Display Cubes of Numbers Up to an Integer
