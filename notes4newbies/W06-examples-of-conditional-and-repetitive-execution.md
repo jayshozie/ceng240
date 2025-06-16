@@ -690,7 +690,7 @@ while i < num:
 Usually, this would be the standard practice.
 </details>
 
-### Sum of Positive Integers Until 0
+### Sum of Numbers Until 0
 
 In this exercise, you will get input from the user and add them up until the
 total hits 0. The user can give positive numbers as much as they want, but if
