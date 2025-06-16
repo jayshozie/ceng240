@@ -709,7 +709,7 @@ Hints:
 - You can use `eval(input())` to get input from the user.
 - You don't need to keep track of the total iteration count, but you should
 keep track of the total.
-- It would be best to use a `while True:` loop.
+- It would be best to use a `while True` loop.
 
 <details>
     <summary>Solution</summary>
@@ -739,12 +739,69 @@ One good thing about this solution is that it automatically works with floats,
 too. You don't need to change anything.
 </details>
 
-###     TODO : ADD A NEW EXERCISE
+### Average Exclude Highest and Lowest
+
+In this exercise, you're expected to write a program that takes in integers
+until the user inputs a negative value. Then, your program will exculed the
+highest and lowest values and calculate the average.
+
+Regulations:
+- OPTIONAL (Hard) : You can create a cli interface that asks the user whether
+they'd like to exclude highest, lowest, both, or none of the grades.
+- You should print your result with 2 decimal points.
+- You should print your result with the following format:
+```text
+Grades : [10, 76, 98.32, 75.24, 100]
+Average : 71.91%
+```
+
+Hints:
+- You can use a `while True` loop.
+- You should keep track of the highest and lowest grades at all times.
+- You can use a list to keep track of all values, then sum all values within
+with the function `sum()`.
+- You can use `print(f"Average : {average:.2f}%")` to print out your result in
+the correct format.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+grades = []
+average = 0
+
+while True:
+    new_grade = eval(input("Please enter the next grade : "))
+
+    if new_grade < 0:
+        break
+
+    grades.append(new_grade)
+
+grades.sort()
+grades.pop()  # Delete last element, highest grade in our case
+grades.pop(0)  # Delete first element, lowest grade in our case
+
+if len(grades) > 0:
+    average = sum(grades) / len(grades)
+
+print(f"Grades : {grades}")
+print(f"Average : {average:.2f}%")
+```
+In this solution, if the user doesn't write anything but still presses enter,
+the program will give out an error. We can fix this after
+[week 11's markdown](./W11).
+
+<details>
+    <summary>Optional Regulation Solution</summary>
+
+</details>
+
+</details>
 
 ### Random Number Guessing Game
 
 ### Simple Password Validation
-
 
 </details>
 
