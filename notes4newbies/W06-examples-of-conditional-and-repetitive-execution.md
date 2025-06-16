@@ -876,7 +876,8 @@ non-numerical value.
 
 Hints:
 - You can use the `random` standard library.
-- You can use `randint(1, 10)` for picking a random value between 1 and 10.
+- You can use `random.randint(1, 10)` for picking a random value between `1`
+and `10`.
 
 <details>
     <summary>Solution</summary>
