@@ -96,7 +96,21 @@ maths don't have side effects. Ours do.
 
 Also, this is a good time to talk about abstraction.
 
+-------------------------------------------------------------------------------
 
+## Functions in Python
+
+> [!IMPORTANT]
+> Don't forget that syntax always matters, and it's really important. Python
+> interpreter won't understand what you mean if you don't follow the language's
+> rules.
+
+> [!IMPORTANT]
+> Syntax of Functions in Python
+> ```python
+> def <name_of_your_function>(<arguments>, <keyword_arguments>):
+>     # your code
+> ```
 
 
 
@@ -106,5 +120,4 @@ Also, this is a good time to talk about abstraction.
 
 # References
 
-[^KhanAcademy]: [What is a function?](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:evaluating-functions/v/what-is-a-function#:~:text=and%20from,and%20only%20ONE%20given%20output.)
-
+[^KhanAcademy]: [Khan Academy : What is a function?](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:evaluating-functions/v/what-is-a-function#:~:text=and%20from,and%20only%20ONE%20given%20output.)
