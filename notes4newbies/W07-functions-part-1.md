@@ -166,6 +166,7 @@ than trying to understand whatever they mean in the slides.
 
 > [!IMPORTANT]
 > What is a scope? (direct quote from the documentation[^Scope])
+>
 > A scope defines the visibility of a name within a block. If a local variable
 > is defined in a block, its scope includes that block. If the definition
 > occurs in a function block, the scope extends to any blocks contained within
