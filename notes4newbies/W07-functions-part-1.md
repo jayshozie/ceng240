@@ -120,6 +120,123 @@ I hate to talk about these, because they mostly use these to confuse you in
 exams, and they're not even used that often, because they, most of the time,
 only confuse people.
 
+Nested functions are functions defined inside other functions. They can be
+useful for encapsulating functionality that is only relevant within the context
+of the outer function. However, they can also make code harder to read and
+maintain, so use them judiciously. (Thanks, Copilot. For explaining this
+without making me mad.)
+```python
+def f(N):
+    Number = N
+    def g():
+        C = 20
+        return N*Number
+    print(f"Number {N}, and its square: {g()}")
+```
+
+In this example, function `g()` can access all the local variables as well as
+the parameters of the function `f()`. Function `f()`, however, cannot access
+the local variables of `g()`. This is due to the something called `scope`,
+which we'll get to in a minute. No function can be used before it's been
+defined, this includes `g()`. For example, line 2 couldn't be the line below.
+```python
+Number = 10 * g(10)
+```
+Remember when I said indentation is incredibly important? Yeah, that's why the
+`print()` function at the end belongs to `f()` and not `g()`.
+<details>
+    <summary>Vent</summary>
+
+I know this example is only here as a "bad" example, but this is so bad it
+confuses first-timers. Also, nested functions are not even needed that much.
+They only use these in the midterm and finals, just to confuse you and force
+you to make a mistake. This mentality is the reason why someone with grade 70
+can get a AA from this course. I hate them so fucking much.
+</details>
+
+### Scope in Python
+
+To understand global variables and nested functions better, we need to
+understand what is scope. Scope refers to the visibility and lifetime of a
+variable within a program. In Python, there are two main types of scope: local
+and global.
+
+As I always do, I'm going to recommend you to read the documentation, rather
+than trying to understand whatever they mean in the slides.
+
+> [!IMPORTANT]
+> A scope defines the visibility of a name within a block. If a local variable
+> is defined in a block, its scope includes that block. If the definition
+> occurs in a function block, the scope extends to any blocks contained within
+> the defining one, unless a contained block introduces a different binding for
+> the name. When a name is used in a code block, it is resolved using the
+> nearest enclosing scope. The set of all such scopes visible to a code block
+> is called the block’s environment.[^Scope]
+
+#### Local Scope
+Local scope refers to variables defined within a function. These variables are
+only accessible within that function and are destroyed once the function
+execution is complete. For example:
+```python
+def my_function():
+    local_variable = 10  # This variable is local to my_function
+    print(local_variable)
+
+my_function()  # Output: 10
+# print(local_variable)
+# This would raise an error because local_variable is not defined outside
+# my_function, thus not accessible here.
+```
+
+#### Global Scope
+Global scope refers to variables defined outside of any function. These
+variables are accessible from anywhere in the program, including inside
+functions.
+```python
+global_variable = 20  # This variable is global
+def another_function():
+    print(global_variable)  # This can access the global variable
+
+another_function()  # Output: 20
+print(global_variable)
+# This wouldn't raise an error since it's a global variable
+```
+
+### L
+
+
+### Global Variables in Python
+
+Global variables are variables defined globally. I don't even know why is this
+in a separate slide.
+
+Global variables are variables that are defined in the `global scope`.
+```python
+event_count = 0  # global variable
+
+def outer_function():
+    # global event_count
+    # this wouldn't make it accessible in inner_function()
+    def inner_function():
+        global event_count
+        # That's why you need to use the global keyword to call it and not
+        # redefine it.
+        event_count += 1
+        # Since we've called the variable into this scope we can use and
+        # manipulate it.
+        print(f"  Inner function increments. Count: {event_count}")
+```
+
+> [!WARNING]
+> Global variables are not recommended to use. Here is three reasons why:
+> 1. **Hidden Side Effects:** Makes it unclear what a function modifies outside
+> of its direct inputs.
+> 2. **Hard to Debug:** Changes to global variables can cause unexpected behavior
+> elsewhere, making bugs difficult to trace back.
+> 3. **Poor Reusability:** Functions become tied to specific global states,
+> making them less modular and harder to use.
+
+
 
 
 
@@ -127,4 +244,5 @@ only confuse people.
 
 # References
 
-[^KhanAcademy]: [Khan Academy : What is a function?](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:evaluating-functions/v/what-is-a-function#:~:text=and%20from,and%20only%20ONE%20given%20output.)
+[^KhanAcademy]: [Khan Academy : What is a function?](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:evaluating-functions/v/what-is-a-function#:~:text=and%20from,and%20only%20ONE%20given%20output.) | 
+[^Scope]: [Documentation: What is scope?](https://docs.python.org/3/reference/executionmodel.html#resolution-of-names) | 
