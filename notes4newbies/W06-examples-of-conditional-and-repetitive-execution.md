@@ -1067,5 +1067,70 @@ examples of the real world coding practices.
 <details>
     <summary>Examples from the Slides</summary>
 
+I recommend you try them yourself before looking at the solution, because these
+are very easy questions that we've covered almost everything you need anyway.
 
+## Sequential Search of Integers
+
+In this exercise you're expected to write a Python program which performs a
+sequential search of a given item in a given list.
+
+Regulations:
+- List of integers will be given by the user as input.
+- As second input, the user will give an integer.
+- Your program should search through the list with a loop, and print `True` if
+the item is in the list, `False` if it isn't.
+- You should to use a loop, not the `item in list` check. This is a loop
+exercise, not a lab exam.
+
+Hints:
+- You can use `eval(input())` to get input of the list.
+- You can print your result with `print()`.
+
+Example I/O:
+```text
+Input:
+[100, 4, 48, 5]
+5
+Output:
+True
+
+Input:
+[38, 45, 20 ,3]
+5
+Output:
+False
+```
+
+<details>
+    <summary>Solution</summary>
+
+```python
+in_list = eval(input("Please enter the list : "))
+item = int(input("Please enter the number you're searching for : "))
+found = False
+
+for i in range(len(in_list)):
+    if in_list[i] == item:
+        print("True")
+        found = True
+
+if found is False:
+    print("False")
+```
+OK, we've written a search algorithm. If you remember we've talked about the
+Big-O notation in algorithms. What is this the Big-O of tihs algorithm? It is
+O(n), because it searches through the entire list, one-by-one, and only once.
 </details>
+
+## Decimal Int to Binary Conversion
+
+In this exercise, you will write a Python program that will take an integer as
+input, and print its binary representation.
+
+Regulation:
+- Your program should calculate it, not another function. You can use the
+algorithm we've talked about in [week 2's markdown](./W02-intro-to-algorithms-and-programming-languages.md#how-to-count-in-binary)
+
+
+
