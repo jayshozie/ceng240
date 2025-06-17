@@ -1283,7 +1283,7 @@ for i in range(len(binary)):
 print(decimal)
 ```
 
-## PLACEHOLDER NAME
+## List Optimization
 
 In this exercise, you will be given nested lists of numbers. If you encounter a
 nested list, replace that nested list with the average of the numbers within.
@@ -1305,14 +1305,34 @@ Output:
     <summary>Solution</summary>
 
 ```python
-in_list = eval(input())
+in_list = eval(input("Please enter the list you want to optimize : "))
 
-for item in range(len(in_list)):
-    if type(in_list[item]) == list:
-        avg = sum(in_list[item]) / len(in_list[item])
-        in_list[item] = avg
+for item in in_list:
+    if type(item) == list:
+        avg = sum(item) / len(item)
+        in_list[in_list.index(item)] = avg
 
 print(in_list)
 ```
+</details>
+
+## Bubble Sort Algorithm
+
+In this exercise, you're expected to sort numbers in a list in increasing
+order. The bubble sort algorithm is as follows:
+```
+
+```
+
+Example I/O:
+```text
+```
+
+<details>
+    <summary>Solution</summary>
+
+```python
+```
+
 </details>
 
