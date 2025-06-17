@@ -1320,19 +1320,75 @@ print(in_list)
 
 In this exercise, you're expected to sort numbers in a list in increasing
 order. The bubble sort algorithm is as follows:
-```
+```markdown
+1. Start at the beginning of the list.
 
+2. Compare each pair of adjacent elements.
+
+3. If the elements are in the wrong order, swap them.
+
+4. Move to the next pair and repeat step 3 until the end of the list.
+
+5. After each pass through the list, the largest element moves to its correct
+position.
+
+6. Repeat the process for the remaining elements (excluding the last sorted
+elements) until no swaps are needed.
 ```
+[WsCube Tech](https://www.wscubetech.com/resources/dsa/bubble-sort)
 
 Example I/O:
 ```text
+Input:
+[5, 1, 3, 6]
+Output:
+[1, 3, 5, 6]
+
+Input:
+[10, -4, 8, 20]
+Output:
+[-4, 8, 10, 20]
+```
+
+Regulations:
+- Do not use the `sort()` function. This exercise is here for you to understand
+how sorting works, and how to create a nested for loop algorithm.
+
+Hints:
+- Remember to check the list if it's sorted. You can use a nested for loop for
+that.
+```python
+# You can use this to check your algorithm.
+# This will give you a list of 15 items, where every item is between -1000 and
+# 1000.
+from random import randint
+unsorted = [randint(-1000, 1000) for _ in range(15)]
 ```
 
 <details>
     <summary>Solution</summary>
 
 ```python
-```
+unsorted = eval(input("Please enter the unsorted list : "))
 
+for j in range(len(unsorted)-1):
+    for i in range(0, len(unsorted) -i -1):
+        if unsorted[i] > unsorted[i+1]:
+            tmp = unsorted[i+1]
+            unsorted[i+1] = unsorted[i]
+            unsorted[i] = tmp
+
+"""
+from random import randint
+
+random_integers = [randint(-1000, 1000) for _ in range(100)]
+
+# You can use this to check your algorithm.
+"""
+
+print(f"Sorted List : {unsorted}")
+```
+Big-O of bubble sort is O(n²), remember we only care about the worst case
+scenario.
 </details>
 

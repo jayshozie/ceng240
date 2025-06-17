@@ -1,8 +1,15 @@
-in_list = eval(input("Please enter the list you want to optimize : "))
+# Bubble Sort
 
-for item in in_list:
-    if type(item) == list:
-        avg = sum(item) / len(item)
-        in_list[in_list.index(item)] = avg
+from random import randint
+unsorted = [randint(-1000, 1000) for _ in range(10)]
 
-print(in_list)
+# unsorted = eval(input("Please enter the unsorted list : "))
+
+for i in range(len(unsorted)-1):
+    for i in range(len(unsorted)-1):
+        if unsorted[i] > unsorted[i+1]:
+            tmp = unsorted[i+1]
+            unsorted[i+1] = unsorted[i]
+            unsorted[i] = tmp
+
+print(f"Sorted List : {unsorted}")
