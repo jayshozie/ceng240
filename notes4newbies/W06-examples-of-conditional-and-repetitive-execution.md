@@ -1282,6 +1282,7 @@ for i in range(len(binary)):
 
 print(decimal)
 ```
+</details>
 
 ## List Optimization
 
@@ -1386,4 +1387,4 @@ print(f"Sorted List : {unsorted}")
 Big-O of bubble sort is O(n²), remember we only care about the worst case
 scenario.
 </details>
-
+</details>
