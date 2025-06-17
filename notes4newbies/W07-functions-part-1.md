@@ -79,9 +79,9 @@ print(f"Bar 2 - Stress: {stress2:.2f} Pa")
 
 ## Functions in Programming vs Mathematics
 
-[^KhanAcademy]
 > In math, remember a function is basically a rule or a process that takes an
 > input and gives you back a single, predictable output.
+[^KhanAcademy]
 
 The type of functions we'll see are similar to the ones in mathematics, but
 there are some core differences. First of all, a function doesn't have to
