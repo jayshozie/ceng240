@@ -325,15 +325,82 @@ g()
 # Output: 
 # 10
 # 10
-
-# Why?
-# In the function `g`, the variable `a` is defined with a value of 20.
-# When `f(a)` is called, it passes the value of `a` (which is 20) to the
-# function `f`. Inside `f`, the parameter `n` receives this value, and then `n`
-# is modified by adding 20 to it. However, this modification does not affect
-# the variable `a` in the function `g`, because integers are immutable in
-# Python.
 ```
+<details>
+    <summary>Explanation</summary>
+
+In the function `g`, the variable `a` is defined with a value of 20. When
+`f(a)` is called, it passes the value of `a` (which is 20) to the function `f`.
+Inside `f`, the parameter `n` receives this value, and then `n` is modified by
+adding 20 to it. However, this modification does not affect the variable `a` in
+the function `g`, because integers are immutable in Python.
+</details>
+
+```python
+def f(List):
+    List[0] = 'A'
+
+def g():
+    L = [1, 2, 3]
+    print(L)
+
+    f(L)
+    print(L)
+
+g()
+# Output:
+# [1, 2, 3]
+# ['A', 2, 3]
+```
+<details>
+    <summary>Explanation</summary>
+
+In this example, the function `f` takes a list as an argument and modifies its
+first element to 'A'. When `g` is called, it creates a list `L` with three
+elements. When `f(L)` is called, it modifies the first element of the list `L`
+to 'A'. Since lists are mutable in Python, the change is reflected in the
+list `L` defined in `g`. Therefore, the output shows the modified list after
+the function call.
+</details>
+
+```python
+def f(List):
+    List = List[::-1]
+
+def g():
+    L = [1, 2, 3]
+    print(L)
+
+    f(L)
+    print(L)
+
+g()
+# Output:
+# [1, 2, 3]
+# [1, 2, 3]
+```
+<details>
+    <summary>Explanation</summary>
+
+In this example, the function `f` attempts to reverse the list passed to it
+using slicing (`List[::-1]`). However, this operation creates a new list
+instead of modifying the original list in place. When `g` is called, it creates
+a list `L` with three elements. When `f(L)` is called, it reverses the list but
+does not modify the original list `L` in `g`. Therefore, the output shows that
+the original list `L` remains unchanged after the function call.
+</details>
+
+-------------------------------------------------------------------------------
+
+## Further Dissecting Functions
+
+OK, we've seen that functions can take in arguments, also if you were reading
+carefully, you probably realized that order of arguments matter.
+
+
+
+
+
 
 -------------------------------------------------------------------------------
 
