@@ -1130,7 +1130,47 @@ input, and print its binary representation.
 
 Regulation:
 - Your program should calculate it, not another function. You can use the
-algorithm we've talked about in [week 2's markdown](./W02-intro-to-algorithms-and-programming-languages.md#how-to-count-in-binary)
+algorithm we've talked about in a dropdown called `Decimal to Binary Conversion
+of Integers (included)` in
+[week 2's markdown](./W02-intro-to-algorithms-and-programming-languages.md#how-to-count-in-binary)
+
+Hints:
+- You can use `int(input())` to get input from the user in the correct format.
+- In the previously mentioned algorithm, the remainders, when read from bottom
+to top, gives you the binary representation of the given number.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+# import time
+decimal = int(input("Please enter the integer you want to convert to binary : "))
+bits_str = ""
+
+next_iter = decimal
+i = 0
+while True:
+    if next_iter == 0:
+        break
+
+    remainder = next_iter % 2
+    next_iter = next_iter // 2
+    bits_str += str(remainder)
+
+    # print("----------------------------------------------------")
+    # print(f"DEBUG | decimal = {decimal} | bits_str = {bits_str}")
+    # print("----------------------------------------------------")
+    # print(f"DEBUG | next_iter = {next_iter} | remainder = {remainder}")
+    # time.sleep(2)
+
+bits_str = bits_str[::-1]  # Reversing the string
+print(bits_str)
+```
+
+This obviously doesn't work for negative integers, but it can be easily
+implemented. I've left some debugging lines for you to how it's done most of
+the time.
+</details>
 
 
 
