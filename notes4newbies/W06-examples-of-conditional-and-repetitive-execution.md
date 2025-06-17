@@ -1123,7 +1123,7 @@ Big-O notation in algorithms. What is this the Big-O of tihs algorithm? It is
 O(n), because it searches through the entire list, one-by-one, and only once.
 </details>
 
-## Decimal Int to Binary Conversion
+## Decimal Integer to Binary Conversion
 
 In this exercise, you will write a Python program that will take an integer as
 input, and print its binary representation.
@@ -1242,4 +1242,9 @@ print(ret_bin)
 ```
 I've added a bitwise OR operation for the curious.
 </details>
+
+## Binary String to Decimal Conversion
+
+In this exercise, we'll do exactly the opposite of what we did in [Decimal
+Integer to Binary Conversion](#decimal-integer-to-binary-conversion) exercise.
 
