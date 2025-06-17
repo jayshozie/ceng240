@@ -21,7 +21,7 @@ if we wanted to sort a different list, we need to re-run the script entirely.
 If we defined the bubble sort algorithm as a function, however, we would be
 able to use it again and again in our code.
 
-[!NOTE]
+> [!NOTE]
 > Functions are `reusable`.
 
 You probably heard that functions are also "easier to maintain", but what does
@@ -47,7 +47,7 @@ value in the code. It may look, or actually be, easy for 10 lines of code, but
 what if you had hundreds, maybe thousands of lines of code? Then, you will
 definitely screw up something, and it will be incredibly harder to trace.
 
-[!NOTE]
+> [!NOTE]
 > Functions are easier to `maintain`.
 
 Finally, consider large programs. Without functions, your entire script would
@@ -72,7 +72,7 @@ stress2, strain2 = calculate_bar_properties(0.025, 12000)
 print(f"Bar 2 - Stress: {stress2:.2f} Pa")
 ```
 
-[!NOTE]
+> [!NOTE]
 > Functions are `structured`.
 
 -------------------------------------------------------------------------------
