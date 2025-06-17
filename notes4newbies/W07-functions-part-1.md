@@ -100,18 +100,25 @@ Also, this is a good time to talk about abstraction.
 
 ## Functions in Python
 
-> [!IMPORTANT]
-> Don't forget that syntax always matters, and it's really important. Python
-> interpreter won't understand what you mean if you don't follow the language's
-> rules.
+Don't forget that syntax always matters, and it's really important. Python
+interpreter won't understand what you mean if you don't follow the language's
+rules. In Python, more than other languages anyway, indentation is extremely
+important. You probably realized that when we were studying conditionals. You
+need to be extremely careful with your indentations, because Python's
+interpreter trusts you completely with them.
 
 > [!IMPORTANT]
-> Syntax of Functions in Python
+> ### Syntax of Functions in Python
 > ```python
 > def <name_of_your_function>(*arguments, **keyword_arguments):
 >     # your code
 > ```
 
+### Nested Functions
+
+I hate to talk about these, because they mostly use these to confuse you in
+exams, and they're not even used that often, because they, most of the time,
+only confuse people.
 
 
 
