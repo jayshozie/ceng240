@@ -204,8 +204,32 @@ print(global_variable)
 # This wouldn't raise an error since it's a global variable
 ```
 
-### L
+#### LEGB Rule in Python (included)
 
+The LEGB rule is a way Python resolves names. It stands for:
+- **L**ocal: Names defined within the current function.
+- **E**nclosing: Names in the local scope of enclosing functions.
+- **G**lobal: Names defined at the top level of the module or declared global.
+- **B**uilt-in: Names pre-defined in Python (like `print()`, `len()`, etc.).
+
+When you reference a name, Python searches for it in the order of LEGB. If it
+finds the name in the local scope, it uses that. If not, it checks the
+enclosing scope, then the global scope, and finally the built-in scope. If it
+doesn't find the name in any of these scopes, it raises a `NameError`.
+```python
+def outer_function():
+    x = 10  # Local variable in outer_function
+    def inner_function():
+        x = 20  # Local variable in inner_function
+        print(f"Inner function: {x}")  # This will print 20
+    inner_function()
+    print(f"Outer function: {x}")  # This will print 10
+
+outer_function()
+# Output:
+# Inner function: 20
+# Outer function: 10
+```
 
 ### Global Variables in Python
 
@@ -238,9 +262,78 @@ def outer_function():
 > 3. **Poor Reusability:** Functions become tied to specific global states,
 > making them less modular and harder to use.
 
+### Updating Nonlocal Variables
 
+There are three main methods of doing this.
 
+1. **Using the Function Like an Object**
+```python
+def f():
+    f.a = 10
 
+    def m():
+        f.a = 20
+
+    m()
+    print(f"a (method 1): {f.a}")
+
+f()  # Output: a (method 1): 20
+```
+
+2. **Using the `nonlocal` Keyword**
+```python
+def g():
+    a = 10
+
+    def m():
+        nonlocal a
+        a = 20
+
+    m()
+    print(f"a (method 2): {a}")
+
+g()  # Output: a (method 2): 20
+```
+
+3. **Using a Mutable Datatype**
+```python
+def h():
+    a = [1]
+
+    def m():
+        a[0] = 20
+
+    m()
+    print(f"a (method 3): {a}")
+
+h()  # Output: a (method 3): 20
+```
+
+### Parameter Passing in Functions
+
+```python
+def f(n):
+    n = n + 20
+
+def g():
+    a = 10
+    print(a)
+    f(a)
+    print(a)
+
+g()
+# Output: 
+# 10
+# 10
+
+# Why?
+# In the function `g`, the variable `a` is defined with a value of 20.
+# When `f(a)` is called, it passes the value of `a` (which is 20) to the
+# function `f`. Inside `f`, the parameter `n` receives this value, and then `n`
+# is modified by adding 20 to it. However, this modification does not affect
+# the variable `a` in the function `g`, because integers are immutable in
+# Python.
+```
 
 -------------------------------------------------------------------------------
 
