@@ -450,6 +450,39 @@ f(1, 2, 3, a=10, b=20)
 # Keyword arguments: {'a': 10, 'b': 20}
 ```
 
+-------------------------------------------------------------------------------
+
+## Extra : Execution Model of Python
+
+This is part is about how Python executes your code. It's not a part of the
+course, but it's a useful skill to have, since it helps you understand how
+Python works under the hood. Also, they ask very weird questions in the
+midterms and finals, and this should help you to solve those questions
+
+<details>
+    <summary>Not Included</summary>
+
+First of all, congratulations. Even though you only came here to get higher
+scores from the exams, you're getting deep into the weeds of programming. From
+now on, programming will look different to you, relative to people who don't
+care how it all works under the hood. Generally speaking, the reason why people
+just don't get how programming works, is because they don't know what is
+happening when they write code. So, congratulations.
+
+Before we start, I highly recommend you to check out the documentation of the
+[lexical analysis](https://docs.python.org/3/reference/lexical_analysis.html)
+and [execution model](https://docs.python.org/3/reference/executionmodel.html)
+as always. We won't go that deep, but it would be nice if you'd check them out
+beforehand.
+
+### Lexical Analysis
+
+
+
+
+
+
+
 
 
 
