@@ -1,14 +1,4 @@
-def f(List):
-    List = List[::-1]
+def f(a=10, b=20):
+    print(f"a: {a}, b: {b}")
 
-def g():
-    L = [1, 2, 3]
-    print(L)
-
-    f(L)
-    print(L)
-
-g()
-# Output:
-# [1, 2, 3]
-# [1, 2, 3]
+f(b=30, a=40)  # Output: a: 40, b: 30

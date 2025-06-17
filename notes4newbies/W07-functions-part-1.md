@@ -394,8 +394,58 @@ the original list `L` remains unchanged after the function call.
 
 ## Further Dissecting Functions
 
-OK, we've seen that functions can take in arguments, also if you were reading
-carefully, you probably realized that order of arguments matter.
+### Arguments (\*Args) and Keyword Arguments (\*\*Kwargs)
+
+OK, we've seen how arguments (args) work. Now, we need to talk about keyword
+arguments, a.k.a. kwargs. It's pretty straightforward so I'll just show an
+example to you.
+```python
+def f(a=10, b=20):
+    print(f"a: {a}, b: {b}")
+
+f()  # Output: a: 10, b: 20
+```
+When you call a function with keyword arguments, you can specify the arguments
+by name, allowing you to skip some arguments or change their order.
+```python
+# Omitting
+f(b=30)  # Output: a: 10, b: 30
+# Changing order
+f(b=30, a=40)  # Output: a: 40, b: 30
+```
+Keyword arguments are sometimes called `defaults`, because they allow you to
+set default values for parameters. If you don't provide a value for a keyword
+argument, the function will use the default value specified in the function
+definition. This is useful for creating functions that can be called with
+fewer arguments than defined, while still providing sensible defaults.
+
+You can also mix positional and keyword arguments in a function call. Positional
+arguments must come before keyword arguments, and you can skip some positional
+arguments as long as you provide values for the keyword arguments that follow.
+```python
+def f(a, b=20, c=30):
+    print(f"a: {a}, b: {b}, c: {c}")
+
+f(10)  # Output: a: 10, b: 20, c: 30
+f(10, c=40)  # Output: a: 10, b: 20, c: 40
+f(10, 50, c=60)  # Output: a: 10, b: 50, c: 60
+```
+
+You can also use `\*args` and `\*\*kwargs` to accept a variable number of
+positional and keyword arguments, respectively. This allows you to create
+functions that can handle a flexible number of arguments.
+```python
+def f(*args, **kwargs):
+    print("Positional arguments:", args)
+    print("Keyword arguments:", kwargs)
+
+f(1, 2, 3, a=10, b=20)
+
+# Output:
+# Positional arguments: (1, 2, 3)
+# Keyword arguments: {'a': 10, 'b': 20}
+```
+
 
 
 
