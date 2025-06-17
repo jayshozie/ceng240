@@ -165,13 +165,14 @@ As I always do, I'm going to recommend you to read the documentation, rather
 than trying to understand whatever they mean in the slides.
 
 > [!IMPORTANT]
+> What is a scope? (direct quote from the documentation[^Scope])
 > A scope defines the visibility of a name within a block. If a local variable
 > is defined in a block, its scope includes that block. If the definition
 > occurs in a function block, the scope extends to any blocks contained within
 > the defining one, unless a contained block introduces a different binding for
 > the name. When a name is used in a code block, it is resolved using the
 > nearest enclosing scope. The set of all such scopes visible to a code block
-> is called the block’s environment.[^Scope]
+> is called the block’s environment.
 
 #### Local Scope
 Local scope refers to variables defined within a function. These variables are
