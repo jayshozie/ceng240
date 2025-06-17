@@ -434,7 +434,7 @@ f(10, c=40)  # Output: a: 10, b: 20, c: 40
 f(10, 50, c=60)  # Output: a: 10, b: 50, c: 60
 ```
 
-You can also use `\*args` and `\*\*kwargs` to accept a variable number of
+You can also use `*args` and `**kwargs` to accept a variable number of
 positional and keyword arguments, respectively. This allows you to create
 functions that can handle a flexible number of arguments.
 ```python
