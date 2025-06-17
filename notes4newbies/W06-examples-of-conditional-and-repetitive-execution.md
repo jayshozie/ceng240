@@ -1248,3 +1248,71 @@ I've added a bitwise OR operation for the curious.
 In this exercise, we'll do exactly the opposite of what we did in [Decimal
 Integer to Binary Conversion](#decimal-integer-to-binary-conversion) exercise.
 
+Example I/O:
+```text
+Input:
+101
+Output:
+5
+
+Input:
+1010
+Output:
+10
+```
+
+<details>
+    <summary>Solution</summary>
+
+```python
+# from time import sleep
+decimal = 0
+
+binary = input("Please enter the binary number : ")
+binary = binary[::-1]  # Reversing the string
+
+for i in range(len(binary)):
+    if i == 0:
+        decimal += int(binary[i])
+    else:
+        decimal += int(binary[i]) * pow(2, i)
+
+    # print(f"DEBUG | decimal = {decimal} | binary = {binary} | len(binary) = {len(binary)} | i = {i}")
+    # sleep(0.2)
+
+print(decimal)
+```
+
+## PLACEHOLDER NAME
+
+In this exercise, you will be given nested lists of numbers. If you encounter a
+nested list, replace that nested list with the average of the numbers within.
+
+Example I/O:
+```text
+Input:
+[[1, 3], [4, 5, 6], 7, [10, 20]]
+Output:
+[2.0, 5.0, 7, 15.0]
+
+Input:
+[20, 30, [4, 8]]
+Output:
+[20, 30, 6.0]
+```
+
+<details>
+    <summary>Solution</summary>
+
+```python
+in_list = eval(input())
+
+for item in range(len(in_list)):
+    if type(in_list[item]) == list:
+        avg = sum(in_list[item]) / len(in_list[item])
+        in_list[item] = avg
+
+print(in_list)
+```
+</details>
+
