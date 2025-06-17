@@ -434,7 +434,7 @@ f(10, c=40)  # Output: a: 10, b: 20, c: 40
 f(10, 50, c=60)  # Output: a: 10, b: 50, c: 60
 ```
 
-< !--*Below part is not in italics, it only looks like it is.*--/>
+<!-- Below part is not in italics, it only looks like it is. -->
 You can also use `*args` and `**kwargs` to accept a variable number of
 positional and keyword arguments, respectively. This allows you to create
 functions that can handle a flexible number of arguments.
