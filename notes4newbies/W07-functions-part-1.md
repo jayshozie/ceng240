@@ -312,7 +312,7 @@ h()  # Output: a (method 3): 20
 ### Parameter Passing in Functions
 
 <details>
-    <summary>Explanation of Method 1</summary>
+    <summary>Explanation of Below</summary>
 
 In the function `g`, the variable `a` is defined with a value of 20. When
 `f(a)` is called, it passes the value of `a` (which is 20) to the function `f`.
@@ -338,7 +338,7 @@ g()
 ```
 
 <details>
-    <summary>Explanation of Method 2</summary>
+    <summary>Explanation of Below</summary>
 
 In this example, the function `f` takes a list as an argument and modifies its
 first element to 'A'. When `g` is called, it creates a list `L` with three
@@ -366,7 +366,7 @@ g()
 ```
 
 <details>
-    <summary>Explanation of Method 3</summary>
+    <summary>Explanation of Below</summary>
 
 In this example, the function `f` attempts to reverse the list passed to it
 using slicing (`List[::-1]`). However, this operation creates a new list
