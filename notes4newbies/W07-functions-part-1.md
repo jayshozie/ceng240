@@ -108,7 +108,7 @@ Also, this is a good time to talk about abstraction.
 > [!IMPORTANT]
 > Syntax of Functions in Python
 > ```python
-> def <name_of_your_function>(<arguments>, <keyword_arguments>):
+> def <name_of_your_function>(*arguments, **keyword_arguments):
 >     # your code
 > ```
 
