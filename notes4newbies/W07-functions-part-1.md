@@ -247,4 +247,4 @@ def outer_function():
 # References
 
 [^KhanAcademy]: [Khan Academy : What is a function?](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:evaluating-functions/v/what-is-a-function#:~:text=and%20from,and%20only%20ONE%20given%20output.) | 
-[^Scope]: [Documentation: What is scope?](https://docs.python.org/3/reference/executionmodel.html#resolution-of-names) | 
+[^Scope]: [Documentation : What is scope?](https://docs.python.org/3/reference/executionmodel.html#resolution-of-names) | 
