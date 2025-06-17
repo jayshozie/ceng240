@@ -1164,7 +1164,7 @@ while True:
     # time.sleep(2)
 
 bits_str = bits_str[::-1]  # Reversing the string
-print(bits_str)
+print(f"Binary representation of {decimal} is {bits_str}.")
 ```
 
 This obviously doesn't work for negative integers, but it can be easily
@@ -1172,5 +1172,74 @@ implemented. I've left some debugging lines for you to how it's done most of
 the time.
 </details>
 
+## Bitwise AND Operation Between Binary Strings
 
+In this exercise, user will enter two binary numbers as string literals, you'll
+perform an AND operation between them, create the corresponding binary number,
+and print it.
+
+Example I/O:
+```text
+Input:
+1011
+1001
+Output:
+1001
+
+Input:
+1010
+0101
+Output:
+0000
+```
+
+<details>
+    <summary>AND Truth Table</summary>
+
+|  p  |  q  |p AND q|
+|:---:|:---:|:-----:|
+|  0  |  0  |   0   |
+|  0  |  1  |   0   |
+|  1  |  0  |   0   |
+|  1  |  1  |   1   |
+</details>
+
+Hints:
+- You can index strings just like lists.
+
+<details>
+    <summary>Solution</summary>
+
+```python
+print("The binary numbers you enter should be of equal length.")
+bin1 = input("Please enter the first binary number : ")
+bin2 = input("Please enter the second binary number : ")
+is_same = False
+
+ret_bin = ""
+
+if len(bin1) == len(bin2):
+    is_same = True
+
+# Bitwise AND Operation
+if is_same:
+    for i in range(len(bin1)):
+        if bin1[i] == '1' and bin2[i] == '1':
+            ret_bin += '1'
+        else:
+            ret_bin += '0'
+else:
+    print("ERR : The binary numbers you enter should be of equal length.")
+
+# Bitwise OR Operation
+# for i in range(len(bin1)):
+#     if bin1[i] == bin2[i]:
+#         ret_bin += '1'
+#     else:
+#         ret_bin += '0'
+
+print(ret_bin)
+```
+I've added a bitwise OR operation for the curious.
+</details>
 

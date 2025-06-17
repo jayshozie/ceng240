@@ -1,22 +1,28 @@
-# import time
-decimal = int(input("Please enter the integer you want to convert to binary : "))
-bits_str = ""
+print("The binary numbers you enter should be of equal length.")
+bin1 = input("Please enter the first binary number : ")
+bin2 = input("Please enter the second binary number : ")
+is_same = False
 
-next_iter = decimal
-i = 0
-while True:
-    if next_iter == 0:
-        break
+ret_bin = ""
 
-    remainder = next_iter % 2
-    next_iter = next_iter // 2
-    bits_str += str(remainder)
+if len(bin1) == len(bin2):
+    is_same = True
 
-    # print("----------------------------------------------------")
-    # print(f"DEBUG | decimal = {decimal} | bits_str = {bits_str}")
-    # print("----------------------------------------------------")
-    # print(f"DEBUG | next_iter = {next_iter} | remainder = {remainder}")
-    # time.sleep(2)
+# Bitwise AND Operation
+if is_same:
+    for i in range(len(bin1)):
+        if bin1[i] == '1' and bin2[i] == '1':
+            ret_bin += '1'
+        else:
+            ret_bin += '0'
+else:
+    print("ERR : The binary numbers you enter should be of equal length.")
 
-bits_str = bits_str[::-1]  # Reversing the string
-print(bits_str)
+# Bitwise OR Operation
+# for i in range(len(bin1)):
+#     if bin1[i] == bin2[i]:
+#         ret_bin += '1'
+#     else:
+#         ret_bin += '0'
+
+print(ret_bin)
