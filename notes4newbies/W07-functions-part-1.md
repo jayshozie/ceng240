@@ -6,7 +6,10 @@ Please see the LICENSE file for more details.
 
 # Note
 
-
+This markdown is incredibly important for everyone. Even if you're not going to
+pursue a career in computer science, you still need to completely understand
+this week's subject, functions, to pass this course. Otherwise, you'll have a
+really bad time.
 
 -------------------------------------------------------------------------------
 
