@@ -35,11 +35,19 @@
 # 
 # print(ast.dump(syntax_tree, indent=2))
 
-from ast import dump, parse
+from ast import dump, parse, unparse
 
 code_snippet = """y = 5
 x = 10 + y"""
 
 syntax_tree = parse(code_snippet)
+unparsed_code = unparse(syntax_tree)
+reparsed_code = parse(unparsed_code)
 
-print(dump(syntax_tree, indent=2))
+print("-------------------------")
+print(f"Syntax Tree:\n{dump(syntax_tree, indent=2)}",sep='')
+print("-------------------------")
+print(f"Unparsed Code:\n{unparsed_code}",sep='')
+print("-------------------------")
+print(f"Reparsed Code:\n{dump(reparsed_code, indent=2)}",sep='')
+print("-------------------------")
