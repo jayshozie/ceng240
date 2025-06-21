@@ -33,4 +33,4 @@ for token_info in tokenize.generate_tokens(code_reader.readline):
     # repr() is needed because of the newline character
     # couldn't make rf-string work
 
-print(ast.dump(syntax_tree, indent=4))
+print(ast.dump(syntax_tree, indent=2))
