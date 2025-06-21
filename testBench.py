@@ -1,5 +1,6 @@
 import io
 import tokenize
+import ast
 
 
 code_snippet = """
@@ -12,8 +13,9 @@ for i in range(10):
 print("this is getting weird")
 """
 
-
+syntax_tree = ast.parse(code_snippet)
 code_reader = io.StringIO(code_snippet)
+
 for token_info in tokenize.generate_tokens(code_reader.readline):
     token_type = token_info.type
     token_lexeme = str(token_info.string)
@@ -30,3 +32,5 @@ for token_info in tokenize.generate_tokens(code_reader.readline):
     print(repr(f"TYPE: {type_name:<15} LEXEME: '{token_lexeme}' (Starts at: {start_line}:{start_col}, Ends at: {end_line}:{end_col})"))
     # repr() is needed because of the newline character
     # couldn't make rf-string work
+
+print(ast.dump(syntax_tree, indent=4))
