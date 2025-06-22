@@ -117,6 +117,8 @@ My_Car.accelerate(10)
 As you can see in this example, we have 2 different objects, holding two
 entirely different sets of data, but having the same blueprint (same class).
 
+## Member Functions (Methods) and Variables (Attributes)
+
 ## Properties of OOP
 
 Before we have more fun with examples, there is some terminology that we need
@@ -206,7 +208,6 @@ in the `Car` class when you accelerate by 10 km/h your current_speed increases
 by 5 km/h. This is because we've changed how these worked in the corresponding
 child classes.
 
-## Member Functions (Methods) and Variables (Attributes)
 
 ## Message Passing
 
