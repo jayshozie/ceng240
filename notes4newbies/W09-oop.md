@@ -147,7 +147,24 @@ properties (attributes) and behaviors (methods) from an existing class. The
 class that *inherits* these is called a **child class** or **derived class**.
 The class that gets *inherited* is called **parent class** or **base class**.
 
+This creates a `is-a` relationship between classes. For example a `Car` is a
+`Vehicle`, a `Dog` is a `Mammal`, etc.
+
+Inheritance promotes code reusability. You don't have to write the same method
+over and over again for closely related classes. You can just write a parent
+class, and inherit those methods, which I'll show you how further down the
+line.
+
 ### Polymorphism
+
+- **Definition:** The word polymorphism refers to the ability of OOP of
+different objects to respond to the same method call in their own, appropriate
+ways.
+
+You can have a general command, and different types of objects (of different
+classes) will
+
+
 
 ## Member Functions (Methods) and Variables (Attributes)
 

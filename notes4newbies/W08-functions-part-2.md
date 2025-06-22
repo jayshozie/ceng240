@@ -35,7 +35,7 @@ squared_list = list(squared_map)
 # squared = list(map(square, num_list))
 ## will work without issues.
 
-print(squared_list)  # Output: [1, 4, 9, 16, 25]
+print(squared)  # Output: [1, 4, 9, 16, 25]
 ```
 In this example, the map function goes through the iterable `num_list` and use
 all of its items, one-by-one, as arguments to the `square()` function. Lastly,
