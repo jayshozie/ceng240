@@ -457,6 +457,10 @@ f(1, 2, 3, a=10, b=20)
 
 ## A Short Summary of [W07.5](./W07.5-extra-dissecting-python.md)
 
+Note: The [next chapter](./W07.5-extra-dissecting-python.md) is not included in
+the course, I've written it only for the curious. This means that this summary
+also is not included.
+
 ###     TODO : ADD A SHORT SUMMARY OF W07.5
 
 -------------------------------------------------------------------------------
