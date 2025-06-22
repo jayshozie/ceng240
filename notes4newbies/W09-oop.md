@@ -196,6 +196,7 @@ to know. These are the fundamental concepts that define OOP.
 
 - **Definition:** Encapsulation means bundling the data (attributes) and the
 functions (methods) that operate on that data into a single unit, an object.
+In CENG240 languages, hiding implementation/representation details.
 
 A key aspect of this encapsulation is **information hiding**. That means that
 the internal working details of an object are hidden from the rest of the code.
@@ -273,7 +274,8 @@ child classes.
 
 - **Definition:** The word polymorphism refers to the ability of OOP of
 different objects to respond to the same method call in their own, appropriate
-ways.
+ways. In CENG240 language, the ability of a child class to behave and appear
+like its parent.
 
 You can have a general command, and different types of objects (of different
 classes) will execute that specific command to their nature.
