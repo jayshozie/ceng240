@@ -51,7 +51,7 @@ For example, you can filter out even numbers in a list:
 ```python
 def is_even(x):
     if x % 2 == 0:
-        return x
+        return True
     else:
         return False
 # return x % 2 == 0
