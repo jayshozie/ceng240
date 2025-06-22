@@ -52,15 +52,28 @@
 # print(f"Reparsed Code:\n{dump(reparsed_code, indent=2)}",sep='')
 # print("-------------------------")
 
+# -----------------------------------------------------------------------------
+# Week 8 - Functions Part 2
 
-def square(x):
-    return x*x
+# def square(x):
+#     return x*x
+# 
+# num_list = [1, 2, 3, 4, 5]
+# 
+# squared_map = map(square, num_list)
+# 
+# squared_list = list(squared_map)
+# # Changing the type of the object from `map` to `list`, so it's human-readable.
+# 
+# print(squared_list)  # Output: [1, 4, 9, 16, 25]
 
-num_list = [1, 2, 3, 4, 5]
+def is_even(x):
+    return x % 2 == 0
 
-squared_map = map(square, num_list)
+num_list = [i for i in range(20)]
 
-squared_list = list(squared_map)
-# Changing the type of the object from `map` to `list`, so it's human-readable.
+evens_filter = filter(is_even, num_list)
 
-print(squared_list)  # Output: [1, 4, 9, 16, 25]
+evens = list(evens_filter)
+
+print(evens)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
