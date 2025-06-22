@@ -162,9 +162,49 @@ different objects to respond to the same method call in their own, appropriate
 ways.
 
 You can have a general command, and different types of objects (of different
-classes) will
+classes) will execute that specific command to their nature. For example,
+```python
+class Vehicle:
+    def __init__(self, current_speed):
+        self.current_speed = current_speed
 
+    def accelerate(self, speed):
+        self.current_speed += speed
+        print(self.current_speed)
 
+class Bike(Vehicle):
+    def accelerate(self, speed):
+        self.current_speed += 2 * speed  # because bikes are cool
+        print(self.current_speed)
+
+class Car(Vehicle):
+    def accelerate(self, speed):
+        self.current_speed += 0.5 * speed  # because cars are shit
+        print(self.current_speed)
+
+class Truck(Vehicle):
+    def __init__(self):
+        self.current_speed = 0
+
+my_bike = Bike(0)
+my_car = Car(0)
+my_truck = Truck()
+
+my_bike.accelerate(10)  # Output: 20
+my_car.accelerate(10)  # Output: 5
+my_truck.accelerate(10)  # Output: 10
+```
+In this example, you can see that although we've not defined a method named
+`__init__()` for `Bike` and `Car` child classes, we could still initiate an
+object from them (which would not be the case if we didn't inherit that method
+from the `Vehicle` class). Same thing applies for the `Truck` class with the
+`accelerate()` method. Although we've not defined it, we were able to call it,
+because it's defined in the inherited parent class. If you look closer, you can
+see that the alternated version of the method is ran when called. In the `Bike`
+class when you accelerate by 10 km/h your current_speed increases by 20 km/h,
+in the `Car` class when you accelerate by 10 km/h your current_speed increases
+by 5 km/h. This is because we've changed how these worked in the corresponding
+child classes.
 
 ## Member Functions (Methods) and Variables (Attributes)
 

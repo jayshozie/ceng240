@@ -78,7 +78,7 @@
 # 
 # print(evens)  # Output: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 
-def factorial(num): return 1 if num == 0 else num * factorial(num-1)
+# def factorial(num): return 1 if num == 0 else num * factorial(num-1)
 
 # def factorial(num):
 #     if num==0:
@@ -86,9 +86,38 @@ def factorial(num): return 1 if num == 0 else num * factorial(num-1)
 #     else:
 #         return num * factorial(num-1)
 
-print(factorial(5))
+# print(factorial(5))
 
 
+class Vehicle:
+    def __init__(self, current_speed):
+        self.current_speed = current_speed
+
+    def accelerate(self, speed):
+        self.current_speed += speed
+        print(self.current_speed)
+
+class Bike(Vehicle):
+    def accelerate(self, speed):
+        self.current_speed += 2 * speed  # because bikes are cool
+        print(self.current_speed)
+
+class Car(Vehicle):
+    def accelerate(self, speed):
+        self.current_speed += 0.5 * speed  # because cars are shit
+        print(self.current_speed)
+
+class Truck(Vehicle):
+    def __init__(self):
+        self.current_speed = 0
+
+my_bike = Bike(0)
+my_car = Car(0)
+my_truck = Truck()
+
+my_bike.accelerate(10)  # Output: 20
+my_car.accelerate(10)  # Output: 5
+my_truck.accelerate(10)  # Output: 10
 
 
 
