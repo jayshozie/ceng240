@@ -35,19 +35,32 @@
 # 
 # print(ast.dump(syntax_tree, indent=2))
 
-from ast import dump, parse, unparse
+# from ast import dump, parse, unparse
+# 
+# code_snippet = """y = 5
+# x = 10 + y"""
+# 
+# syntax_tree = parse(code_snippet)
+# unparsed_code = unparse(syntax_tree)
+# reparsed_code = parse(unparsed_code)
+# 
+# print("-------------------------")
+# print(f"Syntax Tree:\n{dump(syntax_tree, indent=2)}",sep='')
+# print("-------------------------")
+# print(f"Unparsed Code:\n{unparsed_code}",sep='')
+# print("-------------------------")
+# print(f"Reparsed Code:\n{dump(reparsed_code, indent=2)}",sep='')
+# print("-------------------------")
 
-code_snippet = """y = 5
-x = 10 + y"""
 
-syntax_tree = parse(code_snippet)
-unparsed_code = unparse(syntax_tree)
-reparsed_code = parse(unparsed_code)
+def square(x):
+    return x*x
 
-print("-------------------------")
-print(f"Syntax Tree:\n{dump(syntax_tree, indent=2)}",sep='')
-print("-------------------------")
-print(f"Unparsed Code:\n{unparsed_code}",sep='')
-print("-------------------------")
-print(f"Reparsed Code:\n{dump(reparsed_code, indent=2)}",sep='')
-print("-------------------------")
+num_list = [1, 2, 3, 4, 5]
+
+squared_map = map(square, num_list)
+
+squared_list = list(squared_map)
+# Changing the type of the object from `map` to `list`, so it's human-readable.
+
+print(squared_list)  # Output: [1, 4, 9, 16, 25]
