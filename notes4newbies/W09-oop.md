@@ -183,7 +183,7 @@ class Dog:
         print(f"{self.name} says woof!")
 
 my_dog = Dog('Lucky', 'Golden Retriever')
-my_dog.bark()  # calling the method
+my_dog.bark()  # method call (just like a function call)
 # Output: Lucky says woof!
 ```
 
@@ -320,6 +320,38 @@ to call for them, no questions asked; however, with the class `Fish`, since
 there is no method named `fly`, Python gives an error and says that.
 
 ## Message Passing
+
+- **Definition:** In OOP, objects communicate with each other by sending
+`messages`. A message is simply a `method call`. The concept is, when an object
+calls a method on another object (or even itself), it's considered to be
+sending a message. The calling object doesn't explicitly know what the method
+it's calling *will* happen, only it *wants* it to happen, by calling the
+appropriate method. This concept reinforces encapsulation, promotes coupling,
+meaning objects are less dependent on each other's internal sructuer, leading
+to more modular and flexible designs.
+
+Message Passing Example:
+```python
+class Printer:
+    def print_document(self, document_name):
+        print(f"Printing: {document_name} ...")
+
+class User:
+    def __init__(self, name):
+        self.name = name
+
+    def send_to_printer(self, printer_object, doc):
+        print(f"{self.name} is printing {doc}.")
+        printer_object.print_document(doc)  # Message Passing
+
+my_printer = Printer()
+me = User('jayshozie')
+
+me.send_to_printer(my_printer, "Report.docx")
+# Output:
+# jayshozie is printing Report.docx.
+# Printing: Report.docx ...
+```
 
 ## Basics of OOP in Python
 
