@@ -117,7 +117,42 @@ My_Car.accelerate(10)
 As you can see in this example, we have 2 different objects, holding two
 entirely different sets of data, but having the same blueprint (same class).
 
-## Member Functions (Methods) and Variables (Attributes)
+## Defining Classes
+
+To define a class, first you need to give it a name, conventionally starting
+with a capital letter:
+```python
+class MyClass:
+    # class content goes here now
+    pass  # placeholder for now
+```
+
+1. **The `__init__` Method (Object Constructor):** If the class has this method
+it automatically gets called when an object of that class is constructed.
+
+2. **The `self` Parameter:** Although you can name it differently, which is
+highly discouraged, the `self` parameter is a reference to the instance of the
+object itself. It allows you to access variables and methods that belong to
+that specific object.
+
+3. **Constructing an Object (a.k.a. Instantiating a Class):**
+```python
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+my_dog = Dog('Lucky', 'Golden Retriever')
+friends_dog = Dog('Lucy', 'German Shepherd')
+
+print(my_dog.name, my_dog.breed)  # Output: Lucky Golden Retriever
+print(friends_dog.name, friends_dog.breed)  # Output: Lucy German Shepherd
+```
+As you can see in the example, we're calling the same variable name but we're
+getting different outputs, that's because the objects are different. In the
+first print function we're printing the `name` attribute of the `my_dog`
+object, but in the second print function we're printing the `name` attribute of
+the `friends_dog` object.
 
 ## Properties of OOP
 
