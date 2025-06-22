@@ -157,6 +157,50 @@ over and over again for closely related classes. You can just write a parent
 class, and inherit those methods, which I'll show you how further down the
 line.
 
+Inheritance Example:
+```python
+class Vehicle:
+    def __init__(self, current_speed):
+        self.current_speed = current_speed
+
+    def accelerate(self, speed):
+        self.current_speed += speed
+        print(self.current_speed)
+
+class Bike(Vehicle):
+    def accelerate(self, speed):
+        self.current_speed += 2 * speed  # because bikes are cool
+        print(self.current_speed)
+
+class Car(Vehicle):
+    def accelerate(self, speed):
+        self.current_speed += 0.5 * speed  # because cars are shit
+        print(self.current_speed)
+
+class Truck(Vehicle):
+    def __init__(self):
+        self.current_speed = 0
+
+my_bike = Bike(0)
+my_car = Car(0)
+my_truck = Truck()
+
+my_bike.accelerate(10)  # Output: 20
+my_car.accelerate(10)  # Output: 5
+my_truck.accelerate(10)  # Output: 10
+```
+In this example, you can see that although we've not defined a method named
+`__init__()` for `Bike` and `Car` child classes, we could still initiate an
+object from them (which would not be the case if we didn't inherit that method
+from the `Vehicle` class). Same thing applies for the `Truck` class with the
+`accelerate()` method. Although we've not defined it, we were able to call it,
+because it's defined in the inherited parent class. If you look closer, you can
+see that the alternated version of the method is ran when called. In the `Bike`
+class when you accelerate by 10 km/h your current_speed increases by 20 km/h,
+in the `Car` class when you accelerate by 10 km/h your current_speed increases
+by 5 km/h. This is because we've changed how these worked in the corresponding
+child classes.
+
 ### Polymorphism
 
 - **Definition:** The word polymorphism refers to the ability of OOP of
@@ -164,7 +208,50 @@ different objects to respond to the same method call in their own, appropriate
 ways.
 
 You can have a general command, and different types of objects (of different
-classes) will execute that specific command to their nature. For example,
+classes) will execute that specific command to their nature.
+
+**Duck Typing:** Python's approach to polymorphism is often called *duck
+typing*: "If it walks like a duck and quaks like a duck, it is a duck.". It
+means if an object has the method you're trying to call, Python doesn't care
+what type it explicitly is; it will just call that method. No questions asked.
+
+Duck Typing Example:
+```python
+class Bird:
+    def fly(self):
+        print("fly with wings")
+
+class Airplane:
+    def fly(self):
+        print("fly with fuel")
+
+class Fish:
+    def swim(self):
+        print("fish swim in sea")
+
+# Attributes having same name are
+# considered as duck typing
+for obj in Bird(), Airplane(), Fish():
+    obj.fly()
+
+"""
+Output:
+fly with wings
+fly with fuel
+
+Traceback (most recent call last):
+  File "<python-input-0>", line 16, in <module>
+    obj.fly()
+    ^^^^^^^
+AttributeError: 'Fish' object has no attribute 'fly'
+"""
+```
+As you can see, although the name of the method is exactly the same, since the
+class `Bird` and `Airplane` each has a method named `fly`, the script was able
+to call for them, no questions asked; however, with the class `Fish`, since
+there is no method named `fly`, Python gives an error and says that.
+
+Polymorphism Example:
 ```python
 class Vehicle:
     def __init__(self, current_speed):
