@@ -154,6 +154,22 @@ first print function we're printing the `name` attribute of the `my_dog`
 object, but in the second print function we're printing the `name` attribute of
 the `friends_dog` object.
 
+### Member Variables (Attributes) & Functions (Methods)
+
+1. **Member Variables (Attributes):** These are the pieces of data that belong
+to an object. They define its state and characteristics. Each object has its
+own version of that variable. In the previous example the `my_dog` object had
+`Lucky` as the `name` attribute, but the `friends_dog` object had `Lucy` as the
+`name` attribute, same with their `breed` attributes. They're usually defined
+in the `__init__` method, using the format in line 1 and accessed with the
+format in line 2:
+```python
+1: self.<attribute_name> = value
+2: object_name.<attribute_name>
+```
+
+2. **Member Functions (Methods):**
+
 ## Properties of OOP
 
 Before we have more fun with examples, there is some terminology that we need
