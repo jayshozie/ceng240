@@ -168,7 +168,24 @@ format in line 2:
 2: object_name.<attribute_name>
 ```
 
-2. **Member Functions (Methods):**
+2. **Member Functions (Methods):** These are functions defined inside a class
+that perform actions or operations on the object's data. They're essentially
+the behavior of the object. All methods always take `self` as their first
+parameter, implicitly referring to the object itself, allowing the method to
+access the objects own attributes. Let's work on the `Dog` class.
+```python
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def bark(self):
+        print(f"{self.name} says woof!")
+
+my_dog = Dog('Lucky', 'Golden Retriever')
+my_dog.bark()  # calling the method
+# Output: Lucky says woof!
+```
 
 ## Properties of OOP
 
