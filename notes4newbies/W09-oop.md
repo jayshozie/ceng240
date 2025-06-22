@@ -5,3 +5,161 @@ Please see the LICENSE file for more details.
 -------------------------------------------------------------------------------
 
 # Object-Oriented Programming
+
+## What is it?
+
+To understand object oriented programming (OOP), we first need to understand
+what this `object` that I've been talking about since the beginning of the
+course means. An object is a self-contained unit that bundles together **data**
+(what it is, what are its characteristics), and **behavior** (what it can do,
+what are its actions). This is a pretty abstract definiton, so let's bring it
+down to earth with an example.
+
+Imagine an object called `My_Car`, and it's moving. Its data (attributes in
+Python) may be `color`, `model`, or `current_speed`; and its behavior (methods
+in Python) may be `accelerate()`, `brake()`, `turn_off()`, or `turn_on()`. When
+you need to go faster, you call the `accelerate()` method; when you need to
+slow down, you call the `brake()` method. This probably still feels to
+abstract, but we will get there, don't worry.
+
+## Class Definition in Python
+
+A `class` is the blueprint of objects. Let's build on what we've built already.
+We can talk about a class named `Car` in our previous example. When we create
+an object of this class, called `My_Car`, that object will have all the
+attributes and methods the original blueprint, class `Car`, has.
+
+<details>
+    <summary>Example Car Class</summary>
+
+```python
+class Car:
+    def __init__(self, model, color, current_speed, is_running):
+        self.model = model
+        self.color = color
+        self.current_speed = current_speed
+        self.is_running = is_running
+
+    def turn_on():
+        if not self.is_running:
+            self.is_running = True
+            self.current_speed = 0
+            print("Car is turned on.")
+        else:
+            print("Car is already on.")
+
+    def turn_off():
+        if self.is_running:
+            self.is_running = False
+            self.current_speed = 0
+            print("Car is turned off.")
+        else:
+            print("Car is already off.")
+
+    def accelerate(speed):
+        if self.is_running:
+            self.current_speed += speed  # accelerate by {speed} km/h
+            print(f"Accelerated by {speed} km/h.\nCurrent Speed: {current_speed} km/h.")
+        else:
+            print("Car is not on.")
+
+    def brake(speed):
+        if self.is_running:
+            self.current_speed -= speed  # decelerate by {speed} km/h
+            print(f"Decelerated by {speed} km/h.\nCurrent Speed: {current_speed} km/h.")
+        else:
+            print("Car is not on.")
+```
+
+I know this looks complicated, but it isn't. I need you to follow this markdown
+while looking at this constatly.
+</details>
+
+In the example `Car` class case, we would do stuff like:
+```python
+My_Car = Car(1998, 'red', '0', False)
+# This would create us an object called `My_Car` of class `Car` with the
+# attributes: model=1998, color='red', current_speed=0, is_running=False
+My_Car.turn_on()
+# Output: Car is turned on.
+My_Car.accelerate(10)
+# Output: Accelerated by 10 km/h.
+# Output: Current Speed: 10 km/h.
+My_Car.brake(10)
+# Output: Decelerated by 10 km/h.
+# Output: Current Speed: 10 km/h.
+My_Car.turn_off()
+# Output: Car is turned off.
+```
+The main thing is that, I can create more cars without interfering with this
+specific one. For example,
+```python
+My_Other_Car = Car(2025, 'jet black', '0', False)
+My_Other_Car.turn_on()
+# Output: Car is turned on.
+My_Car.turn_on()
+# Output: Car is turned on.
+
+My_Other_Car.accelerate(50)
+# Output: Accelerated by 50 km/h.
+# Output: Current Speed: 50 km/h.
+My_Car.accelerate(10)
+# Output: Accelerated by 10 km/h.
+# Output: Current Speed: 10 km/h.
+
+My_Other_Car.brake(20)
+# Output: Decelerated by 20 km/h.
+# Output: Current Speed: 30 km/h.
+My_Car.accelerate(10)
+# Output: Accelerated by 10 km/h.
+# Output: Current Speed: 20 km/h.
+```
+As you can see in this example, we have 2 different objects, holding two
+entirely different sets of data, but having the same blueprint (same class).
+
+## Properties of OOP
+
+Before we have more fun with examples, there is some terminology that we need
+to know. These are the fundamental concepts that define OOP.
+
+### Encapsulation
+
+- **Definition:** Encapsulation means bundling the data (attributes) and the
+functions (methods) that operate on that data into a single unit, an object.
+
+A key aspect of this encapsulation is **information hiding**. That means that
+the internal working details of an object are hidden from the rest of the code.
+You interact with the object only through its defined methods, rather than
+directly accessing its internal components.
+
+Imagine you're holding a TV remote. You press buttons `change_channel()`, or
+`increase_volume()`. You don't need to know how the TV actually increases the
+volume, or switches channels, that complexity is deliberately hidden from you.
+You only interact with its public interface.
+This abstraction simplifies the interaction, protects data from accidental
+corruption, makes code easier to modify without breaking other parts of the
+system.
+
+### Inheritance
+
+- **Definition:** Inheritance is a mechanism that allows a new class to inherit
+properties (attributes) and behaviors (methods) from an existing class. The
+class that *inherits* these is called a **child class** or **derived class**.
+The class that gets *inherited* is called **parent class** or **base class**.
+
+### Polymorphism
+
+## Member Functions (Methods) and Variables (Attributes)
+
+## Message Passing
+
+## Basics of OOP in Python
+
+
+
+
+
+
+
+
+
