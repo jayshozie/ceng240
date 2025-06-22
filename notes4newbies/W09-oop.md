@@ -22,7 +22,7 @@ you need to go faster, you call the `accelerate()` method; when you need to
 slow down, you call the `brake()` method. This probably still feels to
 abstract, but we will get there, don't worry.
 
-## Class Definition in Python
+## Classes
 
 A `class` is the blueprint of objects. Let's build on what we've built already.
 We can talk about a class named `Car` in our previous example. When we create
