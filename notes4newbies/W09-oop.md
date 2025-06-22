@@ -215,7 +215,7 @@ typing*: "If it walks like a duck and quaks like a duck, it is a duck.". It
 means if an object has the method you're trying to call, Python doesn't care
 what type it explicitly is; it will just call that method. No questions asked.
 
-Duck Typing Example:
+Duck Typing Example from [GeeksForGeeks](https://www.geeksforgeeks.org/python/duck-typing-in-python/):
 ```python
 class Bird:
     def fly(self):
