@@ -85,18 +85,70 @@ factorial of the number before it and itself.
 ```text
 0! = 1
 1! = 1
-2! = 2
-3! = 6
+2! = 1! × 2 = 2
+3! = 2! × 3 = 6
 .
 .
 .
 N! = (N-1)! × N
 ```
 
-In programming, however, recursion is a technique where a function solves a
+In programming, recursion is, similarly, a technique where a function solves a
 problem by calling *itself* one or more times. This is an especially useful
 technique when the argument is structured like a tree.
 
-A very simple example 
+A very simple example would be to write a function that calculates the
+factorial of a given number.
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+```
 
+<details>
+    <summary>A Shorter Version</summary>
 
+```python
+def factorial(n): return 1 if n == 0 else n * factorial(n-1)
+# Personally, I'm not a fan of single-line functions.
+```
+</details>
+There are two parts to a recursive algorithm. First one is the **base case**,
+which is the case where the function stops calling itself. You can see that in
+the example's first if case. If a condition (n == 0) is true at any point in
+the execution, the algorithm stops calling itself. The base case is absolutely
+crucial, because otherwise the function will call itself forever. The second
+one is the **recursive case**, which is the case where the function actually
+calls itself. Again, you can see that in the else case of our function.
+Whenever the condition is met (n != 0), the algorithm calls itself, again and
+again. Until the base case is met.
+
+Another example could be an algorithm that calculates the Fibonacci sequence.
+```python
+def fibonacci(n):
+    if n <= 1:  # Base Case: fibonacci(0) = 0, fibonacci(1) = 1
+        return n
+    else:  # Recursive Case: fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
+        return fibonacci(n-1) + fibonacci(n-2)
+```
+It's almost exactly the same as the previous one, so I'm going to leave
+understanding this to you.
+
+Recursive algorithms always can be written with loops and vice versa; however,
+in some cases the recursive solution may look better, be understood easily, be
+concise. These cases include traversing tree-like data structures, certain
+mathematical algorithms, generating fractals. In these cases, it mostly mirrors
+the problem's mathematical definition.
+
+Putting the benefits aside, there are some drawbacks to using recursion. First
+of all, in Python, simple problems will probably be more efficient with using
+just a loop due to the overhead of function calls with recursion. Another one
+happens if the developer was not very careful while writing the program. It's
+called stack overflow (yes, the website's name comes from this). Without a
+correctly defined base case, or for very deep recursions, you risk hitting
+Python's recursion limit and raising a
+[`OverflowError`](https://docs.python.org/3/library/exceptions.html#OverflowError).
+Also, for very complex algorithms, recursion make the code seem even more
+complicated then a loop.

@@ -67,13 +67,31 @@
 # 
 # print(squared_list)  # Output: [1, 4, 9, 16, 25]
 
-def is_even(x):
-    return x % 2 == 0
+# def is_even(x):
+#     return x % 2 == 0
+# 
+# num_list = [i for i in range(20)]
+# 
+# evens_filter = filter(is_even, num_list)
+# 
+# evens = list(evens_filter)
+# 
+# print(evens)  # Output: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 
-num_list = [i for i in range(20)]
+def factorial(num): return 1 if num == 0 else num * factorial(num-1)
 
-evens_filter = filter(is_even, num_list)
+# def factorial(num):
+#     if num==0:
+#         return 1
+#     else:
+#         return num * factorial(num-1)
 
-evens = list(evens_filter)
+print(factorial(5))
 
-print(evens)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+
+
+
+
+
+
