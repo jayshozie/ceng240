@@ -50,7 +50,11 @@ according to the return of the function given as argument.
 For example, you can filter out even numbers in a list:
 ```python
 def is_even(x):
-    return x % 2 == 0
+    if x % 2 == 0:
+        return x
+    else:
+        return False
+# return x % 2 == 0
 
 num_list = [n for n in range(20)]
 ## evaluates to:
