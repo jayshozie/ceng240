@@ -63,3 +63,7 @@ with open('my_txt.txt', 'r') as text:
 ## Formatting Files
 
 ## Binary Files
+
+-------------------------------------------------------------------------------
+
+###     TODO : ASSIGNMENT(S)

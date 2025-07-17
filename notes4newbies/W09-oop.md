@@ -358,3 +358,7 @@ me.send_to_printer(my_printer, "Report.docx")
 ## Basics of OOP in Python
 
 ###     TODO : ADD EXAMPLES HERE
+
+-------------------------------------------------------------------------------
+
+###     TODO : ASSIGNMENT(S)

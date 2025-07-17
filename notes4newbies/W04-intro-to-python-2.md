@@ -247,3 +247,7 @@ With the `pass` keyword you can skip that block without errors, because if you
 don't put anything indented after `if`, `elif`, `else`, `for`, `while` blocks
 Python will give out an error. You can get rid of the error by using the `pass`
 keyword.
+
+-------------------------------------------------------------------------------
+
+###     TODO : ASSIGNMENT(S)
