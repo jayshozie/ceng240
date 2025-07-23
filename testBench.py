@@ -89,36 +89,112 @@
 # print(factorial(5))
 
 
-class Vehicle:
-    def __init__(self, current_speed):
-        self.current_speed = current_speed
+# class Vehicle:
+#     def __init__(self, current_speed):
+#         self.current_speed = current_speed
+# 
+#     def accelerate(self, speed):
+#         self.current_speed += speed
+#         print(self.current_speed)
+# 
+# class Bike(Vehicle):
+#     def accelerate(self, speed):
+#         self.current_speed += 2 * speed  # because bikes are cool
+#         print(self.current_speed)
+# 
+# class Car(Vehicle):
+#     def accelerate(self, speed):
+#         self.current_speed += 0.5 * speed  # because cars are shit
+#         print(self.current_speed)
+# 
+# class Truck(Vehicle):
+#     def __init__(self):
+#         self.current_speed = 0
+# 
+# my_bike = Bike(0)
+# my_car = Car(0)
+# my_truck = Truck()
+# 
+# my_bike.accelerate(10)  # Output: 20
+# my_car.accelerate(10)  # Output: 5
+# my_truck.accelerate(10)  # Output: 10
 
-    def accelerate(self, speed):
-        self.current_speed += speed
-        print(self.current_speed)
+from getpass import getpass
+from os import system
+# from time import sleep
 
-class Bike(Vehicle):
-    def accelerate(self, speed):
-        self.current_speed += 2 * speed  # because bikes are cool
-        print(self.current_speed)
+password = None
+mode = None
 
-class Car(Vehicle):
-    def accelerate(self, speed):
-        self.current_speed += 0.5 * speed  # because cars are shit
-        print(self.current_speed)
+while True:
+    system("clear")
+    print(
+        "|-------------------------------------------|\n",
+        "|       Completely-Secure-Interface         |\n",
+        "|-------------------------------------------|\n",
+        "| Enter Mode : 1                            |\n",
+        "| Set Mode   : 0                            |\n",
+        "|-------------------------------------------|",
+        sep='')
+    if password is None:
+        print(
+            "|-------------------------------------------|\n",
+            "| Set a password to use this interface.     |\n",
+            "|-------------------------------------------|",
+        sep='')
+        mode = 0
+    else:
+        print(
+            "|-------------------------------------------|\n",
+            "| Enter/Set :                               |\n",
+            "|-------------------------------------------|",
+        sep='')
+        mode = input()
 
-class Truck(Vehicle):
-    def __init__(self):
-        self.current_speed = 0
+    try:
+        mode = int(mode)
+    except ValueError:
+        system("clear")
+        print(
+            f"|-------------------------------------------|\n",
+            f"| You've entered an invalid input           |\n",
+            f"| ('{mode}'), please try again.             |\n",
+            f"|-------------------------------------------|",
+        sep='')
+        continue
 
-my_bike = Bike(0)
-my_car = Car(0)
-my_truck = Truck()
-
-my_bike.accelerate(10)  # Output: 20
-my_car.accelerate(10)  # Output: 5
-my_truck.accelerate(10)  # Output: 10
-
+    if mode == 1 and password is not None:
+        system("clear")
+        print(
+            "|-------------------------------------------|\n",
+            "| Please enter your password:               |\n",
+            "|-------------------------------------------|",
+        sep='')
+        pwd_try = getpass(" ")
+        if pwd_try == password:
+            system("clear")
+            print(
+                "|-------------------------------------------|\n",
+                "| Password is correct.                      |\n",
+                "|-------------------------------------------|",
+            sep='')
+            break
+        else:
+            system("clear")
+            print(
+                "|-------------------------------------------|\n",
+                "| Incorrect password, please try again.     |\n",
+                "|-------------------------------------------|",
+            sep='')
+            continue
+    elif mode == 0:
+        print(
+            "|-------------------------------------------|\n",
+            "| Please enter your new password:           |\n",
+            "|-------------------------------------------|",
+        sep='')
+        password = getpass(" ")
+        continue
 
 
 

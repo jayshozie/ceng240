@@ -982,20 +982,21 @@ This works, but everyone can see what the user enters as password. Not safe.
 
 ```python
 from getpass import getpass
+from os import system
 
 password = None
 mode = None
 
-print(
-"|-------------------------------------------|\n",
-"|       Completely-Secure-Interface         |\n",
-"|-------------------------------------------|\n",
-"| Enter Mode : 1                            |\n",
-"| Set Mode   : 0                            |\n",
-"|-------------------------------------------|\n",
-sep='')
-
 while True:
+    system("clear")
+    print(
+        "|-------------------------------------------|\n",
+        "|       Completely-Secure-Interface         |\n",
+        "|-------------------------------------------|\n",
+        "| Enter Mode : 1                            |\n",
+        "| Set Mode   : 0                            |\n",
+        "|-------------------------------------------|",
+        sep='')
     if password is None:
         print(
             "|-------------------------------------------|\n",
@@ -1014,6 +1015,7 @@ while True:
     try:
         mode = int(mode)
     except ValueError:
+        system("clear")
         print(
             f"|-------------------------------------------|\n",
             f"| You've entered an invalid input           |\n",
@@ -1023,6 +1025,7 @@ while True:
         continue
 
     if mode == 1 and password is not None:
+        system("clear")
         print(
             "|-------------------------------------------|\n",
             "| Please enter your password:               |\n",
@@ -1030,6 +1033,7 @@ while True:
         sep='')
         pwd_try = getpass(" ")
         if pwd_try == password:
+            system("clear")
             print(
                 "|-------------------------------------------|\n",
                 "| Password is correct.                      |\n",
@@ -1037,6 +1041,7 @@ while True:
             sep='')
             break
         else:
+            system("clear")
             print(
                 "|-------------------------------------------|\n",
                 "| Incorrect password, please try again.     |\n",
@@ -1052,9 +1057,9 @@ while True:
         password = getpass(" ")
         continue
 ```
-Eh, as pretty as it gets in a CLI. This is safer on the user side, but it's
-still not safe. Don't forget, we're still storing the password as a string
-literal, without encoding.
+Eh, as pretty as it gets in a CLI, and only with a while loop and some if
+statements. This is safer on the user side, but it's still not safe. Don't
+forget, we're still storing the password as a string literal, without encoding.
 </details>
 </details>
 
