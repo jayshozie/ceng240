@@ -1128,6 +1128,7 @@ You can also explicitly change the type of a variable with some functions. In
 this case, data loss can occur, since we're forcing it to another type.
 ```python
 my_num = 13
+print(my-num, type(my-num))  # Output: 13 <class 'int'>
 my_num = str(my_num)  # You can re-assign variables.
 
 print(my_num, type(my_num))  # Output: 13 <class 'str'>
@@ -1279,10 +1280,12 @@ I know it doesn't make much sense, but I couldn't think of another example.
 
 If you wish to continue with your Python journey outside of this course, I
 highly recommend you to check out [PEP8](https://peps.python.org/pep-0008/).
-PEPs are basically guidelines to how to write Python styled code. There are
-some standards that you should follow while writing Python code. PEPs give you
-those standards. [PEP8](https://peps.python.org/pep-0008/) is a good starting
-point, in my opinion.
+Python Enhancement Proposals (PEPs) are written proposals of the Python
+community to enhance Python at every version, in which PEP8 is to help the
+coders to write Python-ish code. There are some standards that you should
+follow while writing Python code. Some PEPs give you those standards.
+[PEP8](https://peps.python.org/pep-0008/) is a good starting point, in my
+opinion.
 
 Even if you won't please read the rest of this dropdown.
 
