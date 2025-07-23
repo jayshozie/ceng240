@@ -69,21 +69,22 @@ Do you know how to implement your idea?
 1. Yes: Do you know how to implement your idea?
 
     1. Yes: Do it.
-    2. No: Search it in the docs. Did you find what you're looking for?
+
+    2. No: Search it on the Internet. Did you find what you're looking for
+        in sites like [stackoverflow](https://stackoverflow.com) or any
+        issue opened on a [GitHub](https://github.com) repository?
 
         1. Yes: Use it.
-        2. No: Search it on the Internet. Did you find what you're looking for
-            in sites like [stackoverflow](https://stackoverflow.com) or any
-            issue opened on a [GitHub](https://github.com) repository?
 
-            1. Yes: Use it.
-            2. No: Ask it on stackoverflow.
-                You will almost certainly get the answer you're looking for.
+        2. No: Ask it on stackoverflow.
+            You will almost certainly get the answer you're looking for.
 
-2. No:
+2. No: Search it in the docs. Did you find what you're looking for?
 
-    1. Search in stackoverflow directly. Did you find what you're looking for?
-        
+    1. Yes: Use it.
+
+    2. No: Search in stackoverflow directly. Did you find what you're looking for?
+
         1. Yes: UNDERSTAND IT, then use it.
         2. No: Open up a question on stackoverflow.
 
