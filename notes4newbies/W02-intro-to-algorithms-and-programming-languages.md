@@ -194,9 +194,8 @@ for different operations, for example.
     <summary>Flowchart Example</summary>
 
 ![1.3.1 - Example Algorithm Flowchart](./images/algorithm-flowchart-example.png)[^2]
-
 In this funny example, the algorithm asks for the user's favorite subject. If
-They don't say "Computer Science", the algorithm prints out "Try again.!". If
+they don't say "Computer Science", the algorithm prints out "Try again.!". If
 they do say "Computer Science" the algorithm prints out "Of course it is!" and
 ends the program.
 </details>
@@ -851,7 +850,7 @@ and `floating-point numbers`, or `floats`.
 ### How would you represent things with binary?
 
 <details>
-    <summary>Representing Text with Binary</summary>
+    <summary>Representing Text with Binary (included)</summary>
 
 This part is included in the course.
 
