@@ -156,8 +156,10 @@ For example, you can calculate the perimeter and the area of a circle:
 >>> math.pi * 10**2
 314.1592653589793  # Area of a circle with radius 10
 ```
-
-This sure does work, but you don't want to write everything every single time.
+To learn more about how to use the Python interpreter as a calculator, you can
+visit the [tutorial's corresponding part](https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator)
+Although this is one way to calculate whatever you need to, there are certainly
+better ways to do this.
 
 ## Phase 2: Variable & Script
 
