@@ -32,7 +32,7 @@ mean = total / len(nums)
 if len(nums) % 2 == 0:
     median = nums[len(nums)/2]
 else:
-    math.
+
     lower_mid = len(nums)/2
     median =
 
