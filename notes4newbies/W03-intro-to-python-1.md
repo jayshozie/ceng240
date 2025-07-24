@@ -1467,7 +1467,7 @@ while i < 6:
 
 Write a Python program that takes 2 values as input, adds them, and prints the
 result. Create a Python file, naming doesn't matter but for convention you can
-use `W03-assignment.py`. Write your code in it, and run it with Python. If you
+use `W03-assignment-1.py`. Write your code in it, and run it with Python. If you
 don't have Python installed on your computer you can use
 [CS50's](https://cs50.dev) online coding environment built on top of Visual
 Studio Code. I recommend for you to install
@@ -1476,11 +1476,10 @@ Studio Code. I recommend for you to install
 you a lot, since you will be able to reuse a lot of stuff. Check the markdown
 named
 [W03 How to Install Python and VSCode](./W03--how-to-install-python-and-vscode.md)
-for more info.
-If you like to have even more pain than CS50's online IDE, you can use
-[Google Colab](https://colab.research.google.com/). It's incredibly cramped,
-but if you don't want to install anything and just want to pass the course it
-should be enough.
+for more info. If you like to have even more pain than CS50's online IDE, you
+can use [Google Colab](https://colab.research.google.com/). It's incredibly
+cramped, but if you don't want to install anything and just want to pass the
+course it should be enough.
 
 Hints:
 1. You can use the function `eval(input())` to get input from the user.
