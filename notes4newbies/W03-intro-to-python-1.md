@@ -1463,7 +1463,7 @@ while i < 6:
 
 -------------------------------------------------------------------------------
 
-# Assignment 1 of W03
+# Assignment 1
 
 Write a Python program that takes 2 values as input, adds them, and prints the
 result. Create a Python file, naming doesn't matter but for convention you can
@@ -1505,7 +1505,7 @@ Output:
 20
 ```
 
-# Assignment 2 of W03
+# Assignment 2
 
 Write a Python script that takes 2 the radii of 2 circles, calculates the area
 of both, and calculates the area difference of them. If one of them are bigger
