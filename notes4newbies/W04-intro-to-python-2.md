@@ -252,7 +252,45 @@ keyword.
 
 # Assignment 1
 
+Write a Python program that takes an undisclosed amount of values, prints out
+the following statement:
+```markdown
+Largest  : {largest_num}
+Smallest : {smallest_num}
+Mean     : {mean}
+Median   : {median}
+```
+You can calculate the mean and median yourself, or you can use a library.
 
+Hints:
+1. You can get them in a list with `eval(input())`.
+2. You can just use the list you got from the input.
+3. You should store the values that you should print in different variable.
+4. You can print your result with `print()` function, you should use f-strings.
+
+```markdown
+Example I/O:
+
+Input:
+[10, 20, 30, 40, 50]
+Output:
+Largest  : 50
+Smallest : 10
+Mean     : 30
+Median   : 30
+
+Input:
+10
+20
+30
+40
+50
+Output:
+Largest  : 50
+Smallest : 10
+Mean     : 30
+Median   : 30
+```
 
 # Assignment 2
 
