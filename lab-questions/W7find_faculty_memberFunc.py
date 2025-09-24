@@ -6,13 +6,11 @@ Question asks the developer to implement a function formatted like this:
         
         Arguments
         ---------
-
         member_name : string, case-insensitive
         file_name   : string
 
         Returns
         -------
-
         office_number : string, if the member_name is available
         None, the member_name is not available
 
