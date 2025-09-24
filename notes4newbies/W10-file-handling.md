@@ -73,7 +73,7 @@ returns.
 You probably won't use byte-by-byte access unless it's absolutely necessary,
 since usually it's more efficient to read/write larger chunks of data at once.
 
-## The Much Needed Example
+## The Much Needed Example of `open()` and `write()`
 
 Now that we know how to open a file and write to it, let's do it.
 ```python
