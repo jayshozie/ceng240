@@ -243,9 +243,24 @@ squared_numbers_set = {x**2 for x in numbers_set if x % 2 == 0}
 print(squared_numbers_set)  # Output: {16, 4}
 ```
 ###     TODO : EXPLAIN WHY THE ORDER IS REVERSED IN THE SET EXAMPLE
-###     CONTRIBUTION : I couldn't find why is it reversed, tbh. If you know,
-###                    I would love to see why. Please open a PR.
+###     CONTRIBUTION : I couldn't find why it is reversed, tbh. If you know
+###                    why, I would love to know. Please open a PR.
 
 -------------------------------------------------------------------------------
 
+
+
+
+
+
+
 ###     TODO : ASSIGMENT(S)
+
+
+
+
+
+
+
+
+

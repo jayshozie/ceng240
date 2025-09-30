@@ -1,22 +1,13 @@
-
-
-
-
-
-
-
-
-
-
-
+# Solution of Assignment 1
 
 import math
 
 nums = eval(input("Enter 5 numbers in a list (e.g. [10, 20, 30, 40, 50]) : "))
 
+print(nums)
+
 largest = (-1) * math.inf
 smallest = math.inf
-
 total = 0
 for i in nums:
     if i <= smallest:
@@ -26,17 +17,39 @@ for i in nums:
 
     total += i
 
-
 mean = total / len(nums)
 
-if len(nums) % 2 == 0:
-    median = nums[len(nums)/2]
+
+n = len(nums)
+s = sorted(nums)
+if n:
+    median = (s[n//2-1]/2.0 + s[n//2]/2.0, s[n//2])[n % 2]
 else:
+    median = None
 
-    lower_mid = len(nums)/2
-    median =
+# or more explicitly:
+# sortedLst = sorted(nums)
+# lstLen = len(nums)
+# index = (lstLen - 1) // 2
+#
+# if (lstLen % 2):
+#     return sortedLst[index]
+# else:
+#     return (sortedLst[index] + sortedLst[index + 1])/2.0
 
+# or using a library:
+# from numpy import median
+# s = nums.sort()
+# median = median(s)
 
+print(f"""
+Largest  : {largest}
+Smallest : {smallest}
+Mean     : {mean}
+Median   : {median}
+""")
+
+# Solution of Assignment 2
 
 
 

@@ -260,7 +260,13 @@ Smallest : {smallest_num}
 Mean     : {mean}
 Median   : {median}
 ```
-You can calculate the mean and median yourself, or you can use a library.
+You can calculate the mean and median yourself, or you can use a library. Don't
+forget that mean is the average in the sense you know it. Sum all numbers and
+divide it by the number of numbers. Median, however, is the "middle number"
+when the set is ordered from smallest to largest. The list you're given may or
+may not be ordered, so don't forget to order it. The total numbers in your list
+may or may not be odd; hence, your median may not be an integer. In that case,
+your median value will be the half of the sum of the middle 2 numbers.
 
 Hints:
 1. You can get them in a list with `eval(input())`.
@@ -293,5 +299,7 @@ Median   : 30
 ```
 
 # Assignment 2
+
+Write a Python program that 
 
 # Assignment 3
