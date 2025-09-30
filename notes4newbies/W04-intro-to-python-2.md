@@ -252,21 +252,15 @@ keyword.
 
 # Assignment 1
 
-Write a Python program that takes an undisclosed amount of values, prints out
-the following statement:
+# Assignment 2
+
+Write a Python program that takes in an ordered list of numbers, and prints out
+the following message:
 ```markdown
 Largest  : {largest_num}
 Smallest : {smallest_num}
 Mean     : {mean}
-Median   : {median}
 ```
-You can calculate the mean and median yourself, or you can use a library. Don't
-forget that mean is the average in the sense you know it. Sum all numbers and
-divide it by the number of numbers. Median, however, is the "middle number"
-when the set is ordered from smallest to largest. The list you're given may or
-may not be ordered, so don't forget to order it. The total numbers in your list
-may or may not be odd; hence, your median may not be an integer. In that case,
-your median value will be the half of the sum of the middle 2 numbers.
 
 Hints:
 1. You can get them in a list with `eval(input())`.
@@ -298,8 +292,21 @@ Mean     : 30
 Median   : 30
 ```
 
-# Assignment 2
+Write a Python program that takes an undisclosed amount of values, prints out
+the following statement:
+```markdown
+Largest  : {largest_num}
+Smallest : {smallest_num}
+Mean     : {mean}
+Median   : {median}
+```
+You can calculate the mean and median yourself, or you can use a library. Don't
+forget that mean is the average in the sense you know it. Sum all numbers and
+divide it by the number of numbers. Median, however, is the "middle number"
+when the set is ordered from smallest to largest. The list you're given may or
+may not be ordered, so don't forget to order it. The total numbers in your list
+may or may not be odd; hence, your median may not be an integer. In that case,
+your median value will be the half of the sum of the middle 2 numbers.
 
-Write a Python program that 
 
 # Assignment 3
