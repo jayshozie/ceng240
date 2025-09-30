@@ -292,6 +292,9 @@ Mean     : 30
 Median   : 30
 ```
 
+<details>
+    <summary>Assignment 2 Harder Version</summary>
+
 Write a Python program that takes an undisclosed amount of values, prints out
 the following statement:
 ```markdown
@@ -307,6 +310,6 @@ when the set is ordered from smallest to largest. The list you're given may or
 may not be ordered, so don't forget to order it. The total numbers in your list
 may or may not be odd; hence, your median may not be an integer. In that case,
 your median value will be the half of the sum of the middle 2 numbers.
-
+</details>
 
 # Assignment 3
