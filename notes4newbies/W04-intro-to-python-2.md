@@ -252,6 +252,24 @@ keyword.
 
 # Assignment 1
 
+Write a Python program that takes in a name and an age, then prints out the
+following message:
+```markdown
+Hello, {name}! You are {age} years old.
+```
+Hints:
+1. You can get them with `eval(input())`.
+2. You should store the values that you should print in different variables.
+3. You can print your result with `print()` function, you should use f-strings.
+```markdown
+Example I/O:
+Input:
+John
+25
+Output:
+Hello, John! You are 25 years old.
+```
+
 # Assignment 2
 
 Write a Python program that takes in an ordered list of numbers, and prints out
@@ -311,5 +329,3 @@ may not be ordered, so don't forget to order it. The total numbers in your list
 may or may not be odd; hence, your median may not be an integer. In that case,
 your median value will be the half of the sum of the middle 2 numbers.
 </details>
-
-# Assignment 3

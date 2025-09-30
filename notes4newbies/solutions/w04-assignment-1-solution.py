@@ -1,5 +1,9 @@
 # Solution of Assignment 1
 
+name = eval(input())
+age = eval(input())
+
+print(f"Hello, {name}! You are {age} years old.")
 
 # Solution of Assignment 2
 
@@ -74,18 +78,3 @@ Smallest : {smallest}
 Mean     : {mean}
 Median   : {median}
 """)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
