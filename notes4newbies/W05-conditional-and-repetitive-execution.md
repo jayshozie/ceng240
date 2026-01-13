@@ -248,13 +248,19 @@ print(squared_numbers_set)  # Output: {16, 4}
 
 -------------------------------------------------------------------------------
 
+> [!NOTE]
+> Assignments of this week will focus entirely on loops and comprehensions , so
+> you need to study conditional execution yourself. I recommend you try it to
+> use conditional execution as a replacement in conditional expression
+> assignments now.
+
+###     TODO : ASSIGMENT(S)
+
 # Assignment 1
 
 
 
 
-
-###     TODO : ASSIGMENT(S)
 
 
 
