@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # import io
 # import tokenize
 # import ast
@@ -118,85 +119,108 @@
 # my_bike.accelerate(10)  # Output: 20
 # my_car.accelerate(10)  # Output: 5
 # my_truck.accelerate(10)  # Output: 10
+#
+# from getpass import getpass
+# from os import system
+# # from time import sleep
+#
+# password = None
+# mode = None
+#
+# while True:
+#     system("clear")
+#     print(
+#         "|-------------------------------------------|\n",
+#         "|       Completely-Secure-Interface         |\n",
+#         "|-------------------------------------------|\n",
+#         "| Enter Mode : 1                            |\n",
+#         "| Set Mode   : 0                            |\n",
+#         "|-------------------------------------------|",
+#         sep='')
+#     if password is None:
+#         print(
+#             "|-------------------------------------------|\n",
+#             "| Set a password to use this interface.     |\n",
+#             "|-------------------------------------------|",
+#         sep='')
+#         mode = 0
+#     else:
+#         print(
+#             "|-------------------------------------------|\n",
+#             "| Enter/Set :                               |\n",
+#             "|-------------------------------------------|",
+#         sep='')
+#         mode = input()
+#
+#     try:
+#         mode = int(mode)
+#     except ValueError:
+#         system("clear")
+#         print(
+#             f"|-------------------------------------------|\n",
+#             f"| You've entered an invalid input           |\n",
+#             f"| ('{mode}'), please try again.             |\n",
+#             f"|-------------------------------------------|",
+#         sep='')
+#         continue
+#
+#     if mode == 1 and password is not None:
+#         system("clear")
+#         print(
+#             "|-------------------------------------------|\n",
+#             "| Please enter your password:               |\n",
+#             "|-------------------------------------------|",
+#         sep='')
+#         pwd_try = getpass(" ")
+#         if pwd_try == password:
+#             system("clear")
+#             print(
+#                 "|-------------------------------------------|\n",
+#                 "| Password is correct.                      |\n",
+#                 "|-------------------------------------------|",
+#             sep='')
+#             break
+#         else:
+#             system("clear")
+#             print(
+#                 "|-------------------------------------------|\n",
+#                 "| Incorrect password, please try again.     |\n",
+#                 "|-------------------------------------------|",
+#             sep='')
+#             continue
+#     elif mode == 0:
+#         print(
+#             "|-------------------------------------------|\n",
+#             "| Please enter your new password:           |\n",
+#             "|-------------------------------------------|",
+#         sep='')
+#         password = getpass(" ")
+#         continue
 
-from getpass import getpass
-from os import system
-# from time import sleep
+# def lower_name(name):
+#     return name.lower()
+# 
+# def clear_whitespace(dirtyString):
+#     cleanString = ""
+#     for c in dirtyString:
+#         if not c.isspace():
+#             cleanString += c
+#     return cleanString
+# 
+# withWhitespace = "|     JAYSHOZIE   |"
+# withoutWhitespace = clear_whitespace(withWhitespace)
+# print(withoutWhitespace)
 
-password = None
-mode = None
+from time import sleep
+def calculate_nums():
+    x = 0
+    y = 1
+    print(0)
+    while True:
+        z = x + y
+        x = y
+        y = z
+        print(z)
+        sleep(0.25)
 
-while True:
-    system("clear")
-    print(
-        "|-------------------------------------------|\n",
-        "|       Completely-Secure-Interface         |\n",
-        "|-------------------------------------------|\n",
-        "| Enter Mode : 1                            |\n",
-        "| Set Mode   : 0                            |\n",
-        "|-------------------------------------------|",
-        sep='')
-    if password is None:
-        print(
-            "|-------------------------------------------|\n",
-            "| Set a password to use this interface.     |\n",
-            "|-------------------------------------------|",
-        sep='')
-        mode = 0
-    else:
-        print(
-            "|-------------------------------------------|\n",
-            "| Enter/Set :                               |\n",
-            "|-------------------------------------------|",
-        sep='')
-        mode = input()
-
-    try:
-        mode = int(mode)
-    except ValueError:
-        system("clear")
-        print(
-            f"|-------------------------------------------|\n",
-            f"| You've entered an invalid input           |\n",
-            f"| ('{mode}'), please try again.             |\n",
-            f"|-------------------------------------------|",
-        sep='')
-        continue
-
-    if mode == 1 and password is not None:
-        system("clear")
-        print(
-            "|-------------------------------------------|\n",
-            "| Please enter your password:               |\n",
-            "|-------------------------------------------|",
-        sep='')
-        pwd_try = getpass(" ")
-        if pwd_try == password:
-            system("clear")
-            print(
-                "|-------------------------------------------|\n",
-                "| Password is correct.                      |\n",
-                "|-------------------------------------------|",
-            sep='')
-            break
-        else:
-            system("clear")
-            print(
-                "|-------------------------------------------|\n",
-                "| Incorrect password, please try again.     |\n",
-                "|-------------------------------------------|",
-            sep='')
-            continue
-    elif mode == 0:
-        print(
-            "|-------------------------------------------|\n",
-            "| Please enter your new password:           |\n",
-            "|-------------------------------------------|",
-        sep='')
-        password = getpass(" ")
-        continue
-
-
-
-
-
+calculate_nums()

@@ -18,7 +18,6 @@ class Person:
         if today < date(today.year, self.dateOfBirth.month, self.dateOfBirth.day):
             age -= 1
         return age
-    
     def BodyMassIndex(self):
         BMI = self.weight / (self.height**2)
         return BMI
